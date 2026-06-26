@@ -14,6 +14,8 @@ export type RoleSection = {
   paragraphs?: React.ReactNode[];
   /** Bulleted item-list entries. */
   items?: React.ReactNode[];
+  /** Optional closing paragraph rendered after the item-list. */
+  note?: React.ReactNode;
   /** Optional italic highlight quote with optional attribution. */
   highlight?: { quote: string; attribution?: string };
 };
@@ -79,6 +81,8 @@ export default function RolePage({ role }: { role: RoleData }) {
                 ))}
               </ul>
             )}
+
+            {s.note && <p className="body-text">{s.note}</p>}
 
             {s.highlight && (
               <div className="highlight-box">

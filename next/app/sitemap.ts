@@ -26,6 +26,7 @@ const ROUTES = [
   'out-of-office-waitlist',
   'careers',
   'certified-teacher',
+  'mom-ambassador',
   'social-intern',
   'marketing-intern',
   'brand-partnerships-intern',

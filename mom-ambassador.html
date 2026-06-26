@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ai.moms™ Mom Ambassador — ai moms™</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #060d26;
+    --pink: #ff63d8;
+    --white: #ffffff;
+    --gray: #666666;
+    --light-gray: #AAAAAA;
+    --border: #EFEFED;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--white); color: var(--navy); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+
+  .top-bar { background: var(--navy); padding: 14px 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .top-bar-logo { font-family: 'Be Vietnam Pro', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: -0.04em; text-decoration: none; }
+  .top-bar-logo .ai { color: var(--pink); }
+  .top-bar-logo .moms { color: var(--white); }
+  .top-bar-logo .tm { font-size: 7px; vertical-align: super; opacity: 0.4; color: var(--white); }
+  .back-link { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.6); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; }
+  .back-link:hover { color: var(--pink); }
+
+  .hero { background: var(--navy); padding: 80px 60px 96px; }
+  .hero-inner { max-width: 880px; margin: 0 auto; }
+  .hero-label { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--pink); margin-bottom: 18px; }
+  .hero h1 { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(2.4rem, 5.5vw, 4rem); color: var(--white); line-height: 1.05; margin-bottom: 28px; letter-spacing: -0.02em; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+  .pill { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18); padding: 8px 16px; border-radius: 100px; }
+  .hero-desc { font-size: 1.15rem; color: rgba(255,255,255,0.78); line-height: 1.7; max-width: 640px; border-left: 3px solid var(--pink); padding-left: 24px; }
+
+  .content { max-width: 760px; margin: 0 auto; padding: 80px 40px; }
+  .section { margin-bottom: 72px; }
+  .section:last-child { margin-bottom: 0; }
+  .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; }
+  .section-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.9rem; color: var(--navy); margin-bottom: 24px; line-height: 1.15; letter-spacing: -0.01em; }
+  .body-text { font-size: 1rem; color: #333; line-height: 1.75; margin-bottom: 18px; }
+  .body-text strong { color: var(--navy); font-weight: 700; }
+
+  .item-list { list-style: none; margin-bottom: 18px; }
+  .item-list li { font-size: 1rem; color: #333; line-height: 1.7; padding: 14px 0 14px 28px; position: relative; border-bottom: 1px solid var(--border); }
+  .item-list li:last-child { border-bottom: none; }
+  .item-list li::before { content: ''; position: absolute; left: 0; top: 24px; width: 16px; height: 2px; background: var(--pink); }
+  .item-list li strong { color: var(--navy); font-weight: 700; }
+
+  .highlight-box { background: rgba(255,99,216,0.06); border-left: 3px solid var(--pink); padding: 28px 32px; margin: 36px 0; border-radius: 2px; }
+  .highlight-box p { font-size: 1.05rem; color: var(--navy); line-height: 1.65; font-style: italic; margin-bottom: 0; }
+  .highlight-box .attribution { display: block; font-style: normal; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink); font-weight: 700; margin-top: 14px; }
+
+  .apply-block { background: var(--navy); padding: 56px 56px 60px; margin: 80px 0 0; border-radius: 2px; }
+  .apply-block .section-label { color: var(--pink); margin-bottom: 14px; }
+  .apply-block h2 { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.9rem; color: var(--white); margin-bottom: 18px; line-height: 1.2; letter-spacing: -0.01em; }
+  .apply-block p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 12px; }
+  .apply-block .lead { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 28px; }
+  .apply-block ol { list-style: none; counter-reset: apply-counter; margin: 20px 0 28px; }
+  .apply-block ol li { counter-increment: apply-counter; font-size: 0.98rem; color: rgba(255,255,255,0.85); line-height: 1.65; padding: 10px 0 10px 40px; position: relative; }
+  .apply-block ol li::before { content: counter(apply-counter); position: absolute; left: 0; top: 8px; color: var(--pink); font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 0.85rem; width: 26px; height: 26px; border: 1.5px solid var(--pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .apply-btn { display: inline-block; margin-top: 8px; background: var(--pink); color: var(--navy); font-weight: 700; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 16px 36px; text-decoration: none; border-radius: 100px; transition: all 0.2s; }
+  .apply-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,99,216,0.3); }
+
+  .apply-fallback { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 18px; }
+  .apply-fallback a { color: var(--pink); text-decoration: none; }
+  .apply-fallback a:hover { text-decoration: underline; }
+  .closing-line { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--navy); text-align: center; margin-top: 64px; font-style: italic; }
+
+  footer { padding: 32px 60px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; margin-top: 40px; }
+  .footer-logo { font-family: 'Be Vietnam Pro', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: -0.04em; }
+  .footer-logo .ai { color: var(--pink); }
+  .footer-logo .moms { color: var(--navy); }
+  .footer-logo .tm { font-size: 8px; vertical-align: super; opacity: 0.4; color: var(--navy); }
+  footer p { font-size: 0.78rem; color: var(--gray); }
+
+  @media (max-width: 768px) {
+    .top-bar { padding: 12px 24px; }
+    .hero { padding: 56px 24px 72px; }
+    .content { padding: 56px 24px; }
+    .apply-block { padding: 40px 28px 44px; }
+    footer { flex-direction: column; gap: 8px; padding: 24px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="/" class="top-bar-logo"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></a>
+  <a href="careers.html" class="back-link">← Back to Careers</a>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Now Open</div>
+    <h1>ai.moms™ Mom Ambassador</h1>
+    <div class="hero-pills">
+      <span class="pill">Flexible · Your City</span>
+      <span class="pill">For Moms</span>
+    </div>
+    <p class="hero-desc">For the mom who is the community connector in her city — and is deeply aligned with giving moms their time back while advocating for AI education for women.</p>
+  </div>
+</section>
+
+<div class="content">
+
+  <section class="section">
+    <div class="section-label">About the Role</div>
+    <h2 class="section-title">What This Is</h2>
+    <p class="body-text">ai moms™ is on a mission to retire mothers from Chief Everything Officer™ — teaching them to use AI to eliminate the invisible load of running a household, a career, and everything in between. We have a course, a community, and a growing series of mom-hosted experiences coming to cities around the world.</p>
+    <p class="body-text">To bring this to scale, we're activating a network of <strong>ai.moms™ Mom Ambassadors</strong> — moms who are community connectors in their cities, deeply aligned with our mission, and ready to introduce ai.moms™ to the women in their world.</p>
+
+    <div class="highlight-box">
+      <p>"AI is rewriting how we live and work. At ai.moms™, we're making sure mothers aren't left behind — and the only way to do that at scale is through the moms who are already leading and connecting their communities."<span class="attribution">— Raquel, founder of ai.moms™</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">This Role Is For You If</h2>
+    <ul class="item-list">
+      <li>You're a community leader and connector in your local city — moms come to you for recommendations, introductions, and the inside track on what matters</li>
+      <li>You don't need to be an AI super user — you just need to be AI-curious, ready to dive in and learn, and ready to be a cheerleader for AI education in your community</li>
+      <li>You believe deeply in giving moms their time back, and in making sure women aren't left behind as AI reshapes everything</li>
+      <li>You're comfortable sharing what you love on social media, in your group chats, in your school communities, and at the dinner table</li>
+      <li>You have the energy to gather women — host a small workshop, attend our experiences, or pull a group of friends together for a conversation</li>
+      <li>You want to be part of building something bigger than yourself, alongside other extraordinary moms</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Where We're Activating</div>
+    <h2 class="section-title">Key Markets</h2>
+    <p class="body-text">We're looking for ambassadors in cities where moms gather, lead, and shape the cultural conversation. Initial markets include:</p>
+    <ul class="item-list">
+      <li>New York City</li>
+      <li>Los Angeles</li>
+      <li>Chicago</li>
+      <li>Miami</li>
+      <li>San Francisco / Bay Area</li>
+      <li>Boston</li>
+      <li>Washington, D.C.</li>
+      <li>Atlanta</li>
+      <li>Dallas</li>
+      <li>Houston</li>
+      <li>Austin</li>
+      <li>Seattle</li>
+      <li>Denver</li>
+      <li>Detroit Metro</li>
+      <li>Nashville</li>
+      <li>Philadelphia</li>
+      <li>London</li>
+      <li>Paris</li>
+      <li>Zurich</li>
+    </ul>
+    <p class="body-text">If you're a connector mom in your city and you don't see it on this list, we still want to hear from you. We're building this everywhere extraordinary moms already are.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">The Role</div>
+    <h2 class="section-title">What You'll Do</h2>
+    <ul class="item-list">
+      <li>Share ai.moms™ authentically with your network — through social posts, group chats, school communities, and conversations</li>
+      <li>Help us bring our mom-hosted experiences to your city — by gathering a group, hosting at your home, or co-promoting a local event</li>
+      <li>Attend our workshops as our guest, so you can speak about ai.moms™ from real experience</li>
+      <li>Stay in the loop with our private ambassador community for fresh content, prompts, and updates</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">What You'll Get</h2>
+    <ul class="item-list">
+      <li><strong>A meaningful earning opportunity</strong> — whether you're a career mom or a stay-at-home mom, this is a way to earn through the work you're already doing in your community, while helping build the platform that ensures moms aren't left behind in AI</li>
+      <li><strong>Standing as the AI-literate mom in your city</strong> — you'll be the one other moms turn to when they want to learn, ask, or get started</li>
+      <li><strong>A real personal AI fluency</strong> — you'll learn to use AI in ways that genuinely change how you run your own life, before you teach anyone else</li>
+      <li><strong>A network of other extraordinary moms</strong> — connectors, builders, and community leaders across cities you'll meet, learn from, and grow with</li>
+      <li><strong>A real seat at the table</strong> — your feedback shapes what we build, where we go, and how we get there</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">About ai.moms™</h2>
+    <p class="body-text">ai.moms™ exists to retire moms around the globe from Chief Everything Officer™.</p>
+    <p class="body-text">We serve three moms with the same load: the <strong>Mom at Home</strong> drowning in the invisible work no one sees, the <strong>Mom at Work</strong> who doesn't have hours to play with new tools while her colleagues without kids do, and the <strong>Mompreneur</strong> building something real with AI as her leverage.</p>
+    <p class="body-text">The way we get there is through three pillars: real AI <strong>education</strong> that goes beyond tips and tricks, the <strong>solution</strong> of Aime — the AI Chief Everything Officer™ — plus the tools and skills that turn her into a true partner, and the <strong>community</strong> that ensures no mom carries this alone.</p>
+    <p class="body-text">Founded by Raquel Cadourcy — a mom of two with 20+ years of marketing leadership, from LVMH to CMO of luxury and lifestyle brands. AI systems architect and organizational neuroscience specialist. Built ai.moms™ because she needed it first.</p>
+  </section>
+
+  <section class="apply-block">
+    <div class="section-label">Apply</div>
+    <h2>How to Apply</h2>
+    <p class="lead">If this feels like yours, tell us your story.</p>
+    <p>Send us an email at <strong>hello@aimoms.ai</strong> and include the following:</p>
+    <ol>
+      <li>A short paragraph about you — who you are, where you live, what your mom life looks like</li>
+      <li>The communities, group chats, schools, or circles where you're most connected</li>
+      <li>Your social media handles (we want to see how you naturally show up)</li>
+      <li>Why this feels like yours</li>
+    </ol>
+    <a href="mailto:hello@aimoms.ai?subject=ai.moms Mom Ambassador — Application" class="apply-btn">Apply Now</a>
+    <p class="apply-fallback">Or email us directly at <a href="mailto:hello@aimoms.ai">hello@aimoms.ai</a></p>
+  </section>
+
+  <p class="closing-line">The most connected moms are out there. We'd love to find you.</p>
+
+</div>
+
+<footer>
+  <div class="footer-logo"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></div>
+  <p>Retire from Chief Everything Officer™ · ai.moms · hello@aimoms.ai</p>
+</footer>
+
+</body>
+</html>

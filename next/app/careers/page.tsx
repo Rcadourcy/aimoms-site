@@ -49,6 +49,18 @@ export default function CareersPage() {
           <div className="position-arrow">&rarr;</div>
         </Link>
 
+        <Link href="/mom-ambassador" className="position-row">
+          <div className="position-left">
+            <div className="position-type">Now Open &middot; For Moms</div>
+            <div className="position-title">ai.moms&#8482; Mom Ambassador</div>
+            <div className="position-pills">
+              <span className="pill">Flexible &middot; Your City</span>
+              <span className="pill">For Moms</span>
+            </div>
+          </div>
+          <div className="position-arrow">&rarr;</div>
+        </Link>
+
         <Link href="/social-intern" className="position-row">
           <div className="position-left">
             <div className="position-type">Internship &middot; For Academic Credit</div>
