@@ -78,6 +78,17 @@ She should feel seen and capable, never judged. "No stupid questions vibes. You 
 ## Non-negotiables (enforce on every change)
 - NEVER alter, replace, or remove a **Stripe Payment Link** — copy them verbatim. Money
   flow is the most protected part of this site.
+- **PROTECTED EXTERNAL WORKFLOW — course provisioning.** A Foundations purchase grants
+  course access via a chain that runs entirely OFF this website: Stripe checkout →
+  a **Make.com** scenario (Raquel's account) → (1) creates the buyer as a user in
+  **Supabase**, (2) emails them a **magic link to set a password** and enter the
+  Foundations course (hosted separately on Netlify at `aimomsfoundationscourse`). Because
+  it lives on Stripe + Make + Supabase and NOT on the marketing site, the Netlify→Vercel
+  hosting/DNS cutover does not touch it. It only breaks if a **Stripe Payment Link
+  changes** or the **Make trigger stops matching** the incoming event. So: when the
+  Foundations price/link changes, Raquel must confirm the Make scenario still fires on the
+  new link/product. Never modify or "improve" checkout in a way that alters what Stripe
+  sends. This flow is owned by Raquel — do not attempt to rebuild it on the site.
 - The **Foundations course Stripe link AND price are single config/env values** and will
   change within days (Raquel is raising the price → a new link). Swapping them must be a
   one-line edit — never hard-code or find-replace the course link across pages.
@@ -120,4 +131,10 @@ At the end of every session, Claude must:
 - **67 hotlinked `images.unsplash.com` URLs** are fragile (rate limits/policy) — being
   re-hosted into `/public`.
 - **`*-thank-you` pages double as Stripe `success_url` targets** — renaming a slug breaks
-  the post-payment redirect.
+  the post-payment redirect. Note: `success_url` only controls where the *buyer's browser*
+  lands; it does NOT trigger course provisioning. Course access is created by the Make
+  scenario off a Stripe *event*, so provisioning fires even if a buyer closes the tab
+  before the thank-you page loads.
+- **Course provisioning (Stripe → Make → Supabase user + magic-link email) is external and
+  survives cutover** — see the PROTECTED EXTERNAL WORKFLOW non-negotiable. Verify it with a
+  real/test purchase at cutover; it is not visible in this repo or Lauren's Make account.

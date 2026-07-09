@@ -6,7 +6,8 @@
 ---
 
 ## Key facts (so nobody guesses on the call)
-- **Supabase** = already Raquel's, already live (project `pzrrxtakwvspstwbvefb`). Articles + form leads tested working. No change needed.
+- **Supabase** = already Raquel's, already live (project `pzrrxtakwvspstwbvefb`). Articles + form leads tested working. No change needed. *(This same project also holds the course's buyer accounts — see the course-provisioning note below.)*
+- **Course provisioning is external and NOT part of this cutover.** When someone buys Foundations: **Stripe checkout → a Make.com scenario → (1) creates the buyer in Supabase, (2) emails them a magic link to set a password and enter the course** (hosted separately on Netlify at `aimomsfoundationscourse.netlify.app`). This chain runs on Stripe + Make + Supabase — **not on the website** — so pointing `aimoms.ai` at Vercel does not touch it. The only ways it breaks: a **Stripe Payment Link changes**, or the **Make trigger stops matching**. We don't rebuild it — we just **don't disturb the Stripe links** and **test it once end-to-end** (Step 5b). It lives in **Raquel's Make account** (owner confirms it's active).
 - **Resend** = already Raquel's account (owner `raquelcadourcy@gmail.com`). Needs the `aimoms.ai` sending domain verified (DNS records) so notifications can come from `hello@aimoms.ai`.
 - **Vercel** = the preview is currently on *Lauren's* Hobby account. Production must run on **Raquel's Vercel (Pro)** — Hobby is non-commercial.
 - **Stripe** = Raquel's. The site is already at `aimoms.ai` today and the thank-you slugs are unchanged, so success URLs should already be correct — we **verify**, not rebuild.
@@ -25,6 +26,7 @@
 - [ ] Raquel is logged in and screen-sharing: **Vercel**, **GoDaddy**, **Stripe**, **Resend** (Supabase too, just in case).
 - [ ] Raquel's **Vercel is upgraded to Pro** (paid) — required to host a commercial site. Do this now if not done.
 - [ ] **Confirm the Foundations price + Stripe link are still current.** Raquel was raising the price (new link). If it changed, Lauren updates the one line in `next/lib/commerce.ts`, rebuilds, and redeploys before launch.
+  - [ ] ⚠️ **If the Foundations link/product changed:** confirm the **Make.com course-provisioning scenario still triggers on the new link/product.** If its trigger filters by a specific Stripe product or price ID, a new product = provisioning silently stops (buyers pay but never get course access). Re-point the Make trigger if needed, then test via Step 5b. *(This risk is about the price change, not the hosting cutover.)*
 
 ## STEP 2 — Stand up production on Raquel's Vercel, via GitHub *(no user impact — temp URL only)*
 **Deploy model: GitHub-connected** — future content edits auto-deploy on push (the durable path Raquel can maintain).
@@ -69,6 +71,19 @@ Do **not** touch DNS until every box here is checked on Raquel's production temp
 - [ ] Export existing **Netlify Forms** submissions first: Netlify → the site → Forms → export CSV for each form, so no historical leads are lost. ✅ done.
 
 **If anything fails → stop, fix, re-test. Do not flip DNS.**
+
+## STEP 5b — 🎓 Verify course provisioning end-to-end *(Stripe → Make → Supabase user + magic-link email)*
+This is the one flow the Step 5 gate can't prove by "stopping at checkout," because it only fires on a **completed** purchase. It's independent of hosting, so it can be tested **any time** (even before the call) — but confirm it at least once around cutover so we KNOW buyers still get into the course.
+- [ ] Run one **completed** Foundations purchase. Cleanest: **Stripe test mode** with a test card (`4242 4242 4242 4242`). If test mode can't reach the live Make scenario, do a **real purchase and refund it** afterward (the refund does not un-provision — remove the test user from Supabase manually).
+- [ ] Confirm all four downstream effects, in order:
+  1. [ ] The **Make scenario ran** (Make → the scenario → History shows a successful run, no errors).
+  2. [ ] The **buyer appears in Supabase** (the course-user table / Auth users).
+  3. [ ] The **magic-link email arrived** at the buyer's address.
+  4. [ ] The link **sets a password and opens the Foundations course** (lands in the course on `aimomsfoundationscourse.netlify.app`).
+- [ ] Also sanity-check the **safety-net fallback**: from `…/foundations-thank-you`, the "Go to my course" button opens the course host, and "Forgot password" there re-sends access for an already-provisioned buyer.
+- [ ] Clean up any test user created in Supabase.
+
+**Why this is safe re: cutover:** none of the four steps above touch `aimoms.ai` hosting or DNS — so the flip in Step 6 does not change any of it. We test only to confirm the pre-existing Make scenario is healthy.
 
 ## STEP 6 — DNS cutover on GoDaddy *(the actual switch)*
 - [ ] In Raquel's Vercel project → **Settings → Domains → Add `aimoms.ai`** (and `www.aimoms.ai`). Vercel will display the exact records to set.
