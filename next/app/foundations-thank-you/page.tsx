@@ -29,6 +29,10 @@ export default function FoundationsThankYouPage() {
             <div className="date-label">Your course access</div>
             <div className="date-headline">Instant access.</div>
             <p className="date-sub">Self-paced. Your course is yours to revisit as often as you want.</p>
+            {/* Safety-net access link: the welcome email (below) is the primary path, but this
+                button guarantees a way in even if that email is slow or lands in spam. */}
+            <a href="https://aimomsfoundationscourse.netlify.app" className="course-access-link" rel="noopener">Go to my course</a>
+            <p className="date-sub" style={{ marginTop: 12, fontSize: '0.85em' }}>Your welcome email has a link to set your password and get into the course. Didn&rsquo;t get it? Check spam &mdash; or on the course login screen tap <strong>&ldquo;Forgot password&rdquo;</strong> to have it re-sent to the email you paid with. Still stuck? Email <a href="mailto:hello@aimoms.ai">hello@aimoms.ai</a>.</p>
           </div>
 
           <div className="next-block">
