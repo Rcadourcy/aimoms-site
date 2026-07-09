@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { STRIPE_LINKS, PRICES } from '@/lib/commerce';
+import { STRIPE_LINKS, PRICES, WORKSHOP } from '@/lib/commerce';
 import { trackFbq } from './TrackedLink';
 
 function formatPhone(value: string): string {
@@ -66,6 +66,9 @@ export default function WorkshopRegisterForm() {
   return (
     <form ref={formRef} name="workshop-signup" onSubmit={handleSubmit} noValidate>
       <input type="hidden" name="form-name" value="workshop-signup" />
+      {/* Which workshop this signup is for — lets the /admin view group by workshop.
+          Single config value in lib/commerce.ts (WORKSHOP.date), updated monthly. */}
+      <input type="hidden" name="workshop_date" value={WORKSHOP.date} />
 
       <p className="hp-field">
         <label>

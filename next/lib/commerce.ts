@@ -18,6 +18,17 @@ export const STRIPE_LINKS = {
   bundle: 'https://buy.stripe.com/14A7sN92gfYVffj350dZ60b',
 } as const;
 
+/**
+ * The current Monthly Workshop instance. Raquel updates `date` each month — the SAME
+ * value she already changes on the workshop sales page ("Next workshop: …"). It is
+ * stamped onto every workshop registration (hidden `workshop_date` field) so the /admin
+ * signups view can group registrations by which workshop they're for. Keep it a single
+ * config value — never hard-code the date into the form.
+ */
+export const WORKSHOP = {
+  date: 'Thursday, July 9, 2026 · 10:00am ET',
+} as const;
+
 export const PRICES = {
   foundations: 247, // founding-member price (will rise — change here only)
   foundationsStandard: 497, // strikethrough anchor
