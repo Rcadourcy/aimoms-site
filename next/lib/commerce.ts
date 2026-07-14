@@ -19,14 +19,21 @@ export const STRIPE_LINKS = {
 } as const;
 
 /**
- * The current Monthly Workshop instance. Raquel updates `date` each month — the SAME
- * value she already changes on the workshop sales page ("Next workshop: …"). It is
- * stamped onto every workshop registration (hidden `workshop_date` field) so the /admin
- * signups view can group registrations by which workshop they're for. Keep it a single
- * config value — never hard-code the date into the form.
+ * The current Workshop instance. Raquel updates these each time a new workshop opens (the
+ * date mirrors the "Next workshop: …" line on the sales page). All three are stamped onto
+ * every registration (hidden fields) so the /admin signups view groups registrations by
+ * the specific workshop — its date AND place — and shows the format + location. Keep them
+ * config values; never hard-code into the form.
+ *
+ *  - `format`   : 'Virtual (Zoom)' for the monthly Zoom workshop, or 'In person' for an
+ *                 in-person workshop.
+ *  - `location` : 'Zoom' when virtual; the city (and optional venue) when in person,
+ *                 e.g. 'Bloomfield Hills, MI' or 'Miami · The Standard'.
  */
 export const WORKSHOP = {
   date: 'Thursday, July 9, 2026 · 10:00am ET',
+  format: 'Virtual (Zoom)',
+  location: 'Zoom',
 } as const;
 
 export const PRICES = {

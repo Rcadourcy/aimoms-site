@@ -55,6 +55,10 @@
 .admin-group-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 10px; padding-left: 2px; }
 .admin-group-title { font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 800; color: var(--navy); letter-spacing: -0.01em; }
 .admin-group-count { font-size: 12px; font-weight: 700; color: var(--pink); text-transform: uppercase; letter-spacing: 0.08em; }
+/* Format badge (Virtual vs In person) + location on each workshop group header. */
+.admin-badge { font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; background: #eef0ff; color: #4a4fce; white-space: nowrap; }
+.admin-badge.is-inperson { background: #ffe9f8; color: #c0398f; }
+.admin-group-loc { font-size: 13px; font-weight: 600; color: var(--gray-600); white-space: nowrap; }
 
 /* Table */
 .admin-table-wrap { overflow-x: auto; border: 1px solid var(--gray-200); border-radius: 14px; }

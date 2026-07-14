@@ -11,6 +11,14 @@ export type Submission = {
   created_at: string;
 };
 
+type WorkshopGroup = {
+  key: string;
+  date: string;
+  format: string;
+  location: string;
+  rows: Submission[];
+};
+
 // Friendly labels for the raw form-name values (matches the API allowlist).
 const FORM_LABELS: Record<string, string> = {
   'workshop-signup': 'Monthly Workshop',
@@ -29,8 +37,12 @@ function labelFor(form: string): string {
   return FORM_LABELS[form] ?? form;
 }
 
-// Fields already shown in their own columns, or noise — hidden from the "Details" cell.
-const HIDDEN_DETAIL_KEYS = new Set(['email', 'name', 'first_name', 'last_name', 'form-name', 'bot-field']);
+// Fields already shown in their own columns / group header, or noise — hidden from the
+// "Details" cell. (workshop_date/format/location surface in the workshop group header.)
+const HIDDEN_DETAIL_KEYS = new Set([
+  'email', 'name', 'first_name', 'last_name', 'form-name', 'bot-field',
+  'workshop_date', 'format', 'location', '_test',
+]);
 
 function fmtDate(iso: string): string {
   const d = new Date(iso);
@@ -66,7 +78,7 @@ function csvEscape(v: unknown): string {
 function downloadCsv(rows: Submission[], filename: string): void {
   const dataKeys = new Set<string>();
   rows.forEach((r) => Object.keys(r.data ?? {}).forEach((k) => {
-    if (k !== 'form-name' && k !== 'bot-field') dataKeys.add(k);
+    if (k !== 'form-name' && k !== 'bot-field' && k !== '_test') dataKeys.add(k);
   }));
   const cols = ['submitted_at', 'form', 'name', 'email', ...[...dataKeys]];
   const lines = [cols.map(csvEscape).join(',')];
@@ -125,19 +137,24 @@ export default function AdminDashboard({
     });
   }, [rows, activeForm, query]);
 
-  // For the workshop view, break the list into groups by which workshop they signed up for.
-  const groups = useMemo(() => {
+  // For the workshop view, break the list into groups by the specific workshop — a
+  // workshop instance is a unique date + place, so the same date in two cities stays
+  // separate. Each group carries its format + location for the header.
+  const groups = useMemo<WorkshopGroup[]>(() => {
     if (activeForm !== 'workshop-signup') {
-      return [{ key: '', label: '', rows: filtered }];
+      return [{ key: '', date: '', format: '', location: '', rows: filtered }];
     }
-    const byWorkshop = new Map<string, Submission[]>();
+    const map = new Map<string, WorkshopGroup>();
     for (const r of filtered) {
-      const wd = (r.data?.workshop_date as string) || 'Workshop not specified';
-      if (!byWorkshop.has(wd)) byWorkshop.set(wd, []);
-      byWorkshop.get(wd)!.push(r);
+      const date = (r.data?.workshop_date as string) || 'Workshop not specified';
+      const location = (r.data?.location as string) || '';
+      const format = (r.data?.format as string) || '';
+      const key = `${date}||${location}`;
+      if (!map.has(key)) map.set(key, { key, date, format, location, rows: [] });
+      map.get(key)!.rows.push(r);
     }
     // Most-recent submission first determines group order.
-    return [...byWorkshop.entries()].map(([key, gRows]) => ({ key, label: key, rows: gRows }));
+    return [...map.values()];
   }, [filtered, activeForm]);
 
   const csvName = `aimoms-${activeForm === 'all' ? 'all-signups' : activeForm}.csv`;
@@ -219,9 +236,17 @@ export default function AdminDashboard({
       {/* Results */}
       {groups.map((group) => (
         <section key={group.key || 'all'} className="admin-group">
-          {group.label && (
+          {group.date && (
             <div className="admin-group-head">
-              <h2 className="admin-group-title">{group.label}</h2>
+              <h2 className="admin-group-title">{group.date}</h2>
+              {group.format && (
+                <span className={`admin-badge${/person/i.test(group.format) ? ' is-inperson' : ''}`}>
+                  {group.format}
+                </span>
+              )}
+              {group.location && group.location.toLowerCase() !== 'zoom' && (
+                <span className="admin-group-loc">📍 {group.location}</span>
+              )}
               <span className="admin-group-count">
                 {group.rows.length} signup{group.rows.length === 1 ? '' : 's'}
               </span>
