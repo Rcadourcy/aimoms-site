@@ -18,6 +18,24 @@ export const STRIPE_LINKS = {
   bundle: 'https://buy.stripe.com/14A7sN92gfYVffj350dZ60b',
 } as const;
 
+/**
+ * The current Workshop instance. Raquel updates these each time a new workshop opens (the
+ * date mirrors the "Next workshop: …" line on the sales page). All three are stamped onto
+ * every registration (hidden fields) so the /admin signups view groups registrations by
+ * the specific workshop — its date AND place — and shows the format + location. Keep them
+ * config values; never hard-code into the form.
+ *
+ *  - `format`   : 'Virtual (Zoom)' for the monthly Zoom workshop, or 'In person' for an
+ *                 in-person workshop.
+ *  - `location` : 'Zoom' when virtual; the city (and optional venue) when in person,
+ *                 e.g. 'Bloomfield Hills, MI' or 'Miami · The Standard'.
+ */
+export const WORKSHOP = {
+  date: 'Thursday, July 9, 2026 · 10:00am ET',
+  format: 'Virtual (Zoom)',
+  location: 'Zoom',
+} as const;
+
 export const PRICES = {
   foundations: 247, // founding-member price (will rise — change here only)
   foundationsStandard: 497, // strikethrough anchor

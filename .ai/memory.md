@@ -120,3 +120,103 @@ Deploy status: Live on Netlify; not yet on Vercel.
 
 ## Errors fixed — don't repeat these
 (None yet.)
+
+## Session — 2026-07-06
+- Traced the Foundations purchase flow: foundations-register.html (Netlify capture) →
+  Stripe payment link → foundations-thank-you.html (success_url, fires Meta Purchase
+  pixel). The thank-you page does NOT link/redirect to the course player; access is
+  delivered out-of-band by a welcome email from hello@aimoms.ai (set password → player).
+  No email automation lives in this repo — confirm it survives the Vercel cutover.
+- Added a visible "Go to my course" safety-net access button on BOTH thank-you pages
+  (root foundations-thank-you.html reusing .cta-link; next/app/foundations-thank-you
+  page.tsx + new .course-access-link class in foundations-thank-you.css). Links to the
+  course host root https://aimomsfoundationscourse.netlify.app (NOT the deep
+  /foundations-player.html — host root handles first-time set-password + returning login).
+  Money flow (Stripe links) and Meta Pixel untouched. next tsc --noEmit passes.
+- Next step: confirm the post-purchase welcome-email automation (Stripe/Netlify/Make?) and
+  where its link lands; decide whether to point the button at /foundations-player.html
+  directly once the auth/set-password flow is known. Migrated foundations-course page is
+  still a noindex placeholder pending Raquel's approval to add a nav slot.
+
+## Session — 2026-07-07 (forms notifications + signups admin)
+FINDINGS
+- Welcome-email automation is NOT in the repo and NOT in Lauren's Make account (only 3
+  scenarios there: LinkedIn x2 + Notion — none touch ai.moms). It lives on Raquel's side
+  (Stripe/Netlify Identity on the course host, or a manual invite). STILL UNVERIFIED —
+  must ask Raquel: "When someone pays for Foundations, what actually sends the login
+  email, and is it automatic?" The /admin dashboard already shows a live test submission
+  (lea129psu@gmail.com), so Supabase IS provisioned/connected despite CLAUDE.md's stale
+  "not provisioned yet" note.
+- Forms pipeline was ALREADY built by a prior session: app/api/forms/[form]/route.ts
+  (Supabase submissions insert + Resend notify + honeypot + purchase-safe redirect), the
+  submissions table migration (20260623000001_init.sql, RLS-locked, service-role only),
+  and every register form component POSTs to it. The "TODO(phase4)" comment in
+  WorkshopRegisterForm is stale — it already hits the real route.
+
+BUILT THIS SESSION
+- Per-workshop grouping: added WORKSHOP.date to lib/commerce.ts (single monthly config,
+  mirrors the sales-page date) + hidden `workshop_date` field in WorkshopRegisterForm.
+  Stored in submissions.data (no schema change). Admin groups workshop signups by it.
+- /admin signups view (recreates the Netlify Forms tab, friendlier): app/admin/page.tsx
+  (server, force-dynamic, service-role fetch), AdminLogin.tsx, AdminDashboard.tsx (client:
+  per-form tabs w/ counts, search, per-workshop groups, CSV export), admin.css.
+- Gate: lib/admin-auth.ts + app/api/admin/login|logout routes. Single ADMIN_PASSWORD env
+  (added empty to .env.local), httpOnly cookie = SHA-256 of password (raw pw never in
+  browser). Simple internal gate — upgrade to Supabase Auth later. NOT per-user auth.
+- Safety-net "Go to my course" button added last session to BOTH thank-you pages still in.
+- Verified: tsc --noEmit clean, next build clean (/admin + /api/admin/* are dynamic),
+  and a live end-to-end run (login/wrong-pw/logout + dashboard rendered the real test row).
+
+NEXT STEP
+- Raquel to (1) confirm the welcome-email automation + where its link lands, (2) pick an
+  ADMIN_PASSWORD and set it in Vercel env (and .env.local for local). Optional: wire the
+  workshop sales-page date to WORKSHOP.date so it's truly one edit/month. Also flagged:
+  WorkshopRegisterForm fires InitiateCheckout with content_name "Foundations - Form
+  Complete" (copy-paste leftover) — correct before launch.
+
+## Session — 2026-07-07b (course-provisioning workflow confirmed + cutover-protected)
+CONFIRMED BY RAQUEL — the real course-access flow:
+  Stripe checkout → a Make.com scenario (Raquel's Make account) that (1) creates the buyer
+  as a user in Supabase, (2) emails a magic link to set a password and enter the course
+  (hosted on Netlify at aimomsfoundationscourse.netlify.app).
+KEY INSIGHT: this chain runs on Stripe + Make + Supabase, NOT on the website. So the
+  Netlify→Vercel cutover CANNOT interrupt it. It only breaks if (a) a Stripe Payment Link
+  changes, or (b) the Make trigger stops matching the Stripe event. success_url only steers
+  the buyer's browser to the thank-you page — it does NOT trigger provisioning (Make fires
+  off the Stripe event, so access is granted even if the buyer closes the tab).
+  Supabase is the SAME live project (pzrrxtakwvspstwbvefb) that holds articles + form
+  submissions — course buyer accounts live there too. Don't let migrations/RLS touch the
+  course/auth tables. The Make scenario is NOT in this repo and NOT in Lauren's Make acct.
+DID THIS SESSION:
+- CLAUDE.md: added "PROTECTED EXTERNAL WORKFLOW — course provisioning" non-negotiable +
+  two Known-gotcha notes (success_url ≠ provisioning trigger; verify at cutover).
+- CUTOVER-CHECKLIST.md: added key fact; a price-raise warning (if Foundations product/price
+  changes, confirm Make trigger still matches or provisioning silently stops); and new
+  STEP 5b — verify provisioning end-to-end via a completed test purchase (Stripe test card
+  4242…, or real+refund), confirming Make ran → Supabase user → magic-link email → password
+  set → course opens. Cleanup test user.
+- Rewrote the safety-net note on BOTH thank-you pages (root html + next tsx) to match the
+  real flow: welcome email has the set-password link; if missing, use "Forgot password" on
+  the course login (works because Make already created the account) or email hello@aimoms.ai.
+- Verified: tsc --noEmit clean.
+NEXT STEP:
+- At cutover, run STEP 5b once to prove provisioning is healthy. Raquel to set ADMIN_PASSWORD
+  in Vercel env for the /admin signups view. Optional pre-launch: fix WorkshopRegisterForm
+  InitiateCheckout content_name leftover ("Foundations - Form Complete"); wire workshop
+  sales-page date to WORKSHOP.date.
+
+## Session — 2026-07-14 (in-person workshop support)
+- Workshop taxonomy (from site menu): Monthly Workshop = virtual/Zoom $68; in-person
+  events are city-based ($150, tags In Person/Virtual/Int'l/Day Retreat/Date TBC) and today
+  route to external rsvp.aimoms.ai/<city>/ links. Raquel confirmed in-person workshops are
+  coming through the registration flow.
+- Added `format` + `location` to WORKSHOP config (lib/commerce.ts) — single values updated
+  per workshop. Stamped onto each registration via hidden fields in WorkshopRegisterForm.
+  Admin now groups workshop-signup by composite key (date + location) so same date in two
+  cities stays separate; group header shows a format badge (Virtual/In person) + 📍location;
+  CSV includes the new fields. Hid workshop_date/format/location/_test from row chips.
+- Deployed to https://aimoms-preview.vercel.app (prod on the aimoms-preview test project;
+  real aimoms.ai still on Netlify, untouched). Re-seeded 41 test rows tagged
+  data._test='seed-2026-07b' (6 workshops: 3 virtual + 3 in-person w/ venues). Cleanup:
+  DELETE submissions where data->>_test = 'seed-2026-07b'. Commit 600c88c.
+- ADMIN_PASSWORD on Vercel = 1234 (TEMP — change before real/production use).
