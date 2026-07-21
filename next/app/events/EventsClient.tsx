@@ -52,8 +52,6 @@ export default function EventsClient() {
   // Whether each section has any visible cards (for the empty-note).
   const programsHasVisible = ['virtual', 'virtual', 'inperson'].some((t) => visible(t as CardType));
   const eventsTypes: CardType[] = [
-    'inperson',
-    'virtual',
     'virtual',
     'virtual',
     'virtual',
@@ -165,42 +163,6 @@ export default function EventsClient() {
               Tap any city to RSVP. New dates are added all the time &mdash; some are still firming up.
             </p>
             <div className="event-list">
-              <CardLink href="https://rsvp.aimoms.ai/paris/" className="event-row" type="inperson" hidden={!visible('inperson')}>
-                <span className="date-chip">
-                  <span className="m">JUN</span>
-                  <span className="d">30</span>
-                </span>
-                <span className="event-main">
-                  <span className="dow">Tue</span>
-                  <span className="event-city">Paris</span>
-                  <span className="event-sub">ai.moms&#8482; &agrave; Paris &middot; $150 per seat</span>
-                  <span className="event-loc">&#9679; Paris, France</span>
-                  <span className="tagrow">
-                    <span className="tag">In Person</span>
-                    <span className="tag virtual">International</span>
-                  </span>
-                </span>
-                <span className="event-cta">Join the waitlist &rarr;</span>
-              </CardLink>
-
-              <CardLink href="/membership" className="event-row" type="virtual" hidden={!visible('virtual')}>
-                <span className="date-chip">
-                  <span className="m">JUL</span>
-                  <span className="d">21</span>
-                </span>
-                <span className="event-main">
-                  <span className="dow">Tue</span>
-                  <span className="event-city">Mom Member Get-Togethers</span>
-                  <span className="event-sub">12:00pm ET &middot; live on Zoom</span>
-                  <span className="event-loc">&#9679; Live on Zoom</span>
-                  <span className="tagrow">
-                    <span className="tag virtual">Virtual</span>
-                    <span className="tag">Members</span>
-                  </span>
-                </span>
-                <span className="event-cta">Join membership &rarr;</span>
-              </CardLink>
-
               <CardLink href="/membership" className="event-row" type="virtual" hidden={!visible('virtual')}>
                 <span className="date-chip">
                   <span className="m">AUG</span>
