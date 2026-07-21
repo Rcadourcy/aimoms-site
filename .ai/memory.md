@@ -204,3 +204,19 @@ NEXT STEP:
   in Vercel env for the /admin signups view. Optional pre-launch: fix WorkshopRegisterForm
   InitiateCheckout content_name leftover ("Foundations - Form Complete"); wire workshop
   sales-page date to WORKSHOP.date.
+
+## Session — 2026-07-14 (in-person workshop support)
+- Workshop taxonomy (from site menu): Monthly Workshop = virtual/Zoom $68; in-person
+  events are city-based ($150, tags In Person/Virtual/Int'l/Day Retreat/Date TBC) and today
+  route to external rsvp.aimoms.ai/<city>/ links. Raquel confirmed in-person workshops are
+  coming through the registration flow.
+- Added `format` + `location` to WORKSHOP config (lib/commerce.ts) — single values updated
+  per workshop. Stamped onto each registration via hidden fields in WorkshopRegisterForm.
+  Admin now groups workshop-signup by composite key (date + location) so same date in two
+  cities stays separate; group header shows a format badge (Virtual/In person) + 📍location;
+  CSV includes the new fields. Hid workshop_date/format/location/_test from row chips.
+- Deployed to https://aimoms-preview.vercel.app (prod on the aimoms-preview test project;
+  real aimoms.ai still on Netlify, untouched). Re-seeded 41 test rows tagged
+  data._test='seed-2026-07b' (6 workshops: 3 virtual + 3 in-person w/ venues). Cleanup:
+  DELETE submissions where data->>_test = 'seed-2026-07b'. Commit 600c88c.
+- ADMIN_PASSWORD on Vercel = 1234 (TEMP — change before real/production use).
