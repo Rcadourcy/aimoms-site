@@ -2,31 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from 'react';
 import Link from 'next/link';
-
-/* ── Carousel slides ── */
-const SLIDES = [
-  {
-    img: '/img-unsplash-23.jpg',
-    eyebrow: "MOTHER'S DAY",
-    title: "What Every Mom Actually Wants for Mother's Day",
-    desc: 'Not another thing to find a place for on a shelf. Not a 3-hour spa day. She wants her time back — and herself back.',
-    id: 'mothers-day',
-  },
-  {
-    img: '/img-unsplash-21.jpg',
-    eyebrow: 'HOME',
-    title: 'Every Way to Use AI for Meal Planning — Ranked',
-    desc: 'Apps, one-off prompts, micro-tools, and the five-minute method that changed dinnertime forever.',
-    id: 'meal-planning',
-  },
-  {
-    img: '/img-unsplash-13.jpg',
-    eyebrow: 'NEUROSCIENCE',
-    title: "Your Brain Wasn't Built for 300 Decisions a Day",
-    desc: 'The science behind the mental load — and why AI is the only fix that actually makes sense.',
-    id: 'neuroscience-mental-load',
-  },
-];
+import { seededShuffle, rotateWindow } from '@/lib/rotation';
 
 const CATS = [
   { key: 'ALL', label: 'ALL' },
@@ -151,6 +127,22 @@ const NEUROSCIENCE: Story[] = [
   { id: 'delegation-science', cat: 'NEUROSCIENCE', catLabel: 'NEUROSCIENCE', img: '/img/articles/photo-1552664730-d307ca884978-w600.jpg', alt: 'Woman presenting confidently at a whiteboard to a small attentive group', title: 'The Science Behind Why Delegation Feels So Hard — And How AI Rewires It', desc: 'Perfectionism, over-responsibility, the hypervigilance loop. The neuroscience of why letting go is hard — and how AI gives you a guilt-free exit.' },
 ];
 
+/* Every story, in a fixed canonical order. The weekly hero window slides across
+   this whole list, so over time every article gets its turn in the spotlight. */
+const ALL_STORIES: Story[] = [
+  ...AI_101, ...HOME, ...SEASONAL, ...MILESTONES, ...WORK, ...TOOLS, ...NEUROSCIENCE,
+];
+
+/* The category lists, in the order they appear down the page. Each is reshuffled
+   weekly with its own seed offset so no two categories rearrange in lockstep. */
+const CATEGORY_SECTIONS: Story[][] = [AI_101, HOME, SEASONAL, MILESTONES, WORK, TOOLS, NEUROSCIENCE];
+
+type Slide = { img: string; eyebrow: string; title: string; desc: string; id: string };
+
+function toSlide(s: Story): Slide {
+  return { img: s.img, eyebrow: s.catLabel, title: s.title, desc: s.desc, id: s.id };
+}
+
 function CtaStrip({ visible, children }: { visible: boolean; children: ReactNode }) {
   return (
     <div className="cta-strip" style={visible ? undefined : { display: 'none' }}>
@@ -159,15 +151,25 @@ function CtaStrip({ visible, children }: { visible: boolean; children: ReactNode
   );
 }
 
-export default function EditorialClient() {
+export default function EditorialClient({ weekSeed }: { weekSeed: number }) {
   const [current, setCurrent] = useState(0);
   const [cat, setCat] = useState('ALL');
+
+  // ── Weekly rotation ──────────────────────────────────────────────
+  // The hero features 3 stories that slide across the whole library each week,
+  // and every category is reshuffled with its own seed — so the entire page
+  // rearranges when the week rolls over. All computed from `weekSeed` (passed
+  // from the server) so server and client render identically.
+  const SLIDES = rotateWindow(ALL_STORIES, 3, weekSeed).map(toSlide);
+  const sections = CATEGORY_SECTIONS.map((list, i) => seededShuffle(list, weekSeed + i * 101 + 7));
+  const [aiRows, homeRows, seasonalRows, milestonesRows, workRows, toolsRows, neuroRows] = sections;
 
   // Auto-advance carousel every 7s.
   useEffect(() => {
     const t = setInterval(() => setCurrent((c) => (c + 1) % SLIDES.length), 7000);
     return () => clearInterval(t);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [SLIDES.length]);
 
   const show = (storyCat: string) => cat === 'ALL' || storyCat === cat;
   const ctaVisible = cat === 'ALL';
@@ -238,7 +240,7 @@ export default function EditorialClient() {
       {/* ARTICLES */}
       <section className="stories">
         {/* AI 101 */}
-        {renderRows(AI_101)}
+        {renderRows(aiRows)}
 
         <CtaStrip visible={ctaVisible}>
           <div>
@@ -249,10 +251,10 @@ export default function EditorialClient() {
         </CtaStrip>
 
         {/* HOME */}
-        {renderRows(HOME)}
+        {renderRows(homeRows)}
 
         {/* SEASONAL */}
-        {renderRows(SEASONAL)}
+        {renderRows(seasonalRows)}
 
         <CtaStrip visible={ctaVisible}>
           <div>
@@ -263,7 +265,7 @@ export default function EditorialClient() {
         </CtaStrip>
 
         {/* MILESTONES */}
-        {renderRows(MILESTONES)}
+        {renderRows(milestonesRows)}
 
         <CtaStrip visible={ctaVisible}>
           <div>
@@ -274,13 +276,13 @@ export default function EditorialClient() {
         </CtaStrip>
 
         {/* WORK */}
-        {renderRows(WORK)}
+        {renderRows(workRows)}
 
         {/* TOOLS & AIME */}
-        {renderRows(TOOLS)}
+        {renderRows(toolsRows)}
 
         {/* NEUROSCIENCE */}
-        {renderRows(NEUROSCIENCE)}
+        {renderRows(neuroRows)}
 
         {/* FINAL CTA */}
         <CtaStrip visible={ctaVisible}>

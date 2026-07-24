@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import EditorialClient from './EditorialClient';
 import FloatingQuizCTA from '@/components/FloatingQuizCTA';
+import { currentWeekIndex } from '@/lib/rotation';
 import '../editorial.css';
 
 export const metadata: Metadata = {
@@ -25,10 +26,15 @@ export const metadata: Metadata = {
   },
 };
 
+// Recompute the weekly rotation seed on every request (the page is dynamic), so The
+// Edit rearranges itself the moment the week rolls over — no cron, no rebuild needed.
+export const dynamic = 'force-dynamic';
+
 export default function EditorialPage() {
+  const weekSeed = currentWeekIndex();
   return (
     <div className="page-editorial">
-      <EditorialClient />
+      <EditorialClient weekSeed={weekSeed} />
       <FloatingQuizCTA />
     </div>
   );
