@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import InstagramFeed from '@/components/InstagramFeed';
 import '../community.css';
 
 export const metadata: Metadata = {
@@ -143,6 +144,9 @@ export default function CommunityPage() {
           </div>
         </div>
       </section>
+
+      {/* INSTAGRAM FEED */}
+      <InstagramFeed handle="aimoms" />
 
       {/* FINAL CTA */}
       <section className="final-cta">
