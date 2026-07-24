@@ -25,13 +25,20 @@ const DEFAULT_POSTS: IgPost[] = [
 ];
 
 export default function InstagramFeed({
-  handle = 'aimoms',
+  handle = 'aimoms.ai',
   profileUrl,
   posts = DEFAULT_POSTS,
+  widgetSrc,
 }: {
   handle?: string;
   profileUrl?: string;
   posts?: IgPost[];
+  /**
+   * When set, renders the live Instagram widget (e.g. a SnapWidget/Behold iframe URL)
+   * instead of the static brand-image grid. Paste the embed URL from the widget
+   * provider here and the feed goes live — no other change needed.
+   */
+  widgetSrc?: string;
 }) {
   const url = profileUrl ?? `https://www.instagram.com/${handle}/`;
   return (
@@ -45,6 +52,11 @@ export default function InstagramFeed({
           The tools, the wins, and the mom-life realness. Follow along &mdash; and tag us in what you build.
         </p>
 
+        {widgetSrc ? (
+          <div className="ig-widget">
+            <iframe src={widgetSrc} title={`@${handle} on Instagram`} loading="lazy" />
+          </div>
+        ) : (
         <div className="ig-grid">
           {posts.map((p, i) => (
             <a
@@ -67,6 +79,7 @@ export default function InstagramFeed({
             </a>
           ))}
         </div>
+        )}
 
         <div className="ig-cta-row">
           <Link href={url} className="cta-pink" target="_blank" rel="noopener noreferrer">

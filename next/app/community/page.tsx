@@ -145,8 +145,8 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* INSTAGRAM FEED */}
-      <InstagramFeed handle="aimoms" />
+      {/* INSTAGRAM FEED — pass widgetSrc="<SnapWidget/Behold embed URL>" to go live */}
+      <InstagramFeed handle="aimoms.ai" />
 
       {/* FINAL CTA */}
       <section className="final-cta">
