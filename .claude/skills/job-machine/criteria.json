@@ -1,0 +1,77 @@
+{
+  "_readme": "This is the ONLY file you need to edit to retune the job machine. Change a number, save, done.",
+
+  "candidate": {
+    "name": "Raquel V. Cadourcy",
+    "email": "raquelcadourcy@gmail.com",
+    "current_title": "Chief Marketing Officer",
+    "level": "C-suite / SVP",
+    "resume_file": "resume.md"
+  },
+
+  "search": {
+    "_note": "Each title below becomes its own Indeed search. Add or remove freely.",
+    "titles": [
+      "Chief Marketing Officer",
+      "VP Marketing",
+      "SVP Marketing",
+      "Chief Brand Officer",
+      "Chief Growth Officer",
+      "EVP Marketing"
+    ],
+    "locations": ["remote"],
+    "country_code": "US",
+    "job_type": "fulltime"
+  },
+
+  "hard_filters": {
+    "_note": "A job failing ANY of these is dropped before it costs a detail lookup. No judgement calls.",
+    "min_salary": 250000,
+    "salary_unknown_action": "keep",
+    "_salary_unknown_note": "'keep' = senior roles often hide comp; don't lose them. Set to 'drop' to be strict.",
+    "max_days_since_posted": 45,
+    "exclude_title_keywords": [
+      "sales",
+      "account executive",
+      "intern",
+      "assistant",
+      "coordinator",
+      "manager, ",
+      "director of sales"
+    ],
+    "exclude_companies": [],
+    "_exclude_companies_note": "Add any employer you never want to see. Current employer NATIVO belongs here if this search is confidential."
+  },
+
+  "scoring": {
+    "_note": "Weights must total 100. See references/scoring.md for what each one means.",
+    "weights": {
+      "seniority_match": 30,
+      "industry_match": 25,
+      "compensation": 20,
+      "remote_and_flexibility": 15,
+      "company_quality": 10
+    },
+    "draft_threshold": 70,
+    "_draft_threshold_note": "Only jobs scoring at or above this get a written application. Raise it to get fewer, better packages."
+  },
+
+  "industries": {
+    "_note": "Used by industry_match scoring. Pulled from the resume's actual track record.",
+    "strong": ["luxury", "lifestyle", "media", "martech", "adtech", "beauty", "fashion", "consumer brand"],
+    "acceptable": ["saas", "ecommerce", "publishing", "agency", "wellness", "education"],
+    "weak": ["heavy industry", "defense", "logistics", "agriculture", "insurance"]
+  },
+
+  "application": {
+    "_note": "Controls what the machine is permitted to do without asking. See SKILL.md Step 6.",
+    "auto_submit_enabled": false,
+    "_auto_submit_note": "MASTER SWITCH. Stays false until a real send capability exists AND Raquel flips it. When false, every application stops at a saved draft.",
+    "allowed_auto_submit_channels": [],
+    "_channels_note": "Only ever add a channel where programmatic submission is explicitly permitted by that service. Job-board portals (Indeed, LinkedIn, Workday, Greenhouse UI) are NOT eligible - automating those violates their terms and gets the account banned.",
+    "daily_application_cap": 5,
+    "_cap_note": "Hard ceiling per run. Executive search is won on precision, not volume."
+  },
+
+  "tracker_file": "applications.md"
+}

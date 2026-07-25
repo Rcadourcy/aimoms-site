@@ -220,3 +220,24 @@ NEXT STEP:
   data._test='seed-2026-07b' (6 workshops: 3 virtual + 3 in-person w/ venues). Cleanup:
   DELETE submissions where data->>_test = 'seed-2026-07b'. Commit 600c88c.
 - ADMIN_PASSWORD on Vercel = 1234 (TEMP — change before real/production use).
+
+## Session — 2026-07-25 (job machine — personal tool, not site)
+- Built `/job-machine` skill at `.claude/skills/job-machine/` — Raquel's personal executive
+  job search. NOT an ai.moms feature; must never be linked from or deployed with the site.
+- Pipeline: Indeed search across title variants → hard filters (salary floor, age, excluded
+  titles/companies, dedupe vs tracker) → detail lookup → 100-pt weighted score → tailored
+  cover letter + resume angle → Gmail draft → log to applications.md.
+- All tuning in one file: `criteria.json` (min_salary 250000, draft_threshold 70, cap 5).
+- Auto-submit is OFF and gated behind `auto_submit_enabled` + an empty allow-list.
+  Discovered: Indeed MCP has search/details/resume but NO apply tool; Gmail MCP has
+  create_draft but NO send. So there is currently no wire to submit down. Portal apply
+  (Indeed/LinkedIn/Workday/Greenhouse) is permanently barred — ToS + account risk. Only a
+  posting that publishes an application email can ever qualify.
+- Validated against real data: 20 results for CMO/VP Marketing, only 3 clear the $250k floor
+  (Prosper $268-362k, Group1001 $250-350k, BLOOM $225-275k). One "CMO" posting paid $30k.
+- `resume.md` is a deliberate placeholder — the skill HALTS on it so nothing gets fabricated.
+- Noted: Indeed profile resume is OCR-damaged (`Gr\` owth`, `Lu xur y D ail y`) — that's what
+  employers see on Indeed applies; worth fixing at profile.indeed.com.
+NEXT STEP:
+- Raquel to supply the real resume (she was mid-message telling me where it is). Drop it into
+  `.claude/skills/job-machine/resume.md`, then run `/job-machine` for a first live pass.
