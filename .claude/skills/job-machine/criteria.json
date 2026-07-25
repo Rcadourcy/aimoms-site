@@ -18,11 +18,8 @@
       "resume_file": "resume-marketing.md",
       "titles": [
         "Chief Marketing Officer",
-        "VP Marketing",
         "SVP Marketing",
-        "Chief Brand Officer",
-        "Chief Growth Officer",
-        "EVP Marketing"
+        "VP Marketing"
       ]
     },
     "ops": {
@@ -30,11 +27,9 @@
       "resume_file": "resume-ops.md",
       "titles": [
         "Chief Operating Officer",
-        "COO",
-        "VP Operations",
+        "Chief of Staff",
         "SVP Operations",
-        "Chief Transformation Officer",
-        "Chief of Staff to the CEO"
+        "VP Operations"
       ]
     }
   },
