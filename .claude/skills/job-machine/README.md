@@ -14,13 +14,17 @@ That's the whole thing. It searches, filters, scores, writes, and reports back.
 
 ## What it does each run
 
-1. Searches Indeed for every title in your list
-2. Throws out anything under your salary floor, too old, or already applied to
+It runs **two tracks** side by side — CMO/Marketing and COO/Operations — because those are
+two different searches with two different resumes, not one search that happens to mix
+titles.
+
+1. Searches Indeed for every title in each track's list
+2. Throws out anything under your salary floor, too old, or already applied to (per track)
 3. Reads the full description of what's left — catching the "remote" jobs that aren't
-4. Scores each one out of 100 against your actual background
-5. Writes a real cover letter for the ones that clear the bar
+4. Scores each one out of 100 against the resume for that track
+5. Writes a real cover letter against the matching resume for the ones that clear the bar
 6. Puts each package in your Gmail drafts, ready to review and send
-7. Logs everything so it never applies to the same job twice
+7. Logs everything so it never applies to the same posting twice
 
 ## Changing how it behaves
 
@@ -29,16 +33,17 @@ Everything is in **`criteria.json`**. It's the only file you need to touch.
 | To do this | Change this |
 |---|---|
 | Raise or lower the salary floor | `min_salary` |
-| Search different job titles | `titles` |
+| Search different job titles | `tracks.marketing.titles` or `tracks.ops.titles` |
 | Get fewer, better matches | Raise `draft_threshold` (currently 70) |
 | Get more matches to look at | Lower `draft_threshold` |
 | Never see a certain employer | Add them to `exclude_companies` |
-| Apply to more roles per run | Raise `daily_application_cap` |
+| Apply to more roles per run | Raise `daily_application_cap` (applies per track) |
+| Drop a track entirely | Delete it from `tracks`, or just ignore its results in the report |
 
 Save the file and the next run picks it up.
 
-**Keeping the search confidential:** add `NATIVO` to `exclude_companies` so your current
-employer's postings never surface.
+**Keeping either search confidential:** add the employer to `exclude_companies` so their
+postings never surface, in either track.
 
 ## About actually hitting "send"
 
@@ -70,7 +75,8 @@ You'll get the shortlist and the drafts waiting for you.
 | File | What it is |
 |---|---|
 | `criteria.json` | Your settings — the only file you edit |
-| `resume.md` | Your resume. The machine refuses to run without it |
+| `resume-marketing.md` | Your CMO/Marketing resume — scores and letters for that track come from here |
+| `resume-ops.md` | Your COO/Operations resume — scores and letters for that track come from here |
 | `SKILL.md` | The instructions Claude follows |
-| `references/scoring.md` | How jobs get scored out of 100 |
+| `references/scoring.md` | How jobs get scored out of 100, for each track |
 | `applications.md` | Log of everything applied to, so it never repeats |

@@ -241,3 +241,33 @@ NEXT STEP:
 NEXT STEP:
 - Raquel to supply the real resume (she was mid-message telling me where it is). Drop it into
   `.claude/skills/job-machine/resume.md`, then run `/job-machine` for a first live pass.
+
+## Session — 2026-07-25 (job machine — real resumes, split into two tracks)
+- Raquel supplied her two real resumes (PDFs) mid-session, correcting the earlier
+  placeholder. Restructured the skill around them:
+  - `resume-marketing.md` (CMO/Marketing track) and `resume-ops.md` (COO/Operations
+    track) — full real content: 3x first CMO (Allure Bridals, Nativo, Modern Luxury
+    Media), VP Global Brand Marketing (Undertone), LVMH/Hennessy, HelloWorld/Merkle.
+    Correction to earlier assumption: current role is Founder & Advisor, RVC Advisory
+    Group (2025-present, also how ai.moms was incubated) — NOT still employed at Nativo,
+    so no confidentiality exclusion needed there.
+  - `criteria.json` now has a `tracks` object (marketing, ops), each with its own titles
+    and resume_file. `candidate` block updated with phone/LinkedIn/current role.
+  - `SKILL.md` rewritten so every step (search/filter/score/draft) runs once per track,
+    and a job is only ever scored against its own track's resume — never mixes marketing
+    metrics into an ops cover letter or vice versa.
+  - `references/scoring.md` seniority_match now has separate ladders for each track; added
+    a second worked example (ops).
+  - `applications.md` tracker gained a Track column; same company can legitimately appear
+    once per track (different postings).
+  - Removed the old single `resume.md` placeholder file.
+- PDF text extraction needed pip installs in this environment (poppler-utils apt install
+  404'd; used pip pypdf/pdfminer.six + reinstalling cffi/cryptography to fix a broken
+  system _cffi_backend). Not a repo change, just environment troubleshooting.
+- Auto-submit design unchanged: still off, still gated on an empty allow-list, since Indeed
+  MCP has no apply tool and Gmail MCP has no send.
+NEXT STEP:
+- Run `/job-machine` for a first live pass across both tracks now that real resumes are in.
+- Ask Raquel whether "Chief of Staff to the CEO" belongs in the ops track's titles (kept it
+  in on a judgment call - it fits the resume's operational-partner pattern but pays less
+  than COO/SVP Ops on average, so watch whether it's pulling in weaker comp than the floor).

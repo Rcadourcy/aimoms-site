@@ -1,22 +1,24 @@
 ---
 name: job-machine
-description: Runs Raquel's executive job search end to end - searches Indeed across her target titles, filters against her hard requirements, scores each surviving role, writes a tailored application package for the ones worth her time, and either submits or saves a ready-to-send draft. Use when she asks to run the job search, check for new roles, apply to jobs, or invokes /job-machine.
+description: Runs Raquel's executive job search end to end, across her two tracks (CMO/Marketing and COO/Operations) - searches Indeed, filters against her hard requirements, scores each surviving role against the matching resume, writes a tailored application package for the ones worth her time, and either submits or saves a ready-to-send draft. Use when she asks to run the job search, check for new roles, apply to jobs, or invokes /job-machine.
 ---
 
 # Job machine
 
-An executive job search, run on a schedule. It finds roles, throws out the ones that waste
-her time, writes the application, and gets it as close to sent as the rules allow.
+An executive job search, run on a schedule, across **two tracks**: CMO/Marketing and
+COO/Operations. Each track has its own titles and its own resume. It finds roles, throws
+out the ones that waste her time, writes the application against the right resume, and
+gets it as close to sent as the rules allow.
 
 This is a **personal tool for Raquel**. It has nothing to do with the ai.moms website and
 must never be linked from it, deployed with it, or turned into a site feature.
 
 ## The one thing to get right
 
-Executive roles are not won by volume. Twenty search results for "CMO" contained one
-posting at $30,000/year and another at $62,000. The value here is in what gets **rejected**,
-not in how many applications go out. A run that produces two excellent packages beats one
-that produces fifteen.
+Executive roles are not won by volume. A test search for "CMO"/"VP Marketing" alone turned
+up a "Chief Marketing Officer" posting at $30,000/year and another at $62,000, against a
+$250,000 floor. The value here is in what gets **rejected**, not in how many applications go
+out. A run that produces two excellent packages beats one that produces fifteen.
 
 Never pad the results to look productive.
 
@@ -26,46 +28,52 @@ Never pad the results to look productive.
 
 Read, in this order:
 
-1. `criteria.json` — all tuning lives here
-2. The resume file named in `candidate.resume_file`
-3. `references/scoring.md` — the rubric
+1. `criteria.json` — all tuning lives here, including both tracks' titles and resume files
+2. **Both** resume files named under `tracks.*.resume_file` — `resume-marketing.md` and
+   `resume-ops.md`
+3. `references/scoring.md` — the rubric for both tracks
 4. The tracker named in `tracker_file`
 
-**If the resume file is missing or still a placeholder, STOP.** Report that and do nothing
-else. Every downstream step writes claims about her career; without the real resume those
-claims would be invented. There is no acceptable fallback here.
+**If either resume file is missing or still reads as a placeholder, treat that one track as
+blocked and say so — but run the other track normally.** Never invent resume content to
+fill a gap. A track running on a real resume and a track sitting out is a legitimate partial
+run; two tracks running on fabricated content is not.
 
-The resume file on disk is the source of truth, not the Indeed profile. The Indeed copy is
-OCR-mangled (it contains fragments like `Gr\` owth` and `Lu xur y D ail y`). You may call
-`mcp__Indeed__get_resume` to read her stated salary preference, but never quote its text
-into an application.
+The resume files on disk are the source of truth, not the Indeed profile. Raquel updates
+that separately; don't quote its text into an application even if it happens to be current.
 
-## Step 2 — Search
+## Step 2 — Search, once per track
 
-Run one `mcp__Indeed__search_jobs` per `titles` × `locations` combination, passing
-`country_code` and `job_type` from config. These are independent — issue them in parallel
-in a single message.
+For **each track** in `tracks`, run one `mcp__Indeed__search_jobs` per
+`titles` × `search.locations` combination for that track, passing `search.country_code` and
+`search.job_type`. All of these are independent — issue every call across every track in a
+single parallel batch.
 
-Pool all results. Deduplicate on company + title, keeping whichever posting is newer.
+Pool results **within each track separately**. Deduplicate on company + title within a
+track, keeping whichever posting is newer. Do not merge the two tracks' result pools — a
+company's CMO posting and its COO posting are different jobs, evaluated separately, against
+different resumes.
 
-## Step 3 — Hard filters
+## Step 3 — Hard filters (per track)
 
-Apply `hard_filters` mechanically, before spending a detail lookup on anything. No
-judgement at this stage:
+Apply `hard_filters` mechanically to each track's pool, before spending a detail lookup on
+anything. No judgement at this stage:
 
 - Drop if the salary range top is below `min_salary`. Undisclosed comp follows
   `salary_unknown_action`.
 - Drop if posted more than `max_days_since_posted` days ago.
 - Drop if the title contains any `exclude_title_keywords` entry (case-insensitive).
 - Drop if the company is in `exclude_companies`.
-- Drop if the job already appears in the tracker. **Never apply to the same role twice** —
-  it's the fastest way to look automated and get filtered out by a recruiter.
+- Drop if the job already appears in the tracker **for that track**. A company can
+  legitimately appear once per track (a CMO posting and a COO posting at the same firm are
+  not duplicates), but never apply to the same posting twice.
 
-Log the count dropped at each filter. She should be able to see the funnel working.
+Log the count dropped at each filter, per track. She should be able to see the funnel
+working on both sides.
 
 ## Step 4 — Detail lookup
 
-Call `mcp__Indeed__get_job_details` on every survivor, in parallel.
+Call `mcp__Indeed__get_job_details` on every survivor in both tracks, in parallel.
 
 This is where search-result claims get checked against reality. A posting tagged "Remote"
 whose description demands four days onsite is not remote. The description always wins over
@@ -76,38 +84,50 @@ for the `company_quality` dimension.
 
 ## Step 5 — Score
 
-Apply `references/scoring.md` exactly. Produce a table with per-dimension raw scores,
-weighted points, and the total, so the reasoning is visible and arguable.
+Apply `references/scoring.md` exactly, **using the rubric column and resume for that job's
+own track** — a COO posting is never scored against the marketing resume, or vice versa.
+Produce a table with per-dimension raw scores, weighted points, and the total, per track, so
+the reasoning is visible and arguable.
 
 Anything below `scoring.draft_threshold` stops here. List those as one-line rejections with
 the reason — she should see what was passed over and why, so she can retune the config if
-the machine is being too fussy or too loose.
+the machine is being too fussy or too loose, per track.
 
 ## Step 6 — Write the application package
 
-For each job at or above the threshold, up to `application.daily_application_cap`, produce:
+For each job at or above the threshold, up to `application.daily_application_cap`
+**per track**, produce:
 
-**A cover letter.** Specific to this posting. Name the company, the actual problem the role
-exists to solve, and the two or three things in her record that speak to it directly. No
+**A cover letter.** Specific to this posting, drawing only from that track's resume file.
+Name the company, the actual problem the role exists to solve, and the two or three things
+in her record that speak to it directly. For the marketing track, that usually means the
+brand/revenue/campaign metrics (Meta CTR +54%, Google Ads clicks +1,211%, $32MM attributed
+revenue). For the ops track, it usually means the transformation and structural work ($10MM
+waste eliminated, org redesigns, cross-functional restructures, P&L ownership) — even where
+it happened at the same company as a marketing-track letter, lead with different facts. No
 template language, no "I am writing to express my interest." If it could be sent to a
 different company by swapping a name, it isn't finished.
 
 **A resume angle.** Which experience to lead with for this specific role, and which of her
-skills to foreground. Not a rewrite — targeted guidance, plus any genuine gap worth naming
-before an interviewer finds it.
+skills to foreground, from that track's resume. Not a rewrite — targeted guidance, plus any
+genuine gap worth naming before an interviewer finds it.
 
 **The apply link**, kept intact with all parameters. Never strip URL parameters.
 
 ### Absolute rule on content
 
-Every factual claim must trace to the resume file. Do not invent employers, dates, metrics,
-degrees, or outcomes. If a posting asks for something she doesn't have, say so in the run
-report rather than papering over it in the letter. A fabricated credential discovered at
-reference-check stage ends the candidacy and follows her name.
+Every factual claim must trace to the resume file for that job's track. Do not invent
+employers, dates, metrics, degrees, or outcomes, and do not borrow a fact from the other
+track's resume even if it's about the same job at the same company — use the version of the
+narrative that belongs to the track that's applying. If a posting asks for something she
+doesn't have, say so in the run report rather than papering over it in the letter. A
+fabricated credential discovered at reference-check stage ends the candidacy and follows her
+name.
 
 ## Step 7 — Submit or draft
 
-Consult `application.auto_submit_enabled` and `allowed_auto_submit_channels`.
+Consult `application.auto_submit_enabled` and `allowed_auto_submit_channels`. These apply
+identically to both tracks.
 
 **When `auto_submit_enabled` is false — the current state — nothing is sent.** Every package
 becomes a saved draft, and the run report says so plainly.
@@ -144,18 +164,18 @@ as a demonstration.
 
 ## Step 8 — Log and report
 
-Append one row per job to the tracker: date, company, title, comp, score, what was done,
-and the apply link. The tracker is what prevents duplicate applications on the next run, so
-write it even for jobs that were only drafted.
+Append one row per job to the tracker, **including which track it came from**: date, track,
+company, title, comp, score, what was done, and the apply link. The tracker is what prevents
+duplicate applications on the next run, so write it even for jobs that were only drafted.
 
-Then report to her, briefly:
+Then report to her, briefly, with the two tracks clearly separated:
 
-- How many jobs were found, and how many each filter removed
-- The scored shortlist, best first
+- How many jobs were found per track, and how many each filter removed
+- The scored shortlist per track, best first
 - What was drafted and where it's waiting
 - Anything that needs her judgement — a role just under threshold worth a look, a company
-  with worrying reviews, a gap in the resume a posting exposed
-- Follow-ups now due: anything applied to 7+ days ago with no reply
+  with worrying reviews, a gap either resume exposed
+- Follow-ups now due: anything applied to 7+ days ago with no reply, from either track
 
-If nothing cleared the bar, say exactly that. A quiet week in an executive search is
-information, not a failure to hide.
+If a track found nothing above the bar, say exactly that for that track — don't let a strong
+result on one track paper over a quiet one on the other.

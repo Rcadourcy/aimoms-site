@@ -4,21 +4,42 @@
   "candidate": {
     "name": "Raquel V. Cadourcy",
     "email": "raquelcadourcy@gmail.com",
-    "current_title": "Chief Marketing Officer",
-    "level": "C-suite / SVP",
-    "resume_file": "resume.md"
+    "phone": "248.225.0226",
+    "linkedin": "linkedin.com/in/raquelcadourcy",
+    "location": "New York, NY",
+    "current_role": "Founder & Advisor, RVC Advisory Group (2025-present); three-time first CMO before that (Allure Bridals, Nativo, Modern Luxury Media)",
+    "level": "C-suite"
+  },
+
+  "tracks": {
+    "_note": "Each track is a full search -> filter -> score -> draft pass, run with its own titles and its own resume. A job only ever gets evaluated by the track whose titles it matched.",
+    "marketing": {
+      "label": "CMO / Marketing",
+      "resume_file": "resume-marketing.md",
+      "titles": [
+        "Chief Marketing Officer",
+        "VP Marketing",
+        "SVP Marketing",
+        "Chief Brand Officer",
+        "Chief Growth Officer",
+        "EVP Marketing"
+      ]
+    },
+    "ops": {
+      "label": "COO / Operations",
+      "resume_file": "resume-ops.md",
+      "titles": [
+        "Chief Operating Officer",
+        "COO",
+        "VP Operations",
+        "SVP Operations",
+        "Chief Transformation Officer",
+        "Chief of Staff to the CEO"
+      ]
+    }
   },
 
   "search": {
-    "_note": "Each title below becomes its own Indeed search. Add or remove freely.",
-    "titles": [
-      "Chief Marketing Officer",
-      "VP Marketing",
-      "SVP Marketing",
-      "Chief Brand Officer",
-      "Chief Growth Officer",
-      "EVP Marketing"
-    ],
     "locations": ["remote"],
     "country_code": "US",
     "job_type": "fulltime"
@@ -31,7 +52,7 @@
     "_salary_unknown_note": "'keep' = senior roles often hide comp; don't lose them. Set to 'drop' to be strict.",
     "max_days_since_posted": 45,
     "exclude_title_keywords": [
-      "sales",
+      "sales rep",
       "account executive",
       "intern",
       "assistant",
@@ -40,11 +61,11 @@
       "director of sales"
     ],
     "exclude_companies": [],
-    "_exclude_companies_note": "Add any employer you never want to see. Current employer NATIVO belongs here if this search is confidential."
+    "_exclude_companies_note": "Add any employer you never want to see, e.g. a past employer you'd rather not revisit."
   },
 
   "scoring": {
-    "_note": "Weights must total 100. See references/scoring.md for what each one means.",
+    "_note": "Weights must total 100. See references/scoring.md for what each one means. Same rubric is applied within each track, against that track's resume.",
     "weights": {
       "seniority_match": 30,
       "industry_match": 25,
@@ -57,20 +78,20 @@
   },
 
   "industries": {
-    "_note": "Used by industry_match scoring. Pulled from the resume's actual track record.",
+    "_note": "Used by industry_match scoring, for both tracks. Pulled from the actual track record.",
     "strong": ["luxury", "lifestyle", "media", "martech", "adtech", "beauty", "fashion", "consumer brand"],
     "acceptable": ["saas", "ecommerce", "publishing", "agency", "wellness", "education"],
     "weak": ["heavy industry", "defense", "logistics", "agriculture", "insurance"]
   },
 
   "application": {
-    "_note": "Controls what the machine is permitted to do without asking. See SKILL.md Step 6.",
+    "_note": "Controls what the machine is permitted to do without asking. See SKILL.md Step 7.",
     "auto_submit_enabled": false,
     "_auto_submit_note": "MASTER SWITCH. Stays false until a real send capability exists AND Raquel flips it. When false, every application stops at a saved draft.",
     "allowed_auto_submit_channels": [],
     "_channels_note": "Only ever add a channel where programmatic submission is explicitly permitted by that service. Job-board portals (Indeed, LinkedIn, Workday, Greenhouse UI) are NOT eligible - automating those violates their terms and gets the account banned.",
     "daily_application_cap": 5,
-    "_cap_note": "Hard ceiling per run. Executive search is won on precision, not volume."
+    "_cap_note": "Hard ceiling PER TRACK per run. Executive search is won on precision, not volume."
   },
 
   "tracker_file": "applications.md"
