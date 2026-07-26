@@ -48,6 +48,8 @@ export default function Footer() {
             <div className="footer-heading">Connect</div>
             <a href="mailto:hello@aimoms.ai" className="footer-link">hello@aimoms.ai</a>
             <Link href="/press" className="footer-link">Partnerships, Press &amp; Media</Link>
+            <a href="https://www.instagram.com/aimoms.ai/" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/company/ai-moms/" className="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
 
