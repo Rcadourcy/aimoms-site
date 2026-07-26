@@ -51,8 +51,10 @@ These are our audience builders. They stay free, on their own pages, forever.
 - **The Foundations Course** — our self-paced, on-demand course. Buy it anytime, whether or not
   you're in the community. *(Its live sibling — the monthly Foundations Workshop — lives inside
   the membership; the course is the full self-paced library. Live Stripe checkout + Make
-  provisioning stay exactly as they are.)*
+  provisioning stay exactly as they are — price unchanged.)*
+- **Member bonus (not a discount):** members who buy the course get a live **course kickoff**, a
+  dedicated **course-companion space in the hub**, and **priority in office hours** — so they go
+  through it with the community, not alone. (No price change to the course.)
 
 ---
-*Open to confirm: exact annual price ($279?), and whether members get the Foundations Course at a
-member rate.*
+*Locked: $29/mo · $279/yr · course = bonus for members, not a discount.*
