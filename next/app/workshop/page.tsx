@@ -53,7 +53,7 @@ export default function WorkshopPage() {
           {/* SAVE THE DATE */}
           <div className="date-callout">
             <div className="date-callout-label">Next workshop</div>
-            <div className="date-callout-headline">Thursday, July 9 &middot; 10:00am ET</div>
+            <div className="date-callout-headline">Thursday, August 6 &middot; 10:00am ET</div>
             <p className="date-callout-sub">60 minutes live on Zoom. Replay sent if you can&rsquo;t make it. Held the same time each month.</p>
           </div>
         </div>

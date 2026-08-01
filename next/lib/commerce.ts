@@ -31,7 +31,7 @@ export const STRIPE_LINKS = {
  *                 e.g. 'Bloomfield Hills, MI' or 'Miami · The Standard'.
  */
 export const WORKSHOP = {
-  date: 'Thursday, July 9, 2026 · 10:00am ET',
+  date: 'Thursday, August 6, 2026 · 10:00am ET',
   format: 'Virtual (Zoom)',
   location: 'Zoom',
 } as const;
