@@ -220,3 +220,20 @@ NEXT STEP:
   data._test='seed-2026-07b' (6 workshops: 3 virtual + 3 in-person w/ venues). Cleanup:
   DELETE submissions where data->>_test = 'seed-2026-07b'. Commit 600c88c.
 - ADMIN_PASSWORD on Vercel = 1234 (TEMP — change before real/production use).
+
+## Session — 2026-08-01 (monthly workshop date bump)
+- Changed the Monthly Workshop (virtual/Zoom) date from Thursday, July 9 → Thursday,
+  August 6 · 10:00am ET. Aug 6, 2026 is a Thursday, so the weekday label stays correct.
+- Live static site (3 spots): workshop.html date-callout, workshop-thank-you.html
+  date-headline, workshop-register.html meta description.
+- next/ rebuild (4 spots): lib/commerce.ts WORKSHOP.date (the config value), plus the
+  hard-coded copies still sitting in app/workshop/page.tsx, app/workshop-thank-you/page.tsx,
+  and app/workshop-register/page.tsx metadata.
+- No Stripe links, prices, Pixel events, or slugs touched. Commit ba93c00, pushed to
+  claude/monthly-virtual-date-update-27ydca. No PR opened.
+NEXT STEP:
+- Still open from earlier sessions: wire the next/ workshop sales + thank-you + register
+  pages to read WORKSHOP.date instead of hard-coding it, so a future date change is a
+  true one-line edit. Also still pending: fix WorkshopRegisterForm InitiateCheckout
+  content_name leftover ("Foundations - Form Complete"); run cutover STEP 5b; Raquel to
+  set a real ADMIN_PASSWORD in Vercel (currently TEMP 1234).

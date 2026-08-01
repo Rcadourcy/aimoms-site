@@ -5,7 +5,7 @@ import '../workshop-register.css';
 export const metadata: Metadata = {
   title: 'Reserve Your Seat — Monthly Workshop — ai.moms™',
   description:
-    'Reserve your seat for the next ai.moms™ Monthly Workshop. $68 a seat. 60 minutes live on Zoom — Thursday, July 9, 10:00am ET. Replay included.',
+    'Reserve your seat for the next ai.moms™ Monthly Workshop. $68 a seat. 60 minutes live on Zoom — Thursday, August 6, 10:00am ET. Replay included.',
   alternates: { canonical: '/workshop-register' },
   robots: { index: false, follow: true },
 };

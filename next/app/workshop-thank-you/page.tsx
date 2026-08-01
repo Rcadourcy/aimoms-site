@@ -33,7 +33,7 @@ export default function WorkshopThankYouPage() {
           {/* SAVE THE DATE */}
           <div className="date-block">
             <div className="date-label">Save the date</div>
-            <div className="date-headline">Thursday, July 9 &middot; <span style={{ color: 'var(--pink)' }}>10:00am ET</span></div>
+            <div className="date-headline">Thursday, August 6 &middot; <span style={{ color: 'var(--pink)' }}>10:00am ET</span></div>
             <p className="date-sub">60 minutes live on Zoom. Replay sent if you can&rsquo;t make it live.</p>
           </div>
 
