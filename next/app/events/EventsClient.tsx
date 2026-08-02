@@ -184,12 +184,12 @@ export default function EventsClient() {
               <CardLink href="/workshop" className="event-row" type="virtual" hidden={!visible('virtual')}>
                 <span className="date-chip">
                   <span className="m">AUG</span>
-                  <span className="d">5</span>
+                  <span className="d">6</span>
                 </span>
                 <span className="event-main">
-                  <span className="dow">Wed</span>
+                  <span className="dow">Thu</span>
                   <span className="event-city">Monthly Virtual Workshop</span>
-                  <span className="event-sub">11:00am ET &middot; 60 minutes live on Zoom &middot; $68</span>
+                  <span className="event-sub">10:00am ET &middot; 60 minutes live on Zoom &middot; $68</span>
                   <span className="event-loc">&#9679; Live on Zoom</span>
                   <span className="tagrow">
                     <span className="tag virtual">Virtual</span>
