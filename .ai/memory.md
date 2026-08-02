@@ -229,11 +229,27 @@ NEXT STEP:
 - next/ rebuild (4 spots): lib/commerce.ts WORKSHOP.date (the config value), plus the
   hard-coded copies still sitting in app/workshop/page.tsx, app/workshop-thank-you/page.tsx,
   and app/workshop-register/page.tsx metadata.
-- No Stripe links, prices, Pixel events, or slugs touched. Commit ba93c00, pushed to
-  claude/monthly-virtual-date-update-27ydca. No PR opened.
+- No Stripe links, prices, Pixel events, or slugs touched.
+- Also this session: corrected the Monthly Virtual Workshop length 90 min -> 60 min on the
+  homepage "ways to start" card + both events-page rows (the workshop page itself was
+  already 60 throughout, so this was a stale-copy drift, not a real change). corporate.html
+  "60-90 minute session" is the SEPARATE corporate product -- deliberately left alone.
+- Also: events-page August row said Wed Aug 5 / 11:00am, contradicting the workshop page.
+  Corrected the date chip, weekday, and time to Thu Aug 6 / 10:00am ET.
+- MERGED TO main AND PUSHED (Raquel asked for it live; Netlify builds main -> aimoms.ai).
+  Commits ba93c00, 2ba99ed, 929a89f. Branch claude/monthly-virtual-date-update-27ydca is
+  fast-forwarded to match main. No PR opened.
+- OPEN / NEEDS RAQUEL: the September events row still reads Tue, Sep 22 - 11:00am ET.
+  Raquel said "leave sept for now" (2026-08-02). Two known problems when she's ready:
+  the 11:00am contradicts the workshop page's "held the same time each month" (10:00am),
+  and Sep 22 is a Tuesday while the monthly is now a Thursday. Do NOT guess the date.
 NEXT STEP:
-- Still open from earlier sessions: wire the next/ workshop sales + thank-you + register
-  pages to read WORKSHOP.date instead of hard-coding it, so a future date change is a
-  true one-line edit. Also still pending: fix WorkshopRegisterForm InitiateCheckout
+- Confirm the September Monthly Virtual Workshop date + time with Raquel, then fix the
+  events-page row (root events.html ~line 279 + next/app/events/EventsClient.tsx).
+- Wire the next/ workshop sales + thank-you + register pages to read WORKSHOP.date instead
+  of hard-coding it, so a future date change is a true one-line edit. This session proved
+  the need: one date change meant editing 4 files in next/ plus 3 in root. Consider a
+  single WORKSHOP config for the events-page rows too (date/dow/time drifted out of sync
+  with the workshop page and nobody noticed until Raquel spotted it on mobile). Also still pending: fix WorkshopRegisterForm InitiateCheckout
   content_name leftover ("Foundations - Form Complete"); run cutover STEP 5b; Raquel to
   set a real ADMIN_PASSWORD in Vercel (currently TEMP 1234).
