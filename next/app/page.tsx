@@ -156,7 +156,7 @@ export default function Home() {
             <div className="way-tag">02 &middot; Live &middot; $68</div>
             <h3>Monthly Virtual Workshop</h3>
             <p>
-              A 90-minute live intro to AI for moms. Hands-on walk-through, real prompts, your
+              A 60-minute live intro to AI for moms. Hands-on walk-through, real prompts, your
               questions answered. Held once a month over Zoom. The easiest way to start.
             </p>
             <div className="way-link">Reserve your seat &rarr;</div>

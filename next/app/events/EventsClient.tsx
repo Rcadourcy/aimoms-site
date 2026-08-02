@@ -189,7 +189,7 @@ export default function EventsClient() {
                 <span className="event-main">
                   <span className="dow">Wed</span>
                   <span className="event-city">Monthly Virtual Workshop</span>
-                  <span className="event-sub">11:00am ET &middot; 90 minutes live on Zoom &middot; $68</span>
+                  <span className="event-sub">11:00am ET &middot; 60 minutes live on Zoom &middot; $68</span>
                   <span className="event-loc">&#9679; Live on Zoom</span>
                   <span className="tagrow">
                     <span className="tag virtual">Virtual</span>
@@ -207,7 +207,7 @@ export default function EventsClient() {
                 <span className="event-main">
                   <span className="dow">Tue</span>
                   <span className="event-city">Monthly Virtual Workshop</span>
-                  <span className="event-sub">11:00am ET &middot; 90 minutes live on Zoom &middot; $68</span>
+                  <span className="event-sub">11:00am ET &middot; 60 minutes live on Zoom &middot; $68</span>
                   <span className="event-loc">&#9679; Live on Zoom</span>
                   <span className="tagrow">
                     <span className="tag virtual">Virtual</span>
