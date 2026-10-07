@@ -253,3 +253,26 @@ NEXT STEP:
   with the workshop page and nobody noticed until Raquel spotted it on mobile). Also still pending: fix WorkshopRegisterForm InitiateCheckout
   content_name leftover ("Foundations - Form Complete"); run cutover STEP 5b; Raquel to
   set a real ADMIN_PASSWORD in Vercel (currently TEMP 1234).
+
+## Session — 2026-10-07 (where do newsletter signups go?)
+- Raquel says the CUTOVER IS DONE: aimoms.ai now runs the Next.js app on Vercel (Lauren did
+  it). Raquel test-subscribed on the live site and FOUND her row in Supabase → newsletter
+  form works and writes to `submissions` (project "AI Moms Migration", ref
+  pzrrxtakwvspstwbvefb, under the "ai mom's Org" FREE org). Netlify Forms no longer receive
+  anything (expected).
+- /admin is DOWN: https://aimoms-preview.vercel.app returns 404 DEPLOYMENT_NOT_FOUND (Lauren's
+  temp Hobby project was deleted). Code still exists (app/admin). To restore: set
+  ADMIN_PASSWORD in Raquel's Vercel project env + redeploy → aimoms.ai/admin. Not done yet.
+- Signup alert emails: searched raquelcadourcy@gmail.com (incl. spam/trash) — ZERO Resend
+  "New … submission" emails. Check RESEND_TO_EMAIL in Raquel's Vercel env (may still be
+  Lauren's test address) and whether aimoms.ai is verified in Resend.
+- Kit (ConvertKit): NOT connected — no code anywhere. Raquel's decision: DEFER until Belinda
+  starts writing emails; it's part of a bigger email strategy (weekly newsletter to
+  subscribers + marketing funnel). Don't build until Raquel asks.
+- ⚠️ This GitHub repo's main has no commits after 2026-08-01 (no cutover changes). Confirm
+  with Lauren/Raquel which repo/branch Raquel's Vercel project deploys from before editing.
+  Also: pre-cutover Netlify site was deployed by hand via Netlify Drop (Jun 29), not from Git.
+NEXT STEP:
+- Confirm which GitHub repo/branch Vercel deploys from. Then restore /admin (ADMIN_PASSWORD
+  in Vercel env, real password — not 1234) and point RESEND_TO_EMAIL at an inbox Raquel
+  reads; send a test signup and confirm the alert arrives. Kit integration waits on Raquel.
