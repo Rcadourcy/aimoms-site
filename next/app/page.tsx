@@ -166,7 +166,7 @@ export default function Home() {
             <div className="way-tag">03 &middot; Ongoing</div>
             <h3>The Membership</h3>
             <p>
-              $59/month. Bi-weekly live sessions on Zoom + private WhatsApp community +{' '}
+              $59/month. Monthly live sessions on Zoom + private WhatsApp community +{' '}
               <strong>free access to every ai.moms&#8482; in-person event.</strong> Cancel anytime.
             </p>
             <div className="way-link">Join the Membership &rarr;</div>

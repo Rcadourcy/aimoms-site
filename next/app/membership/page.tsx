@@ -5,12 +5,12 @@ import '../membership.css';
 export const metadata: Metadata = {
   title: 'The Membership — ai.moms™',
   description:
-    'Join the ai.moms™ Membership for $59/month. Bi-weekly live sessions on Zoom + private WhatsApp community + access to every ai.moms™ in-person event. Cancel anytime.',
+    'Join the ai.moms™ Membership for $59/month. Monthly live sessions on Zoom + private WhatsApp community + access to every ai.moms™ in-person event. Cancel anytime.',
   alternates: { canonical: '/membership' },
   openGraph: {
     title: 'The ai.moms™ Membership — Show up. Learn AI. Build things. Make mom friends.',
     description:
-      '$59/month. Bi-weekly live AI sessions on Zoom + private WhatsApp community + access to every ai.moms™ in-person event.',
+      '$59/month. Monthly live AI sessions on Zoom + private WhatsApp community + access to every ai.moms™ in-person event.',
     type: 'website',
     url: 'https://aimoms.ai/membership',
     images: ['/og-image.png'],
@@ -23,10 +23,10 @@ export default function MembershipPage() {
       {/* HERO */}
       <section className="hero">
         <div className="container-sm">
-          <div className="hero-eyebrow"><span className="dot" /> Membership &middot; Live Bi-Weekly</div>
+          <div className="hero-eyebrow"><span className="dot" /> Membership &middot; Live Monthly</div>
           <h1>Show up. Learn AI.<br /><span className="italic-accent">Make mom friends.</span></h1>
           <p className="hero-sub">
-            A safe space for moms to learn AI, ask anything, and build alongside each other. Bi-weekly live
+            A safe space for moms to learn AI, ask anything, and build alongside each other. Monthly live
             sessions on Zoom + a private WhatsApp community + <strong>access to every ai.moms&#8482; in-person event.</strong>
           </p>
           <div className="hero-price-line">
@@ -54,8 +54,8 @@ export default function MembershipPage() {
               <div className="icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="14" height="12" rx="2" /><path d="m22 8-6 4 6 4V8Z" /></svg>
               </div>
-              <h3>Bi-Weekly Live Sessions</h3>
-              <p>Twice a month on Zoom. A new AI topic each session &mdash; tool walk-throughs, workflow breakdowns, real prompts. <strong>Ask any question, no matter how basic</strong> &mdash; this is where moms come to learn out loud. Plus show-and-tell, where members share what they&rsquo;re working on. Replays sent if you can&rsquo;t make it live.</p>
+              <h3>Monthly Live Sessions</h3>
+              <p>Once a month on Zoom. A new AI topic each session &mdash; tool walk-throughs, workflow breakdowns, real prompts. <strong>Ask any question, no matter how basic</strong> &mdash; this is where moms come to learn out loud. Plus show-and-tell, where members share what they&rsquo;re working on. Replays sent if you can&rsquo;t make it live.</p>
             </div>
             <div className="included-card">
               <div className="icon">
@@ -101,14 +101,14 @@ export default function MembershipPage() {
               <div className="step-num">2</div>
               <div className="step-body">
                 <h3>Check your email</h3>
-                <p>Once you register, you&rsquo;ll get a welcome email with two links: one to register for the recurring bi-weekly Zoom sessions, and one to join the private WhatsApp community.</p>
+                <p>Once you register, you&rsquo;ll get a welcome email with two links: one to register for the recurring monthly Zoom sessions, and one to join the private WhatsApp community.</p>
               </div>
             </div>
             <div className="step">
               <div className="step-num">3</div>
               <div className="step-body">
                 <h3>Show up. Learn AI. Build things. Make mom friends.</h3>
-                <p>Twice a month, drop into the live session &mdash; new topic each time. Bring questions. Share what you&rsquo;re building. Stay in touch in WhatsApp between sessions. Come to the in-person events when you&rsquo;re ready.</p>
+                <p>Once a month, drop into the live session &mdash; new topic each time. Bring questions. Share what you&rsquo;re building. Stay in touch in WhatsApp between sessions. Come to the in-person events when you&rsquo;re ready.</p>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function MembershipPage() {
           <div className="sub">Billed monthly. Cancel anytime.</div>
 
           <ul className="checklist">
-            <li>Bi-weekly live sessions on Zoom &mdash; new topic each time</li>
+            <li>Monthly live sessions on Zoom &mdash; new topic each time</li>
             <li>Q&amp;A + show-and-tell built into every session</li>
             <li>Guest speakers from outside the community</li>
             <li>Replays if you can&rsquo;t make it live</li>
@@ -156,7 +156,7 @@ export default function MembershipPage() {
             </details>
             <details className="faq-item">
               <summary>How often are the sessions?</summary>
-              <div className="faq-answer">Bi-weekly &mdash; twice a month, live on Zoom. The exact day and time will be in your welcome email along with the Zoom registration link. If you can&rsquo;t make it live, a replay is sent to all members.</div>
+              <div className="faq-answer">Monthly &mdash; once a month, live on Zoom. The exact day and time will be in your welcome email along with the Zoom registration link. If you can&rsquo;t make it live, a replay is sent to all members.</div>
             </details>
             <details className="faq-item">
               <summary>What&rsquo;s the format of each session?</summary>
@@ -168,7 +168,7 @@ export default function MembershipPage() {
             </details>
             <details className="faq-item">
               <summary>What happens after I sign up?</summary>
-              <div className="faq-answer">After registration, you&rsquo;ll get a welcome email from us with two links: one to register for the recurring bi-weekly Zoom sessions, and one to join the private WhatsApp community. From there, you&rsquo;re in.</div>
+              <div className="faq-answer">After registration, you&rsquo;ll get a welcome email from us with two links: one to register for the recurring monthly Zoom sessions, and one to join the private WhatsApp community. From there, you&rsquo;re in.</div>
             </details>
             <details className="faq-item">
               <summary>Can I cancel anytime?</summary>
@@ -190,7 +190,7 @@ export default function MembershipPage() {
       <section className="final-cta">
         <div className="container-sm final-cta-inner">
           <h2>Stop bookmarking AI tutorials.<br /><span className="pink">Start using AI.</span></h2>
-          <p>$59 a month. Cancel anytime. Show up bi-weekly, ask anything, share what you&rsquo;re building, and come to the in-person events when you&rsquo;re ready.</p>
+          <p>$59 a month. Cancel anytime. Show up monthly, ask anything, share what you&rsquo;re building, and come to the in-person events when you&rsquo;re ready.</p>
           <TrackedLink href="/membership-register" className="cta-pink cta-large" event="ViewContent" params={{ content_name: 'Membership - Final CTA' }}>
             Join the Membership &rarr;
           </TrackedLink>

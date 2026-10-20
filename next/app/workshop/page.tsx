@@ -166,8 +166,8 @@ export default function WorkshopPage() {
           <div className="after-grid">
             <TrackedLink href="/membership" className="after-card" event="ViewContent" params={{ content_name: 'Workshop - After: Membership' }}>
               <div className="after-tag">Most popular next step</div>
-              <h3>Stay sharp every other week.</h3>
-              <p>The Membership: bi-weekly live sessions on Zoom, private WhatsApp community, free access to all in-person events. $59/month. Cancel anytime.</p>
+              <h3>Stay sharp every month.</h3>
+              <p>The Membership: monthly live sessions on Zoom, private WhatsApp community, free access to all in-person events. $59/month. Cancel anytime.</p>
               <span className="after-link">Join the Membership &rarr;</span>
             </TrackedLink>
 

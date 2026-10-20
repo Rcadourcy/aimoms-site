@@ -26,6 +26,7 @@ const ALLOWED_FORMS = new Set([
   'press',
   'self-purchase',
   'gift-purchase',
+  'experience-signup',
 ]);
 
 // Fields that are never part of the lead payload.

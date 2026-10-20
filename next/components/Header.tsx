@@ -4,23 +4,24 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const MOBILE_LINKS: { href: string; label: string }[] = [
+  { href: '/#quiz', label: 'START HERE' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
+  { href: '/build-aime', label: 'BUILD AIME · $97' },
+  { href: '/nyc', label: 'IN PERSON' },
   { href: '/membership', label: 'MEMBERSHIP' },
+  { href: '/skill-guide', label: 'SKILL GUIDE' },
+  { href: '/experiences', label: 'HOST AN EXPERIENCE' },
+  { href: '/corporate', label: 'ERG & CORPORATE' },
   { href: '/workshop', label: 'MONTHLY WORKSHOP' },
-  { href: '/experiences', label: 'MOM HOSTED EXPERIENCES' },
-  { href: '/corporate', label: 'FOR COMPANIES' },
   { href: '/editorial', label: 'THE EDIT' },
   { href: '/shop', label: 'SHOP' },
-  { href: '/community', label: 'COMMUNITY' },
-  { href: '/science', label: 'THE SCIENCE' },
-  { href: '/subscribe', label: 'SUBSCRIBE' },
 ];
 
 const TOP_LINKS: { href: string; label: string }[] = [
+  { href: '/#quiz', label: 'START HERE' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
+  { href: '/nyc', label: 'IN PERSON' },
   { href: '/membership', label: 'MEMBERSHIP' },
-  { href: '/workshop', label: 'MONTHLY WORKSHOP' },
-  { href: '/experiences', label: 'MOM HOSTED EXPERIENCES' },
 ];
 
 export default function Header() {
@@ -45,8 +46,8 @@ export default function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link href="/subscribe" className="nav-subscribe">
-              Subscribe
+            <Link href="/foundations" className="nav-subscribe">
+              Get My Time Back
             </Link>
             <button
               type="button"

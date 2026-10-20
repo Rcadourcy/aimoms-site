@@ -21,30 +21,35 @@ export default function Footer() {
           <div>
             <div className="footer-heading">Learning Experiences</div>
             <Link href="/foundations" className="footer-link">Foundations Course</Link>
+            <Link href="/build-aime" className="footer-link">Build Aime</Link>
+            <Link href="/nyc" className="footer-link">In-Person Experiences</Link>
             <Link href="/membership" className="footer-link">The Membership</Link>
             <Link href="/workshop" className="footer-link">Monthly Workshop</Link>
-            <Link href="/experiences" className="footer-link">Mom-Hosted Experiences</Link>
-            <Link href="/corporate" className="footer-link">Corporate Programs</Link>
-            <a href="mailto:hello@aimoms.ai?subject=Private%201%3A1%20Coaching%20Inquiry" className="footer-link">Private 1:1 Coaching</a>
-            <Link href="/editorial" className="footer-link">The Edit</Link>
+            <Link href="/corporate" className="footer-link">ERG &amp; Corporate Programs</Link>
+            <Link href="/subscribe" className="footer-link">The Edit</Link>
           </div>
 
           <div>
             <div className="footer-heading">Company</div>
             <Link href="/community" className="footer-link">Community</Link>
             <Link href="/science" className="footer-link">The Science</Link>
+            <Link href="/skill-guide" className="footer-link">Skill Guide</Link>
+            <Link href="/experiences" className="footer-link">Host an Experience</Link>
+            <Link href="/press" className="footer-link">Press</Link>
             <Link href="/careers" className="footer-link">Careers</Link>
           </div>
 
           <div>
             <div className="footer-heading">Shop</div>
-            <Link href="/shop" className="footer-link">Prompt Packs</Link>
+            <Link href="/shop" className="footer-link">Shop</Link>
             <Link href="/shop#merch" className="footer-link">Merch &amp; Gifts</Link>
           </div>
 
           <div>
             <div className="footer-heading">Connect</div>
             <a href="mailto:hello@aimoms.ai" className="footer-link">hello@aimoms.ai</a>
+            <a href="https://www.instagram.com/aimoms.ai/" className="footer-link" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/company/ai-moms/" className="footer-link" target="_blank" rel="noopener">LinkedIn</a>
             <Link href="/press" className="footer-link">Partnerships, Press &amp; Media</Link>
           </div>
         </div>

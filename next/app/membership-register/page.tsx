@@ -5,7 +5,7 @@ import '../membership-register.css';
 export const metadata: Metadata = {
   title: 'Join the Membership — ai.moms™',
   description:
-    'Register for the ai.moms™ Membership. $59/month — bi-weekly live sessions on Zoom, private WhatsApp community, and free access to every ai.moms™ in-person event.',
+    'Register for the ai.moms™ Membership. $59/month — monthly live sessions on Zoom, private WhatsApp community, and free access to every ai.moms™ in-person event.',
   alternates: { canonical: '/membership-register' },
   robots: { index: false, follow: true },
 };

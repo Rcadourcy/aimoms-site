@@ -62,7 +62,11 @@ html{scroll-behavior:smooth}
 .s-nav .tnl{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
 .s-nav .subscribe{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;padding:8px 16px;border-radius:100px;background:var(--sub-bg);color:var(--sub-fg);box-shadow:inset 0 0 0 1.5px var(--sub-border)}
 .s-nav .navcta{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.02em;padding:10px 18px;border-radius:var(--btn-radius);background:#fff;color:#060d26!important;white-space:nowrap}
-.s-nav .ham{display:none}
+.s-nav .ham{display:none;background:none;border:0;cursor:pointer;padding:6px}
+@media (max-width:1000px){.s-nav .ham{display:grid}}
+.mmenu{max-width:1240px;margin:0 auto;display:grid;padding:4px 0 14px}
+.mmenu a{color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:12px 2px;border-top:1px solid rgba(255,255,255,.1)}
+@media (min-width:1001px){.mmenu{display:none!important}}
 
 .s-nav .ham{gap:4px}.s-nav .ham i{width:18px;height:2px;background:#fff;display:block}
 
@@ -85,6 +89,12 @@ html{scroll-behavior:smooth}
 #start.sec{padding-top:40px;padding-bottom:40px}
 .irl-sec{padding-block:16px!important}
 .sec.qz-sec{padding-top:40px}
+.proof-up{padding-block:72px!important}
+.pcard .deep{display:block;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);color:#fff;font-size:14px;line-height:1.5}
+.pcard .deep b{display:block;font-weight:700}
+.pcard .deep span{color:rgba(255,255,255,.6);font-size:13px}
+.proof-up .vtests{margin-bottom:0}
+.irl-sec{padding-top:56px!important}
 .final{padding-top:92px!important}
 .off{background:var(--off)}
 .navy{background:var(--navy);color:#fff}
@@ -302,15 +312,15 @@ a.reel{display:block;color:#fff}
 .guide-cta b{display:block;font-family:'Outfit',sans-serif;font-size:20px;letter-spacing:-.01em}
 .guide-cta span{color:var(--g600);font-size:14.5px}
 .guide-cta .btn{padding:15px 26px;font-size:15px}
-.founder2{grid-template-columns:minmax(0,1fr) 260px;gap:56px;align-items:start}
-.founder2 img{border-radius:16px;max-width:260px}
+.founder2{grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
+.founder2 img{border-radius:18px;max-width:460px;width:100%;aspect-ratio:3/4;object-fit:cover}
 .founder2 p:last-of-type{margin-bottom:22px}
 .sigrow{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--g200);max-width:36em}
 .siglinks{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:13.5px;color:var(--link)}
 .siglinks a{color:inherit}
 .feedsec{background:#fff}
-@media (max-width:1000px){.founder2{grid-template-columns:minmax(0,1fr) 220px;gap:36px}}
-@media (max-width:820px){.founder2{grid-template-columns:1fr}.founder2 img{max-width:200px}}
+@media (max-width:1000px){.founder2{grid-template-columns:minmax(0,1fr) 340px;gap:40px}}
+@media (max-width:820px){.founder2{grid-template-columns:1fr}.founder2 img{max-width:340px}}
 .subhead{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:14px}
 .vtests{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:48px}
 .qtile{position:relative;aspect-ratio:9/16;border-radius:14px;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff}
@@ -354,7 +364,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 .nowrap{white-space:nowrap}
 .tmx{font-family:'Be Vietnam Pro',sans-serif;font-style:normal;font-weight:500;font-size:.22em;vertical-align:2.4em;margin-left:2px;letter-spacing:0}
 @media (max-width:520px){.nowrap{white-space:normal}}
-.founder2 > img{margin-top:56px}
+.founder2 > img{margin-top:0}
 @media (max-width:820px){.founder2 > img{margin-top:0}}
 .press-strip .ps{display:flex;align-items:center;gap:12px}
 .press-strip .psd{width:1px;height:26px;background:var(--g200);display:block}
@@ -364,7 +374,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 .press-strip .cred{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;letter-spacing:.02em}
 .badge-slot{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 10px;border:1px dashed #d9b84d;background:#fffbe6;color:#7a6200!important;font-size:10px!important;letter-spacing:.06em!important;border-radius:6px}
 @media (max-width:820px){.press-strip .psd{display:none}}
-.tabs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.tabs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
 .tabs-sec .lead{max-width:34em}
 .lnk.sci{font-weight:700;font-size:15px;color:var(--link);text-decoration:underline;text-underline-offset:4px}
 .tabwin{background:#fff;border:1px solid var(--g200);border-radius:16px;box-shadow:0 24px 60px -30px rgba(6,13,38,.35);overflow:hidden}
@@ -380,7 +390,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 .tw-foot span:last-child{font-weight:700;color:var(--navy)}
 @media (max-width:860px){.tabs-grid{grid-template-columns:1fr;gap:32px}}
 /* ---------- 50 TABS, SCROLLING COLUMNS ---------- */
-.mind{margin:0;display:flex;flex-direction:column;gap:18px;padding-top:56px}
+.mind{margin:0;display:flex;flex-direction:column;gap:18px;padding-top:0}
 .cols{position:relative;height:clamp(460px,54vw,620px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;overflow:hidden;background:#fff;border:1px solid var(--g200);border-radius:16px;
  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 84%,transparent 100%)}
 .cols-frame{position:relative}
@@ -462,7 +472,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 .small-start{display:block;margin-top:12px;text-align:center;font-size:13.5px;font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:3px}
 .irl-sec{padding-block:8px 24px}
 .irl{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr) auto;gap:24px 40px;align-items:center;background:var(--navy);color:#fff;border-radius:20px;padding:16px 38px 16px 16px;overflow:hidden}
-.irl-img{width:100%;height:100%;min-height:230px;max-height:300px;object-fit:cover;object-position:50% 62%;border-radius:12px;display:block}
+.irl-img{width:100%;height:100%;min-height:230px;max-height:300px;object-fit:cover;object-position:50% 45%;border-radius:12px;display:block}
 .irl .eyebrow{color:var(--nv-eyebrow);margin-bottom:10px}
 .irl h3{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.02em;line-height:1.15;margin-bottom:10px}
 .irl p{color:rgba(255,255,255,.7);font-size:15px;line-height:1.6;max-width:44em}
@@ -495,7 +505,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 <div class="site" id="site" data-v="today">
   <nav class="s-nav pad"><div class="inner">
     <a class="brand" href="/" style="color:inherit"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span><span class="tag">Retire from Chief Everything Officer™.</span></a>
-    <div class="links"><a class="tnl" href="#quiz">Start Here</a><a class="tnl" href="/foundations">Foundations Course</a><a class="tnl" href="#irl">In Person</a><a class="tnl" href="/membership">Membership</a><a class="navcta" href="/foundations">Get My Time Back</a><span class="ham" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="links"><a class="tnl" href="#quiz">Start Here</a><a class="tnl" href="/foundations">Foundations Course</a><a class="tnl" href="#irl">In Person</a><a class="tnl" href="/membership">Membership</a><a class="navcta" href="/foundations">Get My Time Back</a><button class="ham" type="button" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('mmenu');var o=m.hidden;m.hidden=!o;this.setAttribute('aria-expanded',o)"><i></i><i></i><i></i></button></div><div class="mmenu" id="mmenu" hidden><a href="/#quiz">Start Here</a><a href="/foundations">Foundations Course</a><a href="/build-aime">Build Aime · $97</a><a href="/nyc">In Person</a><a href="/membership">Membership</a><a href="/skill-guide">Skill Guide</a><a href="/experiences">Host an Experience</a><a href="/corporate">ERG &amp; Corporate</a><a href="/workshop">Monthly Workshop</a></div>
   </div></nav>
 
   <section class="hero pad">
@@ -504,7 +514,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
     <p class="sub">The #1 place for moms to learn AI. We teach you AI the mom way, so you can build your own solutions at home, at work and in your business, alongside moms who get it.</p>
     <div class="lanes"><span>For the mom at home</span><span>For the mom at work</span><span>For the mompreneur</span></div>
     <div class="ctas"><a class="btn qs" href="#start">Get My Time Back →</a></div>
-    <p class="micro">The Foundations Course · $247 on demand · demos for home, work and business &nbsp;·&nbsp; <a class="lnk" href="#build">or start small for $97</a></p>
+    <p class="micro">The Foundations Course · $247 on demand · demos for home, work and business &nbsp;·&nbsp; <a class="lnk" href="/build-aime">or start small for $97</a></p>
     <div class="proofline"><span class="stars">★★★★★</span><i>"Seriously, why didn't I do this sooner!"</i><span>Lauren B., <span class="lc">ai.moms</span>™ member</span></div>
   </section>
 
@@ -546,7 +556,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
     <div class="path">
       <div class="col" id="build">
         <div class="ch">Start small <span>Tonight</span></div>
-        <div class="pcard"><div class="how">Your first win</div><h3>Build Aime, your AI Chief Everything Officer™ + 25 ready-made skills</h3><div class="out">Hand off the daily brief, the weekly plan and dinner, starting tonight.</div><p>A guided onboarding to build Aime around your family, plus 25 skills that run on a schedule.</p><div class="price">$97 <small>$794 value</small></div><a class="l" href="https://aimomspluginskillguide.netlify.app/" target="_blank" rel="noopener">Build Aime →</a></div>
+        <div class="pcard"><div class="how">Your first win</div><h3>Build Aime, your AI Chief Everything Officer™ + 25 ready-made skills</h3><div class="out">Hand off the daily brief, the weekly plan and dinner, starting tonight.</div><p>A guided onboarding to build Aime around your family, plus 25 skills that run on a schedule.</p><div class="price">$97 <small>$794 value</small></div><a class="l" href="/build-aime">Build Aime →</a></div>
       </div>
       <div class="col">
         <div class="ch">Go all in <span>Our signature program</span></div>
@@ -557,22 +567,29 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
           <p>We teach you Claude from the ground up, the mom way, with live demos for the mom at home, the mom at work and the mompreneur. Learn the tool, use it for mom life from A to Z, and build Aime along the way. All 25 skills included.</p>
           <div class="price">$247 <small>on demand · 6 modules · 44 short lessons · $1,291 value</small></div>
           <a class="btn qs" href="/foundations">Get My Time Back →</a>
+          <a class="deep" href="/nyc"><b>Want to go deepest? Take it in person · $265 →</b><span>Everything in the course, live in a room of moms, plus the Mompreneur extension.</span></a>
         </div>
       </div>
       <div class="col">
         <div class="ch">Keep growing <span>Ongoing</span></div>
-        <div class="pcard"><div class="how">Community</div><h3>The Membership</h3><div class="out">Keep up with AI without keeping up alone.</div><p>Bi-weekly live sessions on Zoom, a private WhatsApp community and free access to every in-person event. New tools explained as they come out.</p><div class="price">$59 <small>/ month · cancel anytime</small></div><a class="l" href="/membership">Join the membership →</a></div>
+        <div class="pcard"><div class="how">Community</div><h3>The Membership</h3><div class="out">Keep up with AI without keeping up alone.</div><p>Monthly live sessions on Zoom, a private WhatsApp community and free access to every in-person event. New tools explained as they come out.</p><div class="price">$59 <small>/ month · cancel anytime</small></div><a class="l" href="/membership">Join the membership →</a></div>
       </div>
     </div>
   </section>
 
+  <section class="sec navy pad proof-up" id="proof"><div class="wrap">
+    <div class="eyebrow">In their words</div>
+    <h2 class="title" style="margin-bottom:32px;font-size:clamp(30px,4.4vw,46px)">Moms who stopped carrying it all.</h2>
+    <div class="vtests"><button class="reel vt" type="button" data-src="/home/vid/t-pw.mp4" data-place="Port Washington, NY"><img src="/home/vid/t-pw.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Port Washington, NY</b>Tap to play with sound</div></button><button class="reel vt" type="button" data-src="/home/vid/t-larch.mp4" data-place="Larchmont, NY"><img src="/home/vid/t-larch.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Larchmont, NY</b>Tap to play with sound</div></button><button class="reel vt" type="button" data-src="/home/vid/t-ues.mp4" data-place="Upper East Side, NYC"><img src="/home/vid/t-ues.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Upper East Side, NYC</b>Tap to play with sound</div></button><div class="qtile"><span class="stars" aria-label="5 stars">★★★★★</span><q>WOW. It's really life-changing.</q><p><b>Isabelle D.</b><span class="lc">ai.moms</span>™ member</p></div></div>
+  </div></section>
+
   <section class="pad irl-sec" id="irl">
     <div class="wrap irl">
-      <img class="irl-img" src="/home/vid/irl-porch.jpg" alt="Moms in ai.moms™ hats holding pink gift bags at a mom-hosted event" width="1050" height="1400" loading="lazy">
-      <div class="irl-copy"><div class="eyebrow">Join us in real life</div>
+      <img class="irl-img" src="/home/vid/event-group.jpg" alt="A group of moms at an ai.moms™ event" width="1050" height="1400" loading="lazy">
+      <div class="irl-copy"><div class="eyebrow">Go deepest · the course, in person</div>
         <h3>Next: Thursday, November 12 · New York City</h3>
         <p>A hands-on, 3-hour in-person session with 40 moms. Build Aime, set up your first skills, apply it to your business or career with the Mompreneur extension, and go home with the full Foundations Course included.</p></div>
-      <div class="irl-cta"><div class="irl-price">$265<small>40 seats · course included</small></div><a class="btn qs" href="mailto:hello@aimoms.ai?subject=Reserve%20my%20seat%3A%20ai.moms%E2%84%A2%20In-Person%20Experience">Reserve My Seat →</a></div>
+      <div class="irl-cta"><div class="irl-price">$265<small>40 seats · course included</small></div><a class="btn qs" href="/nyc">Reserve My Seat →</a></div>
     </div>
   </section>
 
@@ -625,7 +642,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
       <div class="guar" hidden>Guarantee goes here, for example: finish Module 1 and set up Aime in your first week, or we'll help you 1:1.</div>
     </div>
   </div>
-    <div class="wrap"><div class="worlds"><div class="world"><h4>Runs your world <span>9 skills</span></h4><ul><li><b>Meet Aime</b><span>Her get-to-know-your-family interview, saved to your project.</span></li><li><b>Brain Dump</b><span>Say everything in your head. Get a sorted to-do list.</span></li><li><b>Weekly Plan</b><span>Conflicts fixed, dinners picked, one shopping list.</span></li><li><b>Daily Brief</b><span>Meetings, kid logistics and your top three on one page.</span></li><li><b>Friday Shutdown</b><span>What's done, what moves, and what you can drop.</span></li><li><b>Find Me Time</b><span>Finds your lost hours and protects a block for you.</span></li><li><b>Guilt Check</b><span>A short reset and one next step. Never a lecture.</span></li><li><b>Build an Assistant</b><span>A custom assistant for any job on repeat.</span></li><li><b>SOPs</b><span>Any routine turned into a one-page playbook.</span></li></ul></div><div class="world"><h4>Runs your home <span>11 skills</span></h4><ul><li><b>School Digest</b><span>The school email flood, turned into one action list.</span></li><li><b>Weekly Dinner Plan</b><span>Dinners around your schedule, one store-ordered list.</span></li><li><b>Emergency Dinner</b><span>Snap your fridge, get dinner in 30 minutes.</span></li><li><b>Sick Day</b><span>Absence email, work messages and your day, rearranged.</span></li><li><b>School Breaks</b><span>Every day off covered, with real local camps.</span></li><li><b>Summer Camp</b><span>Real camps, deadlines watched, a week-by-week plan.</span></li><li><b>Celebrations</b><span>Birthdays and holidays planned start to finish.</span></li><li><b>Weekend Activities</b><span>What's actually happening near you this weekend.</span></li><li><b>Travel Plan</b><span>Countdown checklist and packing lists for everyone.</span></li><li><b>Fair Split</b><span>The invisible work made visible, and shared.</span></li><li><b>Village Ask</b><span>Easy-yes asks for pickups, meals and backup.</span></li></ul></div><div class="world"><h4>Runs your career <span>5 skills</span></h4><ul><li><b>Meeting Prep</b><span>Your goal, who's in the room and three points to land.</span></li><li><b>Inbox Triage</b><span>What needs you, with replies drafted in your voice.</span></li><li><b>Boundary Draft</b><span>The no you've been avoiding, written three ways.</span></li><li><b>Career Wins</b><span>Log every win with the numbers, all year.</span></li><li><b>Review Prep</b><span>Your wins turned into the promotion case.</span></li></ul></div></div><div class="guide-cta"><div><b>Want every detail?</b><span>See what each skill does, what it connects to and exactly what you get.</span></div><a class="btn qs" href="https://aimomspluginskillguide.netlify.app/" target="_blank" rel="noopener">Read the full Skill Guide →</a></div></div>
+    <div class="wrap"><div class="worlds"><div class="world"><h4>Runs your world <span>9 skills</span></h4><ul><li><b>Meet Aime</b><span>Her get-to-know-your-family interview, saved to your project.</span></li><li><b>Brain Dump</b><span>Say everything in your head. Get a sorted to-do list.</span></li><li><b>Weekly Plan</b><span>Conflicts fixed, dinners picked, one shopping list.</span></li><li><b>Daily Brief</b><span>Meetings, kid logistics and your top three on one page.</span></li><li><b>Friday Shutdown</b><span>What's done, what moves, and what you can drop.</span></li><li><b>Find Me Time</b><span>Finds your lost hours and protects a block for you.</span></li><li><b>Guilt Check</b><span>A short reset and one next step. Never a lecture.</span></li><li><b>Build an Assistant</b><span>A custom assistant for any job on repeat.</span></li><li><b>SOPs</b><span>Any routine turned into a one-page playbook.</span></li></ul></div><div class="world"><h4>Runs your home <span>11 skills</span></h4><ul><li><b>School Digest</b><span>The school email flood, turned into one action list.</span></li><li><b>Weekly Dinner Plan</b><span>Dinners around your schedule, one store-ordered list.</span></li><li><b>Emergency Dinner</b><span>Snap your fridge, get dinner in 30 minutes.</span></li><li><b>Sick Day</b><span>Absence email, work messages and your day, rearranged.</span></li><li><b>School Breaks</b><span>Every day off covered, with real local camps.</span></li><li><b>Summer Camp</b><span>Real camps, deadlines watched, a week-by-week plan.</span></li><li><b>Celebrations</b><span>Birthdays and holidays planned start to finish.</span></li><li><b>Weekend Activities</b><span>What's actually happening near you this weekend.</span></li><li><b>Travel Plan</b><span>Countdown checklist and packing lists for everyone.</span></li><li><b>Fair Split</b><span>The invisible work made visible, and shared.</span></li><li><b>Village Ask</b><span>Easy-yes asks for pickups, meals and backup.</span></li></ul></div><div class="world"><h4>Runs your career <span>5 skills</span></h4><ul><li><b>Meeting Prep</b><span>Your goal, who's in the room and three points to land.</span></li><li><b>Inbox Triage</b><span>What needs you, with replies drafted in your voice.</span></li><li><b>Boundary Draft</b><span>The no you've been avoiding, written three ways.</span></li><li><b>Career Wins</b><span>Log every win with the numbers, all year.</span></li><li><b>Review Prep</b><span>Your wins turned into the promotion case.</span></li></ul></div></div><div class="guide-cta"><div><b>Want every detail?</b><span>See what each skill does, what it connects to and exactly what you get.</span></div><a class="btn qs" href="/skill-guide">Read the full Skill Guide →</a></div></div>
   </section>
 
   <section class="sec navy pad"><div class="wrap">
@@ -634,8 +651,6 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
     <div class="subhead">Recaps from our events</div>
     <div class="reels"><div class="reel live"><video src="/home/vid/ues.mp4" poster="/home/vid/ues.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper East Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper East Side, NYC</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/pw.mp4" poster="/home/vid/pw.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Port Washington, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Port Washington, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/larch.mp4" poster="/home/vid/larch.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Larchmont, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Larchmont, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/uws.mp4" poster="/home/vid/uws.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper West Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper West Side, NYC</b>Mom-hosted experience</div></div></div>
     <div class="igrow"><span>See more from our events</span><a class="btn qs" href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Follow @aimoms.ai on Instagram ↗</a></div>
-    <div class="subhead">In their words</div>
-    <div class="vtests"><button class="reel vt" type="button" data-src="/home/vid/t-pw.mp4" data-place="Port Washington, NY"><img src="/home/vid/t-pw.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Port Washington, NY</b>Tap to play with sound</div></button><button class="reel vt" type="button" data-src="/home/vid/t-larch.mp4" data-place="Larchmont, NY"><img src="/home/vid/t-larch.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Larchmont, NY</b>Tap to play with sound</div></button><button class="reel vt" type="button" data-src="/home/vid/t-ues.mp4" data-place="Upper East Side, NYC"><img src="/home/vid/t-ues.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Upper East Side, NYC</b>Tap to play with sound</div></button><div class="qtile"><span class="stars" aria-label="5 stars">★★★★★</span><q>WOW. It's really life-changing.</q><p><b>Isabelle D.</b><span class="lc">ai.moms</span>™ member</p></div></div>
     <div class="proof8">
       <div class="pc"><p>"I found the session extremely helpful. Using the skills I learned, I created a summer learning program for my Kindergartener that is engaging and highly customized to his love of soldiers and Legos — in literally 60 seconds."</p><b>Colleen Lee</b><span><span class="lc">ai.moms</span>™ Member</span></div>
       <div class="pc"><p>"I just wanted to share I've been going through the <span class="lc">ai.moms</span>™ Foundations Course. WOW. It's so incredible!!!! I still have a lot to go but I am beyond impressed and love it, I can't wait to keep going with it! 💕"</p><b>Sara Joy</b><span><span class="lc">ai.moms</span>™ Member</span></div>
@@ -650,14 +665,14 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 
   <section class="sec pad"><div class="wrap founder2">
     <div>
-      <div class="eyebrow">Why <span class="lc">ai.moms</span>™ exists</div>
+      <div class="eyebrow">Why <span class="lc" style="letter-spacing:.06em">ai.moms™</span> exists</div>
       <h2>I googled "AI for moms." Nothing came up. So I built it.</h2>
       <p>I'm Raquel, a former luxury CMO turned founder of <span class="lc">ai.moms</span>™. AI can help moms more than almost anyone, yet we have the fewest tools to guide us and the least time to learn it.</p>
       <p>We're changing that. <span class="lc">ai.moms</span>™ is on a mission to close the AI learning gap for moms, with plain-language teaching, a real assistant in Aime, and a community so no one has to learn it alone.</p>
       <p><span class="lc">ai.moms</span>™ is an Approved Claude SMB Trainer and part of the Anthropic Partner Network, so what you learn here is current and taught the right way.</p>
-      <div class="sigrow"><div class="sig"><svg class="sigsvg" viewBox="-20 -1020 6933 1440" role="img" aria-label="Raquel Cadourcy signature"><g transform="scale(1,-1)" fill="none" stroke="currentColor" stroke-width="49.4" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" style="--d:0.00s;--t:.2s" transform="translate(0.0,0)" d="M 498 573 L 419 564 L 356 501 L 340 438 L 293 334 L 208 198 L 154 85.1 L 142 34.6 L 161 3.15 L 198 18.9 L 220 37.8 L 227 44.1 M 81.9 369 L 28.4 419 L 22 495 L 53.5 561 L 161 636 L 274 671 L 406 696 L 558 693 L 671 680 L 772 617 L 813 536 L 788 447 L 677 365 L 554 321 L 432 284 L 334 280 L 202 293 L 198 315 L 312 230 L 381 117 L 498 -22 L 627 -117 L 762 -176 L 882 -176 L 945 -139 L 970 -101 L 976 -66.1"/><path pathLength="1" style="--d:0.08s;--t:.2s" transform="translate(639.0,0)" d="M 495 183 L 457 132 L 406 78.8 L 331 31.5 L 271 18.9 L 243 63 L 255 142 L 296 274 L 277 243 L 176 145 L 69.3 56.7 L -18.9 18.9 L -63 66.1 L -56.7 154 L 34.6 261 L 148 331 L 230 356 L 312 356 L 324 343"/><path pathLength="1" style="--d:0.16s;--t:.2s" transform="translate(1165.0,0)" d="M 324 334 L 224 359 L 88.2 293 L -34.6 180 L -59.9 120 L -53.6 69.3 L -31.5 28.4 L 34.6 25.2 L 120 75.6 L 186 154 L 315 284 L 422 416 L 372 406 L 255 91.4 L 139 -205 L 129 -350 L 161 -403 L 246 -403 L 280 -356 L 293 -249 L 280 -110 L 246 34.6 L 321 28.4 L 413 78.8 L 476 135 L 507 183"/><path pathLength="1" style="--d:0.24s;--t:.2s" transform="translate(1707.0,0)" d="M 47.2 309 L -18.9 217 L -53.6 123 L -56.7 56.7 L -9.45 28.4 L 78.8 53.6 L 145 139 L 227 239 L 293 353 L 324 343 L 214 164 L 205 97.6 L 202 53.6 L 255 22 L 321 40.9 L 413 120 L 463 183"/><path pathLength="1" style="--d:0.32s;--t:.2s" transform="translate(2202.0,0)" d="M 66.1 170 L 148 211 L 217 249 L 252 306 L 239 350 L 180 356 L 63 287 L 15.8 252 L -34.6 192 L -66.1 139 L -72.4 88.2 L -50.4 44.1 L 31.5 9.45 L 170 44.1 L 214 81.9 L 277 135 L 315 183"/><path pathLength="1" style="--d:0.40s;--t:.2s" transform="translate(2548.0,0)" d="M -25.2 176 L 91.4 265 L 239 428 L 346 589 L 394 662 L 381 709 L 312 718 L 243 674 L 148 532 L 41 340 L -28.4 198 L -50.4 85.1 L -22 25.2 L 44.1 18.9 L 120 53.6 L 195 132 L 230 183"/><path pathLength="1" style="--d:0.48s;--t:.2s" transform="translate(3187.0,0)" d="M 296 362 L 403 372 L 526 441 L 617 526 L 658 608 L 639 680 L 564 712 L 375 662 L 249 576 L 110 419 L 41 280 L 12.6 132 L 59.9 25.2 L 189 -31.5 L 346 -15.8 L 476 34.6 L 595 113 L 668 189"/><path pathLength="1" style="--d:0.56s;--t:.2s" transform="translate(3877.0,0)" d="M 495 183 L 457 132 L 406 78.8 L 331 31.5 L 271 18.9 L 243 63 L 255 142 L 296 274 L 277 243 L 176 145 L 69.3 56.7 L -18.9 18.9 L -63 66.1 L -56.7 154 L 34.6 261 L 148 331 L 230 356 L 312 356 L 324 343"/><path pathLength="1" style="--d:0.64s;--t:.2s" transform="translate(4403.0,0)" d="M 328 312 L 302 356 L 258 369 L 151 334 L 47.2 265 L -37.8 176 L -63 107 L -56.7 50.4 L 12.6 15.8 L 78.8 63 L 176 148 L 277 252 L 387 334 L 532 457 L 668 592 L 693 668 L 690 709 L 639 721 L 561 684 L 510 633 L 441 523 L 387 425 L 293 217 L 246 66.1 L 233 -44.1 L 258 -97.6 L 302 -113 L 340 -101"/><path pathLength="1" style="--d:0.72s;--t:.2s" transform="translate(4784.0,0)" d="M 195 337 L 142 365 L 66.1 315 L -6.3 233 L -40.9 161 L -56.7 75.6 L 12.6 9.45 L 101 40.9 L 183 110 L 230 208 L 239 246 L 239 284 L 220 284 M 167 158 L 183 101 L 214 72.4 L 255 75.6 L 296 110 L 359 183"/><path pathLength="1" style="--d:0.80s;--t:.2s" transform="translate(5175.0,0)" d="M 47.2 309 L -18.9 217 L -53.6 123 L -56.7 56.7 L -9.45 28.4 L 78.8 53.6 L 145 139 L 227 239 L 293 353 L 324 343 L 214 164 L 205 97.6 L 202 53.6 L 255 22 L 321 40.9 L 413 120 L 463 183"/><path pathLength="1" style="--d:0.88s;--t:.2s" transform="translate(5670.0,0)" d="M -31.5 183 L 34.6 287 L 154 463 L 47.2 391 L 47.2 365 L 59.9 356 L 258 353 L 145 214 L 81.9 101 L 97.6 22 L 186 28.4 L 296 132 L 337 183"/><path pathLength="1" style="--d:0.96s;--t:.2s" transform="translate(6039.0,0)" d="M 243 306 L 239 350 L 198 365 L 101 328 L -15.8 208 L -47.2 170 L -72.4 110 L -66.1 66.1 L -47.2 25.2 L 56.7 15.8 L 186 56.7 L 268 123 L 315 183"/><path pathLength="1" style="--d:1.04s;--t:.2s" transform="translate(6385.0,0)" d="M 88.2 312 L 3.15 233 L -31.5 186 L -47.2 132 L -53.6 85.1 L -37.8 47.2 L 12.6 31.5 L 69.3 47.2 L 176 151 L 280 277 L 334 334 L 369 331 L 274 139 L 183 -97.6 L 107 -230 L 28.4 -346 L -28.4 -397 L -135 -394 L -167 -346 L -123 -252 L -15.8 -167 L 123 -66.1 L 265 9.45 L 406 123 L 457 183"/><path pathLength="1" style="--d:1.2s;--t:.35s;stroke-width:39.5" d="M137,-330 C2062,-390 4467,-350 6873,-260"/></g></svg><small>Founder, <span class="lc">ai.moms</span>™ · Mom of 2</small></div></div>
+      <div class="sigrow"><div class="sig"><svg class="sigsvg" viewBox="-20 -1020 5657 1400" role="img" aria-label="Raquel Cadourcy signature"><g transform="scale(1,-1)" fill="none" stroke="currentColor" stroke-width="42.0" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" style="--d:0.00s;--t:.2s" transform="translate(0.0,0)" d="M 356 59.9 L 296 25.2 L 176 31.5 L 148 12.6 L 183 53.6 L 233 123 L 315 595 L 337 662 M 44.1 356 L 50.4 447 L 97.6 551 L 164 617 L 243 652 L 328 662 L 400 665 L 498 649 L 554 611 L 586 539 L 576 472 L 532 413 L 479 375 L 432 365 L 369 365 L 460 208 L 583 22.1 L 674 -91.4"/><path pathLength="1" style="--d:0.08s;--t:.2s" transform="translate(684.0,0)" d="M 271 425 L 161 432 L 81.9 397 L 25.2 296 L 3.15 167 L 3.15 66.1 L 12.6 15.8 L 72.5 75.6 L 158 195 L 211 284 L 252 369 L 271 413 L 227 217 L 205 120 L 198 66.1 L 192 12.6 L 255 53.6 L 365 186 L 413 252"/><path pathLength="1" style="--d:0.16s;--t:.2s" transform="translate(1097.0,0)" d="M 284 450 L 236 381 L 186 268 L 110 132 L 63 69.3 L -3.15 12.6 L -15.8 139 L 6.3 280 L 37.8 359 L 85 416 L 170 441 L 230 444 L 261 435 L 198 94.5 L 161 -129 L 142 -170 L 53.5 -230 L 230 -139"/><path pathLength="1" style="--d:0.24s;--t:.2s" transform="translate(1396.0,0)" d="M -47.2 397 L 18.9 444 L 37.8 457 L 9.45 331 L -3.15 211 L -12.6 139 L -12.6 47.2 L -12.6 12.6 L 41 63 L 113 158 L 161 246 L 211 346 L 255 447 L 224 321 L 198 192 L 183 85.1 L 176 9.45 L 252 72.4 L 324 161 L 397 255"/><path pathLength="1" style="--d:0.32s;--t:.2s" transform="translate(1790.0,0)" d="M 3.15 214 L 72.5 258 L 158 343 L 189 387 L 198 435 L 180 454 L 139 457 L 72.5 413 L 22 340 L -6.3 233 L -18.9 148 L -3.15 78.8 L 31.5 28.4 L 63 -3.15 L 170 107 L 239 186 L 287 255"/><path pathLength="1" style="--d:0.40s;--t:.2s" transform="translate(2080.0,0)" d="M 252 753 L 205 762 L 132 734 L 69.3 658 L 47.2 564 L -22.1 107 L -31.5 3.15 L 44.1 69.3 L 142 186 L 192 255"/><path pathLength="1" style="--d:0.48s;--t:.2s" transform="translate(2650.0,0)" d="M 545 639 L 450 668 L 306 624 L 211 507 L 154 391 L 129 284 L 132 183 L 183 75.6 L 236 18.9 L 324 6.3 L 381 40.9 L 460 110"/><path pathLength="1" style="--d:0.56s;--t:.2s" transform="translate(3242.0,0)" d="M 271 425 L 161 432 L 81.9 397 L 25.2 296 L 3.15 167 L 3.15 66.1 L 12.6 15.8 L 72.5 75.6 L 158 195 L 211 284 L 252 369 L 271 413 L 227 217 L 205 120 L 198 66.1 L 192 12.6 L 255 53.6 L 365 186 L 413 252"/><path pathLength="1" style="--d:0.64s;--t:.2s" transform="translate(3655.0,0)" d="M 476 753 L 400 753 L 331 712 L 290 643 L 268 548 L 252 432 L 243 369 L 195 277 L 129 161 L 66.1 72.4 L 0 12.6 L -12.6 129 L 3.15 268 L 41 356 L 72.5 400 L 120 425 L 170 438 L 220 432 L 243 406 L 230 290 L 217 151 L 189 6.3 L 261 63 L 346 167 L 413 255"/><path pathLength="1" style="--d:0.72s;--t:.2s" transform="translate(4065.0,0)" d="M 53.5 3.15 L 66.1 3.15 L 123 31.5 L 176 91.4 L 224 180 L 249 271 L 243 359 L 214 406 L 192 450 L 97.6 406 L 37.8 328 L -3.15 239 L -9.45 161 L 3.15 81.9 L 22 44.1 L 53.5 3.15"/><path pathLength="1" style="--d:0.80s;--t:.2s" transform="translate(4380.0,0)" d="M -47.2 397 L 18.9 444 L 37.8 457 L 9.45 331 L -3.15 211 L -12.6 139 L -12.6 47.2 L -12.6 12.6 L 41 63 L 113 158 L 161 246 L 211 346 L 255 447 L 224 321 L 198 192 L 183 85.1 L 176 9.45 L 252 72.4 L 324 161 L 397 255"/><path pathLength="1" style="--d:0.88s;--t:.2s" transform="translate(4774.0,0)" d="M -50.4 387 L 6.3 435 L 37.8 457 L 6.3 287 L -18.9 132 L -22.1 56.7 L -22.1 25.2 L 6.3 126 L 50.4 224 L 88.2 324 L 135 403 L 161 435 L 195 450 L 236 447"/><path pathLength="1" style="--d:0.96s;--t:.2s" transform="translate(5004.0,0)" d="M 239 435 L 198 457 L 132 444 L 59.9 365 L 31.5 302 L 6.3 236 L 3.15 161 L 9.45 88.2 L 31.5 34.6 L 75.6 -6.3 L 148 59.9 L 227 145 L 309 255"/><path pathLength="1" style="--d:1.04s;--t:.2s" transform="translate(5313.0,0)" d="M -50.4 397 L -40.9 400 L 6.3 435 L 37.8 457 L 6.3 280 L -12.6 120 L -3.15 22.1 L 75.6 107 L 142 211 L 189 299 L 252 441 L 220 293 L 192 81.9 L 167 -56.7 L 139 -120 L 101 -154 L 44.1 -173 L -59.9 -164"/><path pathLength="1" style="--d:1.2s;--t:.35s;stroke-width:31.5" d="M112,-300 C1679,-360 3638,-330 5485,-250"/></g></svg><small>Founder, <span class="lc">ai.moms</span>™ · Mom of 2</small></div></div>
     </div>
-    <img src="raquel.png" alt="Raquel, founder of ai.moms™">
+    <img src="/home/raquel.jpg" alt="Raquel Cadourcy, founder of ai.moms™">
   </div></section>
 
   <section class="sec navy pad"><div class="wrap">
@@ -713,7 +728,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
   <footer class="ffoot pad">
     <div class="grid">
       <div><div class="brand"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span></div><div class="lead2">Retire from<br>Chief Everything Officer™.</div><span class="soc big"><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="ai.moms™ on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener" aria-label="ai.moms™ on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a></span></div>
-      <div><h5>Learning experiences</h5><ul><li><a href="/foundations">Foundations Course</a></li><li><a href="#irl">In-Person Experiences</a></li><li><a href="/membership">The Membership</a></li><li><a href="/workshop">Monthly Workshop</a></li><li><a href="/corporate">ERG &amp; Corporate Programs</a></li><li><a href="/subscribe">The Edit</a></li></ul></div>
+      <div><h5>Learning experiences</h5><ul><li><a href="/foundations">Foundations Course</a></li><li><a href="/experiences">Host an Experience</a></li><li><a href="/membership">The Membership</a></li><li><a href="/workshop">Monthly Workshop</a></li><li><a href="/corporate">ERG &amp; Corporate Programs</a></li><li><a href="/subscribe">The Edit</a></li></ul></div>
       <div><h5>Company</h5><ul><li><a href="/community">Community</a></li><li><a href="/science">The Science</a></li><li><a href="/press">Press</a></li><li><a href="/careers">Careers</a></li></ul></div>
       <div><h5>Shop</h5><ul><li><a href="/shop">Shop</a></li><li><a href="/shop#merch">Merch &amp; Gifts</a></li></ul></div>
       <div><h5>Connect</h5><ul><li>hello@aimoms.ai</li><li><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="/press">Partnerships, Press &amp; Media</a></li></ul></div>
@@ -755,10 +770,10 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
   ['Your budget','What works for your budget right now?',[['Under $100',{a:3}],['Around $250 or so',{f:2,i:1}],["I'd rather invest and do it right",{i:2,f:1}],['A small monthly amount',{m:3}]]]];
  const LANE={home:'for the mental load at home',work:'to stay ahead at work',biz:'to grow your business',all:'across home, work and your business'};
  const OFF={
-  a:{t:'Build Aime + 25 skills',pr:'$97',p:'Your fastest win {lane}. Set up your AI Chief Everything Officer tonight and hand off the daily brief, the weekly plan and dinner.',b:'Build My Aime →',h:'#build',s:'Your fastest first win'},
-  f:{t:'The Foundations Course',pr:'$247 · on demand',p:'Learn Claude from the ground up, the mom way, with demos for home, work and business. Use it {lane} at your own pace, and build Aime along the way.',b:'Get My Time Back →',h:'#start',s:'The full course, at your pace'},
-  i:{t:'An in-person experience',pr:'$265 · 40 seats',p:'Learn it hands-on in a room of moms who get it, then apply it {lane} with the Mompreneur extension. The full course comes with it.',b:'See Upcoming Events →',h:'#start',s:'Hands-on, in a room of moms'},
-  m:{t:'The Membership',pr:'$59 / month',p:"You're already using AI. Keep up {lane} without keeping up alone: live sessions, a private community and every in-person event.",b:'Join the Membership →',h:'#start',s:'Live sessions + community'}};
+  a:{t:'Build Aime + 25 skills',pr:'$97',p:'Your fastest win {lane}. Set up your AI Chief Everything Officer tonight and hand off the daily brief, the weekly plan and dinner.',b:'Build My Aime →',h:'/build-aime',s:'Your fastest first win'},
+  f:{t:'The Foundations Course',pr:'$247 · on demand',p:'Learn Claude from the ground up, the mom way, with demos for home, work and business. Use it {lane} at your own pace, and build Aime along the way.',b:'Get My Time Back →',h:'/foundations-register',s:'The full course, at your pace'},
+  i:{t:'An in-person experience',pr:'$265 · 40 seats',p:'Learn it hands-on in a room of moms who get it, then apply it {lane} with the Mompreneur extension. The full course comes with it.',b:'Reserve My Seat →',h:'/nyc',s:'Hands-on, in a room of moms'},
+  m:{t:'The Membership',pr:'$59 / month',p:"You're already using AI. Keep up {lane} without keeping up alone: live sessions, a private community and every in-person event.",b:'Join the Membership →',h:'/membership-register',s:'Live sessions + community'}};
  const box=document.getElementById('qz');if(!box)return;
  const $=id=>document.getElementById(id),scr=s=>box.querySelectorAll('[data-s]').forEach(el=>el.hidden=el.dataset.s!==s);
  let cur=0,ans=[];

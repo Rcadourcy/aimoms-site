@@ -85,7 +85,7 @@ export default function CommunityPage() {
           <Link href="/membership" className="way-card featured">
             <div className="way-tag">01 &middot; The core</div>
             <h3>The Membership</h3>
-            <p>A private group chat that never sleeps, bi-weekly live sessions on Zoom, and The Members&rsquo; Table each month &mdash; plus free access to every in-person event. $49/month, cancel anytime.</p>
+            <p>A private group chat that never sleeps, a monthly live session on Zoom, and The Members&rsquo; Table each month &mdash; plus free access to every in-person event. $49/month, cancel anytime.</p>
             <div className="way-link">Join the membership &rarr;</div>
           </Link>
 

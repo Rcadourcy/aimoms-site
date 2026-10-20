@@ -14,6 +14,13 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         { source: '/', destination: '/home-v2.html' },
         { source: '/experience-thank-you', destination: '/experience-thank-you.html' },
+        { source: '/nyc', destination: '/nyc.html' },
+        { source: '/foundations', destination: '/foundations-v2.html' },
+        { source: '/build-aime', destination: '/build-aime.html' },
+        { source: '/build-aime-thank-you', destination: '/build-aime-thank-you.html' },
+        { source: '/skill-guide', destination: '/skill-guide.html' },
+        { source: '/experiences', destination: '/experiences-v2.html' },
+        { source: '/corporate', destination: '/corporate-v2.html' },
       ],
       afterFiles: [],
       fallback: [],
