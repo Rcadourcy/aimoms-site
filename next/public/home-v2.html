@@ -399,7 +399,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 .col-set{display:flex;flex-direction:column}
 .col-track+.col-track{border-left:1px solid var(--g200)}
 .col-track.rev{animation-direction:reverse}
-.cols:hover .col-track{animation-play-state:paused}
+
 @keyframes colup{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-50%,0)}}
 .tcard{padding:16px 16px 17px;border-bottom:1px solid var(--g200)}
 
@@ -753,7 +753,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
  const CAT="hhwhhbhwhhbhwhbyhbhhhhyhyhhhwwbbbhhhhhhywhhhhbhhyy",LBL={h:'Home',w:'Work',b:'Business',y:'You'};
  const box=document.getElementById('cols');if(!box)return;
  const cols=[[],[],[],[]];TABS.forEach((t,i)=>cols[i%4].push(i));
- const DUR=[7,8.5,7.5,9];
+ const DUR=[5,6,5.5,6.5];
  cols.forEach((list,c)=>{const tr=document.createElement('div');tr.className='col-track'+(c%2?' rev':'');tr.style.setProperty('--dur',DUR[c]+'s');
    // two copies back to back so the loop is seamless
    for(let k=0;k<2;k++){const set=document.createElement('div');set.className='col-set';if(k)set.setAttribute('aria-hidden','true');tr.appendChild(set);list.forEach(i=>{const d=document.createElement('div');d.className='tcard'+(CAT[i]==='b'?' biz':'');
