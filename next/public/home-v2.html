@@ -91,11 +91,22 @@ html{scroll-behavior:smooth}
 .irl-sec{padding-block:16px!important}
 .sec.qz-sec{padding-top:40px}
 .proof-up{padding-block:72px!important}
+.fmt a.fmt-irl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06);border-radius:12px;padding:12px 14px;color:#fff}
+.fmt a.fmt-irl:hover{background:rgba(255,255,255,.1)}
+.fmt a.fmt-irl b{font-size:15px}.fmt a.fmt-irl span{grid-column:1;font-size:13px;color:rgba(255,255,255,.65)}
+.fmt a.fmt-irl em{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font-family:'Outfit',sans-serif;font-weight:800;font-size:19px}
+#start.sec{padding-bottom:44px!important}
+.irl-sec{padding-top:0!important}
+.pcard.fnd{border-bottom-left-radius:18px;border-bottom-right-radius:18px}
+.pcard.fnd::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-46px;width:46%;height:48px;background:var(--navy);border-radius:0 0 0 0}
+.pcard.fnd .fmt-irl::after{content:none}
+@media (max-width:1000px){.pcard.fnd::after{display:none}#start.sec{padding-bottom:40px!important}.irl-sec{padding-top:8px!important}}
+
 .pcard .deep{display:block;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);color:#fff;font-size:14px;line-height:1.5}
 .pcard .deep b{display:block;font-weight:700}
 .pcard .deep span{color:rgba(255,255,255,.6);font-size:13px}
 .proof-up .igrow{margin:0}
-.irl-sec{padding-top:56px!important}
+
 .final{padding-top:92px!important}
 .off{background:var(--off)}
 .navy{background:var(--navy);color:#fff}
@@ -566,9 +577,8 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
           <h3>The Foundations Course</h3>
           <div class="out">Go from behind to confident, at home, at work and in your business.</div>
           <p>We teach you Claude from the ground up, the mom way, with live demos for the mom at home, the mom at work and the mompreneur. Learn the tool, use it for mom life from A to Z, and build Aime along the way. All 25 skills included.</p>
-          <div class="price">$247 <small>on demand · 6 modules · 44 short lessons · $1,291 value</small></div>
+          <div class="fmt"><div><b>On demand</b><span>6 modules · 44 short lessons · at your pace</span><em>$247</em></div><a href="#irl" class="fmt-irl"><b>In person · go deepest</b><span>Everything in the course, live in a room of moms, plus the Mompreneur extension ↓</span><em>$265</em></a></div>
           <a class="btn qs" href="/foundations">Get My Time Back →</a>
-          <a class="deep" href="/nyc"><b>Want to go deepest? Take it in person · $265 →</b><span>Everything in the course, live in a room of moms, plus the Mompreneur extension.</span></a>
         </div>
       </div>
       <div class="col">
@@ -577,13 +587,6 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
       </div>
     </div>
   </section>
-
-  <section class="sec navy pad proof-up" id="proof"><div class="wrap">
-    <div class="eyebrow">Moms, in real life</div>
-    <h2 class="title" style="margin-bottom:32px;font-size:clamp(30px,4.4vw,46px)">Moms who stopped carrying it all.</h2>
-    <div class="reels" style="margin-bottom:40px"><div class="reel live"><video src="/home/vid/ues.mp4" poster="/home/vid/ues.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper East Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper East Side, NYC</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/pw.mp4" poster="/home/vid/pw.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Port Washington, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Port Washington, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/larch.mp4" poster="/home/vid/larch.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Larchmont, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Larchmont, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/uws.mp4" poster="/home/vid/uws.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper West Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper West Side, NYC</b>Mom-hosted experience</div></div></div>
-    <div class="igrow"><span>See more from our events</span><a class="btn qs" href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Follow @aimoms.ai on Instagram ↗</a></div>
-  </div></section>
 
   <section class="pad irl-sec" id="irl">
     <div class="wrap irl">
@@ -594,6 +597,13 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
       <div class="irl-cta"><div class="irl-price">$265<small>40 seats · course included</small></div><a class="btn qs" href="/nyc">Reserve My Seat →</a></div>
     </div>
   </section>
+
+  <section class="sec navy pad proof-up" id="proof"><div class="wrap">
+    <div class="eyebrow">Moms, in real life</div>
+    <h2 class="title" style="margin-bottom:32px;font-size:clamp(30px,4.4vw,46px)">Moms who stopped carrying it all.</h2>
+    <div class="reels" style="margin-bottom:40px"><div class="reel live"><video src="/home/vid/ues.mp4" poster="/home/vid/ues.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper East Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper East Side, NYC</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/pw.mp4" poster="/home/vid/pw.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Port Washington, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Port Washington, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/larch.mp4" poster="/home/vid/larch.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Larchmont, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Larchmont, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/uws.mp4" poster="/home/vid/uws.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper West Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper West Side, NYC</b>Mom-hosted experience</div></div></div>
+    <div class="igrow"><span>See more from our events</span><a class="btn qs" href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Follow @aimoms.ai on Instagram ↗</a></div>
+  </div></section>
 
   <section class="sec pad qz-sec" id="quiz">
     <div class="wrap qz-grid">
