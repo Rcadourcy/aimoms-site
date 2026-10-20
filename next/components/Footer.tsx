@@ -25,10 +25,8 @@ export default function Footer() {
             <Link href="/workshop" className="footer-link">Monthly Workshop</Link>
             <Link href="/experiences" className="footer-link">Mom-Hosted Experiences</Link>
             <Link href="/corporate" className="footer-link">Corporate Programs</Link>
-            <Link href="/out-of-office-waitlist" className="footer-link">Out of Office Weekends&#8482;</Link>
             <a href="mailto:hello@aimoms.ai?subject=Private%201%3A1%20Coaching%20Inquiry" className="footer-link">Private 1:1 Coaching</a>
             <Link href="/editorial" className="footer-link">The Edit</Link>
-            <Link href="/toolkit" className="footer-link">The AI Toolkit</Link>
           </div>
 
           <div>

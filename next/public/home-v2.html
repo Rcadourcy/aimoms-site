@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ai.moms™ — Moms, get your time back with AI</title>
+<meta name="description" content="The #1 place for moms to learn AI. Learn Claude the mom way with demos for home, work and business, then build Aime, your AI Chief Everything Officer™. On demand or in person.">
+<link rel="canonical" href="https://aimoms.ai/">
+<meta property="og:title" content="ai.moms™ — Moms, get your time back with AI">
+<meta property="og:description" content="The #1 place for moms to learn AI. Learn Claude the mom way with demos for home, work and business, then build Aime, your AI Chief Everything Officer™. On demand or in person.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aimoms.ai">
+<meta property="og:image" content="https://aimoms.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ai.moms™ — Moms, get your time back with AI">
+<meta name="twitter:description" content="The #1 place for moms to learn AI. Learn Claude the mom way with demos for home, work and business, then build Aime, your AI Chief Everything Officer™. On demand or in person.">
+<meta name="twitter:image" content="https://aimoms.ai/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700;1,900&display=swap">
+
+
+
+<script>
+window._fbqQueue=[];
+window.fbq=function(){window._fbqQueue.push(arguments);};
+window._fbq=window.fbq;
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:#060d26;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+
+/* ================= THE SITE (today's homepage) ================= */
+.site{
+  --navy:#060d26; --off:#f8f8f8; --g200:#e5e5e5; --g400:#999; --g600:#666;
+  /* pink-related tokens: TODAY values */
+  --logo-ai:#ff63d8; --h1-accent:#ff63d8; --dot:#ff63d8; --dot-glow:0 0 12px rgba(255,99,216,.8); --pulse:pulse;
+  --btn-bg:#ff63d8; --btn-fg:#fff; --btn-shadow:0 4px 20px rgba(255,99,216,.25); --btn-radius:100px;
+  --ghost-fg:#ff63d8; --ghost-border:#ff63d8;
+  --sub-bg:#ff63d8; --sub-fg:#fff; --sub-border:#ff63d8;
+  --eyebrow:#ff63d8; --num:#ff63d8; --rule:#ff63d8; --tag:#ff63d8; --link:#ff63d8; --note-strong:#ff63d8;
+  --nv-eyebrow:#ff63d8; --nv-num:#ff63d8; --nv-link:#ff63d8; --nv-btn-bg:#ff63d8; --nv-btn-fg:#fff;
+  --hw:900;
+  background:#fff;color:var(--navy);font-family:'Be Vietnam Pro',sans-serif;-webkit-font-smoothing:antialiased;
+}
+.site h1,.site h2,.site h3{font-family:'Outfit',sans-serif;letter-spacing:-.02em}
+.site a{text-decoration:none;color:inherit}
+.site .ia{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;letter-spacing:-.01em}
+.site .tm{font-size:.42em;vertical-align:.6em;font-weight:600;margin-left:1px;opacity:.85}
+.site .pad{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+
+.s-nav{background:var(--navy);color:#fff}
+.s-nav .inner{max-width:1240px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand .bm{font-size:22px}
+.brand .ai{font-family:'Playfair Display',serif;font-style:italic;font-weight:900;color:var(--logo-ai)}
+.brand .moms{font-weight:800}
+.brand .tag{font-size:9px;color:rgba(255,255,255,.6);margin-top:3px}
+.s-nav .links{display:flex;align-items:center;gap:22px}
+.s-nav .tnl{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.s-nav .subscribe{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;padding:8px 16px;border-radius:100px;background:var(--sub-bg);color:var(--sub-fg);box-shadow:inset 0 0 0 1.5px var(--sub-border)}
+.s-nav .navcta{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.02em;padding:10px 18px;border-radius:var(--btn-radius);background:#fff;color:#060d26!important;white-space:nowrap}
+.s-nav .ham{display:none}
+@media (max-width:1000px){.s-nav .ham{display:grid}}
+.s-nav .ham{gap:4px}.s-nav .ham i{width:18px;height:2px;background:#fff;display:block}
+
+.hero{padding-block:110px 96px;text-align:center}
+.eyebrow-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--g200);padding:8px 18px;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:26px}
+.eyebrow-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--dot);box-shadow:var(--dot-glow);animation:var(--pulse) 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+.hero h1{font-weight:var(--hw);font-size:clamp(42px,7vw,72px);line-height:1;letter-spacing:-.035em;max-width:920px;margin:0 auto 28px;text-wrap:balance}
+.hero h1 .ia{color:var(--h1-accent)}
+.hero .sub{font-size:17.5px;line-height:1.7;color:var(--g600);max-width:600px;margin:0 auto 36px}
+.ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:18px 40px;border-radius:var(--btn-radius);font-weight:700;font-size:16.5px;background:var(--btn-bg);color:var(--btn-fg);box-shadow:var(--btn-shadow);border:2px solid var(--btn-bg)}
+.btn.ghost{background:transparent;color:var(--ghost-fg);border-color:var(--ghost-border);box-shadow:none}
+.hero .note{font-size:11px;color:var(--g400);margin-top:26px}
+.hero .note strong{color:var(--note-strong)}
+
+.sec{padding-block:92px}
+/* white sections that stack: one even 56px join between each */
+.sec.tabs-sec{padding-bottom:16px}
+#start.sec{padding-top:40px;padding-bottom:40px}
+.irl-sec{padding-block:16px!important}
+.sec.qz-sec{padding-top:40px}
+.final{padding-top:92px!important}
+.off{background:var(--off)}
+.navy{background:var(--navy);color:#fff}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{font-family:'Outfit',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--eyebrow);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.navy .eyebrow{color:var(--nv-eyebrow)}
+.title{font-weight:var(--hw);font-size:clamp(36px,6vw,64px);line-height:1;letter-spacing:-.03em;margin-bottom:14px;text-wrap:balance}
+.navy .title{color:#fff}
+.lead{color:var(--g600);font-size:16.5px;line-height:1.7;max-width:620px;margin-bottom:40px}
+.navy .lead{color:rgba(255,255,255,.7)}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card3{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:36px 30px 32px;position:relative;min-height:280px;display:flex;flex-direction:column}
+.card3::before{content:"";position:absolute;top:0;left:0;width:32px;height:1px;background:var(--rule)}
+.card3 .num{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(36px,3.6vw,54px);line-height:1;color:var(--num);margin-bottom:18px;letter-spacing:-.03em}
+.card3 h3{font-family:'Be Vietnam Pro',sans-serif;font-weight:800;font-size:clamp(19px,1.55vw,24px);letter-spacing:-.025em;margin-bottom:14px;line-height:1.15}
+.card3 p{color:#3d4357;font-size:15px;line-height:1.6;margin-top:auto}
+.navy .card3{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)}
+.navy .card3 .num{color:var(--nv-num)}
+.navy .card3::before{background:var(--nv-num)}
+.navy .card3 h3{color:#fff}.navy .card3 p{color:rgba(255,255,255,.7)}
+.ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1240px;margin:0 auto}
+.way{background:#fff;border:1px solid var(--g200);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column}
+.way .t{font-family:'Outfit',sans-serif;font-weight:700;font-size:10.9px;letter-spacing:.22em;text-transform:uppercase;color:var(--tag);margin-bottom:18px}
+.way h3{font-weight:800;font-size:21.5px;line-height:1.2;letter-spacing:-.02em;margin-bottom:10px}
+.way p{color:var(--g600);font-size:14.7px;line-height:1.6;margin-bottom:22px;flex:1}
+.way .l{font-weight:700;font-size:13.6px;color:var(--link);letter-spacing:.02em}
+.way.feat{background:var(--navy);color:#fff;border-color:var(--navy)}
+.way.feat p{color:rgba(255,255,255,.6)}
+.way.feat .t,.way.feat .l{color:var(--nv-link)}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column}
+.pc p{color:rgba(255,255,255,.92);font-size:15.2px;line-height:1.65;margin-bottom:18px;font-style:italic;flex:1}
+.pc b{font-size:14px}.pc span{display:block;font-size:12.5px;color:rgba(255,255,255,.45);margin-top:2px}
+.final{padding-block:40px 120px;text-align:center}
+.final h2{font-weight:var(--hw);font-size:clamp(32px,5.5vw,54px);line-height:1.05;margin-bottom:18px;letter-spacing:-.03em;text-wrap:balance}
+.final p{color:rgba(255,255,255,.65);font-size:16.5px;max-width:560px;margin:0 auto 36px;line-height:1.7}
+.final .btn{background:var(--nv-btn-bg);border-color:var(--nv-btn-bg);color:var(--nv-btn-fg);padding:22px 52px;font-size:18px}
+.final .fn{color:rgba(255,255,255,.4);font-size:11px;margin-top:26px}
+.s-foot{background:var(--navy);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.08);padding-block:48px;font-size:13px}
+.s-foot .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.s-foot .brand .bm{font-size:26px;color:#fff}
+
+/* ---------- NEW SECTIONS (sales-page structure) ---------- */
+.site section,.site .s-nav{position:relative}
+.anno{display:none!important;position:absolute;top:14px;right:14px;z-index:5;max-width:280px;background:#fffbe6;color:#3b3200;border:1px solid #e9d97a;border-radius:8px;padding:9px 12px;font:500 12px/1.45 'Be Vietnam Pro',sans-serif;text-align:left;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.anno b{display:block;font-weight:700;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+body.annos .anno{display:block}
+.hero .proofline{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-top:34px;font-size:13.5px;color:var(--g600)}
+.hero .proofline .stars{color:var(--navy);letter-spacing:2px}
+.hero .proofline i{font-style:italic}
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1240px;margin:0 auto;counter-reset:step}
+.step{background:#fff;border:1px solid var(--g200);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
+.step .k{font-family:'Outfit',sans-serif;font-weight:700;font-size:10.9px;letter-spacing:.22em;text-transform:uppercase;color:var(--tag);margin-bottom:14px;display:flex;justify-content:space-between;gap:8px}
+.step .k em{font-style:normal;color:var(--g400);letter-spacing:.12em}
+.step h3{font-weight:800;font-size:22px;line-height:1.15;letter-spacing:-.02em;margin-bottom:6px}
+.step .out{font-weight:600;font-size:14.5px;color:var(--navy);margin-bottom:12px}
+.step p{color:var(--g600);font-size:14.5px;line-height:1.6;margin-bottom:20px;flex:1}
+.step .price{font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;margin-bottom:14px}
+.step .price small{font-family:'Be Vietnam Pro',sans-serif;font-weight:500;font-size:12.5px;color:var(--g400);margin-left:4px}
+.step .l{font-weight:700;font-size:13.6px;color:var(--link)}
+.step.first{background:var(--navy);border-color:var(--navy);color:#fff}
+.step.first .out{color:#fff}.step.first p{color:rgba(255,255,255,.65)}.step.first .k,.step.first .l{color:var(--nv-link)}
+.step.first .k em{color:rgba(255,255,255,.5)}
+.step.first .price small{color:rgba(255,255,255,.5)}
+.badge{position:absolute;top:-12px;left:24px;background:#fff;color:var(--navy);font:700 10.5px/1 'Outfit',sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px;border-radius:100px;box-shadow:0 0 0 1px var(--g200)}
+.offer{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:start}
+.offer h2{font-weight:var(--hw);font-size:clamp(34px,4.8vw,54px);line-height:1.02;letter-spacing:-.03em;margin-bottom:16px;text-wrap:balance}
+.offer h2 .ia{color:var(--h1-accent)}
+.offer .lead{margin-bottom:26px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-bottom:28px}
+.skills div{font-size:14.5px;display:flex;gap:10px;align-items:baseline}
+.skills div::before{content:"✓";color:var(--num);font-weight:800}
+.skills code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--g600)}
+.stack{background:var(--navy);color:#fff;border-radius:18px;padding:30px;font-variant-numeric:tabular-nums}
+.stack .row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:14.5px}
+.stack .row span:last-child{color:rgba(255,255,255,.6);white-space:nowrap}
+.stack .tot{display:flex;justify-content:space-between;padding:16px 0 4px;font-weight:700}
+.stack .tot s{color:rgba(255,255,255,.5);font-weight:500}
+.stack .yours{font-family:'Outfit',sans-serif;font-weight:900;font-size:44px;letter-spacing:-.03em;margin:8px 0 2px}
+.stack .yours small{font:500 13px 'Be Vietnam Pro',sans-serif;color:rgba(255,255,255,.55);margin-left:6px;letter-spacing:0}
+.stack .btn{width:100%;margin-top:18px;background:var(--nv-btn-bg);border-color:var(--nv-btn-bg);color:var(--nv-btn-fg)}
+.stack .guar{margin-top:14px;font-size:12.5px;color:rgba(255,255,255,.6);text-align:center}
+.founder{display:grid;grid-template-columns:280px minmax(0,1fr);gap:48px;align-items:center}
+.founder img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;display:block}
+.founder h2{font-weight:var(--hw);font-size:clamp(30px,4vw,44px);line-height:1.05;letter-spacing:-.03em;margin-bottom:16px;text-wrap:balance}
+.founder p{color:var(--g600);font-size:16px;line-height:1.7;margin-bottom:14px;max-width:38em}
+.founder .sig{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--navy)}
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.faq div{padding:22px 0;border-top:1px solid var(--g200)}
+.faq h3{font-family:'Be Vietnam Pro',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.01em;margin-bottom:6px}
+.faq p{color:var(--g600);font-size:15px;line-height:1.6}
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1180px;margin:0 auto}
+.more a{border:1px solid var(--g200);border-radius:14px;padding:18px 20px;background:#fff;font-weight:700;font-size:15px}
+.more a span{display:block;font-weight:400;color:var(--g600);font-size:13px;margin-top:4px}
+.edit{max-width:1180px;margin:28px auto 0;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:#fff;border:1px solid var(--g200);border-radius:14px;padding:20px 24px}
+.edit b{font-family:'Outfit',sans-serif;font-size:18px}
+.edit p{color:var(--g600);font-size:14px}
+.edit form{display:flex;gap:8px;flex-wrap:wrap}
+.edit input{font:inherit;font-size:14px;padding:12px 14px;border:1px solid var(--g200);border-radius:10px;min-width:0;width:240px;max-width:100%}
+.edit button{font:700 14px 'Be Vietnam Pro',sans-serif;padding:12px 18px;border-radius:var(--btn-radius);border:0;background:var(--navy);color:#fff;cursor:pointer}
+.shell-row .tog{font:inherit;font-size:13px;color:var(--shell-fg);background:var(--shell-card);border:1px solid var(--shell-line);border-radius:999px;padding:6px 12px;cursor:pointer}
+@media (max-width:1000px){.ladder{grid-template-columns:1fr 1fr;gap:28px 18px}.more{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.offer,.founder{grid-template-columns:1fr}.founder img{max-width:240px}.faq{grid-template-columns:1fr}.anno{position:static;margin:0 0 18px;max-width:none}}
+@media (max-width:520px){.ladder,.more,.skills{grid-template-columns:1fr}}
+
+/* ---------- ROUND 3 ---------- */
+.site{--qs-bg:#060d26;--qs-fg:#fff}
+.btn.qs{background:var(--qs-bg);border-color:var(--qs-bg);color:var(--qs-fg);box-shadow:none}
+.navy .btn.qs,.stack .btn.qs{background:#fff;border-color:#fff;color:#060d26}
+.path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1240px;margin:0 auto;align-items:stretch}
+.col{display:flex;flex-direction:column;gap:12px}
+.col .ch{font-family:'Outfit',sans-serif;font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--tag);display:flex;align-items:baseline;gap:10px;padding-left:4px}
+.col .ch span{font-family:'Be Vietnam Pro',sans-serif;font-weight:500;letter-spacing:0;text-transform:none;font-size:13px;color:var(--g400)}
+.pcard{background:#fff;border:1px solid var(--g200);border-radius:18px;padding:28px 26px;display:flex;flex-direction:column;flex:1;position:relative}
+.pcard .how{font-family:'Outfit',sans-serif;font-weight:700;font-size:10.9px;letter-spacing:.2em;text-transform:uppercase;color:var(--g400);margin-bottom:10px}
+.pcard h3{font-weight:800;font-size:21px;line-height:1.18;letter-spacing:-.02em;margin-bottom:6px}
+.pcard .out{font-weight:600;font-size:14.5px;margin-bottom:10px}
+.pcard p{color:var(--g600);font-size:14.5px;line-height:1.6;margin-bottom:18px;flex:1}
+.pcard .price{font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;margin-bottom:12px}
+.pcard .price small{font-family:'Be Vietnam Pro',sans-serif;font-weight:500;font-size:12.5px;color:var(--g400);margin-left:4px}
+.pcard .l{font-weight:700;font-size:13.6px;color:var(--link)}
+.pcard.first{background:var(--navy);border-color:var(--navy);color:#fff}
+.pcard.first .how{color:rgba(255,255,255,.5)}.pcard.first p{color:rgba(255,255,255,.65)}.pcard.first .price small{color:rgba(255,255,255,.5)}
+.pcard.first .btn{margin-top:4px;padding:15px 20px;font-size:15px}
+.or{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--g400);margin:-2px 0}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 28px;margin:6px 0 30px}
+.groups h4{font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tag);margin-bottom:8px}
+.groups ul{list-style:none;display:grid;gap:6px}
+.groups li{font-size:14.5px;line-height:1.35;display:flex;gap:8px}
+.groups li::before{content:"✓";color:var(--num);font-weight:800;flex:none}
+.groups li span{color:var(--g600)}
+.offer2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr);gap:44px;align-items:start}
+.offer2 h2{font-weight:var(--hw);font-size:clamp(32px,4.4vw,52px);line-height:1.04;letter-spacing:-.03em;margin-bottom:14px;text-wrap:balance}
+.offer2 h2 .ia{color:var(--h1-accent)}
+.stack{position:sticky;top:110px}
+.reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:56px}
+.reel{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#111a3a}
+.reel img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82)}
+.reel .ph{position:absolute;inset:auto 12px 12px 12px;color:#fff;font-size:12.5px;line-height:1.35}
+.reel .ph b{display:block;font-size:13.5px}
+.reel .mute{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.5);color:#fff;font-size:11px;padding:5px 9px;border-radius:100px}
+.reel .ph-tag{position:absolute;top:10px;left:10px;background:#fffbe6;color:#3b3200;font-size:10.5px;font-weight:700;padding:4px 8px;border-radius:6px}
+.proof8{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.founder2{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:center}
+.founder2 img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;display:block}
+.founder2 h2{font-weight:var(--hw);font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.03em;margin-bottom:18px;text-wrap:balance}
+.founder2 p{color:var(--g600);font-size:16px;line-height:1.7;margin-bottom:14px;max-width:36em}
+.founder2 .sig{font-style:normal;color:var(--navy)}
+.sigsvg{display:block;width:min(320px,78vw);height:auto;margin:-6px 0 2px -8px}
+.sigsvg path{stroke-dasharray:1;stroke-dashoffset:1}
+.sigsvg.go path{animation:sign var(--t) cubic-bezier(.55,.1,.35,1) var(--d) forwards}
+@keyframes sign{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.sigsvg path{stroke-dashoffset:0}.sigsvg.go path{animation:none}}
+.more4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1180px;margin:0 auto}
+.more4 > div{border:1px solid var(--g200);border-radius:14px;padding:20px;background:#fff;display:flex;flex-direction:column;gap:6px}
+.more4 b{font-size:15.5px}
+.more4 p{color:var(--g600);font-size:13.5px;line-height:1.5;flex:1}
+.more4 .l{font-weight:700;font-size:13.5px;color:var(--link)}
+.more4 form{display:flex;gap:6px;margin-top:4px}
+.more4 input{font:inherit;font-size:13.5px;padding:10px 12px;border:1px solid var(--g200);border-radius:10px;min-width:0;flex:1}
+.more4 button{font:700 13px 'Be Vietnam Pro',sans-serif;padding:10px 14px;border-radius:10px;border:0;background:var(--navy);color:#fff;cursor:pointer}
+.ffoot{background:var(--navy);color:rgba(255,255,255,.65);padding-block:72px 40px;font-size:14px}
+.ffoot .grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1.3fr 1fr 1fr 1.2fr;gap:32px}
+.ffoot .brand .bm{font-size:30px;color:#fff}
+.ffoot .lead2{font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:#fff;line-height:1.2;margin-top:16px}
+.ffoot h5{font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nv-eyebrow);margin-bottom:14px}
+.ffoot ul{list-style:none;display:grid;gap:9px}
+.ffoot .legal{max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
+.ffoot .legal span a{margin-left:18px;text-decoration:underline;text-underline-offset:3px}
+.ffoot .disc{max-width:1180px;margin:18px auto 0;font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.4)}
+.hl-toggle{display:inline-flex;border:1px solid var(--shell-line);border-radius:999px;overflow:hidden;margin-left:8px;vertical-align:middle}
+.hl-toggle button{font:inherit;font-size:12.5px;padding:5px 11px;border:0;background:var(--shell-card);color:var(--shell-mute);cursor:pointer}
+.hl-toggle button[aria-pressed="true"]{background:var(--shell-fg);color:var(--shell-bg)}
+@media (max-width:1000px){.path{grid-template-columns:1fr}.proof8,.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.more4{grid-template-columns:1fr 1fr}.ffoot .grid{grid-template-columns:1fr 1fr}.groups{grid-template-columns:1fr 1fr}.stack{position:static}}
+@media (max-width:820px){.offer2,.founder2{grid-template-columns:1fr}.founder2 img{max-width:260px;order:-1}}
+@media (max-width:520px){.proof8,.more4,.groups,.ffoot .grid{grid-template-columns:1fr}}
+
+.worlds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:48px;padding-top:36px;border-top:1px solid var(--g200)}
+.world h4{font-family:'Outfit',sans-serif;font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--tag);margin-bottom:14px;display:flex;justify-content:space-between;gap:8px}
+.world h4 span{font-family:'Be Vietnam Pro',sans-serif;font-weight:500;letter-spacing:0;text-transform:none;color:var(--g400)}
+.world ul{list-style:none;display:grid;gap:0}
+.world li{padding:11px 0;border-top:1px solid var(--g200);display:grid;gap:2px}
+.world li b{font-size:15px;font-weight:700}
+.world li span{font-size:13.5px;line-height:1.45;color:var(--g600)}
+.guide-link{margin-top:22px;font-weight:700;font-size:14px;color:var(--link)}
+.founder2{grid-template-columns:minmax(0,1fr) 420px;gap:72px}
+.founder2 img{border-radius:20px}
+.founder2 .sig small{display:block;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;font-size:13px;color:var(--g400);margin-top:2px}
+a.reel{display:block;color:#fff}
+.igrow{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin:-28px 0 56px;color:rgba(255,255,255,.7);font-size:14.5px}
+.igrow .btn{padding:13px 24px;font-size:14.5px}
+@media (max-width:1000px){.worlds{grid-template-columns:1fr 1fr}.founder2{grid-template-columns:minmax(0,1fr) 320px;gap:40px}}
+@media (max-width:820px){.founder2{grid-template-columns:1fr}.founder2 img{max-width:320px}}
+@media (max-width:520px){.worlds{grid-template-columns:1fr}}
+.soc{display:inline-flex;gap:12px;align-items:center}
+.soc a{display:inline-flex;color:inherit;opacity:.85}
+.soc a:hover{opacity:1}
+.soc.big{margin-top:22px;gap:14px}
+.soc.big a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);align-items:center;justify-content:center;color:#fff}
+.ffoot ul a{color:inherit}
+.feedhead{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.feedbtns{display:flex;gap:10px;flex-wrap:wrap}
+.feedbtns .btn{padding:13px 22px;font-size:14.5px;gap:8px}
+.feed{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.feed a{position:relative;aspect-ratio:1/1;border-radius:10px;overflow:hidden;display:block;color:#fff}
+.feed img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.feed a span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(6,13,38,.45);opacity:0;transition:opacity .2s}
+.feed a:hover span,.feed a:focus-visible span{opacity:1}
+.feed a:hover img{transform:scale(1.04)}
+@media (max-width:820px){.feed{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.s-nav .soc{display:none}}
+.lc{text-transform:none!important}
+.guide-cta{margin-top:28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:#fff;border:1px solid var(--g200);border-radius:14px;padding:22px 26px}
+.guide-cta b{display:block;font-family:'Outfit',sans-serif;font-size:20px;letter-spacing:-.01em}
+.guide-cta span{color:var(--g600);font-size:14.5px}
+.guide-cta .btn{padding:15px 26px;font-size:15px}
+.founder2{grid-template-columns:minmax(0,1fr) 260px;gap:56px;align-items:start}
+.founder2 img{border-radius:16px;max-width:260px}
+.founder2 p:last-of-type{margin-bottom:22px}
+.sigrow{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--g200);max-width:36em}
+.siglinks{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:13.5px;color:var(--link)}
+.siglinks a{color:inherit}
+.feedsec{background:#fff}
+@media (max-width:1000px){.founder2{grid-template-columns:minmax(0,1fr) 220px;gap:36px}}
+@media (max-width:820px){.founder2{grid-template-columns:1fr}.founder2 img{max-width:200px}}
+.subhead{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:14px}
+.vtests{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:48px}
+.qtile{position:relative;aspect-ratio:9/16;border-radius:14px;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff}
+.qtile .stars{letter-spacing:3px;font-size:14px;color:var(--nv-num)}
+.qtile q{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(22px,2.4vw,32px);line-height:1.15}
+.qtile p{font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.7)}
+.qtile p b{display:block;color:#fff;font-size:14px}
+.reel .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.92);color:#060d26;display:flex;align-items:center;justify-content:center;font-size:18px;padding-left:3px}
+@media (max-width:1000px){.vtests{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.inc{display:block;margin-top:8px;color:var(--navy);font-weight:600}
+.hero .micro{font-size:13.5px;color:var(--g600);margin-top:14px}
+.reel.live video{width:100%;height:100%;object-fit:cover;display:block}
+.reel.live .snd{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font:600 11.5px 'Be Vietnam Pro',sans-serif;padding:6px 10px;border-radius:100px;border:0;cursor:pointer}
+.reel.live .ph{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.reel.live::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.55));pointer-events:none}
+.reel.live .ph,.reel.live .snd{z-index:2}
+button.reel{border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:#fff;width:100%}
+button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.vmodal{position:fixed;inset:0;z-index:100;background:rgba(6,13,38,.86);display:flex;align-items:center;justify-content:center;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.vmodal[hidden]{display:none!important}
+.vbox{position:relative;width:min(420px,100%);max-height:100%;display:flex;flex-direction:column;gap:10px}
+.vbox video{width:100%;max-height:78vh;aspect-ratio:9/16;object-fit:contain;border-radius:14px;background:#000}
+.vclose{position:absolute;top:-6px;right:-6px;z-index:2;width:36px;height:36px;border-radius:50%;border:0;background:#fff;color:#060d26;font-size:16px;cursor:pointer}
+.vcap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:rgba(255,255,255,.75);font:13px 'Be Vietnam Pro',sans-serif}
+.vcap a{color:#fff;font-weight:700}
+.hero .micro .lnk{color:var(--link);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.press-strip{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;padding-block:22px;border-top:1px solid var(--g200);border-bottom:1px solid var(--g200);font-family:'Outfit',sans-serif}
+.press-strip span{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--g400);font-weight:700}
+.press-strip b{font-size:22px;letter-spacing:.06em;font-weight:900}
+.press-strip .lnk{font-family:'Be Vietnam Pro',sans-serif;font-size:13.5px;font-weight:700;color:var(--link)}
+.or{font-size:14px}
+.fmt{display:grid;gap:10px;margin:2px 0 18px}
+.fmt div{display:grid;grid-template-columns:1fr auto;gap:2px 12px;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px 14px}
+.fmt b{font-size:15px}.fmt span{grid-column:1;font-size:13px;color:rgba(255,255,255,.6)}
+.fmt em{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font-family:'Outfit',sans-serif;font-weight:800;font-size:19px}
+.pcard.fnd p{margin-bottom:14px;flex:0}
+.lanes{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:-14px 0 30px}
+.lanes span{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px;border-radius:100px;border:1px solid var(--g200);color:var(--navy)}
+.card3 .ex{margin-top:16px;padding-top:14px;border-top:1px solid #ececec;font-size:13px;font-weight:600;color:var(--navy)}
+.navy .card3 .ex{border-color:rgba(255,255,255,.12);color:#fff}
+.nowrap{white-space:nowrap}
+.tmx{font-family:'Be Vietnam Pro',sans-serif;font-style:normal;font-weight:500;font-size:.22em;vertical-align:2.4em;margin-left:2px;letter-spacing:0}
+@media (max-width:520px){.nowrap{white-space:normal}}
+.founder2 > img{margin-top:56px}
+@media (max-width:820px){.founder2 > img{margin-top:0}}
+.press-strip .ps{display:flex;align-items:center;gap:12px}
+.press-strip .psd{width:1px;height:26px;background:var(--g200);display:block}
+.press-strip .plogo{height:15px;width:auto;display:block}
+.press-strip .plogo.fc{height:24px}
+@media (max-width:640px){.press-strip{flex-direction:column;gap:16px;padding-block:26px}.press-strip .ps{justify-content:center;flex-wrap:wrap;text-align:center}.press-strip span{font-size:11px;letter-spacing:.22em}}
+.press-strip .cred{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;letter-spacing:.02em}
+.badge-slot{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 10px;border:1px dashed #d9b84d;background:#fffbe6;color:#7a6200!important;font-size:10px!important;letter-spacing:.06em!important;border-radius:6px}
+@media (max-width:820px){.press-strip .psd{display:none}}
+.tabs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.tabs-sec .lead{max-width:34em}
+.lnk.sci{font-weight:700;font-size:15px;color:var(--link);text-decoration:underline;text-underline-offset:4px}
+.tabwin{background:#fff;border:1px solid var(--g200);border-radius:16px;box-shadow:0 24px 60px -30px rgba(6,13,38,.35);overflow:hidden}
+.tw-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--g200);background:var(--off)}
+.tw-bar i{width:10px;height:10px;border-radius:50%;background:#e1e1e6}
+.tw-bar b{margin-left:10px;font-family:'Outfit',sans-serif;font-size:13px;color:var(--g600);font-weight:600}
+.tw-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:20px}
+.tw-tabs span{font-size:12.5px;padding:7px 11px;border:1px solid var(--g200);border-radius:8px 8px 3px 3px;background:#fff;white-space:nowrap;color:var(--navy)}
+.tw-tabs span:nth-child(3n){background:var(--off)}
+.tw-tabs span:nth-child(7n){border-color:var(--num);color:var(--num)}
+.tw-tabs .more{background:var(--navy)!important;color:#fff!important;border-color:var(--navy)!important;font-weight:700}
+.tw-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;border-top:1px solid var(--g200);font-size:13px;color:var(--g600)}
+.tw-foot span:last-child{font-weight:700;color:var(--navy)}
+@media (max-width:860px){.tabs-grid{grid-template-columns:1fr;gap:32px}}
+/* ---------- 50 TABS, SCROLLING COLUMNS ---------- */
+.mind{margin:0;display:flex;flex-direction:column;gap:18px;padding-top:56px}
+.cols{position:relative;height:clamp(460px,54vw,620px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;overflow:hidden;background:#fff;border:1px solid var(--g200);border-radius:16px;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 84%,transparent 100%)}
+.cols-frame{position:relative}
+.col-track{display:flex;flex-direction:column;align-self:start;animation:colup var(--dur) linear infinite;will-change:transform;backface-visibility:hidden}
+.col-set{display:flex;flex-direction:column}
+.col-track+.col-track{border-left:1px solid var(--g200)}
+.col-track.rev{animation-direction:reverse}
+.cols:hover .col-track{animation-play-state:paused}
+@keyframes colup{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-50%,0)}}
+.tcard{padding:16px 16px 17px;border-bottom:1px solid var(--g200)}
+
+.tcard small{display:block;font-family:'Outfit',sans-serif;font-weight:800;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+
+.tcard span{display:block;font-size:14px;line-height:1.35;font-weight:500;color:var(--navy)}
+.mind-foot{display:flex;justify-content:space-between;align-items:baseline;gap:8px 20px;flex-wrap:wrap;border-top:1px solid var(--g200);padding-top:14px;font-size:14px;color:var(--g600)}
+.mind-foot b{font-family:'Outfit',sans-serif;font-size:22px;color:var(--navy);font-variant-numeric:tabular-nums;margin-right:4px}
+.mind-foot em{font-style:normal;font-weight:700;color:var(--navy)}
+@media (max-width:640px){.cols{grid-template-columns:repeat(2,minmax(0,1fr));height:460px}.cols .col-track:nth-child(n+3){display:none}.tcard span{font-size:13.5px}}
+@media (prefers-reduced-motion:reduce){.col-track{animation:none}}
+@media (max-width:860px){.mind{padding-top:0}}
+/* ---------- INVISIBLE LOAD QUIZ (from /quiz) ---------- */
+.qz-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.qz-copy .lead{max-width:30em}
+.qz-gets{list-style:none;display:grid;gap:10px;margin-top:-14px}
+.qz-gets li{display:flex;gap:10px;font-size:15px;line-height:1.45}
+.qz-gets li::before{content:"✓";color:var(--num);font-weight:800}
+.qz{background:#fff;border:1px solid var(--g200);border-radius:20px;padding:30px;box-shadow:0 24px 60px -36px rgba(6,13,38,.35);min-height:440px;display:flex;flex-direction:column}
+.qz [hidden]{display:none!important}
+.qz-top{display:flex;justify-content:space-between;gap:12px;font-size:12.5px;color:var(--g400);margin-bottom:10px}
+.qz-top b{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tag)}
+.qz-bar{height:4px;border-radius:2px;background:var(--g200);overflow:hidden;margin-bottom:24px}
+.qz-bar i{display:block;height:100%;background:var(--navy);transition:width .35s ease}
+.qz h3{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(20px,2.1vw,25px);line-height:1.25;letter-spacing:-.02em;margin-bottom:20px}
+.qz-opts{display:grid;gap:10px}
+.qz-opt{font:inherit;font-size:15px;text-align:left;line-height:1.4;padding:14px 16px;border:1px solid var(--g200);border-radius:12px;background:#fff;color:var(--navy);cursor:pointer;transition:border-color .15s,background .15s}
+.qz-opt:hover{border-color:var(--navy)}
+.qz-opt[aria-pressed="true"]{border-color:var(--navy);background:var(--off);font-weight:600}
+.qz-opt:focus-visible,.qz-back:focus-visible,.qz .btn:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+.qz-back{margin-top:auto;padding-top:16px;align-self:flex-start;font:inherit;font-size:13.5px;color:var(--g600);background:none;border:0;cursor:pointer}
+.qz-intro{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin:auto 0}
+.qz-intro .big{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(26px,3vw,34px);line-height:1.1;letter-spacing:-.02em}
+.qz-intro p{color:var(--g600);font-size:15px;line-height:1.6;max-width:30em}
+.qz-intro small{color:var(--g400);font-size:12.5px}
+.qz-res{display:grid;gap:18px}
+.qz-head{display:flex;gap:20px;align-items:center}
+.qz-gauge{position:relative;width:110px;height:110px;flex:none}
+.qz-gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.qz-gauge circle{fill:none;stroke-width:10}
+.qz-gauge .tr{stroke:var(--g200)}
+.qz-gauge .fl{stroke:var(--num);stroke-linecap:round;transition:stroke-dashoffset 1.4s ease}
+.qz-gauge div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.qz-gauge b{font-family:'Outfit',sans-serif;font-weight:800;font-size:32px;line-height:1}
+.qz-gauge span{font-size:11px;color:var(--g400)}
+.qz-head small{font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tag)}
+.qz-head h3{margin:4px 0 0}
+.qz-sum{color:var(--g600);font-size:15px;line-height:1.6}
+.qz-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--g200);border-radius:14px}
+.qz-stats div{padding:14px 12px;text-align:center}
+.qz-stats div+div{border-left:1px solid var(--g200)}
+.qz-stats b{display:block;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1;font-variant-numeric:tabular-nums}
+.qz-stats span{font-size:12px;color:var(--g600)}
+.qz-stats .acc b{color:var(--num)}
+.qz-rec{background:var(--navy);color:#fff;border-radius:16px;padding:22px}
+.qz-rec small{font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nv-eyebrow)}
+.qz-rec h4{font-family:'Outfit',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em;margin:6px 0 6px}
+.qz-rec p{color:rgba(255,255,255,.7);font-size:14px;line-height:1.55;margin-bottom:16px}
+.qz-rec .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.qz-rec .btn{padding:14px 22px;font-size:15px}
+.qz-rec .btn.qs{background:#fff;border-color:#fff;color:#060d26}
+.qz-rec .alt{color:#fff;font-size:13.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.qz-mail{display:grid;gap:8px}
+.qz-mail label{font-size:14px;font-weight:600}
+.qz-mail .r{display:flex;gap:8px;flex-wrap:wrap}
+.qz-mail input{font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--g200);border-radius:10px;flex:1 1 180px;min-width:0}
+.qz-mail button{font:700 14px 'Be Vietnam Pro',sans-serif;padding:12px 18px;border-radius:10px;border:0;background:var(--navy);color:#fff;cursor:pointer}
+.qz-mail .err{color:#b4233a;font-size:13px;min-height:1em}
+.qz-mail .ok{font-size:14px;color:var(--navy);background:var(--off);border-radius:10px;padding:12px 14px}
+.qz-again{font:inherit;font-size:13px;color:var(--g600);background:none;border:0;cursor:pointer;justify-self:start;text-decoration:underline;text-underline-offset:3px}
+.small-start{display:block;margin-top:12px;text-align:center;font-size:13.5px;font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:3px}
+.irl-sec{padding-block:8px 24px}
+.irl{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr) auto;gap:24px 40px;align-items:center;background:var(--navy);color:#fff;border-radius:20px;padding:16px 38px 16px 16px;overflow:hidden}
+.irl-img{width:100%;height:100%;min-height:230px;max-height:300px;object-fit:cover;object-position:50% 62%;border-radius:12px;display:block}
+.irl .eyebrow{color:var(--nv-eyebrow);margin-bottom:10px}
+.irl h3{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.02em;line-height:1.15;margin-bottom:10px}
+.irl p{color:rgba(255,255,255,.7);font-size:15px;line-height:1.6;max-width:44em}
+.irl-cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.irl-price{font-family:'Outfit',sans-serif;font-weight:900;font-size:40px;line-height:1;letter-spacing:-.03em}
+.irl-price small{display:block;font:500 13px 'Be Vietnam Pro',sans-serif;color:rgba(255,255,255,.6);letter-spacing:0;margin-top:6px}
+.irl .btn.qs{background:#fff;border-color:#fff;color:#060d26;padding:15px 26px;font-size:15px}
+@media (max-width:1000px){.irl{grid-template-columns:minmax(0,240px) minmax(0,1fr);padding-right:28px}.irl-cta{grid-column:2}}
+@media (max-width:640px){.irl{grid-template-columns:1fr;padding:14px 14px 26px}.irl-copy,.irl-cta{padding:0 10px}.irl-cta{grid-column:auto}.irl-img{max-height:240px}}
+.qz-sec{padding-top:40px}
+.qz-price{font-family:'Outfit',sans-serif;font-weight:800;font-size:19px;margin:-2px 0 8px}
+.qz-alt{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;border:1px solid var(--g200);border-radius:14px;padding:14px 16px}
+.qz-alt small{grid-column:1/-1;font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--g400)}
+.qz-alt b{display:block;font-size:15.5px}
+.qz-alt span{display:block;font-size:13.5px;color:var(--g600)}
+.qz-alt a{font-weight:700;font-size:14px;color:var(--link);white-space:nowrap}
+.qz-take{display:inline-block;margin-left:18px;font-weight:700;font-size:15px;color:var(--link);text-decoration:underline;text-underline-offset:4px}
+@media (max-width:900px){.qz-grid{grid-template-columns:1fr;gap:28px}.qz{min-height:0}}
+@media (max-width:520px){.qz{padding:22px}.qz-head{flex-direction:column;align-items:flex-start;gap:12px}.qz-take{display:block;margin:12px 0 0}}
+@media (prefers-reduced-motion:reduce){.qz-bar i,.qz-gauge .fl{transition:none}}
+
+@media (max-width:1000px){.s-nav .tnl{display:none}.ways{grid-template-columns:repeat(2,minmax(0,1fr))}.proof{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.trio,.proof{grid-template-columns:1fr}.card3{min-height:0}.sec{padding-block:80px}.hero{padding-block:80px 72px}}
+@media (max-width:480px){.ways{grid-template-columns:1fr}.btn{padding:16px 28px}}
+@media (prefers-reduced-motion:reduce){.eyebrow-pill .dot{animation:none}}
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "name": "ai.moms™", "alternateName": "ai.moms", "url": "https://aimoms.ai/", "logo": "https://aimoms.ai/og-image.png", "email": "hello@aimoms.ai", "founder": {"@type": "Person", "name": "Raquel Cadourcy"}, "description": "ai.moms™ teaches moms to use AI the mom way, with on-demand courses, in-person experiences and a membership community.", "sameAs": ["https://www.instagram.com/aimoms.ai/", "https://www.linkedin.com/company/ai-moms/"]}, {"@context": "https://schema.org", "@type": "Course", "name": "The Foundations Course", "description": "Learn Claude from the ground up, the mom way, with demos for the mom at home, the mom at work and the mompreneur, then build Aime, your AI Chief Everything Officer™. 6 modules, 44 short lessons, 25 ready-made skills.", "provider": {"@type": "Organization", "name": "ai.moms™", "url": "https://aimoms.ai/"}, "url": "https://aimoms.ai/foundations.html", "offers": {"@type": "Offer", "price": "247", "priceCurrency": "USD", "category": "Paid"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT4H"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I'm not technical. Can I actually do this?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We walk you through every single click. If you can use email and a web browser, you can do this. We designed this for busy moms, not engineers."}}, {"@type": "Question", "name": "How is this different from just asking AI questions on my own?", "acceptedAnswer": {"@type": "Answer", "text": "Most people use AI like a search engine: ask a question, get a generic answer. We teach you the tool from the ground up, show you real demos for home, work and business, and you build Aime, an assistant that knows your family, your preferences and your schedule."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Each lesson is 5 to 10 minutes. You can finish the whole course in a week or spread it over a month. Watch whenever works for you: nap time, after bedtime, lunch break."}}, {"@type": "Question", "name": "Is this just another productivity hack?", "acceptedAnswer": {"@type": "Answer", "text": "No. You're learning a complete AI skill set: effective prompting, custom assistants and real automated systems for your household and work. This is infrastructure, not tips."}}, {"@type": "Question", "name": "Is my family's information safe?", "acceptedAnswer": {"@type": "Answer", "text": "We teach you privacy best practices and how to use AI platforms safely, so you stay in control of what you share."}}, {"@type": "Question", "name": "Can my partner join too?", "acceptedAnswer": {"@type": "Answer", "text": "The course is designed for the primary household manager (usually mom), but you're welcome to share access with your partner. The skills benefit the whole family."}}, {"@type": "Question", "name": "Which AI do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Aime and her skills run on Claude. We'll show you exactly how to set it up and which plan you need."}}, {"@type": "Question", "name": "What are the payment options?", "acceptedAnswer": {"@type": "Answer", "text": "The Foundations Course is $247 on demand and includes all 6 modules, Aime onboarding and all 25 skills. Prefer to learn in a room? Join us in person for $265, with the course included."}}]}]</script>
+</head>
+<body>
+<div class="site" id="site" data-v="today">
+  <nav class="s-nav pad"><div class="inner">
+    <a class="brand" href="/" style="color:inherit"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span><span class="tag">Retire from Chief Everything Officer™.</span></a>
+    <div class="links"><a class="tnl" href="#quiz">Start Here</a><a class="tnl" href="/foundations">Foundations Course</a><a class="tnl" href="#irl">In Person</a><a class="tnl" href="/membership">Membership</a><a class="navcta" href="/foundations">Get My Time Back</a><span class="ham" aria-hidden="true"><i></i><i></i><i></i></span></div>
+  </div></nav>
+
+  <section class="hero pad">
+    <div class="eyebrow-pill"><span class="dot"></span>Built by moms, for moms.</div>
+    <h1 id="h1">Moms, get your time back and <span class="ia">build your dreams</span> with AI.</h1>
+    <p class="sub">The #1 place for moms to learn AI. We teach you AI the mom way, so you can build your own solutions at home, at work and in your business, alongside moms who get it.</p>
+    <div class="lanes"><span>For the mom at home</span><span>For the mom at work</span><span>For the mompreneur</span></div>
+    <div class="ctas"><a class="btn qs" href="#start">Get My Time Back →</a></div>
+    <p class="micro">The Foundations Course · $247 on demand · demos for home, work and business &nbsp;·&nbsp; <a class="lnk" href="#build">or start small for $97</a></p>
+    <div class="proofline"><span class="stars">★★★★★</span><i>"Seriously, why didn't I do this sooner!"</i><span>Lauren B., <span class="lc">ai.moms</span>™ member</span></div>
+  </section>
+
+  <div class="press-strip pad"><div class="ps"><span>As featured in</span><img class="plogo fc" src="/home/logos/fastcompany.png" alt="Fast Company"></div><i class="psd"></i><div class="ps"><b class="cred">Approved Claude SMB Trainer</b></div><i class="psd"></i><div class="ps"><b class="cred">Anthropic Partner Network</b></div></div>
+
+
+  <section class="sec off pad"><div class="wrap">
+    <div class="eyebrow">Who we serve</div>
+    <h2 class="title">Three moms. One mission.</h2>
+    <p class="lead">Different lives, different reasons for being here. Whether home is handled and it's all about your career or your business, or you want help with everything, the Foundations Course meets you where you are.</p>
+    <div class="trio">
+      <div class="card3"><div class="num">01</div><h3>The Mom at Home</h3><p>You're drowning in the invisible load — the calendars, the meals, the school forms, the birthdays. You're here to put AI to work on the mental load no one else sees.</p><div class="ex">Weekly plans · dinners · school email · birthdays</div></div>
+      <div class="card3"><div class="num">02</div><h3>The Mom at Work</h3><p>You don't have hours to play with the new tools. Your colleagues without kids do. You're here to stay in the room — and not get left behind.</p><div class="ex">Inbox triage · meeting prep · your promotion case</div></div>
+      <div class="card3"><div class="num">03</div><h3>The Mompreneur</h3><p>You're building something — a side project, a service, a real company. AI becomes your co-founder and exec team: it drafts, plans and recommends, and you make the calls.</p><div class="ex">Content · client emails · SOPs · your own AI exec team</div></div>
+    </div>
+  </div></section>
+
+  <section class="sec pad tabs-sec">
+    <div class="wrap tabs-grid">
+      <div>
+        <div class="eyebrow">The science</div>
+        <h2 class="title">It's not you. It's <span class="ia" style="color:var(--h1-accent)">50 open tabs.</span></h2>
+        <p class="lead">Your brain can actively hold two or three things at once. Most moms are carrying 40 to 60, across home, work and the business they're building. Every switch between them costs focus and adds stress.</p>
+        <p class="lead" style="margin-bottom:22px"><b style="color:var(--navy)">The problem was never you. It's that your brain is being asked to be the whole system.</b> AI can hold the tabs for you, so your brain gets to think again.</p>
+        <a class="lnk sci" href="https://aimoms.ai/science" target="_blank" rel="noopener">Read the science · 15 min →</a>
+      </div>
+      <figure class="mind" id="mind" aria-label="Fifty open tabs: home, work, business and personal to-dos">
+        <div class="cols" id="cols"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec pad" id="start">
+    <div class="wrap">
+      <div class="eyebrow">Where to start</div>
+      <h2 class="title">Three ways to get your time back.</h2>
+      <p class="lead">Start small, go all in, or keep growing with us. Each one builds on the last, so you can start wherever you are.</p>
+    </div>
+    <div class="path">
+      <div class="col" id="build">
+        <div class="ch">Start small <span>Tonight</span></div>
+        <div class="pcard"><div class="how">Your first win</div><h3>Build Aime, your AI Chief Everything Officer™ + 25 ready-made skills</h3><div class="out">Hand off the daily brief, the weekly plan and dinner, starting tonight.</div><p>A guided onboarding to build Aime around your family, plus 25 skills that run on a schedule.</p><div class="price">$97 <small>$794 value</small></div><a class="l" href="https://aimomspluginskillguide.netlify.app/" target="_blank" rel="noopener">Build Aime →</a></div>
+      </div>
+      <div class="col">
+        <div class="ch">Go all in <span>Our signature program</span></div>
+        <div class="pcard first fnd"><span class="badge">Everything included</span>
+          <div class="how">Everything in the starter, plus</div>
+          <h3>The Foundations Course</h3>
+          <div class="out">Go from behind to confident, at home, at work and in your business.</div>
+          <p>We teach you Claude from the ground up, the mom way, with live demos for the mom at home, the mom at work and the mompreneur. Learn the tool, use it for mom life from A to Z, and build Aime along the way. All 25 skills included.</p>
+          <div class="price">$247 <small>on demand · 6 modules · 44 short lessons · $1,291 value</small></div>
+          <a class="btn qs" href="/foundations">Get My Time Back →</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="ch">Keep growing <span>Ongoing</span></div>
+        <div class="pcard"><div class="how">Community</div><h3>The Membership</h3><div class="out">Keep up with AI without keeping up alone.</div><p>Bi-weekly live sessions on Zoom, a private WhatsApp community and free access to every in-person event. New tools explained as they come out.</p><div class="price">$59 <small>/ month · cancel anytime</small></div><a class="l" href="/membership">Join the membership →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad irl-sec" id="irl">
+    <div class="wrap irl">
+      <img class="irl-img" src="/home/vid/irl-porch.jpg" alt="Moms in ai.moms™ hats holding pink gift bags at a mom-hosted event" width="1050" height="1400" loading="lazy">
+      <div class="irl-copy"><div class="eyebrow">Join us in real life</div>
+        <h3>Next: Thursday, November 12 · New York City</h3>
+        <p>A hands-on, 3-hour in-person session with 40 moms. Build Aime, set up your first skills, apply it to your business or career with the Mompreneur extension, and go home with the full Foundations Course included.</p></div>
+      <div class="irl-cta"><div class="irl-price">$265<small>40 seats · course included</small></div><a class="btn qs" href="mailto:hello@aimoms.ai?subject=Reserve%20my%20seat%3A%20ai.moms%E2%84%A2%20In-Person%20Experience">Reserve My Seat →</a></div>
+    </div>
+  </section>
+
+  <section class="sec pad qz-sec" id="quiz">
+    <div class="wrap qz-grid">
+      <div class="qz-copy">
+        <div class="eyebrow">Still deciding?</div>
+        <h2 class="title">Not sure which one <span class="ia" style="color:var(--h1-accent)">is for you?</span></h2>
+        <p class="lead">Answer four quick questions and we'll point you to the best place to start, based on your life, how you like to learn and your budget.</p>
+        <ul class="qz-gets"><li>Takes under a minute</li><li>A clear recommendation, plus a runner-up</li><li>No email needed to see your result</li></ul>
+      </div>
+      <div class="qz" id="qz" aria-live="polite">
+        <div class="qz-intro" data-s="intro">
+          <span class="big">Let's find your first step.</span>
+          <p>Four taps. Then you'll know exactly where to start.</p>
+          <button class="btn qs" type="button" data-act="start">Help Me Choose →</button>
+          <small>4 questions · under a minute</small>
+        </div>
+        <div data-s="q" hidden>
+          <div class="qz-top"><span id="qzN">Question 1 of 4</span><b id="qzCat"></b></div>
+          <div class="qz-bar"><i id="qzBar" style="width:0"></i></div>
+          <h3 id="qzQ"></h3>
+          <div class="qz-opts" id="qzOpts"></div>
+          <button class="qz-back" type="button" data-act="back" id="qzBack">← Back</button>
+        </div>
+        <div class="qz-res" data-s="res" hidden>
+          <div class="qz-rec"><small>Start here</small><h4 id="qzRecT"></h4><div class="qz-price" id="qzRecPr"></div><p id="qzRecP"></p><div class="row"><a class="btn qs" id="qzRecB" href="#start"></a></div></div>
+          <div class="qz-alt"><small>Also a great fit</small><div><b id="qzAltT"></b><span id="qzAltP"></span></div><a id="qzAltB" href="#start">See it →</a></div>
+          <button class="qz-again" type="button" data-act="again">Retake the quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec off pad"><div class="wrap offer2">
+    <div>
+      <div class="eyebrow">Inside the Foundations Course</div>
+      <h2>Learn it A to Z. Then build your AI<br><span class="ia nowrap">Chief Everything Officer<sup class="tmx">™</sup>.</span></h2>
+      <p class="lead">We teach you Claude from the ground up, with demos for the mom at home, the mom at work and the mompreneur. Then you build Aime, who learns your family, your calendar and how you like things done, and the <span class="lc">ai.moms</span>™ plugin gives her 25 skills for the jobs that fill your week, at home and at work. With Build an Assistant, you can also create custom assistants for your business. Run any of them once, then ask Aime to put it on a schedule, like your weekly plan every Sunday evening.</p>
+    </div>
+    <div class="stack">
+      <div class="row"><span>The Foundations Course: 6 modules, 44 short lessons, demos for home, work and business</span><span>$497</span></div>
+      <div class="row"><span>Aime onboarding: build your AI Chief Everything Officer™</span><span>$297</span></div>
+      <div class="row"><span>25 ready-made skills (the <span class="lc">ai.moms</span>™ plugin for Claude)</span><span>$497</span></div>
+      <div class="row"><span>Step-by-step setup guide</span><span>included</span></div>
+      <div class="tot"><span>Total value</span><s>$1,291</s></div>
+      <div class="yours">$247 <small>you save $1,044</small></div>
+      <a class="btn qs" href="/foundations">Get My Time Back →</a>
+      <a class="small-start" href="#build">Just want Aime and the skills? Start small for $97 →</a>
+      <div class="guar" hidden>Guarantee goes here, for example: finish Module 1 and set up Aime in your first week, or we'll help you 1:1.</div>
+    </div>
+  </div>
+    <div class="wrap"><div class="worlds"><div class="world"><h4>Runs your world <span>9 skills</span></h4><ul><li><b>Meet Aime</b><span>Her get-to-know-your-family interview, saved to your project.</span></li><li><b>Brain Dump</b><span>Say everything in your head. Get a sorted to-do list.</span></li><li><b>Weekly Plan</b><span>Conflicts fixed, dinners picked, one shopping list.</span></li><li><b>Daily Brief</b><span>Meetings, kid logistics and your top three on one page.</span></li><li><b>Friday Shutdown</b><span>What's done, what moves, and what you can drop.</span></li><li><b>Find Me Time</b><span>Finds your lost hours and protects a block for you.</span></li><li><b>Guilt Check</b><span>A short reset and one next step. Never a lecture.</span></li><li><b>Build an Assistant</b><span>A custom assistant for any job on repeat.</span></li><li><b>SOPs</b><span>Any routine turned into a one-page playbook.</span></li></ul></div><div class="world"><h4>Runs your home <span>11 skills</span></h4><ul><li><b>School Digest</b><span>The school email flood, turned into one action list.</span></li><li><b>Weekly Dinner Plan</b><span>Dinners around your schedule, one store-ordered list.</span></li><li><b>Emergency Dinner</b><span>Snap your fridge, get dinner in 30 minutes.</span></li><li><b>Sick Day</b><span>Absence email, work messages and your day, rearranged.</span></li><li><b>School Breaks</b><span>Every day off covered, with real local camps.</span></li><li><b>Summer Camp</b><span>Real camps, deadlines watched, a week-by-week plan.</span></li><li><b>Celebrations</b><span>Birthdays and holidays planned start to finish.</span></li><li><b>Weekend Activities</b><span>What's actually happening near you this weekend.</span></li><li><b>Travel Plan</b><span>Countdown checklist and packing lists for everyone.</span></li><li><b>Fair Split</b><span>The invisible work made visible, and shared.</span></li><li><b>Village Ask</b><span>Easy-yes asks for pickups, meals and backup.</span></li></ul></div><div class="world"><h4>Runs your career <span>5 skills</span></h4><ul><li><b>Meeting Prep</b><span>Your goal, who's in the room and three points to land.</span></li><li><b>Inbox Triage</b><span>What needs you, with replies drafted in your voice.</span></li><li><b>Boundary Draft</b><span>The no you've been avoiding, written three ways.</span></li><li><b>Career Wins</b><span>Log every win with the numbers, all year.</span></li><li><b>Review Prep</b><span>Your wins turned into the promotion case.</span></li></ul></div></div><div class="guide-cta"><div><b>Want every detail?</b><span>See what each skill does, what it connects to and exactly what you get.</span></div><a class="btn qs" href="https://aimomspluginskillguide.netlify.app/" target="_blank" rel="noopener">Read the full Skill Guide →</a></div></div>
+  </section>
+
+  <section class="sec navy pad"><div class="wrap">
+    <div class="eyebrow">Moms, in real life</div>
+    <h2 class="title" style="margin-bottom:36px">Real moms. Real results.</h2>
+    <div class="subhead">Recaps from our events</div>
+    <div class="reels"><div class="reel live"><video src="/home/vid/ues.mp4" poster="/home/vid/ues.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper East Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper East Side, NYC</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/pw.mp4" poster="/home/vid/pw.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Port Washington, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Port Washington, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/larch.mp4" poster="/home/vid/larch.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Larchmont, NY event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Larchmont, NY</b>Mom-hosted experience</div></div><div class="reel live"><video src="/home/vid/uws.mp4" poster="/home/vid/uws.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Upper West Side, NYC event recap"></video><button class="snd" type="button" aria-label="Turn sound on">🔇 Tap for sound</button><div class="ph"><b>Upper West Side, NYC</b>Mom-hosted experience</div></div></div>
+    <div class="igrow"><span>See more from our events</span><a class="btn qs" href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Follow @aimoms.ai on Instagram ↗</a></div>
+    <div class="subhead">In their words</div>
+    <div class="vtests"><button class="reel vt" type="button" data-src="/home/vid/t-pw.mp4" data-place="Port Washington, NY"><img src="/home/vid/t-pw.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Port Washington, NY</b>Tap to play with sound</div></button><button class="reel vt" type="button" data-src="/home/vid/t-larch.mp4" data-place="Larchmont, NY"><img src="/home/vid/t-larch.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Larchmont, NY</b>Tap to play with sound</div></button><button class="reel vt" type="button" data-src="/home/vid/t-ues.mp4" data-place="Upper East Side, NYC"><img src="/home/vid/t-ues.jpg" alt=""><span class="play" aria-hidden="true">▶</span><div class="ph"><b>Upper East Side, NYC</b>Tap to play with sound</div></button><div class="qtile"><span class="stars" aria-label="5 stars">★★★★★</span><q>WOW. It's really life-changing.</q><p><b>Isabelle D.</b><span class="lc">ai.moms</span>™ member</p></div></div>
+    <div class="proof8">
+      <div class="pc"><p>"I found the session extremely helpful. Using the skills I learned, I created a summer learning program for my Kindergartener that is engaging and highly customized to his love of soldiers and Legos — in literally 60 seconds."</p><b>Colleen Lee</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"I just wanted to share I've been going through the <span class="lc">ai.moms</span>™ Foundations Course. WOW. It's so incredible!!!! I still have a lot to go but I am beyond impressed and love it, I can't wait to keep going with it! 💕"</p><b>Sara Joy</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"WOW! I had no idea how much I can and should be using AI to help save me so much time — you made it so easy to understand and get started! It's really life-changing."</p><b>Isabelle D.</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"No stupid questions vibes. Doing it alongside other moms made such a difference. Raquel walked us through everything step by step — super easy and doable."</p><b>Lauren B.</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"Such a rich and encouraging experience. I'm super excited to start automating, already feeling such a huge sense of accomplishment."</p><b>Greta P.</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"I loved the format. Your passion is intoxicating — you literally light up when you talk about it. Also the community aspect and the fact that it's only for us women… extra points."</p><b>Isabelle D.</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"So worth it! It helped me better understand the power of AI in my day-to-day, how to use it smarter, and how to really leverage it."</p><b>Charlotte P.</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+      <div class="pc"><p>"THANK YOU for the <span class="lc">ai.moms</span>™ course! I've been feeling behind when it came to using AI in my personal life and this just made it all click! Aime has already been such a huge help. Seriously why didn't I do this sooner!"</p><b>Lauren B.</b><span><span class="lc">ai.moms</span>™ Member</span></div>
+    </div>
+  </div></section>
+
+  <section class="sec pad"><div class="wrap founder2">
+    <div>
+      <div class="eyebrow">Why <span class="lc">ai.moms</span>™ exists</div>
+      <h2>I googled "AI for moms." Nothing came up. So I built it.</h2>
+      <p>I'm Raquel, a former luxury CMO turned founder of <span class="lc">ai.moms</span>™. AI can help moms more than almost anyone, yet we have the fewest tools to guide us and the least time to learn it.</p>
+      <p>We're changing that. <span class="lc">ai.moms</span>™ is on a mission to close the AI learning gap for moms, with plain-language teaching, a real assistant in Aime, and a community so no one has to learn it alone.</p>
+      <p><span class="lc">ai.moms</span>™ is an Approved Claude SMB Trainer and part of the Anthropic Partner Network, so what you learn here is current and taught the right way.</p>
+      <div class="sigrow"><div class="sig"><svg class="sigsvg" viewBox="-20 -1020 6933 1440" role="img" aria-label="Raquel Cadourcy signature"><g transform="scale(1,-1)" fill="none" stroke="currentColor" stroke-width="49.4" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" style="--d:0.00s;--t:.2s" transform="translate(0.0,0)" d="M 498 573 L 419 564 L 356 501 L 340 438 L 293 334 L 208 198 L 154 85.1 L 142 34.6 L 161 3.15 L 198 18.9 L 220 37.8 L 227 44.1 M 81.9 369 L 28.4 419 L 22 495 L 53.5 561 L 161 636 L 274 671 L 406 696 L 558 693 L 671 680 L 772 617 L 813 536 L 788 447 L 677 365 L 554 321 L 432 284 L 334 280 L 202 293 L 198 315 L 312 230 L 381 117 L 498 -22 L 627 -117 L 762 -176 L 882 -176 L 945 -139 L 970 -101 L 976 -66.1"/><path pathLength="1" style="--d:0.08s;--t:.2s" transform="translate(639.0,0)" d="M 495 183 L 457 132 L 406 78.8 L 331 31.5 L 271 18.9 L 243 63 L 255 142 L 296 274 L 277 243 L 176 145 L 69.3 56.7 L -18.9 18.9 L -63 66.1 L -56.7 154 L 34.6 261 L 148 331 L 230 356 L 312 356 L 324 343"/><path pathLength="1" style="--d:0.16s;--t:.2s" transform="translate(1165.0,0)" d="M 324 334 L 224 359 L 88.2 293 L -34.6 180 L -59.9 120 L -53.6 69.3 L -31.5 28.4 L 34.6 25.2 L 120 75.6 L 186 154 L 315 284 L 422 416 L 372 406 L 255 91.4 L 139 -205 L 129 -350 L 161 -403 L 246 -403 L 280 -356 L 293 -249 L 280 -110 L 246 34.6 L 321 28.4 L 413 78.8 L 476 135 L 507 183"/><path pathLength="1" style="--d:0.24s;--t:.2s" transform="translate(1707.0,0)" d="M 47.2 309 L -18.9 217 L -53.6 123 L -56.7 56.7 L -9.45 28.4 L 78.8 53.6 L 145 139 L 227 239 L 293 353 L 324 343 L 214 164 L 205 97.6 L 202 53.6 L 255 22 L 321 40.9 L 413 120 L 463 183"/><path pathLength="1" style="--d:0.32s;--t:.2s" transform="translate(2202.0,0)" d="M 66.1 170 L 148 211 L 217 249 L 252 306 L 239 350 L 180 356 L 63 287 L 15.8 252 L -34.6 192 L -66.1 139 L -72.4 88.2 L -50.4 44.1 L 31.5 9.45 L 170 44.1 L 214 81.9 L 277 135 L 315 183"/><path pathLength="1" style="--d:0.40s;--t:.2s" transform="translate(2548.0,0)" d="M -25.2 176 L 91.4 265 L 239 428 L 346 589 L 394 662 L 381 709 L 312 718 L 243 674 L 148 532 L 41 340 L -28.4 198 L -50.4 85.1 L -22 25.2 L 44.1 18.9 L 120 53.6 L 195 132 L 230 183"/><path pathLength="1" style="--d:0.48s;--t:.2s" transform="translate(3187.0,0)" d="M 296 362 L 403 372 L 526 441 L 617 526 L 658 608 L 639 680 L 564 712 L 375 662 L 249 576 L 110 419 L 41 280 L 12.6 132 L 59.9 25.2 L 189 -31.5 L 346 -15.8 L 476 34.6 L 595 113 L 668 189"/><path pathLength="1" style="--d:0.56s;--t:.2s" transform="translate(3877.0,0)" d="M 495 183 L 457 132 L 406 78.8 L 331 31.5 L 271 18.9 L 243 63 L 255 142 L 296 274 L 277 243 L 176 145 L 69.3 56.7 L -18.9 18.9 L -63 66.1 L -56.7 154 L 34.6 261 L 148 331 L 230 356 L 312 356 L 324 343"/><path pathLength="1" style="--d:0.64s;--t:.2s" transform="translate(4403.0,0)" d="M 328 312 L 302 356 L 258 369 L 151 334 L 47.2 265 L -37.8 176 L -63 107 L -56.7 50.4 L 12.6 15.8 L 78.8 63 L 176 148 L 277 252 L 387 334 L 532 457 L 668 592 L 693 668 L 690 709 L 639 721 L 561 684 L 510 633 L 441 523 L 387 425 L 293 217 L 246 66.1 L 233 -44.1 L 258 -97.6 L 302 -113 L 340 -101"/><path pathLength="1" style="--d:0.72s;--t:.2s" transform="translate(4784.0,0)" d="M 195 337 L 142 365 L 66.1 315 L -6.3 233 L -40.9 161 L -56.7 75.6 L 12.6 9.45 L 101 40.9 L 183 110 L 230 208 L 239 246 L 239 284 L 220 284 M 167 158 L 183 101 L 214 72.4 L 255 75.6 L 296 110 L 359 183"/><path pathLength="1" style="--d:0.80s;--t:.2s" transform="translate(5175.0,0)" d="M 47.2 309 L -18.9 217 L -53.6 123 L -56.7 56.7 L -9.45 28.4 L 78.8 53.6 L 145 139 L 227 239 L 293 353 L 324 343 L 214 164 L 205 97.6 L 202 53.6 L 255 22 L 321 40.9 L 413 120 L 463 183"/><path pathLength="1" style="--d:0.88s;--t:.2s" transform="translate(5670.0,0)" d="M -31.5 183 L 34.6 287 L 154 463 L 47.2 391 L 47.2 365 L 59.9 356 L 258 353 L 145 214 L 81.9 101 L 97.6 22 L 186 28.4 L 296 132 L 337 183"/><path pathLength="1" style="--d:0.96s;--t:.2s" transform="translate(6039.0,0)" d="M 243 306 L 239 350 L 198 365 L 101 328 L -15.8 208 L -47.2 170 L -72.4 110 L -66.1 66.1 L -47.2 25.2 L 56.7 15.8 L 186 56.7 L 268 123 L 315 183"/><path pathLength="1" style="--d:1.04s;--t:.2s" transform="translate(6385.0,0)" d="M 88.2 312 L 3.15 233 L -31.5 186 L -47.2 132 L -53.6 85.1 L -37.8 47.2 L 12.6 31.5 L 69.3 47.2 L 176 151 L 280 277 L 334 334 L 369 331 L 274 139 L 183 -97.6 L 107 -230 L 28.4 -346 L -28.4 -397 L -135 -394 L -167 -346 L -123 -252 L -15.8 -167 L 123 -66.1 L 265 9.45 L 406 123 L 457 183"/><path pathLength="1" style="--d:1.2s;--t:.35s;stroke-width:39.5" d="M137,-330 C2062,-390 4467,-350 6873,-260"/></g></svg><small>Founder, <span class="lc">ai.moms</span>™ · Mom of 2</small></div></div>
+    </div>
+    <img src="raquel.png" alt="Raquel, founder of ai.moms™">
+  </div></section>
+
+  <section class="sec navy pad"><div class="wrap">
+    <div class="eyebrow">Our mission</div>
+    <h2 class="title">To retire moms around the globe from Chief Everything Officer™.</h2>
+    <div class="trio" style="margin-top:40px">
+      <div class="card3"><div class="num">01</div><h3>The Education</h3><p>Real foundation, not just tips and tricks. Skills that go beyond the household — and into the future.</p></div>
+      <div class="card3"><div class="num">02</div><h3>The Solution</h3><p>Build Aime, your AI Chief Everything Officer™ — plus the tools, prompts, and skills that turn her into a truly agentic partner who carries the load with you.</p></div>
+      <div class="card3"><div class="num">03</div><h3>The Community</h3><p>You are not alone. The invisible load thrives in isolation. Community starves it.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec off pad"><div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <h2 class="title" style="margin-bottom:32px">Before you start.</h2>
+    <div class="faq">
+      <div><h3>I'm not technical. Can I actually do this?</h3><p>Yes. We walk you through every single click. If you can use email and a web browser, you can do this. We designed this for busy moms, not engineers.</p></div>
+      <div><h3>How is this different from just asking AI questions on my own?</h3><p>Most people use AI like a search engine: ask a question, get a generic answer. We teach you the tool from the ground up, show you real demos for home, work and business, and you build Aime, an assistant that knows your family, your preferences and your schedule.</p></div>
+      <div><h3>How long does it take?</h3><p>Each lesson is 5 to 10 minutes. You can finish the whole course in a week or spread it over a month. Watch whenever works for you: nap time, after bedtime, lunch break.</p></div>
+      <div><h3>Is this just another productivity hack?</h3><p>No. You're learning a complete AI skill set: effective prompting, custom assistants and real automated systems for your household and work. This is infrastructure, not tips.</p></div>
+      <div><h3>Is my family's information safe?</h3><p>We teach you privacy best practices and how to use AI platforms safely, so you stay in control of what you share.</p></div>
+      <div><h3>Can my partner join too?</h3><p>The course is designed for the primary household manager (usually mom), but you're welcome to share access with your partner. The skills benefit the whole family.</p></div>
+      <div><h3>Which AI do I need?</h3><p>Aime and her skills run on Claude. We'll show you exactly how to set it up and which plan you need.</p></div>
+      <div><h3>What are the payment options?</h3><p>The Foundations Course is $247 on demand and includes all 6 modules, Aime onboarding and all 25 skills. Prefer to learn in a room? Join us in person for $265, with the course included.</p></div>
+    </div>
+  </div></section>
+
+  <section class="final navy pad">
+    <h2>Ready to retire from Chief Everything Officer™?</h2>
+    <p>Learn AI the mom way, build what your life needs, and never do it alone.</p>
+    <a class="btn qs" href="/foundations">Get My Time Back →</a>
+    <p class="fn">The Foundations Course, $247 on demand · or join us in person · or start small for $97.</p>
+  </section>
+
+  <section class="sec off pad" style="padding-block:72px">
+    <div class="wrap"><div class="eyebrow">More from <span class="lc">ai.moms</span>™</div></div>
+    <div class="more4">
+      <div><b>Host an Experience</b><p>Bring ai.moms™ to your home, school or community.</p><a class="l" href="/experiences">Learn to host →</a></div>
+      <div><b>ERG &amp; Corporate Programs</b><p>AI training for the mothers on your team, through your ERG or company.</p><a class="l" href="/corporate">For your company →</a></div>
+      <div><b>Private 1:1 Coaching</b><p>Personal AI coaching built around your life, work or business.</p><a class="l" href="mailto:hello@aimoms.ai?subject=Private%201%3A1%20Coaching%20Inquiry">Email us to inquire →</a></div>
+      <div><b>The Edit</b><p>Free weekly newsletter. Tools we love and prompts that work.</p><a class="l" href="/subscribe">Join The Edit →</a></div>
+    </div>
+  </section>
+
+  <section class="sec pad feedsec">
+    <div class="wrap">
+      <div class="feedhead"><div><div class="eyebrow">Follow along</div><h2 class="title" style="margin-bottom:0">@aimoms.ai</h2></div>
+        <div class="feedbtns"><a class="btn qs" href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Follow on Instagram</a><a class="btn ghost" href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg> LinkedIn</a></div></div>
+      <div class="feed"><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="Open post on Instagram"><img src="/home/vid/irl-porch.jpg" alt="" loading="lazy"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="Open post on Instagram"><img src="/home/vid/event-group.jpg" alt="" loading="lazy"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="Open post on Instagram"><img src="/home/vid/ues.jpg" alt="" loading="lazy"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="Open post on Instagram"><img src="/home/vid/event-bags.jpg" alt="" loading="lazy"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="Open post on Instagram"><img src="/home/vid/pw.jpg" alt="" loading="lazy"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="Open post on Instagram"><img src="/home/vid/larch.jpg" alt="" loading="lazy"><span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a></div>
+    </div>
+  </section>
+
+  <footer class="ffoot pad">
+    <div class="grid">
+      <div><div class="brand"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span></div><div class="lead2">Retire from<br>Chief Everything Officer™.</div><span class="soc big"><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="ai.moms™ on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener" aria-label="ai.moms™ on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a></span></div>
+      <div><h5>Learning experiences</h5><ul><li><a href="/foundations">Foundations Course</a></li><li><a href="#irl">In-Person Experiences</a></li><li><a href="/membership">The Membership</a></li><li><a href="/workshop">Monthly Workshop</a></li><li><a href="/corporate">ERG &amp; Corporate Programs</a></li><li><a href="/subscribe">The Edit</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="/community">Community</a></li><li><a href="/science">The Science</a></li><li><a href="/press">Press</a></li><li><a href="/careers">Careers</a></li></ul></div>
+      <div><h5>Shop</h5><ul><li><a href="/shop">Shop</a></li><li><a href="/shop#merch">Merch &amp; Gifts</a></li></ul></div>
+      <div><h5>Connect</h5><ul><li>hello@aimoms.ai</li><li><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="/press">Partnerships, Press &amp; Media</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 <span class="lc">ai.moms</span>™ All rights reserved.</span><span><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></span></div>
+    <p class="disc"><span class="lc">ai.moms</span>™ is an educational platform. All content is for informational and educational purposes only and does not constitute professional, legal, financial, medical, or therapeutic advice. Individual results vary. AI tools referenced are third-party products not owned or operated by <span class="lc">ai.moms</span>™. Use of third-party AI tools is at your own risk. Please review our full Terms &amp; Conditions and Privacy Policy before using this site or enrolling in any program.</p>
+  </footer>
+
+</div>
+<div class="vmodal" id="vmodal" hidden role="dialog" aria-modal="true" aria-label="Video testimonial">
+  <div class="vbox"><button class="vclose" type="button" aria-label="Close">✕</button>
+    <video id="vplayer" controls playsinline preload="none"></video>
+    <div class="vcap"><span id="vplace"></span><a id="vig" href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
+  </div>
+</div>
+<script>
+
+// --- 50 tabs, scrolling columns ---
+(()=>{
+ const TABS=["What's for dinner?","Permission slip","Report due tomorrow","Mom's birthday gift","Dentist appointment","Client proposal","Is Jamie okay?","Q3 deck","Electric bill","Swim lessons","Reply to investor","Car needs gas","Team 1:1 notes","Sitter for Friday","Launch email","Haven't slept well","Soccer schedule","Invoice #48","Pediatrician forms","Picture day outfit","Out of milk","Thank-you notes","Group chat · 47 unread","Halloween costume","Book club book","Return Amazon package","Camp deadline Friday","Flu shots","Performance review","Slides for Monday","LinkedIn post","Sales tax filing","Instagram caption","Grandma's visit","Field trip $15","Water the plants","Call the plumber","Teacher conference","Lunchbox notes","Gym at 6?","Expense report","Holiday travel","Dog to the vet","School fundraiser","Smoke alarm beeping","Podcast pitch","Snack week","Car registration","Did I lock the door?","Drink some water"];
+ const CAT="hhwhhbhwhhbhwhbyhbhhhhyhyhhhwwbbbhhhhhhywhhhhbhhyy",LBL={h:'Home',w:'Work',b:'Business',y:'You'};
+ const box=document.getElementById('cols');if(!box)return;
+ const cols=[[],[],[],[]];TABS.forEach((t,i)=>cols[i%4].push(i));
+ const DUR=[10,12.5,11,13];
+ cols.forEach((list,c)=>{const tr=document.createElement('div');tr.className='col-track'+(c%2?' rev':'');tr.style.setProperty('--dur',DUR[c]+'s');
+   // two copies back to back so the loop is seamless
+   for(let k=0;k<2;k++){const set=document.createElement('div');set.className='col-set';if(k)set.setAttribute('aria-hidden','true');tr.appendChild(set);list.forEach(i=>{const d=document.createElement('div');d.className='tcard'+(CAT[i]==='b'?' biz':'');
+     const s=document.createElement('small');s.textContent=LBL[CAT[i]];const p=document.createElement('span');p.textContent=TABS[i];d.append(s,p);set.appendChild(d)})}
+   box.appendChild(tr)});
+})();
+
+// --- "which one is for you?" quiz ---
+(()=>{
+ // points per answer: a = Build Aime, f = Foundations, i = In person, m = Membership
+ const QS=[
+  ['Your life','Where do you want your time back most?',[['At home',{a:1,f:1},'home'],['At work',{f:2},'work'],['In my business',{f:1,i:2},'biz'],['Honestly, all of it',{f:2,i:1},'all']]],
+  ['Your starting point','How are you using AI today?',[["I haven't really started",{a:1,i:1}],['I ask it questions sometimes',{a:1,f:1}],['I use it most weeks',{f:2}],['I use it every day',{m:2,f:1}]]],
+  ['How you learn','How do you like to learn something new?',[['Give me a quick win tonight',{a:3}],['At my own pace, on my schedule',{f:3}],['In a room with other moms',{i:3}],['With ongoing support as things change',{m:3}]]],
+  ['Your budget','What works for your budget right now?',[['Under $100',{a:3}],['Around $250 or so',{f:2,i:1}],["I'd rather invest and do it right",{i:2,f:1}],['A small monthly amount',{m:3}]]]];
+ const LANE={home:'for the mental load at home',work:'to stay ahead at work',biz:'to grow your business',all:'across home, work and your business'};
+ const OFF={
+  a:{t:'Build Aime + 25 skills',pr:'$97',p:'Your fastest win {lane}. Set up your AI Chief Everything Officer tonight and hand off the daily brief, the weekly plan and dinner.',b:'Build My Aime →',h:'#build',s:'Your fastest first win'},
+  f:{t:'The Foundations Course',pr:'$247 · on demand',p:'Learn Claude from the ground up, the mom way, with demos for home, work and business. Use it {lane} at your own pace, and build Aime along the way.',b:'Get My Time Back →',h:'#start',s:'The full course, at your pace'},
+  i:{t:'An in-person experience',pr:'$265 · 40 seats',p:'Learn it hands-on in a room of moms who get it, then apply it {lane} with the Mompreneur extension. The full course comes with it.',b:'See Upcoming Events →',h:'#start',s:'Hands-on, in a room of moms'},
+  m:{t:'The Membership',pr:'$59 / month',p:"You're already using AI. Keep up {lane} without keeping up alone: live sessions, a private community and every in-person event.",b:'Join the Membership →',h:'#start',s:'Live sessions + community'}};
+ const box=document.getElementById('qz');if(!box)return;
+ const $=id=>document.getElementById(id),scr=s=>box.querySelectorAll('[data-s]').forEach(el=>el.hidden=el.dataset.s!==s);
+ let cur=0,ans=[];
+ function render(){const[cat,q,opts]=QS[cur];
+  $('qzN').textContent=`Question ${cur+1} of ${QS.length}`;$('qzCat').textContent=cat;$('qzBar').style.width=(cur/QS.length*100)+'%';$('qzQ').textContent=q;
+  const o=$('qzOpts');o.textContent='';
+  opts.forEach((opt,i)=>{const b=document.createElement('button');b.type='button';b.className='qz-opt';b.textContent=opt[0];b.setAttribute('aria-pressed',ans[cur]===i);
+    b.addEventListener('click',()=>{ans[cur]=i;o.querySelectorAll('.qz-opt').forEach(x=>x.setAttribute('aria-pressed',x===b));setTimeout(()=>{if(cur<QS.length-1){cur++;render();o.querySelector('.qz-opt').focus({preventScroll:true})}else result()},240)});o.appendChild(b)});
+  $('qzBack').hidden=cur===0}
+ function result(){
+  const pts={f:0,a:0,i:0,m:0};ans.forEach((a,q)=>{const w=QS[q][2][a][1];for(const k in w)pts[k]+=w[k]});
+  const rank=Object.keys(pts).sort((x,y)=>pts[y]-pts[x]); // ties keep order f, a, i, m
+  const lane=LANE[QS[0][2][ans[0]][2]],top=OFF[rank[0]],alt=OFF[rank[1]];
+  $('qzRecT').textContent=top.t;$('qzRecPr').textContent=top.pr;$('qzRecP').textContent=top.p.replace('{lane}',lane);$('qzRecB').textContent=top.b;$('qzRecB').href=top.h;
+  $('qzAltT').textContent=alt.t+' · '+alt.pr;$('qzAltP').textContent=alt.s;$('qzAltB').href=alt.h;
+  box.dataset.result=top.t;box.dataset.alt=alt.t;scr('res');
+  box.scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+ box.addEventListener('click',e=>{const a=e.target.closest('[data-act]');if(!a)return;
+  if(a.dataset.act==='start'){cur=0;ans=[];scr('q');render();box.querySelector('.qz-opt').focus({preventScroll:true})}
+  if(a.dataset.act==='back'&&cur>0){cur--;render()}
+  if(a.dataset.act==='again'){scr('intro');if($('qzMail'))$('qzMail').hidden=false;const ok=box.querySelector('.qz-mail.ok');ok&&ok.remove()}});
+ const f=$('qzMail'),err=$('qzErr');if(f){
+ f.addEventListener('input',()=>err.textContent='');
+ f.addEventListener('submit',e=>{e.preventDefault();const em=$('qzEmail').value.trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Enter an email like name@example.com so we can send your plan.';$('qzEmail').focus();return}
+  const ok=document.createElement('p');ok.className='qz-mail ok';ok.textContent=`Preview: on the live site, your plan and the free guide go to ${em}.`;f.hidden=true;f.after(ok)})}
+})();
+
+// --- signature writes itself when it scrolls into view ---
+(()=>{const s=document.querySelector('.sigsvg');if(!s)return;const go=()=>{s.classList.add('go');removeEventListener('scroll',chk)};const chk=()=>{const r=s.getBoundingClientRect();if(r.top<innerHeight*.9&&r.bottom>0)go()};addEventListener('scroll',chk,{passive:true});chk();if('IntersectionObserver' in window)new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){go();o.disconnect()}},{threshold:.5}).observe(s)})();
+
+// --- video behavior ---
+const vids=[...document.querySelectorAll('.reel.live video')];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduce)vids.forEach(v=>{v.removeAttribute('autoplay');v.pause()});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce&&!v.closest('.site').hidden){v.play().catch(()=>{})}else{v.pause()}}),{threshold:.35});vids.forEach(v=>io.observe(v))}
+document.querySelectorAll('.reel.live .snd').forEach(b=>b.addEventListener('click',()=>{const v=b.parentElement.querySelector('video');const on=v.muted;vids.forEach(o=>{o.muted=true;o.parentElement.querySelector('.snd').textContent='🔇 Tap for sound'});if(on){v.muted=false;v.play().catch(()=>{});b.textContent='🔊 Sound on'}}));
+const vm=document.getElementById('vmodal'),vp=document.getElementById('vplayer'),vig=document.getElementById('vig');
+document.querySelectorAll('.reel.vt').forEach(b=>b.addEventListener('click',()=>{vids.forEach(o=>o.muted=true);vp.src=b.dataset.src;vp.poster=b.querySelector('img').src;document.getElementById('vplace').textContent=b.dataset.place+' · ai.moms™ member';vm.hidden=false;vp.muted=false;vp.play().catch(()=>{})}));
+function closeV(){vp.pause();vm.hidden=true}
+vm.querySelector('.vclose').addEventListener('click',closeV);vm.addEventListener('click',e=>{if(e.target===vm)closeV()});addEventListener('keydown',e=>{if(e.key==='Escape'&&!vm.hidden)closeV()});
+</script>
+<script>
+(function(){
+  function loadMetaPixel(){
+    if(window._fbqLoaded) return;
+    window._fbqLoaded = true;
+    var queued = window._fbqQueue || [];
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1206405304980852');
+    fbq('track','PageView');
+    queued.forEach(function(args){ try{ fbq.apply(null,args); }catch(e){} });
+  }
+  window.acceptCookies = function(){
+    localStorage.setItem('aimoms_cookies','all');
+    var b=document.getElementById('cookie-banner'); if(b) b.remove();
+    loadMetaPixel();
+  };
+  window.declineCookies = function(){
+    localStorage.setItem('aimoms_cookies','essential');
+    var b=document.getElementById('cookie-banner'); if(b) b.remove();
+    window.fbq=function(){}; window._fbqQueue=[];
+  };
+  var consent = localStorage.getItem('aimoms_cookies');
+  if(!consent){
+    var cb=document.createElement('div'); cb.id='cookie-banner';
+    cb.innerHTML='<div style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#060d26;border-radius:16px;padding:24px 22px 20px;max-width:300px;width:calc(100vw - 48px);font-family:\'Be Vietnam Pro\',sans-serif;box-shadow:0 8px 40px rgba(0,0,0,0.35);">'
+      +'<div style="font-weight:800;font-size:14px;letter-spacing:-0.03em;margin-bottom:10px"><span style="color:#ff63d8;font-family:\'Playfair Display\',Georgia,serif;font-style:italic;font-weight:900;">ai.</span><span style="color:#fff">moms</span><span style="font-size:6px;vertical-align:super;color:rgba(255,255,255,0.35)">&#8482;</span> <span style="color:rgba(255,255,255,0.4);font-weight:400;font-size:11px">uses cookies</span></div>'
+      +'<p style="font-size:11.5px;color:rgba(255,255,255,0.5);margin:0 0 16px;line-height:1.65">We use cookies and advertising technologies &mdash; including Meta Pixel &mdash; to improve your experience. <a href="/privacy" style="color:#ff63d8;text-decoration:underline">Privacy Policy</a></p>'
+      +'<div style="display:flex;flex-direction:column;gap:8px">'
+      +'<button onclick="acceptCookies()" style="background:#ff63d8;color:#fff;border:none;padding:10px 0;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;width:100%">Accept All</button>'
+      +'<button onclick="declineCookies()" style="background:none;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.12);padding:10px 0;border-radius:100px;font-size:12px;font-weight:500;cursor:pointer;width:100%">Essential Only</button>'
+      +'</div></div>';
+    document.body.appendChild(cb);
+  } else if(consent==='all'){ loadMetaPixel(); }
+})();
+</script>
+</body>
+</html>

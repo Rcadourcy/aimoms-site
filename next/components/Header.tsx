@@ -9,9 +9,7 @@ const MOBILE_LINKS: { href: string; label: string }[] = [
   { href: '/workshop', label: 'MONTHLY WORKSHOP' },
   { href: '/experiences', label: 'MOM HOSTED EXPERIENCES' },
   { href: '/corporate', label: 'FOR COMPANIES' },
-  { href: '/events', label: 'EVENTS SCHEDULE' },
   { href: '/editorial', label: 'THE EDIT' },
-  { href: '/toolkit', label: 'THE AI TOOLKIT' },
   { href: '/shop', label: 'SHOP' },
   { href: '/community', label: 'COMMUNITY' },
   { href: '/science', label: 'THE SCIENCE' },
@@ -23,7 +21,6 @@ const TOP_LINKS: { href: string; label: string }[] = [
   { href: '/membership', label: 'MEMBERSHIP' },
   { href: '/workshop', label: 'MONTHLY WORKSHOP' },
   { href: '/experiences', label: 'MOM HOSTED EXPERIENCES' },
-  { href: '/events', label: 'EVENTS SCHEDULE' },
 ];
 
 export default function Header() {

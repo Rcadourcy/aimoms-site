@@ -7,6 +7,18 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  // The homepage and in-person thank-you page are hand-built static pages in /public.
+  // beforeFiles runs ahead of app/page.tsx, so "/" serves the new homepage.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/', destination: '/home-v2.html' },
+        { source: '/experience-thank-you', destination: '/experience-thank-you.html' },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
 };
 
 export default nextConfig;
