@@ -74,7 +74,8 @@ html{scroll-behavior:smooth}
 .eyebrow-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--g200);padding:8px 18px;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:26px}
 .eyebrow-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--dot);box-shadow:var(--dot-glow);animation:var(--pulse) 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
-.hero h1{font-weight:var(--hw);font-size:clamp(42px,7vw,72px);line-height:1;letter-spacing:-.035em;max-width:920px;margin:0 auto 28px;text-wrap:balance}
+.hero h1{font-weight:var(--hw);font-size:clamp(42px,6.4vw,72px);line-height:1.02;letter-spacing:-.035em;max-width:1160px;margin:0 auto 28px;text-wrap:balance}
+@media (max-width:900px){.hero h1 .dbr{display:none}}
 .hero h1 .ia{color:var(--h1-accent)}
 .hero .sub{font-size:17.5px;line-height:1.7;color:var(--g600);max-width:600px;margin:0 auto 36px}
 .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -510,7 +511,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
 
   <section class="hero pad">
     <div class="eyebrow-pill"><span class="dot"></span>Built by moms, for moms.</div>
-    <h1 id="h1">Moms, get your time back and <span class="ia">build your dreams</span> with AI.</h1>
+    <h1 id="h1">Moms, get your time back<br class="dbr"> and <span class="ia">build your dreams</span> with AI.</h1>
     <p class="sub">The #1 place for moms to learn AI. We teach you AI the mom way, so you can build your own solutions at home, at work and in your business, alongside moms who get it.</p>
     <div class="lanes"><span>For the mom at home</span><span>For the mom at work</span><span>For the mompreneur</span></div>
     <div class="ctas"><a class="btn qs" href="#start">Get My Time Back →</a></div>
@@ -627,7 +628,7 @@ button.reel:focus-visible,.reel .snd:focus-visible{outline:2px solid #fff;outlin
   <section class="sec off pad"><div class="wrap offer2">
     <div>
       <div class="eyebrow">Inside the Foundations Course</div>
-      <h2>Learn it A to Z. Then build your AI<br><span class="ia nowrap">Chief Everything Officer<sup class="tmx">™</sup>.</span></h2>
+      <h2>Learn it A to Z. Then build your AI<br><span class="ia nowrap">Chief Everything Officer<sup class="tmx">™</sup></span></h2>
       <p class="lead">We teach you Claude from the ground up, with demos for the mom at home, the mom at work and the mompreneur. Then you build Aime, who learns your family, your calendar and how you like things done, and the <span class="lc">ai.moms</span>™ plugin gives her 25 skills for the jobs that fill your week, at home and at work. With Build an Assistant, you can also create custom assistants for your business. Run any of them once, then ask Aime to put it on a schedule, like your weekly plan every Sunday evening.</p>
     </div>
     <div class="stack">
