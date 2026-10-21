@@ -249,12 +249,12 @@ section,.nh .s-nav{position:relative}
     <div>
       <div class="kicker"><span class="lc">ai.moms™</span> in New York · Thursday, November 12</div>
       <h1>One session to build your <em>Chief Everything Officer<sup class="tmh">™</sup></em></h1>
-      <p class="lede">Join 40 moms for a hands-on, 3-hour session. We teach you Claude from the ground up, the mom way, with live demos for the mom at home, the mom at work and the mompreneur. Learn the tool, use it for mom life from A to Z, and leave with Aime set up and working, plus the ai.moms™ plugin and the full course.</p>
+      <p class="lede">Join 40 moms for a hands-on, 3-hour session, over breakfast or in the evening. We teach you Claude from the ground up, the mom way, with live demos for the mom at home, the mom at work and the mompreneur. Learn the tool, use it for mom life from A to Z, and leave with Aime set up and working, plus the ai.moms™ plugin and the full course.</p>
       <dl class="facts">
         <div><dt>When</dt><dd>Thu, Nov 12</dd></div>
         <div><dt>Where</dt><dd>New York City</dd></div>
-        <div><dt>Length</dt><dd>3 hours</dd></div>
-        <div><dt>Seats</dt><dd>40 moms</dd></div>
+        <div><dt>Sessions</dt><dd>Breakfast 9am · Evening 5:30pm</dd></div>
+        <div><dt>Seats</dt><dd>40 per session</dd></div>
       </dl>
       <div class="cta-row"><a class="btn" href="#rsvp">Reserve my seat · $265</a><small><s>$2,073</s> in total value</small></div>
     </div>
@@ -325,7 +325,7 @@ section,.nh .s-nav{position:relative}
 <section class="band" id="rsvp">
   <div class="wrap rsvp">
     <div class="side">
-      <div class="kicker">RSVP · 40 seats</div>
+      <div class="kicker">RSVP · 40 seats per session</div>
       <div class="sh" style="margin-bottom:0"><h2>Save your seat for November 12.</h2><p>Tell us a little about you. After you register, we'll send the address and your pre-event survey.</p></div>
       <ul>
         <li>Live 3-hour, 4-part workshop</li>
@@ -345,6 +345,14 @@ section,.nh .s-nav{position:relative}
         </div>
         <label for="em">Email<input id="em" name="em" type="email" autocomplete="email" required></label>
         <label for="ph">Mobile <span class="opt">(for day-of updates)</span><input id="ph" name="ph" type="tel" autocomplete="tel"></label>
+        <fieldset>
+          <legend>Pick your session</legend>
+          <div class="chips">
+            <label for="s1"><input type="radio" id="s1" name="session" value="Breakfast · doors 9:00am, session 9:30am–12:00pm">Breakfast · 9:00am–12:00pm</label>
+            <label for="s2"><input type="radio" id="s2" name="session" value="Evening · doors 5:30pm, session 6:00–8:30pm">Evening · 5:30–8:30pm</label>
+          </div>
+          <span class="opt" style="display:block;font-size:13px;line-height:1.5;margin-top:2px">Doors open at the first time. We start 30 minutes later, so come early to settle in and meet everyone.</span>
+        </fieldset>
         <fieldset>
           <legend>Which sound like you? <span class="opt">(pick any)</span></legend>
           <div class="chips">
@@ -372,7 +380,7 @@ section,.nh .s-nav{position:relative}
             <label for="t5"><input type="checkbox" id="t5" name="tools" value="none">None yet</label>
           </div>
         </fieldset>
-        <div class="sum"><span>NYC Experience · Thu, Nov 12</span><b>$265</b></div>
+        <div class="sum"><span id="sumtxt">NYC Experience · Thu, Nov 12</span><b>$265</b></div>
         <p class="err" id="err" role="alert"></p>
         <button class="btn" type="submit">Continue to payment</button>
       </form>
@@ -386,6 +394,7 @@ section,.nh .s-nav{position:relative}
     <div class="faq">
       <div><h3>Do I need to know anything about AI?</h3><p>No. Part 1 starts from the beginning, and the survey helps us meet you where you are. No stupid questions.</p></div>
       <div><h3>What should I bring?</h3><p>Your laptop and charger. We'll email setup steps before the event so you're ready to build on the day.</p></div>
+      <div><h3>What time is it?</h3><p>Pick breakfast or evening. Breakfast doors open at 9:00am and we start at 9:30am. Evening doors open at 5:30pm and we start at 6:00pm. Each session runs 3 hours from doors.</p></div>
       <div><h3>Where is it?</h3><p>A mom-hosted space in New York City. The address comes after you register.</p></div>
       <div><h3>I'm already a member. Do I pay?</h3><p>No. Members attend free. Email hello@aimoms.ai to save your seat.</p></div>
     </div>
@@ -411,10 +420,12 @@ f.addEventListener('submit',e=>{
   e.preventDefault();
   const fn=f.fn.value.trim(),em=f.em.value.trim();
   if(!fn||!f.ln.value.trim()){err.textContent='Add your first and last name so we can put you on the list.';return}
+  const ses=f.querySelector('input[name=session]:checked');
+  if(!ses){err.textContent='Pick the breakfast or evening session so we can save your seat.';return}
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Enter an email like name@example.com so we can send your details.';return}
   err.textContent='';
   const btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='One moment…';
-  const fd=new FormData(f);fd.append('form-name','experience-signup');fd.append('event','NYC · Thu, Nov 12');
+  const fd=new FormData(f);fd.append('form-name','experience-signup');fd.append('event','NYC · Thu, Nov 12 · '+ses.value.split(' · ')[0]);
   fd.append('first_name',fn);fd.append('last_name',f.ln.value.trim());fd.append('email',em);
   try{fbq('track','Lead',{content_name:'In-Person Experience'})}catch(x){}
   const go=()=>{let u=CHECKOUT;if(u.startsWith('https://buy.stripe.com/'))u+=(u.includes('?')?'&':'?')+'prefilled_email='+encodeURIComponent(em);try{fbq('track','InitiateCheckout',{content_name:'In-Person Experience',value:265,currency:'USD'})}catch(x){}location.href=u};
@@ -422,6 +433,7 @@ f.addEventListener('submit',e=>{
   fetch('/api/forms/experience-signup',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(once,once);
   setTimeout(once,2500);
 });
+f.querySelectorAll('input[name=session]').forEach(r=>r.addEventListener('change',()=>{document.getElementById('sumtxt').textContent='NYC Experience · Nov 12 · '+(r.id==='s1'?'Breakfast 9am':'Evening 5:30pm')}));
 </script>
 
 
