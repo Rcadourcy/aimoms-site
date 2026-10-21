@@ -3,3 +3,16 @@
 
 [functions]
   node_bundler = "esbuild"
+
+# The quiz now lives on the homepage. Send the old /quiz page there.
+[[redirects]]
+  from = "/quiz"
+  to = "/#quiz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quiz.html"
+  to = "/#quiz"
+  status = 301
+  force = true
