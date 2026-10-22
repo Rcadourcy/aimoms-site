@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       '$59/month. Monthly live AI sessions on Zoom + private WhatsApp community + access to every ai.moms™ in-person event.',
     type: 'website',
     url: 'https://aimoms.ai/membership',
-    images: ['/og-image.png'],
+    images: ['/og-share.jpg'],
   },
 };
 

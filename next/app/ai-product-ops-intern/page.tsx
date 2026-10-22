@@ -12,14 +12,14 @@ export const metadata: Metadata = {
       'For a self-taught builder who wants hands-on learning at the edge of where AI meets product — using Claude and no-code tools to support real micro-tools, internal workflows, and the website that brings it all together.',
     type: 'website',
     url: 'https://aimoms.ai/ai-product-ops-intern',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Product & Operations Intern — ai moms™',
     description:
       'For a self-taught builder who wants hands-on learning at the edge of where AI meets product — using Claude and no-code tools to support real micro-tools, internal workflows, and the website that brings it all together.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

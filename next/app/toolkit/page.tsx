@@ -16,14 +16,14 @@ export const metadata: Metadata = {
       '80+ AI tools for mothers, scored and ranked. The complete guide to AI apps for family life.',
     type: 'website',
     url: 'https://aimoms.ai/toolkit',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The AI Toolkit for Moms — ai.moms™',
     description:
       '80+ AI tools for mothers, scored and ranked. The complete guide to AI apps for family life.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

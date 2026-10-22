@@ -12,14 +12,14 @@ export const metadata: Metadata = {
       'For the mom who is the community connector in her city — and is deeply aligned with giving moms their time back while advocating for AI education for women.',
     type: 'website',
     url: 'https://aimoms.ai/mom-ambassador',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ai.moms™ Mom Ambassador — ai moms™',
     description:
       'For the mom who is the community connector in her city — and is deeply aligned with giving moms their time back while advocating for AI education for women.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

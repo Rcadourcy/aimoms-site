@@ -13,14 +13,14 @@ export const metadata: Metadata = {
       'The #1 destination for moms to learn AI so she can get her time back and learn to build her dreams.',
     type: 'website',
     url: 'https://aimoms.ai',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ai.moms™ — Your Entry Into AI. For Moms.',
     description:
       'The #1 destination for moms to learn AI so she can get her time back and learn to build her dreams.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

@@ -14,14 +14,14 @@ export const metadata: Metadata = {
       'The #1 destination for mothers to learn AI, eliminate the invisible load, and build their own AI-powered family management team.',
     type: 'website',
     url: 'https://aimoms.ai',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ai moms™ — Retire from Chief Everything Officer.™',
     description:
       'The #1 destination for mothers to learn AI, eliminate the invisible load, and build their own AI-powered family management team.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

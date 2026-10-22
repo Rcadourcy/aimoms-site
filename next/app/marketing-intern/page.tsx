@@ -12,14 +12,14 @@ export const metadata: Metadata = {
       'For a resourceful, detail-obsessed student who wants hands-on learning across integrated marketing — gaining real exposure to how press, grants, awards, events, partnerships, email, and brand presence work together at a growing brand.',
     type: 'website',
     url: 'https://aimoms.ai/marketing-intern',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Brand Marketing Intern — ai moms™',
     description:
       'For a resourceful, detail-obsessed student who wants hands-on learning across integrated marketing — gaining real exposure to how press, grants, awards, events, partnerships, email, and brand presence work together at a growing brand.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

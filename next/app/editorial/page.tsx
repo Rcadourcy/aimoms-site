@@ -14,14 +14,14 @@ export const metadata: Metadata = {
       'AI-powered insights, guides, and stories for mothers navigating the invisible load of modern motherhood.',
     type: 'website',
     url: 'https://aimoms.ai/editorial',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Edit — ai moms™',
     description:
       'AI-powered insights, guides, and stories for mothers navigating the invisible load of modern motherhood.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

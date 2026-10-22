@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'See the full ai.moms™ event schedule and RSVP to whatever you want to join.',
     type: 'website',
     url: 'https://aimoms.ai/events',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Events — ai.moms™',
     description: 'See the full ai.moms™ event schedule and RSVP to whatever you want to join.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

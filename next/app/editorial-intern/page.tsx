@@ -12,14 +12,14 @@ export const metadata: Metadata = {
       'For a sharp, curious student writer who wants hands-on learning at the intersection of editorial, AI, and brand voice — practicing how thoughtful, story-driven content actually gets made.',
     type: 'website',
     url: 'https://aimoms.ai/editorial-intern',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Editorial Intern — ai moms™',
     description:
       'For a sharp, curious student writer who wants hands-on learning at the intersection of editorial, AI, and brand voice — practicing how thoughtful, story-driven content actually gets made.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

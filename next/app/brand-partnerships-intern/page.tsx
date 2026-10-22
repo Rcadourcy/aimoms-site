@@ -12,14 +12,14 @@ export const metadata: Metadata = {
       'For a thoughtful, relationship-minded student who wants hands-on learning in how brands actually find, evaluate, and grow meaningful partnerships — by deeply researching the landscape, identifying mutually-beneficial fits, and learning how aligned partnerships are built from the ground up.',
     type: 'website',
     url: 'https://aimoms.ai/brand-partnerships-intern',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Brand Partnerships Intern — ai moms™',
     description:
       'For a thoughtful, relationship-minded student who wants hands-on learning in how brands actually find, evaluate, and grow meaningful partnerships — by deeply researching the landscape, identifying mutually-beneficial fits, and learning how aligned partnerships are built from the ground up.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

@@ -21,7 +21,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
       title: article.title,
       description: article.subtitle,
       type: 'article',
-      images: ['https://aimoms.ai/og-image.png'],
+      images: ['https://aimoms.ai/og-share.jpg'],
     },
     twitter: {
       card: 'summary_large_image',

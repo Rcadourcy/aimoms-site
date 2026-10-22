@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'A live 60-minute virtual workshop. $68 a seat. The easiest way to start with AI for moms.',
     type: 'website',
     url: 'https://aimoms.ai/workshop',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Monthly Virtual Workshop — ai.moms™',
     description: 'A live 60-minute virtual workshop. $68 a seat. The easiest way to start with AI for moms.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

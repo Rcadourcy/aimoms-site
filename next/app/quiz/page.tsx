@@ -19,14 +19,14 @@ export const metadata: Metadata = {
       "8 quick questions to uncover how much of your family's mental load you're carrying — and what to do about it. Free quiz from ai moms™.",
     type: 'website',
     url: 'https://aimoms.ai/quiz',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: "What's Your Invisible Load Score?",
     description:
       "8 quick questions to uncover how much of your family's mental load you're carrying — and what to do about it.",
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

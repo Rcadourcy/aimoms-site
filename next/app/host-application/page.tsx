@@ -13,13 +13,13 @@ export const metadata: Metadata = {
       'Open up your living room. Invite your mom besties. We bring the AI. Request to host a mom-hosted experience.',
     type: 'website',
     url: 'https://aimoms.ai/host-application',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Host a Mom-Hosted Experience — ai.moms™',
     description: 'Open up your living room. Invite your mom besties. We bring the AI.',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 

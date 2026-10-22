@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       'The #1 destination for mothers to learn AI, eliminate the invisible load, and build their own AI-powered family management team.',
     type: 'website',
     url: 'https://aimoms.ai/foundations',
-    images: ['/og-image.png'],
+    images: ['/og-share.jpg'],
   },
 };
 

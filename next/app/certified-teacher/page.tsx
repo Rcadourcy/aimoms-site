@@ -12,14 +12,14 @@ export const metadata: Metadata = {
       "For the mom who's been quietly using AI to reclaim her own life — and is ready to teach other moms how to do the same.",
     type: 'website',
     url: 'https://aimoms.ai/certified-teacher',
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Certified ai.moms™ Teacher — ai moms™',
     description:
       "For the mom who's been quietly using AI to reclaim her own life — and is ready to teach other moms how to do the same.",
-    images: ['https://aimoms.ai/og-image.png'],
+    images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
 
