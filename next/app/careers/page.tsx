@@ -51,10 +51,10 @@ export default function CareersPage() {
 
         <Link href="/mom-ambassador" className="position-row">
           <div className="position-left">
-            <div className="position-type">Now Open &middot; For Moms</div>
-            <div className="position-title">ai.moms&#8482; Mom Ambassador</div>
+            <div className="position-type">Founding Cohort &middot; For Moms</div>
+            <div className="position-title">ai.moms&#8482; Founding Mom Ambassador</div>
             <div className="position-pills">
-              <span className="pill">Flexible &middot; Your City</span>
+              <span className="pill">One Per Town &middot; Flexible</span>
               <span className="pill">For Moms</span>
             </div>
           </div>
