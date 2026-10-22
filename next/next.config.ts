@@ -9,8 +9,13 @@ const nextConfig: NextConfig = {
   },
   // The homepage and in-person thank-you page are hand-built static pages in /public.
   // beforeFiles runs ahead of app/page.tsx, so "/" serves the new homepage.
+  // Old page addresses that now live elsewhere. The quiz is on the homepage.
   async redirects() {
-    return [{ source: '/curriculum', destination: '/foundations#curriculum', permanent: false }];
+    return [
+      { source: '/curriculum', destination: '/foundations#curriculum', permanent: false },
+      { source: '/quiz', destination: '/#quiz', permanent: true },
+      { source: '/quiz.html', destination: '/#quiz', permanent: true },
+    ];
   },
   async rewrites() {
     return {
