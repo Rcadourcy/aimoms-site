@@ -37,6 +37,7 @@ export default function Footer() {
             <Link href="/experiences" className="footer-link">Host an Experience</Link>
             <Link href="/press" className="footer-link">Press</Link>
             <Link href="/careers" className="footer-link">Careers</Link>
+            <Link href="/your-town" className="footer-link">Host or Ambassador</Link>
           </div>
 
           <div>
