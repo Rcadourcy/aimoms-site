@@ -217,5 +217,5 @@ button,a,.btn,input,select,textarea{
 
 @media (min-width:1041px){.hamburger{display:none}}
 
-.tnl2{display:inline-flex;flex-direction:column;align-items:center;line-height:1.05;text-align:center}
-.tnl2 small{font-family:'Be Vietnam Pro',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.01em;text-transform:none;opacity:.72;margin-top:3px;white-space:nowrap}
+.tnl2{position:relative}
+.tnl2 small{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:3px;font-family:'Be Vietnam Pro',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.01em;text-transform:none;opacity:.72;white-space:nowrap;line-height:1}
