@@ -19,7 +19,7 @@ const MOBILE_LINKS: { href: string; label: string }[] = [
 
 const TOP_LINKS: { href: string; label: string; sub?: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/build-aime', label: 'BUILD AIME', sub: 'your Chief Everything Officer\u2122' },
+  { href: '/build-aime', label: 'BUILD AIME', sub: 'Chief Everything Officer\u2122' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },
   { href: '/membership', label: 'MEMBERSHIP' },
