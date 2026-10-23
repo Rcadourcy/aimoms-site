@@ -64,7 +64,7 @@ export default function CareersPage() {
         <Link href="/social-intern" className="position-row">
           <div className="position-left">
             <div className="position-type">Internship &middot; For Academic Credit</div>
-            <div className="position-title">Social Media Intern</div>
+            <div className="position-title">Social Media Intern (Unpaid)</div>
             <div className="position-pills">
               <span className="pill">Unpaid &middot; For Course Credit</span>
               <span className="pill">NY-Based or Remote</span>

@@ -2,23 +2,23 @@ import type { Metadata } from 'next';
 import RolePage, { type RoleData } from '@/components/RolePage';
 
 export const metadata: Metadata = {
-  title: 'Social Media Intern — ai moms™',
+  title: 'Social Media Intern (Unpaid, For Course Credit) — ai moms™',
   description:
-    'For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
+    'An unpaid internship for course credit. For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
   alternates: { canonical: '/social-intern' },
   openGraph: {
-    title: 'Social Media Intern — ai moms™',
+    title: 'Social Media Intern (Unpaid, For Course Credit) — ai moms™',
     description:
-      'For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
+      'An unpaid internship for course credit. For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
     type: 'website',
     url: 'https://aimoms.ai/social-intern',
     images: ['https://aimoms.ai/og-share.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Social Media Intern — ai moms™',
+    title: 'Social Media Intern (Unpaid, For Course Credit) — ai moms™',
     description:
-      'For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
+      'An unpaid internship for course credit. For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
     images: ['https://aimoms.ai/og-share.jpg'],
   },
 };
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
 const role: RoleData = {
   slug: 'social-intern',
   heroLabel: 'Internship · For Course Credit',
-  heroTitle: 'Social Media Intern',
+  heroTitle: 'Social Media Intern (Unpaid)',
   pills: ['Unpaid · For Course Credit', 'NY-Based or Remote', 'Part-Time Volunteer Hours'],
   heroDesc:
-    'For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
+    'An unpaid internship for course credit. For a sharp, ambitious student who wants to learn what it actually takes to build social for a brand with a real mission — by being immersed in it.',
   sections: [
     {
       label: 'About the Opportunity',
