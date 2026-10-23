@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
         { source: '/skill-guide', destination: '/skill-guide.html' },
         { source: '/experiences', destination: '/experiences-v2.html' },
         { source: '/your-town', destination: '/your-town.html' },
+        { source: '/claude-duet', destination: '/claude-duet.html' },
         { source: '/corporate', destination: '/corporate-v2.html' },
         { source: '/membership', destination: '/membership-v2.html' },
       ],
