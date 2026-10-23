@@ -5,9 +5,8 @@ import Link from 'next/link';
 
 const MOBILE_LINKS: { href: string; label: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/build-aime', label: 'BUILD AIME' },
-  { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/build-aime', label: 'BUILD AIME · $97' },
+  { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },
   { href: '/membership', label: 'MEMBERSHIP' },
   { href: '/skill-guide', label: 'SKILL GUIDE' },
@@ -18,9 +17,9 @@ const MOBILE_LINKS: { href: string; label: string }[] = [
   { href: '/shop', label: 'SHOP' },
 ];
 
-const TOP_LINKS: { href: string; label: string }[] = [
+const TOP_LINKS: { href: string; label: string; sub?: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/build-aime', label: 'BUILD AIME' },
+  { href: '/build-aime', label: 'BUILD AIME', sub: 'your Chief Everything Officer\u2122' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },
   { href: '/membership', label: 'MEMBERSHIP' },
@@ -44,8 +43,9 @@ export default function Header() {
 
           <div className="nav-links">
             {TOP_LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="tnl">
+              <Link key={l.href} href={l.href} className={l.sub ? 'tnl tnl2' : 'tnl'}>
                 {l.label}
+                {l.sub && <small>{l.sub}</small>}
               </Link>
             ))}
             <Link href="/foundations" className="nav-subscribe">
