@@ -253,14 +253,14 @@ section,.nh .s-nav{position:relative}
       <p class="lede">Join 40 moms for a hands-on, 3-hour session, over breakfast or in the evening. We teach you Claude from the ground up, the mom way, with live demos for the mom at home, the mom at work and the mompreneur, plus an intro to Claude Duet, the new proactive assistant that supercharges your Aime. Learn the tool, use it for mom life from A to Z, and leave with Aime set up and working, plus the ai.moms™ plugin and the full course.</p>
       <dl class="facts">
         <div><dt>When</dt><dd>Thu, Nov 12</dd></div>
-        <div><dt>Where</dt><dd>New York City</dd></div>
+        <div><dt>Where</dt><dd>New York City<small style="display:block;font-size:13px;font-weight:400;line-height:1.4;margin-top:4px;opacity:.8">Evening: Playgarden Prep UES, 1366 Madison Ave</small></dd></div>
         <div><dt>Sessions</dt><dd>Breakfast 9am · Evening 5:30pm</dd></div>
         <div><dt>Seats</dt><dd>40 per session</dd></div>
       </dl>
       <div class="cta-row"><a class="btn" href="#rsvp">Reserve my seat · $265</a><small><s>$2,073</s> in total value</small></div>
     </div>
     <div class="photo vidhero"><video src="/home/vid/hands-up.mp4" poster="/home/vid/hands-up.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Moms at an ai.moms™ event raising their hands, ready to learn AI"></video>
-      <div class="tag"><b>Hosted by a mom, in real life</b>Address shared after you register.</div></div>
+      <div class="tag"><b>In person, in New York</b>Evening session at Playgarden Prep UES, 1366 Madison Ave.</div></div>
   </header>
 </div>
 
@@ -352,7 +352,7 @@ section,.nh .s-nav{position:relative}
           <legend>Pick your session</legend>
           <div class="chips">
             <label for="s1"><input type="radio" id="s1" name="session" value="Breakfast · doors 9:00am, session 9:30am–12:00pm">Breakfast · 9:00am–12:00pm</label>
-            <label for="s2"><input type="radio" id="s2" name="session" value="Evening · doors 5:30pm, session 6:00–8:30pm">Evening · 5:30–8:30pm</label>
+            <label for="s2"><input type="radio" id="s2" name="session" value="Evening at Playgarden Prep UES, 1366 Madison Ave · doors 5:30pm, session 6:00–8:30pm">Evening session at Playgarden Prep UES · 5:30–8:30pm</label>
           </div>
           <span class="opt" style="display:block;font-size:13px;line-height:1.5;margin-top:2px">Doors open at the first time. We start 30 minutes later, so come early to settle in and meet everyone.</span>
         </fieldset>
@@ -398,7 +398,7 @@ section,.nh .s-nav{position:relative}
       <div><h3>Do I need to know anything about AI?</h3><p>No. Part 1 starts from the beginning, and the survey helps us meet you where you are. No stupid questions.</p></div>
       <div><h3>What should I bring?</h3><p>Your laptop and charger. We'll email setup steps before the event so you're ready to build on the day.</p></div>
       <div><h3>What time is it?</h3><p>Pick breakfast or evening. Breakfast doors open at 9:00am and we start at 9:30am. Evening doors open at 5:30pm and we start at 6:00pm. Each session runs 3 hours from doors.</p></div>
-      <div><h3>Where is it?</h3><p>A mom-hosted space in New York City. The address comes after you register.</p></div>
+      <div><h3>Where is it?</h3><p>The evening session is at Playgarden Prep Upper East Side, 1366 Madison Avenue. The breakfast session is at a mom-hosted space in New York City, and we send that address after you register.</p></div>
       <div><h3>I'm already a member. Do I pay?</h3><p>No. Members attend free. Email hello@aimoms.ai to save your seat.</p></div>
     </div>
   </div>
@@ -436,7 +436,7 @@ f.addEventListener('submit',e=>{
   fetch('/api/forms/experience-signup',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(once,once);
   setTimeout(once,2500);
 });
-f.querySelectorAll('input[name=session]').forEach(r=>r.addEventListener('change',()=>{document.getElementById('sumtxt').textContent='NYC Experience · Nov 12 · '+(r.id==='s1'?'Breakfast 9am':'Evening 5:30pm')}));
+f.querySelectorAll('input[name=session]').forEach(r=>r.addEventListener('change',()=>{document.getElementById('sumtxt').textContent='NYC Experience · Nov 12 · '+(r.id==='s1'?'Breakfast 9am':'Evening 5:30pm · Playgarden Prep UES')}));
 </script>
 
 
