@@ -128,9 +128,16 @@ form{background:var(--paper);border:1px solid var(--line);border-radius:6px;padd
 .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 label{display:grid;gap:6px;font-size:14px;font-weight:500}
 label .opt{font-weight:400;color:var(--mute)}
-input,select{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+textarea{resize:vertical;min-height:64px;line-height:1.45}
 fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}
 legend{font-size:14px;font-weight:500;margin-bottom:8px}
+.whos{display:flex;flex-direction:column;gap:8px}
+.whos label{display:flex;align-items:flex-start;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:400;cursor:pointer}
+.whos input{width:auto;margin:3px 0 0;accent-color:var(--rose);flex:none}
+.whos span{display:flex;flex-direction:column;gap:2px}
+.whos small{color:var(--mute);font-size:13px;line-height:1.4}
+.whos label:has(input:checked){border-color:var(--ink);background:var(--wash)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:400;cursor:pointer}
 .chips input{width:auto;margin:0;accent-color:var(--rose)}
@@ -374,18 +381,24 @@ section,.nh .s-nav{position:relative}
           <legend>Pick your session</legend>
           <div class="chips">
             <label for="s1"><input type="radio" id="s1" name="session" value="Breakfast · doors 9:00am, session 9:30am–12:00pm">Breakfast · 9:00am–12:00pm</label>
-            <label for="s2"><input type="radio" id="s2" name="session" value="Evening at Playgarden Prep UES, 1366 Madison Ave · doors 5:30pm, session 6:00–8:30pm">Evening session at Playgarden Prep UES · 5:30–8:30pm<span style="display:block;font-size:13px;opacity:.75;margin-top:2px">1366 Madison Avenue</span></label>
+            <label for="s2"><input type="radio" id="s2" name="session" value="Evening at Playgarden Prep UES, 1366 Madison Ave · doors 5:30pm, session 6:00–8:30pm">Evening · 5:30–8:30pm · Playgarden Prep UES, 1366 Madison Ave</label>
           </div>
           <span class="opt" style="display:block;font-size:13px;line-height:1.5;margin-top:2px">Doors open at the first time. We start 30 minutes later, so come early to settle in and meet everyone.</span>
         </fieldset>
         <fieldset>
           <legend>Which sound like you? <span class="opt">(pick any)</span></legend>
-          <div class="chips">
-            <label for="r1"><input type="checkbox" id="r1" name="who" value="home">Mom at home</label>
-            <label for="r2"><input type="checkbox" id="r2" name="who" value="work">Mom at work</label>
-            <label for="r3"><input type="checkbox" id="r3" name="who" value="biz">Mompreneur</label>
+          <div class="whos">
+            <label for="r1"><input type="checkbox" id="r1" name="who" value="home"><span><b>Mom at home</b><small>Put AI to work on the mental load: weekly plans, dinners, school email, birthdays</small></span></label>
+            <label for="r2"><input type="checkbox" id="r2" name="who" value="work"><span><b>Mom at work</b><small>Stay in the room and not get left behind: inbox, meeting prep, your promotion case</small></span></label>
+            <label for="r3"><input type="checkbox" id="r3" name="who" value="biz"><span><b>Mompreneur</b><small>AI as your co-founder and exec team: content, client emails, SOPs</small></span></label>
           </div>
         </fieldset>
+        <label for="pain">What's your biggest pain point you're looking to solve? <span class="opt">(optional)</span>
+          <textarea id="pain" name="pain_point" rows="2" placeholder="e.g. the weekly meal plan, keeping up with school emails, finding time for my business"></textarea>
+        </label>
+        <label for="hope">What's one thing you're hoping to learn? <span class="opt">(optional)</span>
+          <textarea id="hope" name="hope_to_learn" rows="2" placeholder="e.g. how to set up an assistant for my family, how to use AI at work"></textarea>
+        </label>
         <label for="lvl">How are you using AI today?
           <select id="lvl" name="lvl">
             <option value="">Choose one</option>
