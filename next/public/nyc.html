@@ -61,6 +61,17 @@ nav .meta{font-size:13px;color:var(--mute)}
 /* sections */
 section{padding-block:80px}
 .band{background:var(--wash)}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card3{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:30px 26px 26px;display:flex;flex-direction:column;position:relative}
+.card3::before{content:"";position:absolute;top:0;left:0;width:32px;height:2px;background:var(--rose)}
+.card3 .num{font-weight:800;font-size:44px;line-height:1;color:var(--rose);margin-bottom:14px;letter-spacing:-.03em}
+.card3 h3{font-weight:800;font-size:22px;letter-spacing:-.02em;margin:0 0 10px;line-height:1.15}
+.card3 p{color:var(--mute);font-size:15px;line-height:1.6;margin:0}
+.card3 .ex{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13px;font-weight:600;color:var(--ink)}
+.card3 p{margin-bottom:16px}
+.trio-note{margin-top:22px;font-size:15px;color:var(--mute)}
+@media (max-width:900px){.trio{grid-template-columns:1fr}}
+
 .sh{max-width:40em;margin-bottom:40px}
 .sh h2{font-family:var(--serif);font-weight:800;font-size:clamp(30px,3.8vw,46px);letter-spacing:-.02em;line-height:1.08;margin:10px 0 12px;text-wrap:balance}
 .sh p{color:var(--mute);margin:0;font-size:17px}
@@ -264,6 +275,17 @@ section,.nh .s-nav{position:relative}
   </header>
 </div>
 
+<section id="who">
+  <div class="wrap">
+    <div class="sh"><div class="kicker">Who it's for</div><h2>Three moms. One evening.</h2><p>Feeling behind on AI and not sure where to start? Different lives, different reasons for being here. The session covers the foundations, then live demos for each of you, so you leave knowing exactly how to use it in your life.</p></div>
+    <div class="trio">
+      <div class="card3"><div class="num">01</div><h3>The Mom at Home</h3><p>You're carrying the invisible load: the calendars, the meals, the school forms, the birthdays. You're here to put AI to work on the mental load no one else sees.</p><div class="ex">Weekly plans · dinners · school email · birthdays</div></div>
+      <div class="card3"><div class="num">02</div><h3>The Mom at Work</h3><p>You don't have hours to play with the new tools, and your colleagues without kids do. You're here to stay in the room and not get left behind.</p><div class="ex">Inbox triage · meeting prep · your promotion case</div></div>
+      <div class="card3"><div class="num">03</div><h3>The Mompreneur</h3><p>You're building something, whether it's a side project, a service or a real company. AI becomes your co-founder and exec team: it drafts, plans and recommends, and you make the calls.</p><div class="ex">Content · client emails · SOPs · your own AI exec team</div></div>
+    </div>
+    <p class="trio-note">And if you're all three, you're in good company. Most of us are.</p>
+  </div>
+</section>
 <section class="band" id="how">
   <div class="wrap">
     <div class="sh"><div class="kicker">How it works</div><h2>Tailored before, hands-on during, supported after.</h2><p>We shape the session around the women in the room, then make sure it keeps working for you the morning after.</p></div>
