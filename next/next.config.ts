@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
   // Old page addresses that now live elsewhere. The quiz is on the homepage.
   async redirects() {
     return [
+      { source: '/off-your-plate', destination: '/top3', permanent: false },
       { source: '/curriculum', destination: '/foundations#curriculum', permanent: false },
       { source: '/quiz', destination: '/#quiz', permanent: true },
       { source: '/quiz.html', destination: '/#quiz', permanent: true },
@@ -23,7 +24,7 @@ const nextConfig: NextConfig = {
         { source: '/', destination: '/home-v2.html' },
         { source: '/experience-thank-you', destination: '/experience-thank-you.html' },
         { source: '/nyc', destination: '/nyc.html' },
-        { source: '/off-your-plate', destination: '/off-your-plate.html' },
+        { source: '/top3', destination: '/top3.html' },
         { source: '/off-your-plate-thank-you', destination: '/off-your-plate-thank-you.html' },
         { source: '/foundations', destination: '/foundations-v2.html' },
         { source: '/build-aime', destination: '/build-aime.html' },

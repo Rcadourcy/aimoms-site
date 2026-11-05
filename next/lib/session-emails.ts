@@ -23,14 +23,14 @@ function invite(row: SessionRow, slot: string, organizer: string, mom: string, w
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//ai.moms//Off Your Plate//EN',
+    'PRODID:-//ai.moms//Top 3 Session//EN',
     'METHOD:REQUEST',
     'BEGIN:VEVENT',
     `UID:${row.id}@aimoms.ai`,
     `DTSTAMP:${icsTime(new Date())}`,
     `DTSTART:${icsTime(start)}`,
     `DTEND:${icsTime(end)}`,
-    `SUMMARY:${clean('ai.moms™ Off Your Plate session')}`,
+    `SUMMARY:${clean('ai.moms™ Top 3 Session')}`,
     `LOCATION:${clean(where)}`,
     `ORGANIZER;CN=ai.moms™:mailto:${organizer}`,
     `ATTENDEE;RSVP=TRUE:mailto:${mom}`,
@@ -77,7 +77,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
   const wishes = [d.pain_1, d.pain_2, d.pain_3].map(str).filter(Boolean);
 
   const attachments = (ics: string) => [
-    { filename: 'off-your-plate.ics', content: Buffer.from(ics).toString('base64'), content_type: 'text/calendar; method=REQUEST' },
+    { filename: 'top-3-session.ics', content: Buffer.from(ics).toString('base64'), content_type: 'text/calendar; method=REQUEST' },
   ];
 
   if (slot) {
@@ -90,7 +90,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
       subject: `You're booked! ${when}`,
       html: wrap(
         p(`Hi ${esc(first)},`) +
-          p(`You're booked for your ai.moms™ Off Your Plate session!`) +
+          p(`You're booked for your ai.moms™ Top 3 Session!`) +
           p(`<b>${esc(when)}</b><br>${whereLine}`) +
           p(`We have your 3, and we'll plan around them before we meet. You'll hear from us about which Claude plan you need, so all you have to do is show up with your laptop.`) +
           p(`Need to reschedule? Just reply at least 24 hours before your session.`) +
@@ -123,7 +123,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
     subject: 'We got your session request',
     html: wrap(
       p(`Hi ${esc(first)},`) +
-        p(`Thank you for booking your ai.moms™ Off Your Plate session! We have your 3 and your time request:`) +
+        p(`Thank you for booking your ai.moms™ Top 3 Session! We have your 3 and your time request:`) +
         p(`<b>${esc(request)}</b>`) +
         p(`We'll email you to confirm your time within one business day.`) +
         sign,

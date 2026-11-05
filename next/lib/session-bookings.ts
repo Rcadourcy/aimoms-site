@@ -2,7 +2,7 @@ import 'server-only';
 import { createServiceClient } from '@/lib/supabase/server';
 import { SESSION_MINUTES, type Busy } from '@/lib/session-slots';
 
-/** The Off Your Plate Stripe payment link. A slot counts as booked once its checkout is paid. */
+/** The Top 3 Session Stripe payment link. A slot counts as booked once its checkout is paid. */
 export const PAYMENT_LINK = 'plink_1UYTVMQla4s4LgSSTEXVwYRo';
 const HOLD_MINUTES = 30; // a slot stays held while she's on the Stripe page
 

@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 const MAX_SYNC_AGE_HOURS = 72;
 
 /**
- * Open times for the Off Your Plate session. Returns times only, never calendar details.
+ * Open times for the Top 3 Session. Returns times only, never calendar details.
  * Busy times come from data/session-busy.json, which a scheduled task refreshes from
  * Raquel's calendars. If GOOGLE_CAL_ICS_URLS is set, the live feeds are used instead.
  * With a stale file or any failure it returns ok:false and the page falls back to

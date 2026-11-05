@@ -1,7 +1,7 @@
 import ICAL from 'ical.js';
 
 /**
- * Bookable times for the Off Your Plate session: Monday to Friday, starts between
+ * Bookable times for the Top 3 Session: Monday to Friday, starts between
  * 9:00am and 1:00pm New York time, so the last session ends at 2:30pm.
  * Pure functions, so they can be tested without Google, Stripe or Supabase.
  */
