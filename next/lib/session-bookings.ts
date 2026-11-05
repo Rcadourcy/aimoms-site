@@ -69,10 +69,22 @@ export async function findBooking(bookingId: string): Promise<SessionRow | null>
   return (data?.[0] as SessionRow) ?? null;
 }
 
-export async function markConfirmed(row: SessionRow): Promise<void> {
-  const { error } = await createServiceClient()
-    .from('submissions')
-    .update({ data: { ...row.data, confirmed_at: new Date().toISOString() } })
-    .eq('id', row.id);
+/** Merges fields into the booking, and into `row`, so later updates keep them. */
+export async function updateBooking(row: SessionRow, fields: Record<string, unknown>): Promise<void> {
+  row.data = { ...row.data, ...fields };
+  const { error } = await createServiceClient().from('submissions').update({ data: row.data }).eq('id', row.id);
   if (error) throw new Error(error.message);
+}
+
+/** The newest email failure, so the reason can be read without opening Vercel logs. */
+export async function lastEmailError(): Promise<string | null> {
+  const { data, error } = await createServiceClient()
+    .from('submissions')
+    .select('data')
+    .eq('form_name', 'session-signup')
+    .not('data->>email_error', 'is', null)
+    .order('created_at', { ascending: false })
+    .limit(1);
+  if (error) throw new Error(error.message);
+  return (data?.[0]?.data as { email_error?: string } | undefined)?.email_error ?? null;
 }

@@ -41,21 +41,25 @@ function invite(row: SessionRow, slot: string, organizer: string, mom: string, o
   ].join('\r\n');
 }
 
-async function send(body: Record<string, unknown>) {
+/** Sends one email and throws Resend's reason, so a failed send is never mistaken for a sent one. */
+async function send(key: string, body: Record<string, unknown>) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+      'Idempotency-Key': key,
+    },
     body: JSON.stringify(body),
   });
-  if (!res.ok) console.error('[session] Resend send failed', res.status, await res.text());
+  if (!res.ok) throw new Error(`Resend ${res.status}: ${(await res.text()).slice(0, 300)}`);
 }
 
 export async function sendSessionEmails(row: SessionRow, verified: boolean): Promise<void> {
   const from = process.env.RESEND_FROM_EMAIL;
   const owner = process.env.RESEND_TO_EMAIL;
   if (!process.env.RESEND_API_KEY || !from || !owner) {
-    console.warn('[session] Resend env missing, skipping emails');
-    return;
+    throw new Error('Resend env missing');
   }
   const d = row.data;
   const first = str(d.first_name) || 'there';
@@ -85,7 +89,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
   if (slot) {
     const when = slotLabel(slot);
     const ics = invite(row, slot, from, mom, owner, where);
-    await send({
+    await send(`${row.id}-mom`, {
       from: `ai.moms™ <${from}>`,
       to: [mom],
       reply_to: owner,
@@ -100,7 +104,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
       ),
       attachments: attachments(ics),
     });
-    await send({
+    await send(`${row.id}-owner`, {
       from: `ai.moms™ <${from}>`,
       to: [owner],
       reply_to: mom,
@@ -118,7 +122,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
     return;
   }
 
-  await send({
+  await send(`${row.id}-mom`, {
     from: `ai.moms™ <${from}>`,
     to: [mom],
     reply_to: owner,
@@ -131,7 +135,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
         sign,
     ),
   });
-  await send({
+  await send(`${row.id}-owner`, {
     from: `ai.moms™ <${from}>`,
     to: [owner],
     reply_to: mom,
