@@ -29,7 +29,7 @@ export default function TermsPage() {
       <div className="legal-head">
         <Link href="/" className="back-link">&larr; Back to Home</Link>
         <h1>Terms &amp; Conditions.</h1>
-        <p className="head-date">Last updated: March 2026</p>
+        <p className="head-date">Last updated: November 2026</p>
       </div>
 
       <section className="legal-section">
@@ -37,7 +37,7 @@ export default function TermsPage() {
           <Link href="/" className="btn-navy">&larr; Back to Home</Link>
 
           <h1>TERMS &amp; CONDITIONS</h1>
-          <p className="last-updated">Last Updated: February 25, 2026</p>
+          <p className="last-updated">Last Updated: November 5, 2026</p>
 
           <p>Welcome to ai moms&trade;. By purchasing, enrolling in, or participating in any of our programs, services, or experiences (&ldquo;Services&rdquo;), you agree to these Terms &amp; Conditions. Please read them carefully.</p>
 
@@ -84,6 +84,9 @@ export default function TermsPage() {
             <li>Payment plan customers: Only payments already made will be refunded; remaining payments will be cancelled</li>
           </ul>
           <p><strong>No refunds after accessing program content or attending a live session.</strong> All sales are final once you have engaged with the material.</p>
+
+          <h3>Off Your Plate Private Sessions:</h3>
+          <p>If we don&rsquo;t get your top 3 done in your session, email <a href="mailto:hello@aimoms.ai">hello@aimoms.ai</a> within 7 days of your session and we will refund your $300 in full. If something is too big to finish in 90 minutes, we will agree with you before the session on what done means. This guarantee applies to Off Your Plate sessions and takes priority over the no-refund terms above and Section 10 for those sessions. To reschedule, reply to your confirmation email at least 24 hours before your session.</p>
 
           <h3>In-Person Experiences:</h3>
           <p>Refund and cancellation policies for in-person events may vary and will be communicated at the time of registration. In general, refunds for in-person events must be requested at least 14 days before the event date.</p>
@@ -223,7 +226,7 @@ export default function TermsPage() {
 
           <p style={{ marginTop: 30 }}><strong>By purchasing, enrolling in, or participating in any ai moms&trade; program or service, you acknowledge that you have read, understood, and agree to be bound by these Terms &amp; Conditions.</strong></p>
 
-          <p style={{ marginTop: 40, textAlign: 'center' }}><em>Last Updated: February 25, 2026</em></p>
+          <p style={{ marginTop: 40, textAlign: 'center' }}><em>Last Updated: November 5, 2026</em></p>
 
           <div className="end-cta"><Link href="/" className="btn-navy">Back to Home</Link></div>
         </div>
