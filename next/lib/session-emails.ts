@@ -42,6 +42,59 @@ function invite(row: SessionRow, slot: string, organizer: string, mom: string, o
 }
 
 /** Sends one email and throws Resend's reason, so a failed send is never mistaken for a sent one. */
+/** The hidden Kit form. Kit sends the mom's confirmation from its TOP3 BOOKED sequence. */
+const KIT_FORM = 10149618;
+async function sendToKit(email: string, first: string, fields: Record<string, string>) {
+  const body = new URLSearchParams({ email_address: email, 'fields[first_name]': first });
+  for (const [k, v] of Object.entries(fields)) body.set(`fields[${k}]`, v);
+  const res = await fetch(`https://app.kit.com/forms/${KIT_FORM}/subscriptions`, {
+    method: 'POST',
+    headers: { Accept: 'application/json' },
+    body,
+  });
+  if (!res.ok) throw new Error(`Kit ${res.status}: ${(await res.text()).slice(0, 300)}`);
+}
+
+export const sessionZoom = () => process.env.SESSION_ZOOM_URL || 'https://us06web.zoom.us/j/82822702155';
+
+export function sessionTimes(slot: string) {
+  const start = new Date(slot);
+  return { start, end: new Date(start.getTime() + SESSION_MINUTES * 6e4) };
+}
+
+function googleCalendarLink(slot: string, where: string): string {
+  const { start, end } = sessionTimes(slot);
+  const q = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: 'ai.moms™ Top 3 Session',
+    dates: `${icsTime(start)}/${icsTime(end)}`,
+    details: `Join here: ${where}`,
+    location: where,
+  });
+  return `https://calendar.google.com/calendar/render?${q}`;
+}
+
+/** A plain calendar file for the Apple or Outlook link. No attendees, so nothing gets emailed. */
+export function calendarFile(slot: string, where: string): string {
+  const { start, end } = sessionTimes(slot);
+  const clean = (s: string) => s.replace(/[\\;,]/g, '\\$&');
+  return [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//ai.moms//Top 3 Session//EN',
+    'BEGIN:VEVENT',
+    `UID:${icsTime(start)}-top3@aimoms.ai`,
+    `DTSTAMP:${icsTime(new Date())}`,
+    `DTSTART:${icsTime(start)}`,
+    `DTEND:${icsTime(end)}`,
+    `SUMMARY:${clean('ai.moms™ Top 3 Session')}`,
+    `LOCATION:${clean(where)}`,
+    `DESCRIPTION:${clean(`Join here: ${where}`)}`,
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n');
+}
+
 async function send(key: string, body: Record<string, unknown>) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -67,18 +120,12 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
   const mom = str(d.email);
   const slot = str(d.slot);
   const request = str(d.time_request);
-  const zoom = process.env.SESSION_ZOOM_URL || 'https://us06web.zoom.us/j/82822702155';
+  const zoom = sessionZoom();
   const inPerson = str(d.where).includes('NYC');
   const where = inPerson ? 'In person in NYC' : zoom || 'Zoom';
-  const whereLine = inPerson
-    ? "In person in NYC. We'll email you the spot before we meet."
-    : zoom
-      ? `On Zoom: ${esc(zoom)}`
-      : "On Zoom. We'll send your link before we meet.";
   const p = (s: string) => `<p style="margin:0 0 14px">${s}</p>`;
   const wrap = (s: string) =>
     `<div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;color:#060d26;max-width:520px">${s}</div>`;
-  const sign = p('The ai.moms™ team 🩷');
   const check = verified ? '' : p('Check Stripe to confirm the payment came through.');
   const wishes = [d.pain_1, d.pain_2, d.pain_3].map(str).filter(Boolean);
 
@@ -89,20 +136,11 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
   if (slot) {
     const when = slotLabel(slot);
     const ics = invite(row, slot, from, mom, owner, where);
-    await send(`${row.id}-mom`, {
-      from: `ai.moms™ <${from}>`,
-      to: [mom],
-      reply_to: owner,
-      subject: `You're booked! ${when}`,
-      html: wrap(
-        p(`Hi ${esc(first)},`) +
-          p(`You're booked for your ai.moms™ Top 3 Session!`) +
-          p(`<b>${esc(when)}</b><br>${whereLine}`) +
-          p(`We have your 3, and we'll plan around them before we meet. You'll hear from us about which Claude plan you need, so all you have to do is show up with your laptop.`) +
-          p(`Need to reschedule? Just reply at least 24 hours before your session.`) +
-          sign,
-      ),
-      attachments: attachments(ics),
+    await sendToKit(mom, first, {
+      session_when: when,
+      session_where: inPerson ? "In person in NYC. We'll email you the spot before we meet." : `On Zoom: ${zoom}`,
+      session_google_link: googleCalendarLink(slot, where),
+      session_apple_link: `https://aimoms.ai/api/session-calendar?start=${encodeURIComponent(slot)}&place=${inPerson ? 'nyc' : 'zoom'}`,
     });
     await send(`${row.id}-owner`, {
       from: `ai.moms™ <${from}>`,
@@ -122,19 +160,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
     return;
   }
 
-  await send(`${row.id}-mom`, {
-    from: `ai.moms™ <${from}>`,
-    to: [mom],
-    reply_to: owner,
-    subject: 'We got your session request',
-    html: wrap(
-      p(`Hi ${esc(first)},`) +
-        p(`Thank you for booking your ai.moms™ Top 3 Session! We have your 3 and your time request:`) +
-        p(`<b>${esc(request)}</b>`) +
-        p(`We'll email you to confirm your time within one business day.`) +
-        sign,
-    ),
-  });
+  await sendToKit(mom, first, { session_when: request, session_where: 'none', session_google_link: 'none', session_apple_link: 'none' });
   await send(`${row.id}-owner`, {
     from: `ai.moms™ <${from}>`,
     to: [owner],
