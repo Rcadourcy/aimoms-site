@@ -44,13 +44,13 @@ export async function takenSlots(now: Date): Promise<Busy[]> {
     .eq('form_name', 'session-signup')
     .gte('created_at', since);
   if (error) throw new Error(error.message);
-  const paid = await paidBookingIds();
+  const paid = process.env.STRIPE_READ_KEY ? await paidBookingIds() : new Set<string>();
   const out: Busy[] = [];
   for (const row of (data ?? []) as SessionRow[]) {
     const slot = typeof row.data.slot === 'string' ? Date.parse(row.data.slot) : NaN;
     if (Number.isNaN(slot)) continue;
     const held = now.getTime() - Date.parse(row.created_at) < HOLD_MINUTES * 6e4;
-    if (held || paid.has(String(row.data.booking_id))) {
+    if (held || row.data.confirmed_at || paid.has(String(row.data.booking_id))) {
       out.push({ start: slot, end: slot + SESSION_MINUTES * 6e4 });
     }
   }

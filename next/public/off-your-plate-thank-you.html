@@ -329,7 +329,7 @@ section,.nh .s-nav{position:relative}
 
 <script>
 const sid=new URLSearchParams(location.search).get('session_id');
-if(sid)fetch('/api/session-confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sid})}).then(r=>r.json()).then(d=>{if(d.when){const w=document.getElementById('when');w.textContent=d.when;w.hidden=false}}).catch(()=>{});
+if(sid)fetch('/api/session-confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sid,booking_id:(()=>{try{return localStorage.getItem('oyp_booking')}catch(x){return null}})()})}).then(r=>r.json()).then(d=>{if(d.when){const w=document.getElementById('when');w.textContent=d.when;w.hidden=false}}).catch(()=>{});
 </script>
 <script>
 (function(){

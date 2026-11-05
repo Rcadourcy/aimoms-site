@@ -479,6 +479,7 @@ f.addEventListener('submit',async e=>{
   if(pick){const open=await loadSlots().catch(()=>null);
     if(open&&!open.includes(pick)){slots=open;pick=null;paint();btn.disabled=false;btn.textContent='Continue to payment · $300';err.textContent='That time was just taken. Pick another one.';return}}
   const booking=crypto.randomUUID();
+  try{localStorage.setItem('oyp_booking',booking)}catch(x){}
   const fd=new FormData(f);fd.append('form-name','session-signup');fd.append('first_name',fn);fd.append('last_name',f.ln.value.trim());fd.append('email',em);fd.append('booking_id',booking);if(pick){fd.append('slot',pick);fd.append('slot_label',dayOf(pick)+', '+timeOf(pick)+' ET')}
   try{fbq('track','Lead',{content_name:'Off Your Plate Session'})}catch(x){}
   const go=()=>{try{fbq('track','InitiateCheckout',{content_name:'Off Your Plate Session',value:300,currency:'USD'})}catch(x){}location.href=CHECKOUT+'?prefilled_email='+encodeURIComponent(em)+'&client_reference_id='+booking};

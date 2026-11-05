@@ -48,7 +48,7 @@ async function send(body: Record<string, unknown>) {
   if (!res.ok) console.error('[session] Resend send failed', res.status, await res.text());
 }
 
-export async function sendSessionEmails(row: SessionRow): Promise<void> {
+export async function sendSessionEmails(row: SessionRow, verified: boolean): Promise<void> {
   const from = process.env.RESEND_FROM_EMAIL;
   const owner = process.env.RESEND_TO_EMAIL;
   if (!process.env.RESEND_API_KEY || !from || !owner) {
@@ -73,6 +73,7 @@ export async function sendSessionEmails(row: SessionRow): Promise<void> {
   const wrap = (s: string) =>
     `<div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.5;color:#060d26;max-width:520px">${s}</div>`;
   const sign = p('The ai.moms™ team 🩷');
+  const check = verified ? '' : p('Check Stripe to confirm the payment came through.');
   const wishes = [d.pain_1, d.pain_2, d.pain_3].map(str).filter(Boolean);
 
   const attachments = (ics: string) => [
@@ -107,7 +108,8 @@ export async function sendSessionEmails(row: SessionRow): Promise<void> {
           p(`<b>${esc(when)}</b><br>${esc(str(d.where))}`) +
           p(`Her 3:<br>${wishes.map(esc).join('<br>')}`) +
           p(`Using AI: ${esc(str(d.lvl)) || 'not given'}<br>Tools: ${esc(str(d.tools)) || 'not given'}`) +
-          p(`Accept the attached invite so it lands on your calendar.`),
+          p(`Accept the attached invite so it lands on your calendar.`) +
+          check,
       ),
       attachments: attachments(ics),
     });
@@ -136,7 +138,8 @@ export async function sendSessionEmails(row: SessionRow): Promise<void> {
       p(`<b>${esc(name)}</b> paid and asked for another time:`) +
         p(`<b>${esc(request)}</b><br>${esc(str(d.where))}`) +
         p(`Her 3:<br>${wishes.map(esc).join('<br>')}`) +
-        p(`Using AI: ${esc(str(d.lvl)) || 'not given'}<br>Tools: ${esc(str(d.tools)) || 'not given'}`),
+        p(`Using AI: ${esc(str(d.lvl)) || 'not given'}<br>Tools: ${esc(str(d.tools)) || 'not given'}`) +
+        check,
     ),
   });
 }

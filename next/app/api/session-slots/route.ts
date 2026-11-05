@@ -1,22 +1,22 @@
 import { NextResponse } from 'next/server';
 import { buildSlots, parseBusy, DAYS_AHEAD, type Busy } from '@/lib/session-slots';
 import { takenSlots } from '@/lib/session-bookings';
+import synced from '@/data/session-busy.json';
 
 export const dynamic = 'force-dynamic';
 
+const MAX_SYNC_AGE_HOURS = 72;
+
 /**
  * Open times for the Off Your Plate session. Returns times only, never calendar details.
- * GOOGLE_CAL_ICS_URLS holds the secret iCal address of each calendar, comma separated.
- * With anything missing or failing it returns ok:false and the page falls back to
+ * Busy times come from data/session-busy.json, which a scheduled task refreshes from
+ * Raquel's calendars. If GOOGLE_CAL_ICS_URLS is set, the live feeds are used instead.
+ * With a stale file or any failure it returns ok:false and the page falls back to
  * "request a time", so checkout keeps working.
  */
-export async function GET() {
+async function calendarBusy(now: Date): Promise<Busy[] | null> {
   const feeds = (process.env.GOOGLE_CAL_ICS_URLS ?? '').split(',').map((u) => u.trim()).filter(Boolean);
-  if (!feeds.length || !process.env.STRIPE_READ_KEY) {
-    return NextResponse.json({ ok: false, slots: [] });
-  }
-  try {
-    const now = new Date();
+  if (feeds.length) {
     const to = new Date(now.getTime() + (DAYS_AHEAD + 2) * 864e5);
     const calendars = await Promise.all(
       feeds.map(async (url) => {
@@ -25,8 +25,20 @@ export async function GET() {
         return parseBusy(await res.text(), now, to);
       }),
     );
-    const busy: Busy[] = [...calendars.flat(), ...(await takenSlots(now))];
-    return NextResponse.json({ ok: true, slots: buildSlots(now, busy) });
+    return calendars.flat();
+  }
+  const age = now.getTime() - Date.parse(synced.updated);
+  if (!(age < MAX_SYNC_AGE_HOURS * 36e5)) return null;
+  return synced.busy.map((b) => ({ start: Date.parse(b.start), end: Date.parse(b.end) }));
+}
+
+export async function GET() {
+  try {
+    const now = new Date();
+    const busy = await calendarBusy(now);
+    if (!busy) return NextResponse.json({ ok: false, slots: [] });
+    const all = [...busy, ...(await takenSlots(now))];
+    return NextResponse.json({ ok: true, slots: buildSlots(now, all) });
   } catch (err) {
     console.error('[session-slots]', err);
     return NextResponse.json({ ok: false, slots: [] });
