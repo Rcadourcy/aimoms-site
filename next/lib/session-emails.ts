@@ -145,7 +145,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
     const ics = invite(row, slot, from, mom, owner, where);
     await sendToKit(mom, first, {
       session_when: slotPhrase(slot),
-      session_where: inPerson ? "In person in NYC. We'll email you the spot before we meet." : `On Zoom: ${zoom}`,
+      session_where: inPerson ? "In person in NYC. We'll be in touch so we can coordinate our in-person meetup spot." : `On Zoom: ${zoom}`,
       session_google_link: googleCalendarLink(slot, where),
       session_apple_link: `https://aimoms.ai/api/session-calendar?start=${encodeURIComponent(slot)}&place=${inPerson ? 'nyc' : 'zoom'}`,
     });
