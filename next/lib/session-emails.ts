@@ -63,7 +63,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
   const mom = str(d.email);
   const slot = str(d.slot);
   const request = str(d.time_request);
-  const zoom = process.env.SESSION_ZOOM_URL;
+  const zoom = process.env.SESSION_ZOOM_URL || 'https://us06web.zoom.us/j/82822702155';
   const inPerson = str(d.where).includes('NYC');
   const where = inPerson ? 'In person in NYC' : zoom || 'Zoom';
   const whereLine = inPerson
