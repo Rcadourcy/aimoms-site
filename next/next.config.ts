@@ -23,6 +23,8 @@ const nextConfig: NextConfig = {
         { source: '/', destination: '/home-v2.html' },
         { source: '/experience-thank-you', destination: '/experience-thank-you.html' },
         { source: '/nyc', destination: '/nyc.html' },
+        { source: '/off-your-plate', destination: '/off-your-plate.html' },
+        { source: '/off-your-plate-thank-you', destination: '/off-your-plate-thank-you.html' },
         { source: '/foundations', destination: '/foundations-v2.html' },
         { source: '/build-aime', destination: '/build-aime.html' },
         { source: '/build-aime-thank-you', destination: '/build-aime-thank-you.html' },

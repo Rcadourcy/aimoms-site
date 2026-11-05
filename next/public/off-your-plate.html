@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Off Your Plate · ai.moms™</title>
+<meta name="description" content="One private 90-minute session. Bring your 3 biggest headaches or wishes, from home, work or your business, and leave with them done. $300, money-back guarantee.">
+<link rel="canonical" href="https://aimoms.ai/off-your-plate">
+<meta property="og:title" content="Off Your Plate · ai.moms™">
+<meta property="og:image" content="https://aimoms.ai/home/raquel.jpg">
+<script>
+window._fbqQueue=[];
+window.fbq=function(){window._fbqQueue.push(arguments);};
+window._fbq=window.fbq;
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600;1,900&display=swap">
+<style>
+/* Layout: an evening invitation. Navy-led "Quiet Navy" direction; a receipt-style value stack is the centerpiece, RSVP card sticks beside the details on desktop. */
+:root{
+  --ink:#060d26; --paper:#ffffff; --wash:#f8f8f8; --rose:#ff63d8; --rose-soft:#fdf0f6; --mute:#5d6578; --line:#e3e6ec; --on-ink:#ffffff; --ink-mute:#b8bfd0; --ok:#2f7a55;
+  --serif:'Outfit',system-ui,sans-serif; --accent:'Playfair Display',Georgia,serif;
+  --sans:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#eef0f6;--paper:#0d1426;--wash:#131c33;--rose:#ff63d8;--rose-soft:#2a1e2c;--mute:#a3abc0;--line:#25304a;--on-ink:#0d1426;--ink-mute:#3d4763;--ok:#7cc8a0;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#eef0f6;--paper:#0d1426;--wash:#131c33;--rose:#ff63d8;--rose-soft:#2a1e2c;--mute:#a3abc0;--line:#25304a;--on-ink:#0d1426;--ink-mute:#3d4763;--ok:#7cc8a0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);margin:0;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+.tm{font-size:.45em;vertical-align:.9em;margin-left:1px}
+.serif{font-family:var(--serif)}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-weight:600}
+nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;border-bottom:1px solid var(--line)}
+.logo{font-family:var(--sans);font-weight:800;font-size:22px;text-decoration:none}
+.logo em{color:var(--rose);font-family:var(--accent);font-style:italic;font-weight:900}
+nav .meta{font-size:13px;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:100px;font-weight:700;font:700 15px/1 var(--sans);background:var(--ink);color:var(--on-ink);border:0;cursor:pointer;text-decoration:none}
+.btn:hover{opacity:.9}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;padding-block:64px 72px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,5.6vw,72px);line-height:1.02;letter-spacing:-.025em;margin:16px 0 22px;text-wrap:balance}
+.hero h1 em{color:var(--rose);font-family:var(--accent);font-style:italic;font-weight:600}
+.hero .lede{font-size:18px;color:var(--mute);max-width:32em;margin:0 0 28px}
+.facts{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,1.75fr) minmax(0,.8fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:28px}
+.facts div{padding:16px 0}
+.facts div+div{padding-left:18px;border-left:1px solid var(--line)}
+.facts dt{font-size:12px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:20px}
+.cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.cta-row small{color:var(--mute);font-size:14px}
+.cta-row small s{opacity:.8}
+.photo{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:4px;overflow:hidden;background:var(--wash)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .tag{position:absolute;left:14px;right:14px;bottom:14px;background:var(--paper);color:var(--ink);padding:14px 16px;border-radius:4px;font-size:13.5px}
+.photo .tag b{font-family:var(--serif);font-weight:500;font-size:17px;display:block}
+
+/* sections */
+section{padding-block:80px}
+.band{background:var(--wash)}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card3{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:30px 26px 26px;display:flex;flex-direction:column;position:relative}
+.card3::before{content:"";position:absolute;top:0;left:0;width:32px;height:2px;background:var(--rose)}
+.card3 .num{font-weight:800;font-size:44px;line-height:1;color:var(--rose);margin-bottom:14px;letter-spacing:-.03em}
+.card3 h3{font-weight:800;font-size:22px;letter-spacing:-.02em;margin:0 0 10px;line-height:1.15}
+.card3 p{color:var(--mute);font-size:15px;line-height:1.6;margin:0}
+.card3 .ex{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13px;font-weight:600;color:var(--ink)}
+.card3 p{margin-bottom:16px}
+.trio-note{margin-top:22px;font-size:15px;color:var(--mute)}
+@media (max-width:900px){.trio{grid-template-columns:1fr}}
+
+.sh{max-width:40em;margin-bottom:40px}
+.sh h2{font-family:var(--serif);font-weight:800;font-size:clamp(30px,3.8vw,46px);letter-spacing:-.02em;line-height:1.08;margin:10px 0 12px;text-wrap:balance}
+.sh p{color:var(--mute);margin:0;font-size:17px}
+
+/* timeline */
+.phases{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr);gap:20px}
+.phase{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:28px}
+.phase.main{background:#060d26;border-color:#060d26;color:#fff}
+.phase.main .when{color:rgba(255,255,255,.6)}
+.phase.main h3,.phase.main .part b{color:#fff}
+.phase.main .part span{color:rgba(255,255,255,.72)}
+.phase.main .part{border-top-color:rgba(255,255,255,.14)}
+.phase.main .close{color:rgba(255,255,255,.72);border-top-color:rgba(255,255,255,.2)}
+.phase h3{font-family:var(--serif);font-weight:800;font-size:24px;margin:6px 0 16px}
+.phase .when{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.phase ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.phase li{font-size:15px;color:var(--mute);padding-left:18px;position:relative}
+.phase li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.phase li b{display:block;color:var(--ink);font-weight:600}
+.parts{display:grid;gap:0;counter-reset:p}
+.part{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.part:first-child{border-top:0;padding-top:0}
+.part .n{font-family:var(--accent);font-size:15px;color:var(--rose);font-style:italic;padding-top:2px}
+.part b{display:block;font-weight:600}
+.part span{color:var(--mute);font-size:15px}
+.close{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14px;color:var(--mute)}
+
+/* value stack */
+.value{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:start}
+.receipt{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--paper)}
+.receipt table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.receipt td{padding:18px 22px;border-top:1px solid var(--line);vertical-align:top}
+.receipt tr:first-child td{border-top:0}
+.receipt td:last-child{text-align:right;white-space:nowrap;font-family:var(--serif);font-size:19px;padding-left:8px}
+.receipt .item{font-weight:600;font-size:16px}
+.receipt .d{display:block;color:var(--mute);font-size:14px;font-weight:400;margin-top:3px;max-width:36em}
+.receipt .bonus{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);font-weight:600;margin-right:6px}
+.receipt .total td{background:var(--wash);font-weight:600}
+.receipt .total td:last-child{font-size:22px}
+.receipt .price td{background:var(--ink);color:var(--on-ink);border-top:0}
+.receipt .price td:first-child{font-family:var(--serif);font-size:22px}
+.receipt .price td:last-child{font-size:34px}
+.receipt .price small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink-mute);margin-top:2px}
+.why h3{font-family:var(--serif);font-weight:800;font-size:30px;line-height:1.15;margin:8px 0 14px;letter-spacing:-.015em}
+.why p{color:var(--mute);margin:0 0 14px}
+.big{font-family:var(--serif);font-size:64px;line-height:1;letter-spacing:-.03em;margin:24px 0 6px;color:var(--rose)}
+.big+small{color:var(--mute);font-size:14px;display:block;margin-bottom:24px}
+
+/* rsvp */
+.rsvp{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.rsvp .side ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px;font-size:15px;color:var(--mute)}
+.rsvp .side li::before{content:"✓";color:var(--rose);margin-right:10px;font-weight:600}
+form{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:32px;display:grid;gap:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-size:14px;font-weight:500}
+label .opt{font-weight:400;color:var(--mute)}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+textarea{resize:vertical;min-height:64px;line-height:1.45}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}
+legend{font-size:14px;font-weight:500;margin-bottom:8px}
+.whos{display:flex;flex-direction:column;gap:8px}
+.whos label{display:flex;align-items:flex-start;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:400;cursor:pointer}
+.whos input{width:auto;margin:3px 0 0;accent-color:var(--rose);flex:none}
+.whos span{display:flex;flex-direction:column;gap:2px}
+.whos small{color:var(--mute);font-size:13px;line-height:1.4}
+.whos label:has(input:checked){border-color:var(--ink);background:var(--wash)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-weight:400;cursor:pointer}
+.chips input{width:auto;margin:0;accent-color:var(--rose)}
+.chips label:has(input:checked){border-color:var(--ink);background:var(--wash)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:16px;font-variant-numeric:tabular-nums}
+.sum span{color:var(--mute);font-size:14px}
+.sum b{font-family:var(--serif);font-size:28px;font-weight:400}
+form .btn{width:100%;padding:17px}
+.err{color:#b4233a;font-size:13px;min-height:1em;margin:0}
+.done{display:grid;gap:12px;text-align:left}
+.done h3{font-family:var(--serif);font-weight:800;font-size:30px;margin:0}
+.done p{margin:0;color:var(--mute)}
+.done .pill{display:inline-block;justify-self:start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ok);border:1px solid currentColor;border-radius:999px;padding:5px 10px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.faq h3{font-family:var(--serif);font-weight:700;font-size:20px;margin:0 0 8px}
+.faq p{margin:0;color:var(--mute);font-size:15px}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--mute);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero,.value,.rsvp{grid-template-columns:1fr;gap:36px}
+  .photo{aspect-ratio:4/3}
+  .phases,.faq{grid-template-columns:1fr}
+  section{padding-block:56px}
+}
+@media (max-width:520px){
+  .two{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .facts div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .receipt td{padding:14px 16px}
+  form{padding:22px}
+  .part{grid-template-columns:52px minmax(0,1fr)}
+}
+@media (min-width:521px) and (max-width:720px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
+.tmh{font-family:var(--sans);font-style:normal;font-weight:500;font-size:.28em;vertical-align:2.2em;margin-left:2px;letter-spacing:0}
+.lc{text-transform:none;letter-spacing:.04em}
+.surprise{font-family:var(--accent);font-style:italic;font-size:19px;color:var(--ink);border-left:2px solid var(--rose);padding-left:14px;margin:18px 0 0}
+
+
+.photo.vidhero{aspect-ratio:9/16;max-width:400px;margin-left:auto;background:#060d26}
+.photo.vidhero video{width:100%;height:100%;object-fit:cover;display:block}
+.rsvp-photo{display:block;width:100%;max-width:440px;aspect-ratio:1050/820;object-fit:cover;border-radius:6px;margin-top:28px}
+@media (max-width:900px){.photo.vidhero{max-width:340px;margin:0 auto;aspect-ratio:9/16!important}}
+@media (prefers-reduced-motion:reduce){.photo.vidhero video{display:none}.photo.vidhero{background:url(/home/vid/hands-up.jpg) center/cover}}
+/* site-wide nav + footer (scoped) */
+.nh{
+  --navy:#060d26; --off:#f8f8f8; --g200:#e5e5e5; --g400:#999; --g600:#666;
+  /* pink-related tokens: TODAY values */
+  --logo-ai:#ff63d8; --h1-accent:#ff63d8; --dot:#ff63d8; --dot-glow:0 0 12px rgba(255,99,216,.8); --pulse:pulse;
+  --btn-bg:#ff63d8; --btn-fg:#fff; --btn-shadow:0 4px 20px rgba(255,99,216,.25); --btn-radius:100px;
+  --ghost-fg:#ff63d8; --ghost-border:#ff63d8;
+  --sub-bg:#ff63d8; --sub-fg:#fff; --sub-border:#ff63d8;
+  --eyebrow:#ff63d8; --num:#ff63d8; --rule:#ff63d8; --tag:#ff63d8; --link:#ff63d8; --note-strong:#ff63d8;
+  --nv-eyebrow:#ff63d8; --nv-num:#ff63d8; --nv-link:#ff63d8; --nv-btn-bg:#ff63d8; --nv-btn-fg:#fff;
+  --hw:900;
+  background:#fff;color:var(--navy);font-family:'Be Vietnam Pro',sans-serif;-webkit-font-smoothing:antialiased;
+}
+.nh{font-family:'Be Vietnam Pro',sans-serif;-webkit-font-smoothing:antialiased}
+.nh a{text-decoration:none;color:inherit}
+.nh *{box-sizing:border-box}
+.nh ul{margin:0;padding:0}.nh h5{margin:0}
+.nh .pad{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.nh .tm{font-size:.42em;vertical-align:.6em;font-weight:600;margin-left:1px;opacity:.85}
+.nh .s-nav{background:var(--navy);color:#fff}
+.nh .s-nav .inner{max-width:1240px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nh .brand{display:flex;flex-direction:column;line-height:1}
+.nh .brand .bm{font-size:22px}
+.nh .brand .ai{font-family:'Playfair Display',serif;font-style:italic;font-weight:900;color:var(--logo-ai)}
+.nh .brand .moms{font-weight:800}
+.nh .brand .tag{font-size:9px;color:rgba(255,255,255,.6);margin-top:3px}
+.nh .s-nav .links{display:flex;align-items:center;gap:22px}
+.nh .s-nav .tnl{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.nh .s-nav .subscribe{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;padding:8px 16px;border-radius:100px;background:var(--sub-bg);color:var(--sub-fg);box-shadow:inset 0 0 0 1.5px var(--sub-border)}
+.nh .s-nav .navcta{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.02em;padding:10px 18px;border-radius:var(--btn-radius);background:#fff;color:#060d26!important;white-space:nowrap}
+.nh .s-nav .ham{display:none;background:none;border:0;cursor:pointer;padding:6px}
+@media (max-width:1000px){.nh .s-nav .ham{display:grid}}
+.nh .mmenu{max-width:1240px;margin:0 auto;display:grid;padding:4px 0 14px}
+.nh .mmenu a{color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:12px 2px;border-top:1px solid rgba(255,255,255,.1)}
+@media (min-width:1001px){.nh .mmenu{display:none!important}}
+.nh .s-nav .ham{gap:4px}
+.nh .s-nav .ham i{width:18px;height:2px;background:#fff;display:block}
+.nh .s-foot .brand .bm{font-size:26px;color:#fff}
+.nh /* ---------- NEW SECTIONS (sales-page structure) ---------- */
+section,.nh .s-nav{position:relative}
+.nh .ffoot{background:var(--navy);color:rgba(255,255,255,.65);padding-block:72px 40px;font-size:14px}
+.nh .ffoot .grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1.3fr 1fr 1fr 1.2fr;gap:32px}
+.nh .ffoot .brand .bm{font-size:30px;color:#fff}
+.nh .ffoot .lead2{font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:#fff;line-height:1.2;margin-top:16px}
+.nh .ffoot h5{font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nv-eyebrow);margin-bottom:14px}
+.nh .ffoot ul{list-style:none;display:grid;gap:9px}
+.nh .ffoot .legal{max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
+.nh .ffoot .legal span a{margin-left:18px;text-decoration:underline;text-underline-offset:3px}
+.nh .ffoot .disc{max-width:1180px;margin:18px auto 0;font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.4)}
+@media (max-width:1000px){.nh .ffoot .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.nh .proof8,.nh .more4,.nh .groups,.nh .ffoot .grid{grid-template-columns:1fr}}
+.nh .soc{display:inline-flex;gap:12px;align-items:center}
+.nh .soc a{display:inline-flex;color:inherit;opacity:.85}
+.nh .soc a:hover{opacity:1}
+.nh .soc.big{margin-top:22px;gap:14px}
+.nh .soc.big a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);align-items:center;justify-content:center;color:#fff}
+.nh .ffoot ul a{color:inherit}
+@media (max-width:640px){.nh .s-nav .soc{display:none}}
+.nh .lc{text-transform:none!important}
+@media (max-width:1000px){.nh .s-nav .tnl{display:none}}
+.nh .s-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nh .s-nav{display:block;padding-block:0;border:0;position:relative}
+.nh.stick{position:sticky;top:env(safe-area-inset-top,0px);z-index:60}
+.nh .ffoot{display:block;border-top:0;margin:0}
+.nh .brand{display:flex;flex-direction:column;line-height:1}
+
+.nh .mmenu[hidden]{display:none!important}
+.nh .s-nav .inner{position:relative}
+.nh .mmenu{position:absolute;left:0;right:0;top:100%;background:#060d26;padding:4px max(24px,env(safe-area-inset-left,0px)) 14px;z-index:70;box-shadow:0 18px 30px -18px rgba(0,0,0,.5)}
+.tnl2{position:relative}.tnl2 small{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:3px;font-family:'Be Vietnam Pro',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.01em;text-transform:none;opacity:.72;white-space:nowrap;line-height:1}
+/* Off Your Plate */
+.hero .photo img{object-position:50% 0}
+@media (min-width:901px){.hero h1{font-size:clamp(38px,4.5vw,60px);max-width:none}}
+@media (max-width:900px){.hero .photo{aspect-ratio:1/1}}
+.hero .facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+.wins{list-style:none;margin:auto 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;gap:10px}
+.wins li{font-size:14.5px;line-height:1.45;padding-left:18px;position:relative}
+.wins li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.steps4{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.steps4 li{counter-increment:s;display:flex;flex-direction:column;gap:6px}
+.steps4 li::before{content:counter(s);font:800 28px/1 var(--serif);color:var(--rose)}
+.steps4 b{font:800 19px/1.2 var(--serif)}
+.steps4 span{color:var(--mute);font-size:15px}
+.steps4.one{grid-template-columns:1fr;max-width:34em;margin-block:28px}
+.value .receipt td:last-child{text-align:left;white-space:normal;font-family:var(--sans);font-size:16px;padding-left:22px}
+.promise{background:#060d26;color:#fff}
+.promise h2{font-family:var(--serif);font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:10px 0 12px;max-width:20em;text-wrap:balance}
+.promise p{margin:0;color:#c9cede;font-size:17px;max-width:36em}
+.meet{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:48px;align-items:center}
+.meet img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;display:block}
+.meet h2{font-family:var(--serif);font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.12;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.meet p{color:var(--mute);margin:0 0 18px}
+.meet blockquote{margin:0;padding-top:16px;border-top:1px solid var(--line);font-size:16px}
+.meet cite{display:block;margin-top:8px;font-style:normal;font-size:14px;color:var(--mute)}
+.total{font-size:17px;color:var(--mute)}.total b{font:800 34px var(--serif);color:var(--ink)}
+.slotgrid{display:flex;flex-wrap:wrap;gap:8px}
+.slotgrid:empty{display:none}
+#pickbox[hidden],#trbox[hidden],#other[hidden],.when[hidden]{display:none}
+#pickbox{display:grid;gap:12px}
+.slot{border:1px solid var(--line);background:none;color:var(--ink);border-radius:999px;padding:9px 14px;font:inherit;font-size:14px;cursor:pointer}
+.slot[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+.linkbtn{border:0;background:none;padding:0;color:var(--ink);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer;justify-self:start}
+.when{font:800 22px/1.3 var(--serif);margin:0 0 8px}
+.tybox{padding-block:64px 72px}
+.tybox h1{font-family:var(--serif);font-weight:800;font-size:clamp(36px,5vw,60px);line-height:1.05;letter-spacing:-.025em;margin:14px 0 16px;max-width:15em}
+.tybox h1 em{color:var(--rose);font-family:var(--accent);font-style:italic;font-weight:600}
+.tybox .lede{font-size:18px;color:var(--mute);max-width:32em}
+@media (max-width:900px){.steps4{grid-template-columns:1fr}.meet{grid-template-columns:1fr}.meet img{max-width:260px}.hero .facts{grid-template-columns:repeat(2,minmax(0,1fr))}.hero .facts div+div{border-left:0;padding-left:0}}
+</style>
+</head>
+<body>
+<div class="nh stick"><nav class="s-nav pad"><div class="inner">
+    <a class="brand" href="/" style="color:inherit"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span><span class="tag">Retire from Chief Everything Officer™.</span></a>
+    <div class="links"><a class="tnl" href="/#quiz">Start Here</a><a class="tnl" href="/build-aime">Build Aime</a><a class="tnl" href="/foundations">Foundations Course</a><a class="tnl" href="/nyc">In Person</a><a class="tnl" href="/off-your-plate">Private Session</a><a class="tnl" href="/membership">Membership</a><a class="navcta" href="/foundations">Get My Time Back</a><button class="ham" type="button" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('mmenu');var o=m.hidden;m.hidden=!o;this.setAttribute('aria-expanded',o)"><i></i><i></i><i></i></button></div><div class="mmenu" id="mmenu" hidden><a href="/#quiz">Start Here</a><a href="/build-aime">Build Aime · $97</a><a href="/foundations">Foundations Course</a><a href="/nyc">In Person</a><a href="/off-your-plate">Private Session</a><a href="/membership">Membership</a><a href="/skill-guide">Skill Guide</a><a href="/experiences">Host an Experience</a><a href="/corporate">ERG &amp; Corporate</a><a href="/workshop">Monthly Workshop</a></div>
+  </div></nav></div>
+
+
+
+<header class="wrap hero">
+  <div>
+    <span class="kicker">One private session · Zoom or NYC</span>
+    <h1>Bring your 3 biggest headaches or wishes.<br>Leave with them <em>done.</em></h1>
+    <p class="lede">The invisible load at home, the work you can't get caught up on, the business idea you've been sitting on. In 90 minutes, one on one, we take the three that matter most to you and get them done with Claude, on your laptop, in your real accounts.</p>
+    <dl class="facts">
+      <div><dt>Time</dt><dd>90 minutes</dd></div>
+      <div><dt>Where</dt><dd>Zoom or NYC</dd></div>
+      <div><dt>Price</dt><dd>$300</dd></div>
+      <div><dt>Guarantee</dt><dd>Money back</dd></div>
+    </dl>
+    <div class="cta-row"><a class="btn" href="#book">Book your session</a><small>One session. Nothing renews.</small></div>
+  </div>
+  <div class="photo"><img src="/home/raquel.jpg" alt="Raquel Cadourcy, founder of ai.moms™"><div class="tag"><b>With Raquel Cadourcy</b>Founder of ai.moms™ and Approved Claude SMB Trainer</div></div>
+</header>
+
+<section id="solve"><div class="wrap">
+  <div class="sh"><span class="kicker">What we can solve</span><h2>Your 3 can come from anywhere in your life.</h2><p>So many moms are living in two or three of these buckets, so mix and match. These are the kinds of things we can get done together in 90 minutes.</p></div>
+  <div class="trio">
+    <div class="card3"><h3>At home: the invisible load</h3><p>The schedules, the forms, the thing that has to be bought by Thursday.</p><ul class="wins"><li><b>"I wish our calendars talked to each other."</b> Everyone in one view, with a Sunday brief that flags every conflict.</li><li><b>"I wish someone else figured out dinner."</b> The week's meals planned, with one grocery list.</li><li><b>"I wish the school emails were one list."</b> What to sign, pay, pack and show up for.</li></ul></div>
+    <div class="card3"><h3>At your 9-to-5: get caught up</h3><p>You don't have the hours your colleagues without kids have to keep up with AI, and you're not getting left behind.</p><ul class="wins"><li><b>"I wish I could get on top of my inbox."</b> Cut down to what needs you, with replies drafted.</li><li><b>"I wish I knew how to use AI at my job."</b> Set up around the work you actually do.</li><li><b>"I wish I walked into meetings prepared."</b> Your prep ready before you sit down.</li></ul></div>
+    <div class="card3"><h3>Your business: start the idea</h3><p>The one you've been sitting on because you haven't had the time.</p><ul class="wins"><li><b>"I wish I could build a website."</b> We build the first version together.</li><li><b>"I wish I could send an email blast."</b> Your first one written and ready to go.</li><li><b>"I wish I knew where to start."</b> Your offer and first steps mapped out.</li></ul></div>
+  </div>
+  <p class="trio-note">Have something else in mind? Tell us on the form. If it won't fit in 90 minutes, we'll say so before your session.</p>
+</div></section>
+
+<section class="band" id="how"><div class="wrap">
+  <div class="sh"><span class="kicker">How it works</span><h2>You show up with your 3. You leave with them running.</h2></div>
+  <ol class="steps4">
+    <li><b>Tell us your 3 and pick your time</b><span>One short form, in your own words. You pay, and you're booked.</span></li>
+    <li><b>We prep</b><span>We read your 3 and plan around them, so you don't spend the first 20 minutes explaining your life.</span></li>
+    <li><b>We do it together</b><span>Your laptop open, your accounts, one thing at a time. You see how each one gets built, so you can build the next one yourself.</span></li>
+    <li><b>You leave with it working</b><span>Your 3 set up and ready to use, plus a written recap of what we built.</span></li>
+  </ol>
+</div></section>
+
+<section id="value"><div class="wrap value">
+  <div>
+    <div class="sh"><span class="kicker">What you walk away with</span><h2>The things floating in the back of your head are finally out of it.</h2><p>The family week is planned, the inbox is down to what needs you, and the website you kept meaning to build has a first version. Whatever your 3 are, you leave with them moving.</p></div>
+  </div>
+  <div class="receipt"><table>
+    <tr><td><span class="item">Your top 3, done</span><span class="d">Set up in Claude and working on your real life, your real job or your real business.</span></td></tr>
+    <tr><td><span class="item">Claude set up around you</span><span class="d">Your privacy settings, your preferences, and your calendar and email connected if you want them.</span></td></tr>
+    <tr><td><span class="item">The how behind each one</span><span class="d">So number 4 is something you can build on your own.</span></td></tr>
+    <tr><td><span class="item">A written recap</span><span class="d">What we built and the prompts we used, in your inbox.</span></td></tr>
+  </table></div>
+</div></section>
+
+<section class="promise"><div class="wrap">
+  <span class="kicker">Our guarantee</span>
+  <h2>We get your top 3 done, or you get your $300 back.</h2>
+  <p>If we don't do what we said, tell us within 7 days of your session and we'll refund you in full.</p>
+</div></section>
+
+<section id="who"><div class="wrap meet">
+  <img src="/home/raquel.jpg" alt="Raquel Cadourcy" loading="lazy">
+  <div>
+    <span class="kicker">Who you'll work with</span>
+    <h2>Raquel ran a 50-person marketing team, and planning dinner still brought her to tears.</h2>
+    <p>That's how ai.moms™ started. Raquel has been the mom at work, and now she's the mompreneur, so all three of these are her life too. We've since taught hundreds of moms to use AI so they can get their time back and build their dreams, and we've been featured in Fast Company. Raquel is an Approved Claude SMB Trainer.</p>
+    <blockquote>"I've been feeling behind when it came to using AI in my personal life and this just made it all click! Aime has already been such a huge help. Seriously why didn't I do this sooner!"<cite>Lauren B., ai.moms™ member</cite></blockquote>
+  </div>
+</div></section>
+
+<section class="band" id="book"><div class="wrap value">
+  <div>
+    <div class="sh"><span class="kicker">Book your session</span><h2>Tell us your 3 and pick your time.</h2><p>Headaches, wishes or a mix of both. Write them the way you'd say them to a friend. Messy is perfect.</p></div>
+    <p class="total"><b>$300</b> for 90 minutes, one time.</p>
+  </div>
+  <div id="formbox">
+    <form id="f" novalidate>
+      <div class="two">
+        <label for="fn">First name<input id="fn" name="fn" autocomplete="given-name" required></label>
+        <label for="ln">Last name<input id="ln" name="ln" autocomplete="family-name" required></label>
+      </div>
+      <label for="em">Email<input id="em" name="em" type="email" autocomplete="email" required></label>
+      <label for="ph">Mobile <span class="opt">(optional)</span><input id="ph" name="ph" type="tel" autocomplete="tel"></label>
+      <fieldset><legend>Where would you like to meet?</legend><div class="chips">
+        <label for="w1"><input type="radio" id="w1" name="where" value="Zoom">Zoom</label>
+        <label for="w2"><input type="radio" id="w2" name="where" value="In person in NYC">In person in NYC</label>
+      </div></fieldset>
+      <label for="p1">Headache or wish 1<textarea id="p1" name="pain_1" rows="2" required placeholder="e.g. three calendars that don't talk to each other"></textarea></label>
+      <label for="p2">Headache or wish 2<textarea id="p2" name="pain_2" rows="2" placeholder="e.g. I can't get caught up at work"></textarea></label>
+      <label for="p3">Headache or wish 3<textarea id="p3" name="pain_3" rows="2" placeholder="e.g. I wish I could build a website for my business"></textarea></label>
+      <label for="lvl">How are you using AI today?
+        <select id="lvl" name="lvl">
+          <option value="">Choose one</option>
+          <option>Haven't really started</option>
+          <option>I ask it questions sometimes</option>
+          <option>I use it most weeks</option>
+          <option>I use it every day</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Which AI tools are you using? <span class="opt">(pick any)</span></legend>
+        <div class="chips">
+          <label for="t1"><input type="checkbox" id="t1" name="tools" value="chatgpt">ChatGPT</label>
+          <label for="t2"><input type="checkbox" id="t2" name="tools" value="claude">Claude</label>
+          <label for="t3"><input type="checkbox" id="t3" name="tools" value="copilot">Copilot</label>
+          <label for="t4"><input type="checkbox" id="t4" name="tools" value="gemini">Gemini</label>
+          <label for="t5"><input type="checkbox" id="t5" name="tools" value="none">None yet</label>
+        </div>
+      </fieldset>
+      <fieldset id="picker">
+        <legend>Pick your time <span class="opt">(New York time)</span></legend>
+        <div id="pickbox"><p class="opt" id="pickmsg">Finding open times…</p><div class="slotgrid" id="days"></div><div class="slotgrid" id="times"></div></div>
+        <button class="linkbtn" type="button" id="other">None of these work? Request another time</button>
+        <label for="tr" id="trbox" hidden>What days and times work for you?<textarea id="tr" name="time_request" rows="2" placeholder="e.g. Tuesdays after 3pm, or any Friday morning"></textarea></label>
+      </fieldset>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" type="submit">Continue to payment · $300</button>
+      <small class="opt">You'll pay securely with Stripe, and your time is booked.</small>
+    </form>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="sh"><span class="kicker">Questions</span><h2>What moms want to know first.</h2></div>
+  <div class="faq">
+    <div><h3>Is this coaching?</h3><p>No. It's one session with a clear finish line. You bring 3 things, we get them done, and that's it. Nothing renews.</p></div>
+    <div><h3>I've barely used AI. Will this work for me?</h3><p>Yes, this is made for you. We start wherever you are, and there are no stupid questions.</p></div>
+    <div><h3>What if one of my 3 is too big for 90 minutes?</h3><p>We read your form first. A whole website or launch can take longer than one session, so we'd agree before we meet on what done means, like a first version. If that doesn't work for you, we'll refund you.</p></div>
+    <div><h3>Can I bring something from my job?</h3><p>Yes. If your company has rules about AI, tell us and we'll work inside them.</p></div>
+    <div><h3>What do I need?</h3><p>Your laptop and a Claude account. Claude is Anthropic's AI assistant. We'll tell you which plan you need before we meet, and any Claude plan is separate from your session.</p></div>
+    <div><h3>Is my information safe?</h3><p>You work on your own laptop, in your own accounts. We start with your privacy settings, and we never keep your passwords. Claude recommends and you decide.</p></div>
+    <div><h3>How do I pick a time?</h3><p>You pick it right on this page when you book. Sessions start between 9am and 1pm ET, Monday through Friday. If none of those work, request another time and we'll work around you.</p></div>
+    <div><h3>Can I bring my partner or a friend?</h3><p>Your partner is welcome, especially for anything you share, like the family calendar. For a group of friends, our <a href="/experiences">in-person experiences</a> are a better fit.</p></div>
+    <div><h3>I already bought the Foundations course.</h3><p>Then you're a great fit. We'll pick up wherever you stopped and get it working on your real week.</p></div>
+    <div><h3>What if I need to reschedule?</h3><p>No problem. Just tell us at least 24 hours before your session.</p></div>
+    <div><h3>How does the guarantee work?</h3><p>If we don't get your top 3 done, email us within 7 days of your session at hello@aimoms.ai and we'll refund your $300.</p></div>
+  </div>
+</div></section>
+
+<div class="nh"><footer class="ffoot pad">
+    <div class="grid">
+      <div><div class="brand"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span></div><div class="lead2">Retire from<br>Chief Everything Officer™.</div><span class="soc big"><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="ai.moms™ on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener" aria-label="ai.moms™ on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a></span></div>
+      <div><h5>Learning experiences</h5><ul><li><a href="/foundations">Foundations Course</a></li><li><a href="/off-your-plate">Private Session</a></li><li><a href="/experiences">Host an Experience</a></li><li><a href="/membership">The Membership</a></li><li><a href="/workshop">Monthly Workshop</a></li><li><a href="/corporate">ERG &amp; Corporate Programs</a></li><li><a href="/subscribe">The Edit</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="/community">Community</a></li><li><a href="/science">The Science</a></li><li><a href="/press">Press</a></li><li><a href="/careers">Careers</a></li><li><a href="/your-town">Host or Ambassador</a></li></ul></div>
+      <div><h5>Shop</h5><ul><li><a href="/shop">Shop</a></li><li><a href="/shop#merch">Merch &amp; Gifts</a></li></ul></div>
+      <div><h5>Connect</h5><ul><li>hello@aimoms.ai</li><li><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="/press">Partnerships, Press &amp; Media</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 <span class="lc">ai.moms</span>™ All rights reserved.</span><span><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></span></div>
+    <p class="disc"><span class="lc">ai.moms</span>™ is an educational platform. All content is for informational and educational purposes only and does not constitute professional, legal, financial, medical, or therapeutic advice. Individual results vary. AI tools referenced are third-party products not owned or operated by <span class="lc">ai.moms</span>™. Use of third-party AI tools is at your own risk. Please review our full Terms &amp; Conditions and Privacy Policy before using this site or enrolling in any program.</p>
+  </footer></div>
+
+<script>
+const CHECKOUT='https://buy.stripe.com/6oU6oJguI285aZ3eNIdZ60q';
+const f=document.getElementById('f'),err=document.getElementById('err');
+const $=id=>document.getElementById(id),trbox=$('trbox'),ET={timeZone:'America/New_York'};
+const dayOf=s=>new Date(s).toLocaleDateString('en-US',{...ET,weekday:'short',month:'short',day:'numeric'});
+const timeOf=s=>new Date(s).toLocaleTimeString('en-US',{...ET,hour:'numeric',minute:'2-digit'});
+let slots=[],day=null,pick=null;
+function chip(label,on,fn){const b=document.createElement('button');b.type='button';b.className='slot';b.textContent=label;b.setAttribute('aria-pressed',on);b.onclick=fn;return b}
+function paint(){
+  const days=[...new Set(slots.map(dayOf))];
+  $('days').replaceChildren(...days.map(d=>chip(d,d===day,()=>{day=d;pick=null;paint()})));
+  $('times').replaceChildren(...slots.filter(s=>dayOf(s)===day).map(s=>chip(timeOf(s),s===pick,()=>{pick=s;trbox.hidden=true;f.tr.value='';paint()})));
+  $('pickmsg').textContent='Pick a day, then a time.';$('pickmsg').hidden=!!day;
+}
+function askOther(){$('pickbox').hidden=slots.length===0;$('other').hidden=slots.length===0;trbox.hidden=false;pick=null;paint()}
+$('other').onclick=()=>{askOther();f.tr.focus()};
+const loadSlots=()=>fetch('/api/session-slots',{cache:'no-store'}).then(r=>r.json()).then(d=>d.ok?d.slots:[]);
+loadSlots().then(s=>{slots=s;s.length?paint():askOther()},askOther);
+f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const fn=f.fn.value.trim(),em=f.em.value.trim();
+  if(!fn||!f.ln.value.trim()){err.textContent='Add your first and last name so we know who we are meeting.';return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Enter an email like name@example.com so we can send your times.';return}
+  const where=f.querySelector('input[name=where]:checked');
+  if(!where){err.textContent='Pick Zoom or in person so we can plan your session.';return}
+  if(!f.p1.value.trim()){err.textContent='Add at least your first one so we can prep.';return}
+  const asked=!trbox.hidden&&f.tr.value.trim();
+  if(!asked&&!pick){err.textContent=trbox.hidden?'Pick a time, or request another one.':'Tell us what days and times work for you.';return}
+  err.textContent='';
+  const btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='One moment…';
+  if(pick){const open=await loadSlots().catch(()=>null);
+    if(open&&!open.includes(pick)){slots=open;pick=null;paint();btn.disabled=false;btn.textContent='Continue to payment · $300';err.textContent='That time was just taken. Pick another one.';return}}
+  const booking=crypto.randomUUID();
+  const fd=new FormData(f);fd.append('form-name','session-signup');fd.append('first_name',fn);fd.append('last_name',f.ln.value.trim());fd.append('email',em);fd.append('booking_id',booking);if(pick){fd.append('slot',pick);fd.append('slot_label',dayOf(pick)+', '+timeOf(pick)+' ET')}
+  try{fbq('track','Lead',{content_name:'Off Your Plate Session'})}catch(x){}
+  const go=()=>{try{fbq('track','InitiateCheckout',{content_name:'Off Your Plate Session',value:300,currency:'USD'})}catch(x){}location.href=CHECKOUT+'?prefilled_email='+encodeURIComponent(em)+'&client_reference_id='+booking};
+  let sent=false;const once=()=>{if(!sent){sent=true;go()}};
+  fetch('/api/forms/session-signup',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(once,once);
+  setTimeout(once,2500);
+});
+</script>
+<script>
+(function(){
+  function loadMetaPixel(){
+    if(window._fbqLoaded) return;
+    window._fbqLoaded = true;
+    var queued = window._fbqQueue || [];
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1206405304980852');
+    fbq('track','PageView');
+    queued.forEach(function(args){ try{ fbq.apply(null,args); }catch(e){} });
+  }
+  window.acceptCookies = function(){
+    localStorage.setItem('aimoms_cookies','all');
+    var b=document.getElementById('cookie-banner'); if(b) b.remove();
+    loadMetaPixel();
+  };
+  window.declineCookies = function(){
+    localStorage.setItem('aimoms_cookies','essential');
+    var b=document.getElementById('cookie-banner'); if(b) b.remove();
+    window.fbq=function(){}; window._fbqQueue=[];
+  };
+  var consent = localStorage.getItem('aimoms_cookies');
+  if(!consent){
+    var cb=document.createElement('div'); cb.id='cookie-banner';
+    cb.innerHTML='<div style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#060d26;border-radius:16px;padding:24px 22px 20px;max-width:300px;width:calc(100vw - 48px);font-family:\'Be Vietnam Pro\',sans-serif;box-shadow:0 8px 40px rgba(0,0,0,0.35);">'
+      +'<div style="font-weight:800;font-size:14px;letter-spacing:-0.03em;margin-bottom:10px"><span style="color:#ff63d8;font-family:\'Playfair Display\',Georgia,serif;font-style:italic;font-weight:900;">ai.</span><span style="color:#fff">moms</span><span style="font-size:6px;vertical-align:super;color:rgba(255,255,255,0.35)">&#8482;</span> <span style="color:rgba(255,255,255,0.4);font-weight:400;font-size:11px">uses cookies</span></div>'
+      +'<p style="font-size:11.5px;color:rgba(255,255,255,0.5);margin:0 0 16px;line-height:1.65">We use cookies and advertising technologies &mdash; including Meta Pixel &mdash; to improve your experience. <a href="/privacy" style="color:#ff63d8;text-decoration:underline">Privacy Policy</a></p>'
+      +'<div style="display:flex;flex-direction:column;gap:8px">'
+      +'<button onclick="acceptCookies()" style="background:#ff63d8;color:#fff;border:none;padding:10px 0;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;width:100%">Accept All</button>'
+      +'<button onclick="declineCookies()" style="background:none;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.12);padding:10px 0;border-radius:100px;font-size:12px;font-weight:500;cursor:pointer;width:100%">Essential Only</button>'
+      +'</div></div>';
+    document.body.appendChild(cb);
+  } else if(consent==='all'){ loadMetaPixel(); }
+})();
+</script>
+</body>
+</html>

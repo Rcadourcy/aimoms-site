@@ -34,6 +34,7 @@ export default function Footer() {
             <Link href="/community" className="footer-link">Community</Link>
             <Link href="/science" className="footer-link">The Science</Link>
             <Link href="/skill-guide" className="footer-link">Skill Guide</Link>
+            <Link href="/off-your-plate" className="footer-link">Private Session</Link>
             <Link href="/experiences" className="footer-link">Host an Experience</Link>
             <Link href="/press" className="footer-link">Press</Link>
             <Link href="/careers" className="footer-link">Careers</Link>
