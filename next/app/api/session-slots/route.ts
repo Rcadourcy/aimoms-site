@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { buildSlots, parseBusy, DAYS_AHEAD, type Busy } from '@/lib/session-slots';
+import { buildSlots, parseBusy, LAST_BOOKABLE_DAY, type Busy } from '@/lib/session-slots';
 import { takenSlots } from '@/lib/session-bookings';
 import synced from '@/data/session-busy.json';
 
@@ -17,7 +17,7 @@ const MAX_SYNC_AGE_HOURS = 72;
 async function calendarBusy(now: Date): Promise<Busy[] | null> {
   const feeds = (process.env.GOOGLE_CAL_ICS_URLS ?? '').split(',').map((u) => u.trim()).filter(Boolean);
   if (feeds.length) {
-    const to = new Date(now.getTime() + (DAYS_AHEAD + 2) * 864e5);
+    const to = new Date(LAST_BOOKABLE_DAY + 2 * 864e5);
     const calendars = await Promise.all(
       feeds.map(async (url) => {
         const res = await fetch(url, { cache: 'no-store' });

@@ -10,7 +10,7 @@ const FIRST_START = 9 * 60;
 const LAST_START = 13 * 60;
 const STEP_MINUTES = 30;
 const NOTICE_HOURS = 48; // time to read her 3 and prep
-export const DAYS_AHEAD = 28;
+export const LAST_BOOKABLE_DAY = Date.UTC(2027, 0, 31, 12);
 const TZ = 'America/New_York';
 
 export type Busy = { start: number; end: number };
@@ -35,8 +35,9 @@ export function buildSlots(now: Date, busy: Busy[]): string[] {
   const earliest = now.getTime() + NOTICE_HOURS * HOUR;
   const { y, m, d } = nyDateParts(now);
   const out: string[] = [];
-  for (let i = 0; i <= DAYS_AHEAD; i++) {
+  for (let i = 0; ; i++) {
     const day = new Date(Date.UTC(y, m, d + i, 12));
+    if (day.getTime() > LAST_BOOKABLE_DAY) break;
     const dow = day.getUTCDay();
     if (dow === 0 || dow === 6) continue;
     const offset = nyOffsetMs(day);

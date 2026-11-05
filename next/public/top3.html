@@ -278,10 +278,17 @@ section,.nh .s-nav{position:relative}
 .meet blockquote{margin:0;padding-top:16px;border-top:1px solid var(--line);font-size:16px}
 .meet cite{display:block;margin-top:8px;font-style:normal;font-size:14px;color:var(--mute)}
 .total{font-size:17px;color:var(--mute)}.total b{font:800 34px var(--serif);color:var(--ink)}
-.slotgrid{display:flex;flex-wrap:wrap;gap:8px}
-.slotgrid:empty{display:none}
+#picker{min-width:0}
+.dayscroll{display:flex;gap:10px;overflow-x:scroll;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.dayscroll:empty{display:none}
+.dayscroll::-webkit-scrollbar{height:6px}
+.dayscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px}
+.daycol{flex:0 0 96px;display:grid;gap:8px;align-content:start;scroll-snap-align:start}
+.dayhead{text-align:center;font-size:14px;line-height:1.3;padding-bottom:4px}
+.dayhead b{display:block}
+.daycol .slot{padding:9px 4px;white-space:nowrap}
 #pickbox[hidden],#trbox[hidden],#other[hidden],.when[hidden]{display:none}
-#pickbox{display:grid;gap:12px}
+#pickbox{display:grid;gap:12px;min-width:0}
 .slot{border:1px solid var(--line);background:none;color:var(--ink);border-radius:999px;padding:9px 14px;font:inherit;font-size:14px;cursor:pointer}
 .slot[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
 .linkbtn{border:0;background:none;padding:0;color:var(--ink);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer;justify-self:start}
@@ -407,7 +414,7 @@ section,.nh .s-nav{position:relative}
       </fieldset>
       <fieldset id="picker">
         <legend>Pick your time <span class="opt">(New York time)</span></legend>
-        <div id="pickbox"><p class="opt" id="pickmsg">Finding open times…</p><div class="slotgrid" id="days"></div><div class="slotgrid" id="times"></div></div>
+        <div id="pickbox"><p class="opt" id="pickmsg">Finding open times…</p><div class="dayscroll" id="days" tabindex="0" aria-label="Open dates and times"></div></div>
         <button class="linkbtn" type="button" id="other">None of these work? Request another time</button>
         <label for="tr" id="trbox" hidden>What days and times work for you?<textarea id="tr" name="time_request" rows="2" placeholder="e.g. Tuesdays after 3pm, or any Friday morning"></textarea></label>
       </fieldset>
@@ -454,13 +461,18 @@ const f=document.getElementById('f'),err=document.getElementById('err');
 const $=id=>document.getElementById(id),trbox=$('trbox'),ET={timeZone:'America/New_York'};
 const dayOf=s=>new Date(s).toLocaleDateString('en-US',{...ET,weekday:'short',month:'short',day:'numeric'});
 const timeOf=s=>new Date(s).toLocaleTimeString('en-US',{...ET,hour:'numeric',minute:'2-digit'});
-let slots=[],day=null,pick=null;
+let slots=[],pick=null;
 function chip(label,on,fn){const b=document.createElement('button');b.type='button';b.className='slot';b.textContent=label;b.setAttribute('aria-pressed',on);b.onclick=fn;return b}
+function column(d){
+  const [wd,date]=d.split(', '),head=document.createElement('div'),col=document.createElement('div');
+  head.className='dayhead';head.innerHTML='<b>'+wd+'</b>'+date;col.className='daycol';
+  col.append(head,...slots.filter(s=>dayOf(s)===d).map(s=>chip(timeOf(s),s===pick,()=>{pick=s;trbox.hidden=true;f.tr.value='';paint()})));
+  return col;
+}
 function paint(){
-  const days=[...new Set(slots.map(dayOf))];
-  $('days').replaceChildren(...days.map(d=>chip(d,d===day,()=>{day=d;pick=null;paint()})));
-  $('times').replaceChildren(...slots.filter(s=>dayOf(s)===day).map(s=>chip(timeOf(s),s===pick,()=>{pick=s;trbox.hidden=true;f.tr.value='';paint()})));
-  $('pickmsg').textContent='Pick a day, then a time.';$('pickmsg').hidden=!!day;
+  const box=$('days'),x=box.scrollLeft;
+  box.replaceChildren(...[...new Set(slots.map(dayOf))].map(column));box.scrollLeft=x;
+  $('pickmsg').textContent='Pick a time. Scroll right for more dates.';
 }
 function askOther(){$('pickbox').hidden=slots.length===0;$('other').hidden=slots.length===0;trbox.hidden=false;pick=null;paint()}
 $('other').onclick=()=>{askOther();f.tr.focus()};
