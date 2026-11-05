@@ -16,7 +16,7 @@ export function slotLabel(iso: string): string {
 }
 
 const icsTime = (d: Date) => d.toISOString().replace(/[-:]|\.\d{3}/g, '');
-function invite(row: SessionRow, slot: string, organizer: string, mom: string, where: string): string {
+function invite(row: SessionRow, slot: string, organizer: string, mom: string, owner: string, where: string): string {
   const start = new Date(slot);
   const end = new Date(start.getTime() + SESSION_MINUTES * 6e4);
   const clean = (s: string) => s.replace(/[\;,]/g, '\\$&').replace(/\r?\n/g, ' ');
@@ -32,8 +32,10 @@ function invite(row: SessionRow, slot: string, organizer: string, mom: string, w
     `DTEND:${icsTime(end)}`,
     `SUMMARY:${clean('ai.moms™ Top 3 Session')}`,
     `LOCATION:${clean(where)}`,
+    `DESCRIPTION:${clean(`Join here: ${where}`)}`,
     `ORGANIZER;CN=ai.moms™:mailto:${organizer}`,
     `ATTENDEE;RSVP=TRUE:mailto:${mom}`,
+    `ATTENDEE;RSVP=TRUE:mailto:${owner}`,
     'END:VEVENT',
     'END:VCALENDAR',
   ].join('\r\n');
@@ -82,7 +84,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
 
   if (slot) {
     const when = slotLabel(slot);
-    const ics = invite(row, slot, from, mom, where);
+    const ics = invite(row, slot, from, mom, owner, where);
     await send({
       from: `ai.moms™ <${from}>`,
       to: [mom],
