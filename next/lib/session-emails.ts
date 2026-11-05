@@ -15,6 +15,13 @@ export function slotLabel(iso: string): string {
   return `${day}, ${t(start)} to ${t(end)} ET`;
 }
 
+/** For the sentence in the Kit email: "Thursday, December 3 at 1:00 PM ET". */
+function slotPhrase(iso: string): string {
+  const start = new Date(iso);
+  const day = start.toLocaleDateString('en-US', { ...ET, weekday: 'long', month: 'long', day: 'numeric' });
+  return `${day} at ${start.toLocaleTimeString('en-US', { ...ET, hour: 'numeric', minute: '2-digit' })} ET`;
+}
+
 const icsTime = (d: Date) => d.toISOString().replace(/[-:]|\.\d{3}/g, '');
 function invite(row: SessionRow, slot: string, organizer: string, mom: string, owner: string, where: string): string {
   const start = new Date(slot);
@@ -137,7 +144,7 @@ export async function sendSessionEmails(row: SessionRow, verified: boolean): Pro
     const when = slotLabel(slot);
     const ics = invite(row, slot, from, mom, owner, where);
     await sendToKit(mom, first, {
-      session_when: when,
+      session_when: slotPhrase(slot),
       session_where: inPerson ? "In person in NYC. We'll email you the spot before we meet." : `On Zoom: ${zoom}`,
       session_google_link: googleCalendarLink(slot, where),
       session_apple_link: `https://aimoms.ai/api/session-calendar?start=${encodeURIComponent(slot)}&place=${inPerson ? 'nyc' : 'zoom'}`,
