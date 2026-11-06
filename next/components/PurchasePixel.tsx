@@ -22,6 +22,9 @@ export default function PurchasePixel({
 }) {
   useEffect(() => {
     trackFbq(event, { content_name: contentName, value, currency });
+    // ga.js sends this once it loads. If it already has, send it now.
+    if (window.gtag) window.gtag('event', 'purchase', { content_name: contentName, value, currency });
+    else window._gaPurchase = { name: contentName, value };
   }, [event, contentName, value, currency]);
 
   return null;

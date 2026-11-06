@@ -92,8 +92,8 @@ export default function Analytics() {
         <span className="tm-mini">&#8482;</span> <span className="uses">uses cookies</span>
       </div>
       <p>
-        We use cookies and advertising technologies &mdash; including Meta Pixel &mdash; to
-        improve your experience. <Link href="/privacy">Privacy Policy</Link>
+        We use cookies and advertising technologies &mdash; including Meta Pixel and Google
+        Analytics &mdash; to improve your experience. <Link href="/privacy">Privacy Policy</Link>
       </p>
       <div className="cookie-actions">
         <button type="button" className="cookie-accept" onClick={acceptCookies}>

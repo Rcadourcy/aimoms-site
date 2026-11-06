@@ -29,7 +29,7 @@ export default function PrivacyPage() {
       <div className="legal-head">
         <Link href="/" className="back-link">&larr; Back to Home</Link>
         <h1>Privacy policy.</h1>
-        <p className="head-date">Last updated: March 2026</p>
+        <p className="head-date">Last updated: November 2026</p>
       </div>
 
       <section className="legal-section">
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           <Link href="/" className="btn-navy">&larr; Back to Home</Link>
 
           <h1>Privacy policy.</h1>
-          <p className="last-updated">Last Updated: February 25, 2026</p>
+          <p className="last-updated">Last Updated: November 6, 2026</p>
 
           <p>ai moms&trade; (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you participate in any of our programs, services, experiences, or community (&ldquo;Services&rdquo;).</p>
 
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
           <p>We may use cookies and similar technologies to:</p>
           <ul>
             <li>Remember your preferences</li>
-            <li>Analyze how our website and materials are used</li>
+            <li>Analyze how our website and materials are used (e.g., Google Analytics, if you accept cookies)</li>
             <li>Improve user experience</li>
             <li>Serve relevant marketing (e.g., Meta Pixel for Facebook/Instagram advertising)</li>
           </ul>
@@ -171,7 +171,7 @@ export default function PrivacyPage() {
           <p>Questions, concerns, or requests regarding this Privacy Policy?</p>
           <p>Email: <a href="mailto:hello@aimoms.ai">hello@aimoms.ai</a></p>
 
-          <p style={{ marginTop: 40, textAlign: 'center' }}><em>Last Updated: February 25, 2026</em></p>
+          <p style={{ marginTop: 40, textAlign: 'center' }}><em>Last Updated: November 6, 2026</em></p>
 
           <div className="end-cta"><Link href="/" className="btn-navy">Back to Home</Link></div>
         </div>

@@ -8,6 +8,10 @@ const BASE = 'https://aimoms.ai';
 const ROUTES = [
   '',
   'foundations',
+  'build-aime',
+  'top3',
+  'skill-guide',
+  'your-town',
   'membership',
   'workshop',
   'shop',
