@@ -847,6 +847,7 @@ vm.querySelector('.vclose').addEventListener('click',closeV);vm.addEventListener
   function loadMetaPixel(){
     if(window._fbqLoaded) return;
     window._fbqLoaded = true;
+    var ga=document.createElement('script'); ga.async=true; ga.src='/ga.js'; document.head.appendChild(ga);
     var queued = window._fbqQueue || [];
     !function(f,b,e,v,n,t,s){
       if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};

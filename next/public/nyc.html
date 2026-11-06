@@ -466,7 +466,8 @@ f.addEventListener('submit',e=>{
   const fd=new FormData(f);fd.append('form-name','experience-signup');fd.append('event','NYC · Thu, Nov 12 · '+ses.value.split(' · ')[0]);
   fd.append('first_name',fn);fd.append('last_name',f.ln.value.trim());fd.append('email',em);
   try{fbq('track','Lead',{content_name:'In-Person Experience'})}catch(x){}
-  const go=()=>{let u=CHECKOUT;if(u.startsWith('https://buy.stripe.com/'))u+=(u.includes('?')?'&':'?')+'prefilled_email='+encodeURIComponent(em);try{fbq('track','InitiateCheckout',{content_name:'In-Person Experience',value:265,currency:'USD'})}catch(x){}location.href=u};
+  try{window.gtag&&gtag('event','generate_lead',{content_name:'In-Person Experience'})}catch(x){}
+  const go=()=>{let u=CHECKOUT;if(u.startsWith('https://buy.stripe.com/'))u+=(u.includes('?')?'&':'?')+'prefilled_email='+encodeURIComponent(em);try{window.gtag&&gtag('event','begin_checkout',{content_name:'In-Person Experience'})}catch(x){}try{fbq('track','InitiateCheckout',{content_name:'In-Person Experience',value:265,currency:'USD'})}catch(x){}location.href=u};
   let sent=false;const once=()=>{if(!sent){sent=true;go()}};
   fetch('/api/forms/experience-signup',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(once,once);
   setTimeout(once,2500);
@@ -480,6 +481,7 @@ f.querySelectorAll('input[name=session]').forEach(r=>r.addEventListener('change'
   function loadMetaPixel(){
     if(window._fbqLoaded) return;
     window._fbqLoaded = true;
+    var ga=document.createElement('script'); ga.async=true; ga.src='/ga.js'; document.head.appendChild(ga);
     var queued = window._fbqQueue || [];
     !function(f,b,e,v,n,t,s){
       if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};

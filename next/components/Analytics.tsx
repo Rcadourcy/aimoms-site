@@ -23,6 +23,11 @@ function loadMetaPixel() {
   if (typeof window === 'undefined' || window._fbqLoaded) return;
   window._fbqLoaded = true;
 
+  const ga = document.createElement('script');
+  ga.async = true;
+  ga.src = '/ga.js';
+  document.head.appendChild(ga);
+
   const queued = window._fbqQueue || [];
 
   const n = function (this: unknown, ...args: unknown[]) {
