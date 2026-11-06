@@ -19,7 +19,7 @@ export default function MembershipThankYouPage() {
         membership price is $59/mo; the 49 looks like a stale value worth confirming
         with Raquel before launch (see commerce.ts PRICES.membership).
       */}
-      <PurchasePixel event="Subscribe" contentName="Membership" value={49} />
+      <PurchasePixel event="Subscribe" contentName="Membership" value={59} />
 
       {/* CONFIRMATION */}
       <section className="confirm-section">
