@@ -2,8 +2,8 @@ import 'server-only';
 import { createServiceClient } from '@/lib/supabase/server';
 import { SESSION_MINUTES, type Busy } from '@/lib/session-slots';
 
-/** The Top 3 Session Stripe payment link. A slot counts as booked once its checkout is paid. */
-export const PAYMENT_LINK = 'plink_1UYTVMQla4s4LgSSTEXVwYRo';
+/** The Top 3 Session Stripe payment links, $500 first, then the retired $300 one. A slot counts as booked once its checkout is paid. */
+export const PAYMENT_LINKS = ['plink_1UYtI6Qla4s4LgSSiHkzFqHJ', 'plink_1UYTVMQla4s4LgSSTEXVwYRo'];
 const HOLD_MINUTES = 30; // a slot stays held while she's on the Stripe page
 
 export type SessionRow = { id: string; created_at: string; data: Record<string, unknown> };
@@ -23,14 +23,16 @@ export function getCheckoutSession(id: string) {
 
 async function paidBookingIds(): Promise<Set<string>> {
   const ids = new Set<string>();
-  let after = '';
-  for (let page = 0; page < 10; page++) {
-    const list = await stripeGet(
-      `checkout/sessions?payment_link=${PAYMENT_LINK}&status=complete&limit=100${after}`,
-    );
-    for (const s of list.data) if (s.client_reference_id) ids.add(s.client_reference_id);
-    if (!list.has_more) break;
-    after = `&starting_after=${list.data[list.data.length - 1].id}`;
+  for (const link of PAYMENT_LINKS) {
+    let after = '';
+    for (let page = 0; page < 10; page++) {
+      const list = await stripeGet(
+        `checkout/sessions?payment_link=${link}&status=complete&limit=100${after}`,
+      );
+      for (const s of list.data) if (s.client_reference_id) ids.add(s.client_reference_id);
+      if (!list.has_more) break;
+      after = `&starting_after=${list.data[list.data.length - 1].id}`;
+    }
   }
   return ids;
 }

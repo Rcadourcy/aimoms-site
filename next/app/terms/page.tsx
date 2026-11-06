@@ -86,7 +86,7 @@ export default function TermsPage() {
           <p><strong>No refunds after accessing program content or attending a live session.</strong> All sales are final once you have engaged with the material.</p>
 
           <h3>Top 3 Private Sessions:</h3>
-          <p>We will talk through your top 3 with you and agree on what done looks like for each one. If they are not done, or started and far enough along that you feel confident finishing them, email <a href="mailto:hello@aimoms.ai">hello@aimoms.ai</a> within 7 days of your session and we will refund your $300 in full. This guarantee applies to Top 3 Sessions and takes priority over the no-refund terms above and Section 10 for those sessions. To reschedule, reply to your confirmation email at least 24 hours before your session.</p>
+          <p>We will talk through your top 3 with you and agree on what done looks like for each one. If they are not done, or started and far enough along that you feel confident finishing them, email <a href="mailto:hello@aimoms.ai">hello@aimoms.ai</a> within 7 days of your session and we will refund your session fee in full. This guarantee applies to Top 3 Sessions and takes priority over the no-refund terms above and Section 10 for those sessions. To reschedule, reply to your confirmation email at least 24 hours before your session.</p>
 
           <h3>In-Person Experiences:</h3>
           <p>Refund and cancellation policies for in-person events may vary and will be communicated at the time of registration. In general, refunds for in-person events must be requested at least 14 days before the event date.</p>

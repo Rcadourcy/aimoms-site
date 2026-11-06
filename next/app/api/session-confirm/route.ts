@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { findBooking, getCheckoutSession, PAYMENT_LINK, updateBooking } from '@/lib/session-bookings';
+import { findBooking, getCheckoutSession, PAYMENT_LINKS, updateBooking } from '@/lib/session-bookings';
 import { sendSessionEmails, slotLabel } from '@/lib/session-emails';
 
 /**
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     let booking = saved;
     if (verified) {
       const session = await getCheckoutSession(id);
-      if (session.payment_status !== 'paid' || session.payment_link !== PAYMENT_LINK) {
+      if (session.payment_status !== 'paid' || !PAYMENT_LINKS.includes(session.payment_link)) {
         return NextResponse.json({ ok: false });
       }
       booking = session.client_reference_id;
