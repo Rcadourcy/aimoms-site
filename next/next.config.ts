@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: '/off-your-plate', destination: '/top3', permanent: false },
+      { source: '/nyc', destination: '/top3', permanent: false },
+      { source: '/nyc.html', destination: '/top3', permanent: false },
       { source: '/curriculum', destination: '/foundations#curriculum', permanent: false },
       { source: '/quiz', destination: '/#quiz', permanent: true },
       { source: '/quiz.html', destination: '/#quiz', permanent: true },
