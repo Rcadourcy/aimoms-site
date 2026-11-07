@@ -36,19 +36,6 @@ export default function CareersPage() {
       <section className="positions">
         <h2>Available Experiences</h2>
 
-        <Link href="/certified-teacher" className="position-row">
-          <div className="position-left">
-            <div className="position-type">Paid Role &middot; For Moms</div>
-            <div className="position-title">Certified ai.moms&#8482; Teacher</div>
-            <div className="position-pills">
-              <span className="pill">Paid &middot; Per Workshop</span>
-              <span className="pill">Remote or In-Person</span>
-              <span className="pill">For Moms</span>
-            </div>
-          </div>
-          <div className="position-arrow">&rarr;</div>
-        </Link>
-
         <Link href="/mom-ambassador" className="position-row">
           <div className="position-left">
             <div className="position-type">Founding Cohort &middot; For Moms</div>
