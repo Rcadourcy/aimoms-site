@@ -268,12 +268,12 @@ section,.nh .s-nav{position:relative}
     <div>
       <div class="kicker"><span class="lc">ai.moms™</span> in New York · Registration closed</div>
       <h1>November 12 is closed. <em>The next one is coming.</em></h1>
-      <p class="lede">Registration for our November 12 session is closed. So many moms told us the date didn't work, with work travel and everything that piles up before Thanksgiving, so our next New York session will be after the holidays. Join the waitlist and you'll hear about it first. Or don't wait: book a private 90-minute session with us, on Zoom or in person in NYC, for $265, the same as a seat.</p>
+      <p class="lede">Registration for our November 12 session is closed. Join the waitlist and you'll hear about our next New York session first. Or book a private 90-minute session with us, on Zoom or in person in NYC. As a Thanksgiving thank-you to our ai.moms™ community, it's $300 instead of $500 through November 30.</p>
       <div class="cta-row"><a class="btn" href="#rsvp">Join the waitlist</a><a class="btn" href="/top3" style="background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor">Book a one-on-one</a></div>
-      <p style="margin-top:14px;font-size:14px;opacity:.8">Use code <b>NYC265</b> at checkout to take The Top 3 Session from $500 to $265.</p>
+      <p style="margin-top:14px;font-size:14px;opacity:.8">Use code <b>THANKS300</b> at checkout to take The Top 3 Session from $500 to $300, through November 30.</p>
     </div>
     <div class="photo vidhero"><video src="/home/vid/hands-up.mp4" poster="/home/vid/hands-up.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Moms at an ai.moms™ event raising their hands, ready to learn AI"></video>
-      <div class="tag"><b>In person, in New York</b>Our next session is after the holidays.</div></div>
+      <div class="tag"><b>In person, in New York</b>Our next session is coming. Join the waitlist.</div></div>
   </header>
 </div>
 
@@ -353,8 +353,8 @@ section,.nh .s-nav{position:relative}
       <div class="sh" style="margin-bottom:0"><h2>Be first in the room next time.</h2><p>Leave your name and email and we'll tell you the date and place of our next New York session before anyone else hears about it.</p></div>
       <div style="margin-top:22px;padding:22px;border-radius:16px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)">
         <div class="kicker" style="margin-bottom:6px">Don't want to wait?</div>
-        <h3 style="margin:0 0 8px">Book a one-on-one for $265.</h3>
-        <p style="margin:0 0 14px">The Top 3 Session is 90 minutes with us, on Zoom or in person in NYC. Bring your 3 biggest headaches or wishes and we get them done together. It's normally $500. Use code <b>NYC265</b> at checkout.</p>
+        <h3 style="margin:0 0 8px">Book a one-on-one for $300.</h3>
+        <p style="margin:0 0 14px">The Top 3 Session is 90 minutes with us, on Zoom or in person in NYC. Bring your 3 biggest headaches or wishes and we get them done together. It's normally $500. As our Thanksgiving gift to the ai.moms™ community, use code <b>THANKS300</b> at checkout through November 30.</p>
         <a class="btn" href="/top3">Book a one-on-one</a>
       </div>
       <img class="rsvp-photo" src="/home/vid/event-porch-rsvp.jpg" alt="Moms in ai.moms™ hats holding pink gift bags at an ai.moms™ event" loading="lazy">
@@ -390,8 +390,8 @@ section,.nh .s-nav{position:relative}
     <div class="faq">
       <div><h3>Do I need to know anything about AI?</h3><p>No. Part 1 starts from the beginning, and the survey helps us meet you where you are. No stupid questions.</p></div>
       <div><h3>What should I bring?</h3><p>Your laptop and charger. We'll email setup steps before the event so you're ready to build on the day.</p></div>
-      <div><h3>When is the next session?</h3><p>After the holidays. Waitlist moms hear the date and place first.</p></div>
-      <div><h3>Can I start before then?</h3><p>Yes. Book The Top 3 Session for $265 with code NYC265, or start the Foundations course on your own time.</p></div>
+      <div><h3>When is the next session?</h3><p>We're setting the date now. Waitlist moms hear the date and place first.</p></div>
+      <div><h3>Can I start before then?</h3><p>Yes. Book The Top 3 Session for $300 with code THANKS300 through November 30, or start the Foundations course on your own time.</p></div>
       <div><h3>I'm already a member. Do I pay?</h3><p>No. Members attend free. Join the waitlist and we'll save your seat.</p></div>
     </div>
   </div>
@@ -419,11 +419,11 @@ f.addEventListener('submit',e=>{
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Enter an email like name@example.com so we can reach you.';return}
   err.textContent='';
   const btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='One moment…';
-  const fd=new FormData(f);fd.append('form-name','experience-signup');fd.append('event','NYC waitlist · next session after the holidays');
+  const fd=new FormData(f);fd.append('form-name','experience-signup');fd.append('event','NYC waitlist · next session');
   fd.append('first_name',fn);fd.append('last_name',ln);fd.append('email',em);
   try{fbq('track','Lead',{content_name:'NYC Waitlist'})}catch(x){}
   try{window.gtag&&gtag('event','generate_lead',{content_name:'NYC Waitlist'})}catch(x){}
-  const done=ok=>{if(ok)document.getElementById('formbox').innerHTML='<div class="sh"><h2>You\'re on the list, '+fn.replace(/[<>&]/g,'')+'.</h2><p>We\'ll email you the date and place of our next New York session before anyone else. Don\'t want to wait? <a href="/top3" style="color:inherit;text-decoration:underline">Book a one-on-one</a> with code NYC265.</p></div>';else{btn.disabled=false;btn.textContent='Join the waitlist';err.textContent='Something went wrong. Try again, or email hello@aimoms.ai.'}};
+  const done=ok=>{if(ok)document.getElementById('formbox').innerHTML='<div class="sh"><h2>You\'re on the list, '+fn.replace(/[<>&]/g,'')+'.</h2><p>We\'ll email you the date and place of our next New York session before anyone else. Don\'t want to wait? <a href="/top3" style="color:inherit;text-decoration:underline">Book a one-on-one</a> for $300 with code THANKS300.</p></div>';else{btn.disabled=false;btn.textContent='Join the waitlist';err.textContent='Something went wrong. Try again, or email hello@aimoms.ai.'}};
   fetch('/api/forms/experience-signup',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).then(r=>done(r.ok),()=>done(false));
 });
 </script>
