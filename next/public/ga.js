@@ -11,7 +11,7 @@
   s.async=true;
   s.src='https://www.googletagmanager.com/gtag/js?id='+ID;
   document.head.appendChild(s);
-  var bought={'/experience-thank-you':{name:'In-Person Experience',value:265},'/off-your-plate-thank-you':{name:'Top 3 Session',value:500},'/build-aime-thank-you':{name:'Build Aime',value:97}}[location.pathname.replace(/\.html$/,'')]||window._gaPurchase;
+  var bought={'/experience-thank-you':{name:'In-Person Experience',value:265},'/off-your-plate-thank-you':{name:'Top 3 Session',value:500},'/build-aime-thank-you':{name:'Build Aime',value:97},'/prompt-library-thank-you':{name:'Prompt Library',value:27}}[location.pathname.replace(/\.html$/,'')]||window._gaPurchase;
   if(bought){
     var sale={content_name:bought.name,value:bought.value,currency:'USD'};
     var sid=new URLSearchParams(location.search).get('session_id');

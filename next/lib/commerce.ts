@@ -16,6 +16,7 @@ export const STRIPE_LINKS = {
   workshop: 'https://buy.stripe.com/3cI4gB5Q49Ax5EJ494dZ60l',
   courseGift: 'https://buy.stripe.com/8x2fZj6U83c98QV20WdZ60a',
   bundle: 'https://buy.stripe.com/14A7sN92gfYVffj350dZ60b',
+  promptLibrary: 'https://buy.stripe.com/00w6oJ4M0fYV2sxdJEdZ60s',
 } as const;
 
 /**
@@ -43,4 +44,5 @@ export const PRICES = {
   membership: 59, // /month
   workshop: 68,
   bundle: 297,
+  promptLibrary: 27,
 } as const;

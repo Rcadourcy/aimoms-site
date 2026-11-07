@@ -44,7 +44,6 @@ export default function Footer() {
           <div>
             <div className="footer-heading">Shop</div>
             <Link href="/shop" className="footer-link">Shop</Link>
-            <Link href="/shop#merch" className="footer-link">Merch &amp; Gifts</Link>
           </div>
 
           <div>
