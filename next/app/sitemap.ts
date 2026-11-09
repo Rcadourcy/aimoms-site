@@ -1,10 +1,11 @@
 import type { MetadataRoute } from 'next';
+import { getAllArticles } from '@/lib/articles';
 
 const BASE = 'https://aimoms.ai';
 
 // Public, indexable routes only. Excludes *-register / *-thank-you / *-success
-// (noindex transactional pages), the dynamic /article route, and the /foundations-course
-// stub. Mirrors the static site's sitemap.xml and adds the other live public pages.
+// (noindex transactional pages) and the /foundations-course stub. Every article in The Edit
+// is listed at its canonical /article?id= URL so search engines can find it.
 const ROUTES = [
   '',
   'foundations',
@@ -40,10 +41,16 @@ const ROUTES = [
   'terms',
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return ROUTES.map((path) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const pages: MetadataRoute.Sitemap = ROUTES.map((path) => ({
     url: path ? `${BASE}/${path}` : `${BASE}/`,
     changeFrequency: 'weekly',
     priority: path === '' ? 1 : 0.7,
   }));
+  const articles: MetadataRoute.Sitemap = (await getAllArticles()).map((a) => ({
+    url: `${BASE}/article?id=${a.id}`,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+  return [...pages, ...articles];
 }
