@@ -246,6 +246,40 @@ const NEWSLETTER = `<section class="nl" aria-label="Newsletter"><div class="wrap
     <button type="submit">Get me on the list</button>
   </form>
 </div></section>`;
+// Newsletter pop-up (Nov 13). Best practice for a content site: never on arrival. It slides in (no full-screen overlay,
+// so Google doesn't treat it as an intrusive interstitial) after the reader is engaged: half an article read, 40 seconds
+// on the page, or the mouse heading for the tab bar on desktop. It waits for the cookie banner, closes with × or Esc,
+// stays away 14 days after a close and never comes back after a sign-up.
+const POPUP = `<aside class="nlp" id="nlp" role="dialog" aria-modal="false" aria-labelledby="nlp-h" hidden>
+  <button type="button" class="nlp-x" aria-label="Close">×</button>
+  <span class="kicker">The AIM newsletter · coming soon</span>
+  <h2 id="nlp-h">Be first when it <span class="accent">launches</span></h2>
+  <p>What's new in AI and what it means for your week, in plain words. Add your email and we'll tell you the day it starts.</p>
+  <form name="newsletter" class="nl-form" novalidate>
+    <input type="hidden" name="form-name" value="newsletter">
+    <input type="hidden" name="source" value="the-aim-popup">
+    <label class="hp">Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    <label class="sr-only" for="nlp-email">Email address</label>
+    <input id="nlp-email" type="email" name="email" required placeholder="you@email.com">
+    <button type="submit">Get me on the list</button>
+  </form>
+</aside>`;
+const POPUP_CSS = `.nlp{position:fixed;right:24px;bottom:24px;z-index:9997;width:min(380px,calc(100vw - 32px));background:#060d26;color:#fff;border-radius:16px;padding:24px 22px 20px;box-shadow:0 24px 60px -20px rgba(6,13,38,.6);transform:translateY(16px);opacity:0;transition:transform .35s ease,opacity .35s ease;font-family:'Be Vietnam Pro',sans-serif}
+.nlp.in{transform:none;opacity:1}.nlp[hidden]{display:none}
+.nlp .kicker{color:#ff63d8;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.nlp h2{margin:8px 0 8px;font-family:'Outfit',sans-serif;font-weight:800;font-size:24px;line-height:1.1;letter-spacing:-.01em;color:#fff}
+.nlp h2 .accent{box-shadow:inset 0 -.18em 0 #ff63d8}
+.nlp p{margin:0 0 14px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.78)}
+.nlp form{display:flex;flex-direction:column;gap:8px}
+.nlp input[type=email]{min-height:46px;padding:0 16px;border-radius:100px;border:0;font-size:15px;font-family:inherit;color:#060d26}
+.nlp button[type=submit]{min-height:46px;border-radius:100px;border:0;background:#ff63d8;color:#060d26;font-weight:700;font-size:14px;font-family:'Outfit',sans-serif;cursor:pointer}
+.nlp .nlp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:rgba(255,255,255,.7);font-size:24px;line-height:1;cursor:pointer;border-radius:50%}
+.nlp .nlp-x:hover,.nlp .nlp-x:focus-visible{color:#fff;background:rgba(255,255,255,.08)}
+.nlp .hp{position:absolute;left:-9999px}
+.nlp .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (max-width:600px){.nlp{left:0;right:0;bottom:0;width:auto;border-radius:16px 16px 0 0;padding:22px 18px calc(18px + env(safe-area-inset-bottom,0px))}}
+@media (prefers-reduced-motion:reduce){.nlp{transition:none}}`;
+const POPUP_JS = `(function(){var p=document.getElementById('nlp');if(!p)return;var K='aim_nl_popup',st=null;try{st=JSON.parse(localStorage.getItem(K)||'null')}catch(e){}if(st&&(st.s==='joined'||(st.s==='closed'&&Date.now()-st.t<14*864e5)))return;var shown=false;function save(s){try{localStorage.setItem(K,JSON.stringify({s:s,t:Date.now()}))}catch(e){}}function show(){if(shown)return;if(document.getElementById('cookie-banner')){setTimeout(show,4000);return}var f=document.activeElement;if(f&&/INPUT|TEXTAREA/.test(f.tagName))return;shown=true;p.hidden=false;requestAnimationFrame(function(){p.classList.add('in')});if(window.gtag)gtag('event','newsletter_popup_view')}function hide(){p.classList.remove('in');setTimeout(function(){p.hidden=true},350);save('closed')}p.querySelector('.nlp-x').onclick=hide;document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!p.hidden)hide()});p.querySelector('form').addEventListener('submit',function(){save('joined')});document.querySelectorAll('.nl-form').forEach(function(f){f.addEventListener('submit',function(){save('joined')})});setTimeout(show,40000);var art=!!document.querySelector('.prose');window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;if(h>0&&scrollY/h>(art?.5:.35))show()},{passive:true});if(matchMedia('(pointer:fine)').matches)document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<8)show()})})();`;
 const NEWSLETTER_JS = `document.querySelectorAll('.nl-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('[name=email]');if(!em.value||em.value.indexOf('@')<1){em.focus();return}var done=false,go=function(){if(done)return;done=true;location.href='/newsletter-success'};setTimeout(go,2500);fetch('/api/forms/newsletter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()}).then(go,go)})});`;
 const COPY_JS = `document.querySelectorAll('.prompt .copy').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode.querySelector('.ptext').innerText;var ok=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}})});`;
 
@@ -273,7 +307,7 @@ ${extraHead}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,700;1,900&display=swap">
 ${FBQ_STUB}
-<style>${CHROME_CSS}${CSS}${DEMO_CSS()}${VIDEO_CSS}${AIME_CSS}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
+<style>${CHROME_CSS}${CSS}${DEMO_CSS()}${VIDEO_CSS}${AIME_CSS}${POPUP_CSS}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
 <script src="/aim-track.js" defer></script>
 </head>
 <body>
@@ -283,9 +317,10 @@ ${NAV}
 ${main}
 ${NEWSLETTER}
 </main>
+${POPUP}
 ${FOOTER}
 </div>
-<script>${NEWSLETTER_JS}${script}</script>
+<script>${NEWSLETTER_JS}${POPUP_JS}${script}</script>
 ${PIXEL}
 </body>
 </html>
@@ -471,7 +506,7 @@ function run(){var t=(q.value||'').trim().toLowerCase();if(!t){res.hidden=true;s
 q.addEventListener('input',run);var u=new URLSearchParams(location.search).get('q');if(u){q.value=u;run()}
 (function(){var c=document.querySelector(".lead-car");if(!c)return;var s=c.querySelectorAll(".lc-slide"),d=c.querySelectorAll(".lc-dots button"),i=0,t=null,paused=false;var still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;function go(n){i=(n+s.length)%s.length;s.forEach(function(x,k){x.classList.toggle("on",k===i);x.setAttribute("aria-hidden",k===i?"false":"true");x.tabIndex=k===i?0:-1});d.forEach(function(x,k){x.setAttribute("aria-current",k===i?"true":"false")})}function run(){clearInterval(t);if(!still)t=setInterval(function(){if(!paused)go(i+1)},6000)}d.forEach(function(x,k){x.onclick=function(){go(k);run()}});c.querySelectorAll(".lc-arrow").forEach(function(b){b.onclick=function(){go(i+Number(b.dataset.d));run()}});c.addEventListener("mouseenter",function(){paused=true});c.addEventListener("mouseleave",function(){paused=false});c.addEventListener("focusin",function(){paused=true});c.addEventListener("focusout",function(){paused=false});var x0=null;c.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});c.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));run()}x0=null});go(0);run()})();`;
   const ld = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'The AIM by ai.moms™', url: SITE + '/editorial', hasPart: list.map((a) => ({ '@type': 'Article', headline: plain(a.title), url: `${SITE}/editorial/${a.slug}` })) };
-  return page({ title: 'The AIM by ai.moms™: AI News, Guides and Prompts for Moms', description: 'The AIM by ai.moms™: AI news, articles, guides and copy-ready prompts for the mom at home, the mom at work and the mompreneur.', canonical: SITE + '/editorial', ogType: 'website', image: absImg(lead?.hero?.src), extraHead: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`, main, script: js });
+  return page({ title: 'The AIM by ai.moms™: AI News, Guides and Prompts for Moms', description: 'The AIM by ai.moms™: AI news, articles, guides and copy-ready prompts for the mom at home, the mom at work and the mompreneur.', canonical: SITE + '/editorial', ogType: 'website', image: absImg(fs.existsSync(path.join(PUB, 'editorial/img/the-aim-share.jpg')) ? '/editorial/img/the-aim-share.jpg' : lead?.hero?.src), extraHead: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`, main, script: js });
 }
 
 const files = fs.readdirSync(SRC).filter((f) => f.endsWith('.json') && !f.startsWith('_'));

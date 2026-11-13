@@ -479,7 +479,21 @@ body{background:#ffffff;color:#060d26;font-family:'Be Vietnam Pro',system-ui,san
 .ed .aime .aform button{background:var(--pink);color:var(--navy);border:0;border-radius:100px;padding:0 18px;font-weight:800;opacity:.6}
 .ed .aime .amock{font-size:12px;color:rgba(255,255,255,.55);margin:6px 0 12px}
 @media (max-width:700px){.ed .aime{padding:22px 18px;margin-left:-4px;margin-right:-4px}.ed .aime .a0{flex-direction:column;align-items:flex-start}.ed .aime .lands li{grid-template-columns:1fr auto;gap:4px 10px}.ed .aime .when{grid-column:1/-1}}
-.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
+.nlp{position:fixed;right:24px;bottom:24px;z-index:9997;width:min(380px,calc(100vw - 32px));background:#060d26;color:#fff;border-radius:16px;padding:24px 22px 20px;box-shadow:0 24px 60px -20px rgba(6,13,38,.6);transform:translateY(16px);opacity:0;transition:transform .35s ease,opacity .35s ease;font-family:'Be Vietnam Pro',sans-serif}
+.nlp.in{transform:none;opacity:1}.nlp[hidden]{display:none}
+.nlp .kicker{color:#ff63d8;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.nlp h2{margin:8px 0 8px;font-family:'Outfit',sans-serif;font-weight:800;font-size:24px;line-height:1.1;letter-spacing:-.01em;color:#fff}
+.nlp h2 .accent{box-shadow:inset 0 -.18em 0 #ff63d8}
+.nlp p{margin:0 0 14px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.78)}
+.nlp form{display:flex;flex-direction:column;gap:8px}
+.nlp input[type=email]{min-height:46px;padding:0 16px;border-radius:100px;border:0;font-size:15px;font-family:inherit;color:#060d26}
+.nlp button[type=submit]{min-height:46px;border-radius:100px;border:0;background:#ff63d8;color:#060d26;font-weight:700;font-size:14px;font-family:'Outfit',sans-serif;cursor:pointer}
+.nlp .nlp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:rgba(255,255,255,.7);font-size:24px;line-height:1;cursor:pointer;border-radius:50%}
+.nlp .nlp-x:hover,.nlp .nlp-x:focus-visible{color:#fff;background:rgba(255,255,255,.08)}
+.nlp .hp{position:absolute;left:-9999px}
+.nlp .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (max-width:600px){.nlp{left:0;right:0;bottom:0;width:auto;border-radius:16px 16px 0 0;padding:22px 18px calc(18px + env(safe-area-inset-bottom,0px))}}
+@media (prefers-reduced-motion:reduce){.nlp{transition:none}}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
 <script src="/aim-track.js" defer></script>
 </head>
 <body>
@@ -547,6 +561,20 @@ body{background:#ffffff;color:#060d26;font-family:'Be Vietnam Pro',system-ui,san
   </form>
 </div></section>
 </main>
+<aside class="nlp" id="nlp" role="dialog" aria-modal="false" aria-labelledby="nlp-h" hidden>
+  <button type="button" class="nlp-x" aria-label="Close">×</button>
+  <span class="kicker">The AIM newsletter · coming soon</span>
+  <h2 id="nlp-h">Be first when it <span class="accent">launches</span></h2>
+  <p>What's new in AI and what it means for your week, in plain words. Add your email and we'll tell you the day it starts.</p>
+  <form name="newsletter" class="nl-form" novalidate>
+    <input type="hidden" name="form-name" value="newsletter">
+    <input type="hidden" name="source" value="the-aim-popup">
+    <label class="hp">Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    <label class="sr-only" for="nlp-email">Email address</label>
+    <input id="nlp-email" type="email" name="email" required placeholder="you@email.com">
+    <button type="submit">Get me on the list</button>
+  </form>
+</aside>
 <footer class="ffoot pad">
     <div class="grid">
       <div><div class="brand"><span class="bm"><span class="ai">ai.</span><span class="moms">moms</span><span class="tm">™</span></span></div><div class="lead2">Retire from<br>Chief Everything Officer™.</div><span class="soc big"><a href="https://www.instagram.com/aimoms.ai/" target="_blank" rel="noopener" aria-label="ai.moms™ on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/ai-moms/" target="_blank" rel="noopener" aria-label="ai.moms™ on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a></span></div>
@@ -559,7 +587,7 @@ body{background:#ffffff;color:#060d26;font-family:'Be Vietnam Pro',system-ui,san
     <p class="disc"><span class="lc">ai.moms</span>™ is an educational platform. All content is for informational and educational purposes only and does not constitute professional, legal, financial, medical, or therapeutic advice. Individual results vary. AI tools referenced are third-party products not owned or operated by <span class="lc">ai.moms</span>™. Use of third-party AI tools is at your own risk. Please review our full Terms &amp; Conditions and Privacy Policy before using this site or enrolling in any program.</p>
   </footer>
 </div>
-<script>document.querySelectorAll('.nl-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('[name=email]');if(!em.value||em.value.indexOf('@')<1){em.focus();return}var done=false,go=function(){if(done)return;done=true;location.href='/newsletter-success'};setTimeout(go,2500);fetch('/api/forms/newsletter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()}).then(go,go)})});document.querySelectorAll('.prompt .copy').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode.querySelector('.ptext').innerText;var ok=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}})});</script>
+<script>document.querySelectorAll('.nl-form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('[name=email]');if(!em.value||em.value.indexOf('@')<1){em.focus();return}var done=false,go=function(){if(done)return;done=true;location.href='/newsletter-success'};setTimeout(go,2500);fetch('/api/forms/newsletter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()}).then(go,go)})});(function(){var p=document.getElementById('nlp');if(!p)return;var K='aim_nl_popup',st=null;try{st=JSON.parse(localStorage.getItem(K)||'null')}catch(e){}if(st&&(st.s==='joined'||(st.s==='closed'&&Date.now()-st.t<14*864e5)))return;var shown=false;function save(s){try{localStorage.setItem(K,JSON.stringify({s:s,t:Date.now()}))}catch(e){}}function show(){if(shown)return;if(document.getElementById('cookie-banner')){setTimeout(show,4000);return}var f=document.activeElement;if(f&&/INPUT|TEXTAREA/.test(f.tagName))return;shown=true;p.hidden=false;requestAnimationFrame(function(){p.classList.add('in')});if(window.gtag)gtag('event','newsletter_popup_view')}function hide(){p.classList.remove('in');setTimeout(function(){p.hidden=true},350);save('closed')}p.querySelector('.nlp-x').onclick=hide;document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!p.hidden)hide()});p.querySelector('form').addEventListener('submit',function(){save('joined')});document.querySelectorAll('.nl-form').forEach(function(f){f.addEventListener('submit',function(){save('joined')})});setTimeout(show,40000);var art=!!document.querySelector('.prose');window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;if(h>0&&scrollY/h>(art?.5:.35))show()},{passive:true});if(matchMedia('(pointer:fine)').matches)document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<8)show()})})();document.querySelectorAll('.prompt .copy').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode.querySelector('.ptext').innerText;var ok=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}})});</script>
 <script>
 (function(){
   function loadMetaPixel(){
