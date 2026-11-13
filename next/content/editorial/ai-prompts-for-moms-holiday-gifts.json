@@ -1,0 +1,411 @@
+{
+  "slug": "ai-prompts-for-moms-holiday-gifts",
+  "pillar": "Seasonal",
+  "cluster": "Holidays",
+  "kicker": "SEASONAL · HOLIDAYS · EDITOR'S PICK",
+  "title": "A Beginner-Friendly AI Prompt for Moms to Plan Holiday Gifts",
+  "cardTitle": "Holiday Gift Planning With AI",
+  "dek": "The list, the budget, the teachers, the in-laws and the wrapping paper: hand it to Claude before December gets here.",
+  "byline": "Belinda Sanmiguel",
+  "date": "2026-11-12",
+  "readTime": "9 min",
+  "hero": {
+    "src": "/editorial/img/holiday-gifts-mom-and-son.jpg",
+    "alt": "A mom and her young son sitting together on a couch by a Christmas tree, the moment all the gift planning is for",
+    "focus": "50% 35%"
+  },
+  "takeaways": [
+    "**Use the RCTF prompt method for holiday gift planning:** Role, Context, Task, Format. It’s the four-part prompt structure we teach moms so AI gives a useful answer the first time.",
+    "**Context gives a better answer.** Ages, interests, what they already own, what to skip and your budget turn a generic toy list into one built for your kids.",
+    "**Add one special line at the end: “Ask me clarifying questions before you start.”** The AI fills its own gaps, so you don’t have to think of everything.",
+    "**Talk instead of typing to save time.** [Wispr Flow](https://wisprflow.ai/) lets you say your details out loud instead of typing them.",
+    "**Check before you buy.** AI can be wrong about prices, stock and links, so click through every suggestion before it goes in the cart."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "We have about a month before the holidays are here. Is the gift list already running in the back of your head, with no time to sit down and write it?"
+    },
+    {
+      "type": "p",
+      "text": "[Amazon’s Holiday Kids Gift Book](https://www.aboutamazon.com/news/retail/amazon-2026-holiday-kids-gift-book) has probably landed on your doorstep by now. Just make sure the kids don’t see it first! It’s a good starting point, but reading the whole catalog, circling pages and cross-checking what’s already in the toy bins takes time. And moms don’t have a ton of time available."
+    },
+    {
+      "type": "p",
+      "text": "Working moms are juggling meetings and daycare updates. Moms at home are running the house and caring for their kids. Moms in business are chasing new clients and finding the best swim classes nearby. Every mom is short on time heading into the holidays, and then there’s gift shopping."
+    },
+    {
+      "type": "p",
+      "text": "[Parents.com](https://www.parents.com/how-many-toys-is-too-many-12152466) looked at how many toys is too many, and the takeaway is clear: more toys don’t lead to better play. Kids with fewer, open-ended toys tend to stay with one idea longer and get more creative with it. A few thoughtful gifts chosen for who your child is right now will do more than a cart full of whatever is trending."
+    },
+    {
+      "type": "p",
+      "text": "Choosing those few gifts is the hard part. Researching, finding the best prices and checking them against what your kids already have takes hours. Whether you have one or many kiddos, AI can help."
+    },
+    {
+      "type": "h2",
+      "text": "How Can Moms Use AI This Holiday Season?"
+    },
+    {
+      "type": "answer",
+      "text": "**The short answer:** Moms can use AI to plan holiday gifts by writing one detailed AI prompt with the RCTF method: Role, Context, Task and Format. In return, Claude or ChatGPT gives you an age-appropriate gift list with links, so you can finish holiday shopping sooner and get your time back."
+    },
+    {
+      "type": "p",
+      "text": "Moms can use AI for just about anything: menus, travel plans, holiday photos, the school party sign-ups. But in this article, we’re focusing on how to use it for gift giving."
+    },
+    {
+      "type": "h2",
+      "text": "What Is the RCTF Prompt Method?"
+    },
+    {
+      "type": "p",
+      "text": "At ai.moms™, our goal is always the same: hand the mental load to AI and get your time back. RCTF is one of the first prompt structures we teach, because it works for almost anything you’d ask Claude, ChatGPT or Gemini."
+    },
+    {
+      "type": "p",
+      "text": "Role, Context, Task, Format. For holiday gifts, each part looks like this."
+    },
+    {
+      "type": "table",
+      "head": [
+        "Part",
+        "What it tells the AI",
+        "Holiday gift example"
+      ],
+      "rows": [
+        [
+          "**R: Role**",
+          "Who to be",
+          "“You are an experienced child development expert.”"
+        ],
+        [
+          "**C: Context**",
+          "What only you know",
+          "Kids’ ages, interests, toys they already own, what to skip, your budget"
+        ],
+        [
+          "**T: Task**",
+          "The one job to do",
+          "“Find three toys for each child that I should consider.”"
+        ],
+        [
+          "**F: Format**",
+          "How to hand it back",
+          "A numbered list per child, with links, why each fits and a total"
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "R: Role"
+    },
+    {
+      "type": "p",
+      "text": "Tell the AI who to be. The role sets the expertise behind the answer."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "For gifts: “You are an experienced child development expert with a background in children 10 and under.”",
+        "A child development expert thinks about play, skills and age, which is what you want guiding the list."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "C: Context"
+    },
+    {
+      "type": "p",
+      "text": "This is where you get specific, and where most prompts fall short. The more the AI knows about your kids, the less time you spend on research."
+    },
+    {
+      "type": "p",
+      "text": "Things to include:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "How many kids, their names and their ages",
+        "What they love: characters, hobbies, sports, the thing they talk about at dinner",
+        "Toys they already have plenty of, so they aren’t suggested again",
+        "What you want to avoid (light-up toys, dolls, Magna-Tiles)",
+        "What you want to encourage: STEM, sensory play, critical thinking, arts and science, fine motor skills",
+        "Your total budget",
+        "Nice-to-haves, like gift wrapping or free shipping and returns"
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "T: Task"
+    },
+    {
+      "type": "p",
+      "text": "Give the AI one clear job. “Find me three gifts for each child that I should consider” is better than “help with holiday shopping.” Tell it where to look too, such as this year’s popular gift guides and parenting or education blogs."
+    },
+    {
+      "type": "h3",
+      "text": "F: Format"
+    },
+    {
+      "type": "p",
+      "text": "Tell it how you want the answer back, so it’s ready to use:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "A numbered list for each child",
+        "A link to where to buy each gift at its most affordable price",
+        "One or two lines on why it’s a fit for that child",
+        "A running total against your budget"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Which AI Prompt Should Moms Use for Holiday Gifts?"
+    },
+    {
+      "type": "p",
+      "text": "Moms who are beginners in AI can start with this RCTF prompt. Each part is labeled, so swap in your own kids’ information, interests and budget, then paste it into Claude or ChatGPT. Turn on web search so the AI can pull current prices and links."
+    },
+    {
+      "type": "prompt",
+      "label": "The holiday gift prompt",
+      "lines": [
+        "**Role:** You are an experienced child development expert with a background in kids aged 10 and under.",
+        "**Context:** I’m looking for holiday gifts for my kids, aged ==[insert ages]==. I want to stay away from ==[insert type of toy you want to avoid]== and instead encourage ==[insert type of play, like STEM, sensory play or critical thinking]==. My kids love ==[insert interests, hobbies, favorite characters, etc.]==. They already have plenty of ==[insert toys they already own]==, so let’s skip those. My budget is ==[insert total budget for all kids]==. If gift wrapping is available, that’s a plus.",
+        "**Task:** Using this year’s Amazon Holiday Kids Gift Book, other popular gift guides online and your knowledge of play, find three toys for each child that I should consider.",
+        "**Format:** Give me a numbered list for each child. For each toy, include a link to where to buy it at its most affordable price and why I should consider it for that child. End with the total cost.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "This short demo walks through each step, from turning on web search to asking for a swap."
+    },
+    {
+      "type": "demo",
+      "label": "Watch it: from prompt to gift list",
+      "steps": [
+        {
+          "scene": "gf-search",
+          "title": "Turn on",
+          "accent": "web search.",
+          "caption": "Web search lets the AI pull current prices and links."
+        },
+        {
+          "scene": "gf-paste",
+          "title": "Copy the prompt and",
+          "accent": "paste it in.",
+          "caption": "Click Copy, open Claude and paste the whole prompt into the message box."
+        },
+        {
+          "scene": "gf-say",
+          "title": "Click each pink spot and",
+          "accent": "say your info.",
+          "caption": "Click right on the spot, start Wispr Flow and say your own details. Only that part changes. Read it over, then hit send."
+        },
+        {
+          "scene": "gf-answer",
+          "title": "Answer its",
+          "accent": "questions.",
+          "caption": "A sentence or two each is plenty. The toys and prices shown here are a made-up example."
+        },
+        {
+          "scene": "gf-check",
+          "title": "Click every link, then",
+          "accent": "ask for swaps.",
+          "caption": "AI can suggest a product that’s sold out. Reply in the same chat, and it keeps all your context."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Why Add “Ask Me Clarifying Questions” to Your Prompt?"
+    },
+    {
+      "type": "p",
+      "text": "The last line in the prompt is the one most moms skip. When you ask for clarifying questions, the AI checks what it doesn’t know before it starts shopping. For a gift list, it might ask:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Should the budget be split evenly between the kids?",
+        "Does that include stocking stuffers or only the main gifts?",
+        "Do you have space limitations or anything you’d rather not have in the house?",
+        "When do you need it delivered?"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Answer in a sentence or two each, and the list that comes back is closer to done. You don’t have to think of everything up front. The AI asks, and you answer."
+    },
+    {
+      "type": "p",
+      "text": "Talk to it like a friend. The more conversational you are, the better the results."
+    },
+    {
+      "type": "h2",
+      "text": "Can You Talk to AI Instead of Typing?"
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/holiday-gifts-voice-prompt-sm.jpg",
+      "alt": "A woman outdoors speaking into her phone, which shows how you can say a prompt to AI instead of typing it",
+      "portrait": true
+    },
+    {
+      "type": "p",
+      "text": "A prompt this detailed is a lot to type on your phone while waiting in the school pickup line. Speak it instead."
+    },
+    {
+      "type": "p",
+      "text": "[Wispr Flow](https://wisprflow.ai) is a voice dictation app that turns what you say into clean, written text in whatever app you’re using, including Claude and ChatGPT. You talk the way you’d explain it to a friend, and it handles the punctuation and the filler words."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Copy the prompt above and paste it into Claude",
+        "Tap an area you want to speak, start Wispr Flow and say your own details",
+        "Read it over, fix any names it misheard and hit send"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "You only say the parts that are yours, so it takes about a minute. That’s faster than reading the first page of the catalog."
+    },
+    {
+      "type": "h2",
+      "text": "How Do You Check AI Gift Ideas Before You Buy?"
+    },
+    {
+      "type": "p",
+      "text": "AI does the research and the heavy lifting, but you make the final purchase. AI is a great time-saver, but it isn’t perfect, and it still needs your human touch."
+    },
+    {
+      "type": "p",
+      "text": "A few quick checks keep the list safe and accurate:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Click every link.** AI can suggest a product that’s sold out, has changed price or links to the wrong item.",
+        "**Check the age range** on the product page, especially for small parts and other choking hazards for young children.",
+        "**Look at the total.** Ask the AI to recalculate if prices changed when you clicked through.",
+        "**Keep private details out.** First names, ages and interests are plenty. Leave out last names, school names and your address in the prompt.",
+        "**Ask for swaps.** Reply in the same chat: “Swap the second toy for something under $40” or “Give me one more outdoor option for ==[insert child’s name]==.” The AI keeps all your context, so small notes go a long way."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Can Moms Use the RCTF Method for Other Holiday Tasks?"
+    },
+    {
+      "type": "p",
+      "text": "The RCTF prompt method works for other lists and tasks you handle throughout your day. Change the Role and Context, and the same structure handles the rest of the season."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Mom at home:** “You’re a thoughtful gift planner. Here are my kids’ three teachers, the bus driver and the coach, and $150 for all of them. Give me a list of gift ideas, with links and a card message for each.”",
+        "**Mom at work:** “You’re an executive assistant who plans team gifts. I manage six people with a $300 budget, and two are remote. Suggest gifts that ship easily, in a table with the price and delivery date for each.”",
+        "**Mompreneur:** “You’re a marketing expert for small businesses. I run a bakery and want to thank my top 10 customers for under $25 each. Give me three gift ideas and a short thank-you note I can print.”"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Each one ends the same way: _Before you start, ask me any clarifying questions._"
+    }
+  ],
+  "faqTitle": "AI 101 for Moms: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "What does RCTF stand for in AI prompting?",
+      "a": "RCTF stands for Role, Context, Task and Format. It’s a simple prompt structure ai.moms™ teaches so moms get a useful answer from AI on the first try."
+    },
+    {
+      "q": "Which AI is the best?",
+      "a": "There is no “best” AI, so use the one you feel comfortable working with, as long as it can search the web for current links and prices. The RCTF method works in Claude, ChatGPT and Gemini. Our [Which AI Should Moms Use?](/editorial/which-ai-should-moms-use) guide can help if you’re deciding where to start."
+    },
+    {
+      "q": "Do I need a paid plan to use this prompt?",
+      "a": "No. This prompt works on the free versions of Claude and ChatGPT, and both include web search. Consider a paid plan if you use it often, since free plans limit how many messages you can send in a set period."
+    },
+    {
+      "q": "Do I need to be tech-savvy to write AI prompts?",
+      "a": "No. If you can explain what your kids love to a grandparent, you can write this prompt."
+    },
+    {
+      "q": "What if the AI’s answer isn’t clear?",
+      "a": "Ask it to explain anything that isn’t clear the first time. The more comfortable you get using it like an online assistant, the more you’ll get out of it."
+    }
+  ],
+  "closing": {
+    "title": "How Can AI Help Moms Hand Over the Mental Load?",
+    "paragraphs": [
+      "Maybe you’re the mom at home keeping track of every birthday, teacher gift and stocking stuffer in your head. Maybe you’re the mom at work fitting holiday shopping between team meetings, or the mompreneur sending client thank-yous while running your business. The RCTF method works the same way for each of you. When AI holds the lists, tracks the details and drafts the first pass, the gift list stops living in your head.",
+      "The time you get back is yours to use however you see fit. Use your open time to read the book that’s been sitting on your nightstand, to finally make the early-morning workout or to get that website off the ground. AI helps you carry less and gives you more room for what you’re building.",
+      "You don’t have to figure it out alone. At ai.moms™, moms learn AI together, step by step. Start with one prompt this season. We’ll be here for the next one.",
+      "**Your next step:** Start the [ai.moms™ Foundations Course](/foundations) to get your AI education started."
+    ]
+  },
+  "brief": {
+    "workingTitle": "Holiday Gift Giving with RCTF — Final Draft",
+    "draftDate": "2026-11-06",
+    "author": "Belinda Sanmiguel",
+    "note": "Beginner level, written for all three moms, with the mom at home in the lead example.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "A Beginner-Friendly AI Prompt for Moms to Plan Holiday Gifts",
+    "altH1s": [
+      "Save Time, The Holiday Gift AI Prompt for Moms"
+    ],
+    "primaryKeywords": [
+      "ai for moms",
+      "ai prompts for moms"
+    ],
+    "supportingTerms": [
+      "RCTF prompt method",
+      "holiday gift ideas for kids",
+      "AI gift list",
+      "how to use AI for holiday shopping"
+    ],
+    "metaTitle": "AI Prompt for Moms: Plan Holiday Gifts With RCTF",
+    "metaDescription": "A beginner-friendly AI prompt for moms: use the RCTF method to build a thoughtful holiday gift list that fits your kids and your budget.",
+    "slugPath": "/editorial/ai-prompts-for-moms-holiday-gifts",
+    "internalLinks": [
+      "aimoms.ai/editorial/which-ai-should-moms-use (FAQ)",
+      "aimoms.ai/foundations (closing CTA)"
+    ],
+    "externalLinks": [
+      "Parents.com toy article",
+      "Amazon Holiday Kids Gift Book",
+      "Wispr Flow"
+    ],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 2,140 words, article body only",
+    "sourceArticle": null,
+    "reviewNotes": [
+      "Nov 6 mockup of Belinda's updated doc with a Watch it demo, formatted with aimoms-blog-formatter. The real article is unchanged.",
+      "Raquel to approve: the hero shows a child. It's a stock photo (Kateryna Hliznitsova, Unsplash License allows commercial use); keep it out of paid ads.",
+      "Nov 10: voice photo is from Canva's free gallery (Belinda). The page uses the 600x600 square version.",
+      "Decide: the skill still lists the AI Toolkit as a soft CTA and Belinda's FAQ links /toolkit, but it was retired Nov 2. This mockup links Which AI Should Moms Use? instead.",
+      "Belinda to check: free Claude and ChatGPT both include web search (FAQ). Nov 10: Parents.com link loads (Belinda).",
+      "Nov 6, Raquel's changes: insert-here parts are pink, and the demo now copies the prompt, pastes it whole and fills in only the pink spots by voice.",
+      "Nov 7: Wispr Flow list updated to match the demo (copy, paste, then say only your own details).",
+      "Watch it: screens are a drawing; check the labels (the + button, Web search, the Paste menu, the Wispr Flow listening pill) against the apps before publishing. Toys and prices are made-up examples.",
+      "Hand-off check, done: SEO brief and character counts (H1 60, meta title 48, meta description 136), takeaways, jump links, two-sentence short answer, question H2s, lists, visuals, alt text, author bio, CTA, disclosure. No stats, so no Sources section.",
+      "Nov 10: new opening line added before the Amazon paragraph (about a month before the holidays)."
+    ],
+    "byline": "Belinda Sanmiguel"
+  },
+  "authorPhoto": "/editorial/img/belinda-sanmiguel.jpg",
+  "authorBio": "Belinda Sanmiguel is a Chicago-based writer and marketer. Her work has been featured on iPhone Life, NorthShore Care and other platforms. Belinda is a mom to an adventurous three-year-old daughter and a cavapoo.",
+  "status": "published",
+  "faqIntro": "If you’re a mom who’s new to AI, you may not know how to use all the features right away. That’s okay. Opening Claude or ChatGPT and trying a few chats is the first step, so ask it questions like you would ask a friend.",
+  "jumpLinks": true,
+  "disclosure": "Disclosure: ai.moms™ is a listed partner in Anthropic’s Claude Partner Network. We’re an independent company, and we cover tools across AI."
+}

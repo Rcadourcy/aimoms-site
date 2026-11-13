@@ -1,0 +1,45 @@
+/* Site header + footer styles for The AIM pages (from the live static pages). */
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#ffffff;color:#060d26;font-family:'Be Vietnam Pro',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.site{--navy:#060d26;--logo-ai:#ff63d8;--btn-radius:100px;--nv-eyebrow:#ff63d8}
+.site .tm{font-size:.42em;vertical-align:.6em;font-weight:600;margin-left:1px;opacity:.85}
+.site .pad{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.s-nav a,.ffoot a{text-decoration:none;color:inherit}
+.s-nav{background:var(--navy);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:60;box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.s-nav .inner{max-width:1240px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand .bm{font-size:22px}
+.brand .ai{font-family:'Playfair Display',serif;font-style:italic;font-weight:900;color:var(--logo-ai)}
+.brand .moms{font-weight:800}
+.brand .tag{font-size:9px;color:rgba(255,255,255,.6);margin-top:3px}
+.s-nav .links{display:flex;align-items:center;gap:22px}
+.s-nav .tnl{font-family:'Outfit',sans-serif;font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.s-nav .navcta{font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;letter-spacing:.02em;padding:10px 18px;border-radius:var(--btn-radius);background:#fff;color:#060d26!important;white-space:nowrap}
+.s-nav .ham{display:none;background:none;border:0;cursor:pointer;padding:6px;gap:4px}
+.s-nav .ham i{width:18px;height:2px;background:#fff;display:block}
+.mmenu{position:absolute;left:0;right:0;top:100%;background:#060d26;display:grid;padding:4px max(24px,env(safe-area-inset-left,0px)) 14px;z-index:70;box-shadow:0 18px 30px -18px rgba(0,0,0,.5)}
+.mmenu[hidden]{display:none!important}
+.mmenu a{color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:12px 2px;border-top:1px solid rgba(255,255,255,.1)}
+/* Nov 13: the hamburger shows at every width; on desktop the menu drops down on the right. */
+.s-nav .ham{display:grid}
+@media (min-width:1001px){.mmenu{left:auto;right:0;width:300px;border-radius:0 0 14px 14px}}
+@media (max-width:1000px){.s-nav .tnl{display:none}}
+@media (max-width:520px){.s-nav .navcta{display:none}}
+.soc{display:inline-flex;gap:12px;align-items:center}
+.soc.big{margin-top:22px;gap:14px}
+.soc.big a{display:inline-flex;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);align-items:center;justify-content:center;color:#fff}
+.lc{text-transform:none!important}
+.ffoot{background:var(--navy);color:rgba(255,255,255,.65);padding-block:72px 40px;font-size:14px;margin-top:72px}
+.ffoot .grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1.3fr 1fr 1fr 1.2fr;gap:32px}
+.ffoot .brand .bm{font-size:30px;color:#fff}
+.ffoot .lead2{font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:#fff;line-height:1.2;margin-top:16px}
+.ffoot h5{font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nv-eyebrow);margin-bottom:14px}
+.ffoot ul{list-style:none;display:grid;gap:9px}
+.ffoot .legal{max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
+.ffoot .legal span a{margin-left:18px;text-decoration:underline;text-underline-offset:3px}
+.ffoot .disc{max-width:1180px;margin:18px auto 0;font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.4)}
+@media (max-width:1000px){.ffoot .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ffoot .grid{grid-template-columns:1fr}}
+

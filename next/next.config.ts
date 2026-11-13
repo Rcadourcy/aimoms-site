@@ -1,5 +1,22 @@
 import type { NextConfig } from "next";
 import path from "node:path";
+import fs from "node:fs";
+
+// The AIM (/editorial) is built to static pages by scripts/build-editorial.mjs.
+// Old /article?id= links go to the new article when it's published, otherwise to /editorial.
+function editorialRedirects() {
+  const dir = path.join(__dirname, 'content/editorial');
+  const out: { source: string; has: { type: 'query'; key: string; value: string }[]; destination: string; permanent: boolean }[] = [];
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith('.json') || f.startsWith('_')) continue;
+    const a = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    const dest = a.status === 'draft' ? '/editorial' : `/editorial/${a.slug}`;
+    for (const id of [a.legacyId, ...(a.mergedIds || [])].filter(Boolean)) {
+      for (const source of ['/article', '/article.html']) out.push({ source, has: [{ type: 'query', key: 'id', value: id }], destination: dest, permanent: true });
+    }
+  }
+  return out;
+}
 
 const nextConfig: NextConfig = {
   // Pin the workspace root to this folder so Next doesn't pick up a stray
@@ -16,6 +33,10 @@ const nextConfig: NextConfig = {
       { source: '/curriculum', destination: '/foundations#curriculum', permanent: false },
       { source: '/quiz', destination: '/#quiz', permanent: true },
       { source: '/quiz.html', destination: '/#quiz', permanent: true },
+      ...editorialRedirects(),
+      { source: '/article', destination: '/editorial', permanent: true },
+      { source: '/article.html', destination: '/editorial', permanent: true },
+      { source: '/editorial.html', destination: '/editorial', permanent: true },
     ];
   },
   async rewrites() {
@@ -35,6 +56,8 @@ const nextConfig: NextConfig = {
         { source: '/claude-duet', destination: '/claude-duet.html' },
         { source: '/corporate', destination: '/corporate-v2.html' },
         { source: '/membership', destination: '/membership-v2.html' },
+        { source: '/editorial', destination: '/editorial/index.html' },
+        { source: '/editorial/:slug([a-z0-9-]+)', destination: '/editorial/:slug.html' },
       ],
       afterFiles: [],
       fallback: [],

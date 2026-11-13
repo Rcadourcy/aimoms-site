@@ -215,7 +215,7 @@ button,a,.btn,input,select,textarea{
     section{padding:60px 20px;}
 }
 
-@media (min-width:1041px){.hamburger{display:none}}
+/* Nov 13: the hamburger shows at every width. */
 
 .tnl2{position:relative}
 .tnl2 small{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:3px;font-family:'Be Vietnam Pro',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.01em;text-transform:none;opacity:.72;white-space:nowrap;line-height:1}

@@ -1,0 +1,332 @@
+{
+  "slug": "which-ai-should-moms-use",
+  "status": "published",
+  "pillar": "Education",
+  "cluster": "Getting Set Up",
+  "title": "Which AI Should Moms Use? How to Get Started in Claude",
+  "cardTitle": "Which AI Should Moms Use?",
+  "dek": "Claude, ChatGPT, Gemini, Perplexity, NotebookLM: what each one is good for, plus how to get started in Claude, from the screen to your memory.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-12",
+  "readTime": "4 min",
+  "hero": {
+    "src": "/editorial/img/which-ai-should-moms-use-hero.jpg",
+    "alt": "A woman at a colorful desk smiling with excitement at her laptop, ready to get started with AI",
+    "focus": "58% 35%"
+  },
+  "takeaways": [
+    "**Each AI has a job it does well.** Claude, ChatGPT, Gemini, Perplexity and NotebookLM are each good at something different.",
+    "**Pick one home base and learn it well.** We teach on Claude because it’s where Aime and the ai.moms™ plugin live.",
+    "**Five spots on the Claude screen are all you need.** New chat, the chat box, the + button, the mic and Projects.",
+    "**Start with the default model.** You can switch models anytime from the menu under the chat box.",
+    "**You don’t have to start over.** If you’ve used ChatGPT, you can bring what it knows about your family into Claude."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "“Which AI should I use?” is the question we get most, at every workshop, in every DM. It usually comes from a mom who has three apps downloaded, used each one twice and isn’t sure any of them is the right one."
+    },
+    {
+      "type": "p",
+      "text": "That uncertainty keeps a lot of moms stuck at the starting line. The school forms keep coming, the dinner question keeps coming, and the AI app sits on the second screen of the phone, unopened."
+    },
+    {
+      "type": "p",
+      "text": "So this is the short version: what each tool is good for, which one we teach on and how to get started so the second time is easy."
+    },
+    {
+      "type": "h2",
+      "text": "Which AI Should Moms Use?"
+    },
+    {
+      "type": "answer",
+      "text": "**The short answer:** pick one home base and learn it well, then add other tools for specific jobs. At ai.moms™ our home base is Claude, and the prompting skills you learn there work in ChatGPT, Gemini and the rest."
+    },
+    {
+      "type": "h2",
+      "text": "What Is Each AI Tool Good For?"
+    },
+    {
+      "type": "table",
+      "head": [
+        "Tool",
+        "What it’s good for",
+        "A mom example"
+      ],
+      "rows": [
+        [
+          "**Claude**",
+          "Our home base: writing, planning and building assistants that know your family",
+          "The weekly plan, the hard email, your family Project"
+        ],
+        [
+          "**ChatGPT**",
+          "Where most of us started, familiar and reliable",
+          "Quick questions; you can bring its memory over to Claude"
+        ],
+        [
+          "**Gemini**",
+          "Handy if your life lives in Gmail and Google Docs",
+          "Working with what’s already in your Google account"
+        ],
+        [
+          "**Perplexity**",
+          "Answers with links you can check",
+          "Looking up a rule or a fact with sources"
+        ],
+        [
+          "**NotebookLM**",
+          "Upload your sources and get a tutor that knows them",
+          "Drop in the school handbook and ask it anything"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "You don’t need all five. Most moms do almost everything in one, and reach for another when a job calls for it."
+    },
+    {
+      "type": "h2",
+      "text": "Why Do We Teach Moms to Learn AI in Claude?"
+    },
+    {
+      "type": "p",
+      "text": "We teach moms who want to learn AI in Claude because it handles the full range of what moms actually need, from a quick rewrite to an assistant that remembers your family. It’s also where Aime, your AI Chief Everything Officer™, and the 25 skills in the ai.moms™ plugin run. If you already love another tool, keep it. The habits you build here carry over."
+    },
+    {
+      "type": "h2",
+      "text": "How Do Moms Get Started in Claude?"
+    },
+    {
+      "type": "h3",
+      "text": "Step 1: Change three settings first"
+    },
+    {
+      "type": "p",
+      "text": "Before you tell Claude anything about your family, take about a minute in Settings. Turn off the option that lets your chats help train the models, and turn on the memory options so it remembers your family. We walk through each one in [AI Privacy for Moms](/editorial/ai-privacy-for-moms)."
+    },
+    {
+      "type": "h3",
+      "text": "Step 2: Learn five spots on the screen"
+    },
+    {
+      "type": "ol",
+      "items": [
+        "**New chat:** one topic, one chat. The dinner plan and the work email get separate chats.",
+        "**The chat box:** full sentences about your real situation.",
+        "**The + button:** add photos, files and screenshots, like the school flyer or a picture of your fridge.",
+        "**The mic:** don’t type, talk. Perfect for the carpool line.",
+        "**Projects:** where Claude remembers you. More on this in [Claude Projects for Moms](/editorial/claude-projects-for-moms)."
+      ]
+    },
+    {
+      "type": "demo",
+      "label": "Watch it: five spots on the screen",
+      "steps": [
+        {
+          "scene": "which-newchat",
+          "title": "New chat:",
+          "accent": "one topic, one chat.",
+          "caption": "Start a new chat for each topic. The dinner plan and the work email get their own."
+        },
+        {
+          "scene": "which-box",
+          "title": "The chat box:",
+          "accent": "full sentences.",
+          "caption": "Write it the way you’d say it to a friend, with your real situation."
+        },
+        {
+          "scene": "which-plus",
+          "title": "The + button:",
+          "accent": "photos and files.",
+          "caption": "Add photos, files and screenshots, like the school flyer or a picture of your fridge."
+        },
+        {
+          "scene": "which-mic",
+          "title": "The mic:",
+          "accent": "don’t type, talk.",
+          "caption": "Tap the mic and say it out loud. Perfect for the carpool line."
+        },
+        {
+          "scene": "which-projects",
+          "title": "Projects:",
+          "accent": "where it remembers you.",
+          "caption": "Projects keep your family’s details, so every chat inside one already knows them."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Step 3: Pick your model"
+    },
+    {
+      "type": "p",
+      "text": "Same Claude, a few different models, and the menu is right under the chat box. Opus is the everyday driver for almost everything. Sonnet and Haiku are quicker for a rephrase or summing up a long email, and they make your plan go further. Fable is the newest and most powerful, for your toughest problem. Start with Opus. You can change it anytime."
+    },
+    {
+      "type": "h3",
+      "text": "Step 4: Bring your ChatGPT memory over"
+    },
+    {
+      "type": "p",
+      "text": "Switching from ChatGPT? Everything it knows about your family can come with you."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "In Claude, go to **Settings → Memory → Start import**.",
+        "Copy the prompt Claude gives you and paste it into ChatGPT.",
+        "Paste ChatGPT’s answer back into Claude.",
+        "Choose **Add to memory**, and read what it saved."
+      ]
+    },
+    {
+      "type": "demo",
+      "label": "Watch it: bring your ChatGPT memory over",
+      "steps": [
+        {
+          "scene": "which-import",
+          "title": "Settings → Memory →",
+          "accent": "Start import.",
+          "caption": "Click Start import and copy the prompt Claude gives you. Paste it into ChatGPT."
+        },
+        {
+          "scene": "which-paste",
+          "title": "Paste it back,",
+          "accent": "add to memory.",
+          "caption": "Paste ChatGPT’s answer back into Claude, choose Add to memory, then read what it saved."
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Step 5: Hand it one real task"
+    },
+    {
+      "type": "p",
+      "text": "Skip the test questions. Give it something from today’s list, using the prompt below."
+    },
+    {
+      "type": "h2",
+      "text": "What Should You Ask Claude First?"
+    },
+    {
+      "type": "p",
+      "text": "This one helps you decide where AI can help you first, so your first week has a plan."
+    },
+    {
+      "type": "prompt",
+      "label": "Your first prompt",
+      "lines": [
+        "**Role:** You are a friendly AI coach who helps busy moms start using Claude in real life.",
+        "**Context:** I’m a ==[mom at home / mom at work / mompreneur]== with ==[insert number]== kids, ages ==[insert ages]==. The weekly tasks that take the most of my time and headspace are ==[insert three or four, like dinner planning, school emails, work follow-ups or client invoices]==. I’m ==[new to AI / I’ve used ChatGPT a little]==.",
+        "**Task:** Pick the one task where Claude would help me most this week, and show me exactly how to hand it over. Then suggest one small new thing to try each day for the next five days.",
+        "**Format:** A short plan: the first task with a ready-to-use prompt, then a five-day list with one line per day.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What Should Moms Double-Check?"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Read what memory saved.** After an import, look over the list and delete anything you don’t want stored.",
+        "**Free or paid is your call.** You can start on a free account and decide later if you need more. Plans and features change, so check the current options in the app.",
+        "**Any tool can be wrong.** Whichever one you use, check dates, prices and anything medical, legal or money-related."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What’s the Right Setup for Each Mom?"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Mom at home:** Claude as home base, NotebookLM for the school handbook, the mic for everything in the car.",
+        "**Mom at work:** check what your company allows at work, and keep a separate personal account for family life.",
+        "**Mompreneur:** Claude for your brand voice and content, Perplexity when you need sources you can cite."
+      ]
+    }
+  ],
+  "faqTitle": "Getting Started With AI: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "What is the best AI for moms?",
+      "a": "The best one is the one you’ll use every day. We teach on Claude because it handles writing, planning and assistants that remember your family, and it’s where Aime and the ai.moms™ plugin run. ChatGPT and Gemini are good choices too."
+    },
+    {
+      "q": "Is Claude better than ChatGPT?",
+      "a": "They’re both strong, and the same prompting skills work in each. We use Claude as our home base, and you can bring your ChatGPT memory over if you switch."
+    },
+    {
+      "q": "Which Claude model should I use?",
+      "a": "Start with Opus for everyday tasks. Use Sonnet or Haiku for quick rewrites and summaries, and Fable for your hardest problems. You can change models from the menu under the chat box."
+    },
+    {
+      "q": "Can I move my ChatGPT history to Claude?",
+      "a": "You can bring over what ChatGPT remembers about you. In Claude, go to Settings → Memory → Start import and follow the steps. Your old chats stay in ChatGPT."
+    }
+  ],
+  "closing": {
+    "title": "How Can Moms Start Using AI Tonight?",
+    "paragraphs": [
+      "Maybe you’re the mom at home with three AI apps you haven’t opened, the mom at work who wants to stop feeling behind, or the mompreneur who needs a home base for her business. Getting started looks the same for each of you: three settings, five spots on the screen and one real task.",
+      "Once that feels easy, make it remember you with a Project, and keep your family’s details safe while you do it. Both are next in our [Foundations Course](/foundations)."
+    ]
+  },
+  "brief": {
+    "workingTitle": "Which AI should I use + your first hour in Claude",
+    "draftDate": "2026-11-02",
+    "author": "ai.moms™ team",
+    "note": "Beginner level. Curriculum part 4 (get set up), with the toolkit framing from part 3.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "Which AI Should Moms Use? How to Get Started in Claude",
+    "altH1s": [
+      "The Best AI for Moms: How to Choose and Get Set Up",
+      "Getting Started With Claude: A Beginner Guide for Moms"
+    ],
+    "primaryKeywords": [
+      "best ai for moms",
+      "ai for moms",
+      "how to use claude"
+    ],
+    "supportingTerms": [
+      "Claude vs ChatGPT for moms",
+      "which Claude model to use",
+      "import ChatGPT memory to Claude",
+      "AI tools for moms"
+    ],
+    "metaTitle": "Which AI Should Moms Use? Getting Started in Claude",
+    "metaDescription": "Claude, ChatGPT, Gemini and more: what each AI is good for, and how moms can get started in Claude, from the screen to your memory.",
+    "slugPath": "/editorial/which-ai-should-moms-use",
+    "internalLinks": [
+      "aimoms.ai/editorial/ai-privacy-for-moms (step 1)",
+      "aimoms.ai/editorial/claude-projects-for-moms (step 2)",
+      "aimoms.ai/foundations (closing)",
+      "aimoms.ai/build-aime (closing)",
+      "aimoms.ai/skill-guide (closing)"
+    ],
+    "externalLinks": [],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 940 words, article body only",
+    "sourceArticle": "ai.moms™ Daily lessons 01 (Which AI should I use), 03 (Tour of the Claude screen), 04 (Pick your model), 05 (Bring your ChatGPT memory over) + curriculum part 4 (get set up)",
+    "reviewNotes": [
+      "Tool descriptions come from the Lesson 01 caption and cover slide; neutral, no tool is knocked.",
+      "Please verify the model lineup (Opus, Sonnet, Haiku, Fable) and the Settings → Memory → Start import path are still current before publishing.",
+      "FAQ avoids naming plan prices; check the free/paid wording against Claude’s current plans.",
+      "Watch it: screens are a drawing; check the labels (New chat, the + button and the mic in the chat box, Projects in the sidebar, Settings → Memory → Start import, the import panel with Copy, Add to memory) against the Claude app before publishing.",
+      "Nov 10: formatted with aimoms-blog-formatter: question H2s, two-sentence short answer, jump links, disclosure, one CTA (Foundations; removed the Build Aime / Skill Guide line), takeaway 1 reworded, date moved to Nov 12 to go out with the gift article. Still needed: author and bio; Raquel to confirm which model Claude opens with (takeaway says default, body and FAQ say Opus).",
+      "Nov 10: new hero, \"Excited woman looking at laptop with steaming coffee\" by Vitaly Gariev on Unsplash (unsplash.com/photos/-zf6Y2mq0SQ, Unsplash License, commercial use OK), 1920x1080. Old hero file kept.",
+      "Nov 10: dropped \"first hour\" everywhere (H1 now \"Which AI Should Moms Use? How to Get Started in Claude\", 54 characters; subtitle, opening, prompt label, closing and hero alt text to match).",
+      "Nov 10: prompt fill-in spots highlighted pink to match the gift article."
+    ]
+  },
+  "jumpLinks": true,
+  "disclosure": "Disclosure: ai.moms™ is a listed partner in Anthropic’s Claude Partner Network. We’re an independent company, and we cover tools across AI."
+}

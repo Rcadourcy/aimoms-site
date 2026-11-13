@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next';
-import { getAllArticles } from '@/lib/articles';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const BASE = 'https://aimoms.ai';
 
 // Public, indexable routes only. Excludes *-register / *-thank-you / *-success
-// (noindex transactional pages) and the /foundations-course stub. Every article in The Edit
-// is listed at its canonical /article?id= URL so search engines can find it.
+// (noindex transactional pages) and the /foundations-course stub. Every page of The AIM
+// (built to public/editorial) is listed at its /editorial/<slug> URL.
 const ROUTES = [
   '',
   'foundations',
@@ -47,8 +48,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'weekly',
     priority: path === '' ? 1 : 0.7,
   }));
-  const articles: MetadataRoute.Sitemap = (await getAllArticles()).map((a) => ({
-    url: `${BASE}/article?id=${a.id}`,
+  const dir = path.join(process.cwd(), 'public/editorial');
+  const slugs = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.html') && f !== 'index.html').map((f) => f.replace(/\.html$/, '')) : [];
+  const articles: MetadataRoute.Sitemap = slugs.map((slug) => ({
+    url: `${BASE}/editorial/${slug}`,
     changeFrequency: 'monthly',
     priority: 0.6,
   }));

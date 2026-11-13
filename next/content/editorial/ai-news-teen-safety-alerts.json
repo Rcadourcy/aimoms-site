@@ -1,0 +1,217 @@
+{
+  "slug": "ai-news-teen-safety-alerts",
+  "status": "published",
+  "pillar": "AI News",
+  "cluster": "This Week in AI",
+  "title": "Trending This Week in AI",
+  "cardTitle": "This Week in AI: Nov 12",
+  "dek": "Instagram’s AI now spots teens using an adult birthday, Gemini shows what it remembers about you and a catch-up on ChatGPT’s teen rules.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-12",
+  "readTime": "4 min",
+  "hero": {
+    "src": "/editorial/img/ai-news-teen-safety-hero.jpg",
+    "alt": "A mom and her daughter smiling together on a couch while the mom checks her phone",
+    "focus": "50% 45%"
+  },
+  "takeaways": [
+    "**Instagram now uses AI to find teens, even with an adult birthday.** Accounts it thinks belong to teens move into Teen Account protections, and Facebook is next.",
+    "**Meta’s parent alerts only reach parents who supervise.** Check the supervision settings on your teen’s Instagram or Facebook this week.",
+    "**Gemini now shows what it remembers about you.** Read the Memory summary and delete anything you don’t want stored.",
+    "**ChatGPT has stricter rules for teens.** Link your accounts so alerts can reach you, and keep talking with your kids, since alerts alone aren’t enough."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "If another mom at school pickup mentions a new AI feature or a safety concern and you have no idea what they’re talking about, you’re not behind."
+    },
+    {
+      "type": "p",
+      "text": "AI moves fast and most of it is written for people who build software, not for the mom reading her phone between work meetings and doctor’s appointments."
+    },
+    {
+      "type": "p",
+      "text": "That’s why we started this roundup. Every week, the ai.moms™ team reads the announcements and the reporting, picks the stories that touch your family, your job or your business, and tells you what each one means in plain words. Every item links to its source, so you can read more when you have a minute."
+    },
+    {
+      "type": "p",
+      "text": "Two stories stood out this week. Meta started using AI to find teens on Instagram who list an adult birthday, and Gemini now shows you what it remembers about you. We also added a catch-up on ChatGPT’s teen rules, since parents are still asking about them."
+    },
+    {
+      "type": "h2",
+      "text": "Instagram Now Uses AI to Find Teens, Even When They List an Adult Birthday"
+    },
+    {
+      "type": "p",
+      "text": "On November 9, Meta announced it’s expanding its AI age estimation to Instagram users around the world ([Meta’s announcement](https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/)). The technology looks for accounts Meta suspects belong to teens, even when the profile lists an adult birthday, and moves them into Teen Accounts. Teen Accounts automatically limit who can contact a teen, what they see and how much time they spend on the app. Meta says it’s also rolling this out on Facebook, with Threads to follow later this year, and it’s asking TikTok and YouTube to do the same."
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/ai-news-instagram-phone.jpg",
+      "alt": "A close-up of an iPhone showing the Instagram app page in the App Store",
+      "portrait": true
+    },
+    {
+      "type": "p",
+      "text": "Starting this month, parents in the US will see an explainer on Instagram that links to a ConnectSafely guide on helping your teen give the correct age online. Meta hasn’t shared how accurate the age estimates are or how to fix one that’s wrong."
+    },
+    {
+      "type": "p",
+      "text": "This builds on parent alerts Meta added in late October. Parents who supervise a teen’s account now get an alert if the teen repeatedly searches for suicide or self-harm content, or if the teen’s chats with Meta AI suggest they may be at risk, [Engadget reported](https://www.engadget.com/2301410/meta-will-now-alert-parents-if-teens-repeatedly-search-for-self-harm-content-on-facebook/). The alerts don’t show the searches or the chats, and they link to helpline resources."
+    },
+    {
+      "type": "p",
+      "text": "**What it means for you:** If your teen is on Instagram, look at the birthday on the account together. If they picked an older age to get past the sign-up screen, the app may start treating them as a teen anyway, and that’s a good moment to talk about why the protections are there. Then check that supervision is set up, since that’s what lets alerts reach you. In the US, anyone in crisis can call or text 988."
+    },
+    {
+      "type": "h2",
+      "text": "Gemini Now Shows You What It Remembers About You"
+    },
+    {
+      "type": "p",
+      "text": "On November 9, [9to5Google reported](https://9to5google.com/2026/11/09/google-gemini-memory-summary/) that Gemini has a new Memory summary, a page where you can see, edit and delete what Gemini knows about you. It sorts what it has saved into groups, like your background and key relationships, work projects, travel and fitness. You can type a plain request to add or remove a detail, and a Memory history shows when each one was added or changed. For now it’s for Google AI subscribers using US English on the web, with Keep Activity and Memory turned on. You’ll find it under Settings, then Personal Intelligence."
+    },
+    {
+      "type": "p",
+      "text": "**What it means for you:** If you use Gemini, take five minutes to read what it has saved about you and your family, and delete anything you’d rather not have stored, like your kids’ school or an old address. The mompreneur who uses one account for home and business may find both mixed together in there. The same habit is worth building in any assistant you use, and our guide to [AI privacy for moms](/editorial/ai-privacy-for-moms) covers what to keep out of AI memory."
+    },
+    {
+      "type": "h2",
+      "text": "Catching Up: ChatGPT’s New Limits for Teens"
+    },
+    {
+      "type": "p",
+      "text": "On October 30, OpenAI announced new safeguards for ChatGPT, [The Next Web reported](https://thenextweb.com/news/chatgpt-teen-safety-weapons-limits-community-safety-report). Teen accounts will no longer get practical details about weapons or security systems, even when a question seems harmless. For all users, ChatGPT will share less detail about past mass attacks. ChatGPT can now end chats that fixate on violence, and OpenAI may pause an account after repeated incidents."
+    },
+    {
+      "type": "p",
+      "text": "Since July, parents with linked accounts have been alerted if a teen’s account is deactivated over violence, and OpenAI says alerts for temporary pauses are in development. OpenAI also says it strengthened the system that estimates a user’s age, and adults placed in the teen experience by mistake can verify their age through its partner, Persona. The changes roll out over the next few weeks."
+    },
+    {
+      "type": "p",
+      "text": "Earlier in October, Common Sense Media rated ChatGPT for Teens an “Unacceptable Risk.” In its testing, linked parent accounts got no alerts during conversations about self-harm or disordered eating, [KQED reported](https://www.kqed.org/news/12103289/keep-teens-off-chatgpt-says-youth-ai-safety-institute). OpenAI disputed the results and said parent and teen accounts need to be linked for about three hours before alerts start."
+    },
+    {
+      "type": "p",
+      "text": "**What it means for you:** If your teen uses ChatGPT, link your accounts, since parent alerts only reach linked accounts, and don’t count on alerts alone. No setting replaces a conversation, so use the news as an easy opening to ask your kids which AI tools they use and what for."
+    },
+    {
+      "type": "h2",
+      "text": "The Prompt to Try This Week"
+    },
+    {
+      "type": "p",
+      "text": "A calm, short family conversation does more than any setting. Paste this prompt into Claude, ChatGPT or Gemini to plan one."
+    },
+    {
+      "type": "prompt",
+      "label": "The family AI conversation prompt",
+      "lines": [
+        "**Role:** You are a family communication coach who helps parents talk with kids about technology in a calm, curious, non-judgmental way.",
+        "**Context:** I have ==[insert number]== kids, ages ==[insert ages]==. They use ==[insert AI tools and apps, like ChatGPT, Gemini, Meta AI or Instagram]==. I read that AI companies are adding new teen safety rules and parent alerts, and I want to understand how my kids actually use AI without it feeling like an interrogation. Our family screen rules right now are ==[insert rules, or “we don’t have any yet”]==.",
+        "**Task:** Help me plan a 10-minute conversation for this week, plus a short set of family AI rules we can agree on together.",
+        "**Format:** Give me 5 open-ended questions to ask, 3 things to listen for, a one-page draft of family AI rules in plain language and a checklist of parent settings to review for each app my kids use.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Check the settings checklist against each app’s own help page before you rely on it, since menus and features change often."
+    }
+  ],
+  "faqTitle": "AI News for Moms: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "Where can moms keep up with AI news without falling behind?",
+      "a": "Right here. The AIM publishes a roundup every week with the AI stories that touch your family, your job and your business, what each one means in plain words and a link to every source."
+    },
+    {
+      "q": "How does Instagram know if my teen used a fake birthday?",
+      "a": "Meta uses AI to estimate age and moves accounts it thinks belong to teens into Teen Accounts, even when the profile lists an adult birthday. Meta hasn’t shared how accurate it is, so check the birthday on your teen’s account yourself."
+    },
+    {
+      "q": "Is ChatGPT safe for teenagers?",
+      "a": "OpenAI announced new teen safeguards, and parent alerts reach you only when your accounts are linked. Currently there is no setting that replaces knowing which AI tools your kids use. Talk with your kids about AI and keep open communication."
+    },
+    {
+      "q": "How do I see what an AI remembers about me?",
+      "a": "In Gemini, go to Settings, then Personal Intelligence, to see your Memory summary (Google AI subscribers, US English, on the web for now). Read it and delete anything you don’t want stored. Our guide to [AI privacy for moms](/editorial/ai-privacy-for-moms) covers what to keep private in any assistant."
+    }
+  ],
+  "closing": {
+    "title": "Moms, Stay Ahead on AI One Week at a Time",
+    "paragraphs": [
+      "The mom at home, the mom at the 9 to 5 and the mompreneur don’t need to follow every AI headline. You need the few that change something for your family, your job or your business, and a clear sense of what to do next. That’s what this page is for.",
+      "When you’re ready to go from reading about AI to using it with confidence, start with our [Foundations Course](/foundations). We’ll be back next week with what’s new."
+    ]
+  },
+  "brief": {
+    "workingTitle": "This Week in AI for Moms: Nov 12, 2026",
+    "draftDate": "2026-11-02",
+    "author": "ai.moms™ team",
+    "note": "First weekly AI news roundup for The AIM. Covers Mon Oct 26 to Sun Nov 1, 2026. One h2 per news item with facts, a source link and a 'What it means for you' paragraph for the three moms.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads on the teen safety items)",
+    "h1": "Trending This Week in AI",
+    "altH1s": [
+      "AI News for Moms: Instagram Age Checks and Gemini Memory",
+      "This Week in AI for Moms: What Changed for Teens and Parents"
+    ],
+    "primaryKeywords": [
+      "ai for moms",
+      "ai news this week",
+      "ai news for parents"
+    ],
+    "supportingTerms": [
+      "Instagram teen accounts AI age",
+      "Meta AI parent alerts",
+      "Gemini memory summary",
+      "ChatGPT teen safety",
+      "Common Sense Media ChatGPT"
+    ],
+    "metaTitle": "This Week in AI for Moms: Nov 12, 2026",
+    "metaDescription": "The AI news moms need this week: Instagram’s AI age checks for teens, Gemini’s new Memory summary and ChatGPT’s teen rules, with what each means for you.",
+    "slugPath": "/editorial/ai-news-teen-safety-alerts",
+    "internalLinks": [
+      "aimoms.ai/editorial/ai-privacy-for-moms (Gemini item, FAQ)",
+      "aimoms.ai/foundations (closing)"
+    ],
+    "externalLinks": [
+      "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/",
+      "https://www.engadget.com/2301410/meta-will-now-alert-parents-if-teens-repeatedly-search-for-self-harm-content-on-facebook/",
+      "https://9to5google.com/2026/11/09/google-gemini-memory-summary/",
+      "https://thenextweb.com/news/chatgpt-teen-safety-weapons-limits-community-safety-report",
+      "https://openai.com/index/community-safety-report-and-new-protections-for-teens/",
+      "https://www.kqed.org/news/12103289/keep-teens-off-chatgpt-says-youth-ai-safety-institute",
+      "https://about.commonsensemedia.org/press-room/press-releases/chatgpt-for-teens-poses-unacceptable-risk-to-kids-common-sense-media-finds"
+    ],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 1,400 words, article body only",
+    "sourceArticle": "Nov 11 rework: web research of news dated Nov 1 to Nov 10, 2026, plus the October teen-safety stories kept as a catch-up.",
+    "reviewNotes": [
+      "Source dates: The Next Web, Oct 31, 2026 (OpenAI announced Oct 30); OpenAI post, Oct 30 per coverage (openai.com returned 403 to our fetch, so the facts come from TNW; please open the OpenAI post and confirm); Engadget, Oct 29, 2026; MacRumors, Oct 27, 2026; Google blog (Gemini file editing), Oct 29, 2026; Android Police, Oct 30, 2026; Google blog (immersive explorations), Oct 28, 2026; CNBC Make It, Oct 30, 2026.",
+      "Gemini file editing: Google says it’s “available to all users in all languages where Gemini app is available,” but Android Police says full use is tied to Google One AI plans. We followed Google’s wording; worth a quick check in the app before publishing.",
+      "Meta alerts: Engadget doesn’t say which regions get the alerts or whether supervision needs an extra opt-in. We kept the copy to what was reported.",
+      "CNBC jobs item: the SHL survey (Propeller Insights, June to July 2026, margin of error 5%) was commissioned by a talent company. Only the ‘nearly 1 in 5’ figure is used.",
+      "Left out on purpose: Claude Duet research preview (Oct 21, outside the week; could be a ‘catch up’ line if you want it), Anthropic’s public IPO filing (reported Oct 26 by Bloomberg, paywalled and not opened; also financial news we shouldn’t frame as advice), Gemini 4 Carbon (limited to cyber defenders, not consumer), SynthID Detector (published Oct 7, only updated Oct 29).",
+      "Nov 6: took out the Friday newsletter lines because the emails aren’t running yet. Add them back when the newsletter launches.",
+      "QA: All six news items checked against their sources on Nov 2. Fixed: the SHL 'nearly 1 in 5' figure is US respondents only (copy implied US + UK); cut an unsourced FAQ line ('outside safety groups have questioned...'); added Persona as OpenAI's age-verification partner (per TNW).",
+      "Nov 10: hero added, a mom and daughter on a couch with a phone, Pexels photo 8055528 (pexels.com/photo/a-mother-and-a-daughter-sitting-on-a-couch-8055528, free Pexels License, commercial use OK), 2400x1600.",
+      "Nov 10: stock photos of children are fine; the no-kids rule covers real moms' and Raquel's children only (per Belinda).",
+      "Nov 10: headline changed to \"Trending This Week in AI for Moms\" since the roundup covers several topics; subtitle unchanged.",
+      "Nov 10: prompt fill-in spots highlighted pink to match the other articles.",
+      "Nov 10: date moved to Nov 12 for Batch 1 (meta title and card title too). ChatGPT paragraph split at \"Since July\". The copy still says \"this week\" about Oct 27-30 news.",
+      "Nov 10: headline shortened to \"Trending This Week in AI\".",
+      "Nov 10: web address is /editorial/ai-news-teen-safety-alerts (was ai-news-this-week-nov-2-2026).",
+      "Nov 10: news-timing wording fixed for a Nov 12 date: \"This month had a clear theme\", removed \"Two of this week’s biggest stories…\", new FAQ answer on teen safeguards, meta description says \"this season\".",
+      "Nov 11: reworked for relevance. Leads with Meta’s worldwide Instagram AI age estimation (Meta newsroom, Nov 9) and Gemini’s Memory summary (9to5Google, Nov 9). Meta’s Oct 29 parent alerts folded into the Meta section. ChatGPT teen limits kept as a catch-up, with Common Sense Media’s Oct 7 “Unacceptable Risk” finding and OpenAI’s response (KQED). Cut: ChatGPT iCloud, Gemini file editing, Gemini student explorations, the CNBC boomerang-jobs item and ChatGPT Images 2.6 GIFs (per Belinda, not relevant for moms). FAQ: iCloud question replaced with Instagram age and AI memory questions. Meta doesn’t give accuracy figures or steps to correct a wrong age; Gemini mobile path not published yet.",
+      "Nov 11: opening now says “another mom at school pickup” and “between work meetings and doctor’s appointments”; prompt subhead renamed “The Prompt to Try This Week” (per Belinda).",
+      "Nov 11: first paragraph rewritten and split in two (per Belinda).",
+      "Nov 11: inline photo added under the first Instagram paragraph: Unsplash 9OeW6Thad0Q by Shutter Speed (free Unsplash License), cropped to 600x600 and compressed to 34 KB, shown up to 420px wide.",
+      "Nov 11: FAQ answer for “Is ChatGPT safe for teenagers?” reworded (per Belinda)."
+    ]
+  }
+}

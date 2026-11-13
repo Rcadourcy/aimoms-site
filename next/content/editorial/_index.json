@@ -1,0 +1,83 @@
+{
+  "lead": "ai-prompts-for-moms-holiday-gifts",
+  "side": [
+    "ai-family-command-center",
+    "ai-for-moms-start-here"
+  ],
+  "startHere": [
+    "ai-for-moms-start-here",
+    "what-is-an-ai-prompt",
+    "how-to-delegate-to-ai"
+  ],
+  "featured": {
+    "Community": [
+      "host-ai-workshop-for-mom-friends",
+      "learn-ai-with-mom-friends-in-person",
+      "mom-guilt-what-research-says"
+    ],
+    "Seasonal": [
+      "thanksgiving-planning-with-ai-for-moms",
+      "christmas-planning-with-ai-for-moms",
+      "mlk-day-weekend-plans-with-ai",
+      "spring-break-planning-with-ai-for-moms"
+    ]
+  },
+  "room": {
+    "kicker": "In person",
+    "title": "Reading about it is step one. _The room_ is where it clicks.",
+    "copy": "A hands-on, three-hour workshop in a friend's living room. We bring the curriculum and the teaching. $265 per guest, free for the host.",
+    "cta": "See the experiences",
+    "href": "/experiences",
+    "photo": "/home/vid/event-group.jpg",
+    "photoAlt": "Moms learning AI together at an ai.moms™ experience"
+  },
+  "timeline": [
+    "Thanksgiving",
+    "Sick Season",
+    "Holidays",
+    "Winter Break",
+    "Three-Day Weekends",
+    "Ramadan & Eid",
+    "Valentine's Day",
+    "Easter & Passover",
+    "Tax Season",
+    "Spring Break",
+    "Spring",
+    "Mother's Day",
+    "End of School Year",
+    "Summer",
+    "Back to School",
+    "Halloween"
+  ],
+  "launch": [
+    "ai-meal-planning-for-moms",
+    "ai-meeting-prep-for-moms",
+    "ai-news-teen-safety-alerts",
+    "ai-prompts-for-moms-holiday-gifts",
+    "ai-thanksgiving-menu-timeline-grocery-list",
+    "ai-workshop-for-moms-what-to-expect",
+    "christmas-planning-with-ai-for-moms",
+    "claude-projects-for-moms",
+    "cold-and-flu-season-plan-for-moms",
+    "host-ai-workshop-for-mom-friends",
+    "how-to-delegate-to-ai",
+    "learn-ai-with-mom-friends-in-person",
+    "teacher-gifts-and-holiday-cards",
+    "thanksgiving-planning-with-ai-for-moms",
+    "thanksgiving-seating-chart-with-ai",
+    "what-is-an-ai-prompt",
+    "which-ai-should-moms-use",
+    "winter-break-planning-with-ai-for-moms",
+    "how-to-use-ai-as-your-cofounder",
+    "ai-privacy-for-moms",
+    "thanksgiving-table-setting-ideas-ai",
+    "ai-travel-prompts-for-moms"
+  ],
+  "launchHome": {
+    "lead": "ai-prompts-for-moms-holiday-gifts",
+    "side": [
+      "thanksgiving-planning-with-ai-for-moms",
+      "which-ai-should-moms-use"
+    ]
+  }
+}
