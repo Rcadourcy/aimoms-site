@@ -22,10 +22,11 @@ const LAUNCH = process.argv.includes('--launch');
 const SG = fs.readFileSync(path.join(PUB, 'skill-guide.html'), 'utf8');
 const cut = (s, a, b) => s.slice(s.indexOf(a), s.indexOf(b, s.indexOf(a)) + b.length);
 const NAV = cut(SG, '<nav class="s-nav pad">', '</nav>')
-  .replace('<a class="tnl" href="/#quiz">Start Here</a>', '<a class="tnl" href="/#quiz">Start Here</a><a class="tnl on" href="/editorial">The AIM</a>')
-  .replace('<a href="/#quiz">Start Here</a>', '<a href="/#quiz">Start Here</a><a href="/editorial">The AIM</a>')
-  // Nov 13 (Raquel): The AIM replaces Membership in the top row; Membership stays in the hamburger menu.
-  .replace('<a class="tnl" href="/membership">Membership</a>', '');
+  // Nov 13 (Raquel): The AIM sits after Private Session, where Membership was; Membership stays in the hamburger menu.
+  .replace(/<a class="tnl"[^>]*href="\/(?:editorial|theaim)">The AIM<\/a>/g, '').replace(/<a href="\/(?:editorial|theaim)">The AIM<\/a>/g, '')
+  .replace('<a class="tnl" href="/membership">Membership</a>', '')
+  .replace('<a class="tnl" href="/top3">Private Session</a>', '<a class="tnl" href="/top3">Private Session</a><a class="tnl on" href="/editorial">The AIM</a>')
+  .replace('<a href="/membership">Membership</a>', '<a href="/editorial">The AIM</a><a href="/membership">Membership</a>');
 const FOOTER = cut(SG, '<footer class="ffoot pad">', '</footer>');
 const FBQ_STUB = cut(SG, '<script>\nwindow._fbqQueue', '</script>');
 const PIXEL = cut(SG, '<script>\n(function(){\n  function loadMetaPixel', '</script>');

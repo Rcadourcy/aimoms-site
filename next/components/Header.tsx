@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 const MOBILE_LINKS: { href: string; label: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/theaim', label: 'THE AIM' },
   { href: '/build-aime', label: 'BUILD AIME · $97' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },
+  { href: '/theaim', label: 'THE AIM' },
   { href: '/membership', label: 'MEMBERSHIP' },
   { href: '/skill-guide', label: 'SKILL GUIDE' },
   { href: '/experiences', label: 'HOST AN EXPERIENCE' },
@@ -19,11 +19,11 @@ const MOBILE_LINKS: { href: string; label: string }[] = [
 
 const TOP_LINKS: { href: string; label: string; sub?: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/theaim', label: 'THE AIM' },
   { href: '/build-aime', label: 'BUILD AIME' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },
   { href: '/top3', label: 'PRIVATE SESSION' },
+  { href: '/theaim', label: 'THE AIM' },
 ];
 
 export default function Header() {
