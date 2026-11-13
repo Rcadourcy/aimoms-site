@@ -409,7 +409,8 @@ function pillarPage(p, list, cfg) {
   <span class="crumb"><a href="/editorial">The AIM</a></span>
   <h1>${esc(p.title || p.name)}</h1>
   <p>${esc(p.desc)}</p>
-  <div class="count">${n} article${n === 1 ? '' : 's'} &amp; guide${n === 1 ? '' : 's'}</div>
+  <div class="count">${n ? `${n} article${n === 1 ? '' : 's'} &amp; guide${n === 1 ? '' : 's'}` : 'New articles coming soon'}</div>
+  ${n ? '' : '<p>We’re writing these now. In the meantime, start with the latest on <a href="/editorial">The AIM</a>.</p>'}
   ${clusters.length > 1 ? `<nav class="jump" aria-label="Topics">${clusters.map((c) => `<a href="#${slugify(c)}">${esc(c)}</a>`).join('')}</nav>` : ''}
 </header>
 ${clusters.map((c) => `<section class="wrap cluster" id="${slugify(c)}"><h2>${esc(c)}</h2><div class="grid">${items.filter((a) => a.cluster === c).sort((x, y) => !!y.hero?.src - !!x.hero?.src).map((a) => tile(a)).join('')}</div></section>`).join('\n')}`;
@@ -473,7 +474,8 @@ const loaded = files.map((f) => JSON.parse(fs.readFileSync(path.join(SRC, f), 'u
   .filter((a) => !a.archived && (LAUNCH ? (cfg0.launch || []).includes(a.slug) : (ALL || a.status !== 'draft')));
 // Mockups get a page for review but stay out of the home page, section pages and Keep reading.
 const list = loaded.filter((a) => !a.mockup);
-if (!ALL && !LAUNCH) LIVE = new Set([...list.map((a) => a.slug), ...PILLARS.filter((p) => list.some((a) => a.pillar === p.key)).map((p) => p.id)]);
+// Every section keeps its tab and page; a section with no live articles yet says they're coming soon.
+if (!ALL && !LAUNCH) LIVE = new Set([...list.map((a) => a.slug), ...PILLARS.map((p) => p.id)]);
 list.sort((x, y) => (y.date || '').localeCompare(x.date || '') || x.title.localeCompare(y.title));
 // In a launch build, launchHome (lead, side) matches the articles the launch home page features up top.
 const cfg = LAUNCH && cfg0.launchHome ? { ...cfg0, ...cfg0.launchHome } : cfg0;
@@ -485,6 +487,6 @@ for (const a of loaded) write(path.join(OUT, a.slug + '.html'), articlePage(a, l
 // Review-only test versions with the video, listen and highlights top (never in the production build).
 if (ALL) for (const a of list) if (a.video) fs.writeFileSync(path.join(OUT, a.slug + '-video.html'), articlePage(a, list, { video: true }));
 let pillars = 0;
-for (const p of PILLARS) if (list.some((a) => a.pillar === p.key)) { write(path.join(OUT, p.id + '.html'), pillarPage(p, list, cfg)); pillars++; }
+for (const p of PILLARS) if (LIVE || list.some((a) => a.pillar === p.key)) { write(path.join(OUT, p.id + '.html'), pillarPage(p, list, cfg)); pillars++; }
 write(path.join(OUT, 'index.html'), indexPage(list, cfg));
 console.log(`Built ${list.length} article page(s) + ${pillars} pillar page(s) + home → ${path.relative(ROOT, OUT)}/`);
