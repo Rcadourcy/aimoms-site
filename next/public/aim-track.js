@@ -1,4 +1,4 @@
-// The AIM event tracking for GA4. One file, loaded by every /editorial page.
+// The AIM event tracking for GA4. One file, loaded by every page of The AIM (/theaim).
 // Consent: nothing is sent unless the visitor chose Accept All (localStorage aimoms_cookies = 'all').
 // This file also loads /ga.js after Accept All, since the static AIM pages don't render the Next Analytics component.
 // Everything is read from the page markup (or data-track-* attributes), so new articles are tracked automatically.
@@ -35,7 +35,7 @@
 
   // ---- Page context: shared params on every event ----
   var path = location.pathname.replace(/\/+$/, '').replace(/\.html$/, '');
-  var slug = (path.match(/\/editorial\/([a-z0-9-]+)$/) || [])[1] || (/\/editorial$/.test(path) ? 'index' : '');
+  var slug = (path.match(/\/(?:editorial|theaim)\/([a-z0-9-]+)$/) || [])[1] || (/\/(?:editorial|theaim)$/.test(path) ? 'index' : '');
   var art = null;
   d.querySelectorAll('script[type="application/ld+json"]').forEach(function (s) {
     try { var j = JSON.parse(s.textContent); if (j['@type'] === 'Article') art = j; } catch (e) {}
@@ -113,8 +113,8 @@
     if (url.hostname === 'aimoms.ai' || url.host === location.host) {
       if (el.matches('.navcta')) return send('cta_click', { cta_name: 'get_my_time_back', cta_location: loc, link_path: p });
       if (CTA[p]) return send('cta_click', { cta_name: attr(el, 'cta') || CTA[p], cta_location: loc, link_path: p });
-      var m = p.match(/^\/editorial\/([a-z0-9-]+)$/);
-      if (p === '/editorial' || m) {
+      var m = p.match(/^\/(?:editorial|theaim)\/([a-z0-9-]+)$/);
+      if (p === '/editorial' || p === '/theaim' || m) {
         var target = m ? m[1] : 'index';
         if (el.closest('aside.news')) return send('trending_click', { target_slug: target, link_text: txt(el) });
         if (el.closest('nav.pnav')) return send('section_nav_click', { target_section: txt(el), target_slug: target });
@@ -170,7 +170,7 @@
   seen(d.querySelector('section.takeaways:not(.intoc)'), function () { send('takeaways_view', {}); });
   seen(d.querySelector('.hero-img img, .hero-img'), function () { send('hero_view', {}); }, 0.3);
   seen(d.querySelector('section.top a.lead'), function () {
-    var a = d.querySelector('section.top a.lead'), m = (a.getAttribute('href') || '').match(/\/editorial\/([a-z0-9-]+)/);
+    var a = d.querySelector('section.top a.lead'), m = (a.getAttribute('href') || '').match(/\/(?:editorial|theaim)\/([a-z0-9-]+)/);
     send('hero_carousel_view', { slide: 1, target_slug: m ? m[1] : '' });
   });
   seen(d.querySelector('aside.news'), function () { send('trending_view', {}); });

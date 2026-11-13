@@ -2,15 +2,15 @@ import type { NextConfig } from "next";
 import path from "node:path";
 import fs from "node:fs";
 
-// The AIM (/editorial) is built to static pages by scripts/build-editorial.mjs.
-// Old /article?id= links go to the new article when it's published, otherwise to /editorial.
+// The AIM (/theaim) is built to static pages in public/editorial by scripts/build-editorial.mjs.
+// Old /article?id= links go to the new article when it's published, otherwise to /theaim.
 function editorialRedirects() {
   const dir = path.join(__dirname, 'content/editorial');
   const out: { source: string; has: { type: 'query'; key: string; value: string }[]; destination: string; permanent: boolean }[] = [];
   for (const f of fs.readdirSync(dir)) {
     if (!f.endsWith('.json') || f.startsWith('_')) continue;
     const a = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    const dest = a.status === 'draft' ? '/editorial' : `/editorial/${a.slug}`;
+    const dest = a.status === 'draft' ? '/theaim' : `/theaim/${a.slug}`;
     for (const id of [a.legacyId, ...(a.mergedIds || [])].filter(Boolean)) {
       for (const source of ['/article', '/article.html']) out.push({ source, has: [{ type: 'query', key: 'id', value: id }], destination: dest, permanent: true });
     }
@@ -34,9 +34,12 @@ const nextConfig: NextConfig = {
       { source: '/quiz', destination: '/#quiz', permanent: true },
       { source: '/quiz.html', destination: '/#quiz', permanent: true },
       ...editorialRedirects(),
-      { source: '/article', destination: '/editorial', permanent: true },
-      { source: '/article.html', destination: '/editorial', permanent: true },
-      { source: '/editorial.html', destination: '/editorial', permanent: true },
+      { source: '/article', destination: '/theaim', permanent: true },
+      { source: '/article.html', destination: '/theaim', permanent: true },
+      { source: '/editorial.html', destination: '/theaim', permanent: true },
+      // Nov 13: The AIM moved from /editorial to /theaim (photos stay at /editorial/img).
+      { source: '/editorial', destination: '/theaim', permanent: true },
+      { source: '/editorial/:slug([a-z0-9-]+)', destination: '/theaim/:slug', permanent: true },
     ];
   },
   async rewrites() {
@@ -56,8 +59,8 @@ const nextConfig: NextConfig = {
         { source: '/claude-duet', destination: '/claude-duet.html' },
         { source: '/corporate', destination: '/corporate-v2.html' },
         { source: '/membership', destination: '/membership-v2.html' },
-        { source: '/editorial', destination: '/editorial/index.html' },
-        { source: '/editorial/:slug([a-z0-9-]+)', destination: '/editorial/:slug.html' },
+        { source: '/theaim', destination: '/editorial/index.html' },
+        { source: '/theaim/:slug([a-z0-9-]+)', destination: '/editorial/:slug.html' },
       ],
       afterFiles: [],
       fallback: [],

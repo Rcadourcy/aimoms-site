@@ -477,11 +477,13 @@ list.sort((x, y) => (y.date || '').localeCompare(x.date || '') || x.title.locale
 // In a launch build, launchHome (lead, side) matches the articles the launch home page features up top.
 const cfg = LAUNCH && cfg0.launchHome ? { ...cfg0, ...cfg0.launchHome } : cfg0;
 fs.mkdirSync(OUT, { recursive: true });
+// The live site serves The AIM at /theaim (files stay in public/editorial, photos at /editorial/img).
+const write = (f, html) => fs.writeFileSync(f, LIVE ? html.replace(/\/editorial(?!\/img\/)(?=[\/"'?#<\s]|$)/g, '/theaim') : html);
 for (const f of fs.readdirSync(OUT)) if (f.endsWith('.html')) fs.unlinkSync(path.join(OUT, f));
-for (const a of loaded) fs.writeFileSync(path.join(OUT, a.slug + '.html'), articlePage(a, list));
+for (const a of loaded) write(path.join(OUT, a.slug + '.html'), articlePage(a, list));
 // Review-only test versions with the video, listen and highlights top (never in the production build).
 if (ALL) for (const a of list) if (a.video) fs.writeFileSync(path.join(OUT, a.slug + '-video.html'), articlePage(a, list, { video: true }));
 let pillars = 0;
-for (const p of PILLARS) if (list.some((a) => a.pillar === p.key)) { fs.writeFileSync(path.join(OUT, p.id + '.html'), pillarPage(p, list, cfg)); pillars++; }
-fs.writeFileSync(path.join(OUT, 'index.html'), indexPage(list, cfg));
+for (const p of PILLARS) if (list.some((a) => a.pillar === p.key)) { write(path.join(OUT, p.id + '.html'), pillarPage(p, list, cfg)); pillars++; }
+write(path.join(OUT, 'index.html'), indexPage(list, cfg));
 console.log(`Built ${list.length} article page(s) + ${pillars} pillar page(s) + home → ${path.relative(ROOT, OUT)}/`);

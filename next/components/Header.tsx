@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const MOBILE_LINKS: { href: string; label: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/editorial', label: 'THE AIM' },
+  { href: '/theaim', label: 'THE AIM' },
   { href: '/build-aime', label: 'BUILD AIME · $97' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },
@@ -19,7 +19,7 @@ const MOBILE_LINKS: { href: string; label: string }[] = [
 
 const TOP_LINKS: { href: string; label: string; sub?: string }[] = [
   { href: '/#quiz', label: 'START HERE' },
-  { href: '/editorial', label: 'THE AIM' },
+  { href: '/theaim', label: 'THE AIM' },
   { href: '/build-aime', label: 'BUILD AIME' },
   { href: '/foundations', label: 'FOUNDATIONS COURSE' },
   { href: '/nyc', label: 'IN PERSON' },

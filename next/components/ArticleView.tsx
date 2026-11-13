@@ -133,7 +133,7 @@ export default function ArticleView({
 
       <div className="article-wrap">
         <div style={{ paddingTop: 32 }}>
-          <Link href="/editorial" className="back-link">The Edit</Link>
+          <Link href="/theaim" className="back-link">The AIM</Link>
         </div>
 
         <div className="article-meta">

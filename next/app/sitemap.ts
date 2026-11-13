@@ -6,7 +6,7 @@ const BASE = 'https://aimoms.ai';
 
 // Public, indexable routes only. Excludes *-register / *-thank-you / *-success
 // (noindex transactional pages) and the /foundations-course stub. Every page of The AIM
-// (built to public/editorial) is listed at its /editorial/<slug> URL.
+// (built to public/editorial) is listed at its /theaim/<slug> URL.
 const ROUTES = [
   '',
   'foundations',
@@ -18,7 +18,7 @@ const ROUTES = [
   'workshop',
   'shop',
   'quiz',
-  'editorial',
+  'theaim',
   'experiences',
   'events',
   'community',
@@ -51,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dir = path.join(process.cwd(), 'public/editorial');
   const slugs = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.html') && f !== 'index.html').map((f) => f.replace(/\.html$/, '')) : [];
   const articles: MetadataRoute.Sitemap = slugs.map((slug) => ({
-    url: `${BASE}/editorial/${slug}`,
+    url: `${BASE}/theaim/${slug}`,
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
