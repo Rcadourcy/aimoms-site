@@ -76,10 +76,10 @@ const CSS = `
 .ed .mast{padding-top:56px}
 .ed .mast-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding-bottom:30px}
 .ed .mast-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 18px}
-.ed .mast h1,.ed .mast .name{margin:0;font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(54px,8vw,104px);line-height:.9;letter-spacing:-.02em}
+.ed .mast h1,.ed .mast .name{margin:0;font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(48px,7vw,92px);line-height:.9;letter-spacing:-.02em}
 .ed .mast .by{display:inline-flex;align-items:center;gap:10px;font:700 16px 'Be Vietnam Pro',sans-serif;letter-spacing:.02em;white-space:nowrap}
 .ed .mast .by::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pink);flex:none}
-.ed .mast .tag{margin:20px 0 0;font-size:18px;line-height:1.55;color:var(--navy);max-width:50ch}
+.ed .mast .tag{margin:20px 0 0;font-size:17px;line-height:1.55;color:var(--navy);max-width:50ch}
 /* Navy masthead (approved by Raquel, Nov 12) */
 .ed .mast{background:var(--navy);color:#fff;box-shadow:0 0 0 100vmax var(--navy);clip-path:inset(0 -100vmax);padding-bottom:4px}
 .ed .mast h1,.ed .mast .name,.ed .mast .by{color:#fff}
@@ -102,8 +102,8 @@ const CSS = `
 .ed .lead{padding-right:32px;border-right:1px solid var(--rule)}
 .ed .lead .ph{aspect-ratio:3/2}
 .ed .lead .kicker{margin-top:18px}
-.ed .lead h2{margin:8px 0 10px;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(30px,3.4vw,44px);line-height:1.06;letter-spacing:-.02em}
-.ed .lead p{margin:0;font-size:17px;line-height:1.55;color:var(--mid);max-width:640px}
+.ed .lead h2{margin:8px 0 10px;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(26px,3vw,39px);line-height:1.06;letter-spacing:-.02em}
+.ed .lead p{margin:0;font-size:16px;line-height:1.55;color:var(--mid);max-width:640px}
 .ed .side{padding-left:32px;display:flex;flex-direction:column}
 .ed .side a{display:block;padding:0 0 22px}
 .ed .side a+a{padding-top:22px;border-top:1px solid var(--rule)}
@@ -111,23 +111,23 @@ const CSS = `
 .ed .news{padding-left:32px}
 .ed .news .box{border-top:3px solid var(--navy);padding-top:12px}
 .ed .news .date{font-size:12px;color:var(--mid);margin-top:4px}
-.ed .news h2{margin:6px 0 14px;font-family:'Outfit',sans-serif;font-weight:800;font-size:24px;line-height:1.15}
+.ed .news h2{margin:6px 0 14px;font-family:'Outfit',sans-serif;font-weight:800;font-size:21px;line-height:1.15}
 .ed .news ol{list-style:none;margin:0;padding:0;counter-reset:n}
 .ed .news li{counter-increment:n;display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--rule);font-size:15px;line-height:1.4;font-weight:600}
 .ed .news li::before{content:counter(n);font:italic 700 20px 'Playfair Display',Georgia,serif;color:var(--pink);min-width:16px;line-height:1.1}
 .ed .news .go{display:inline-block;margin:14px 16px 0 0;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--pink);padding-bottom:2px}
-.ed .side h3{margin:6px 0 0;font-family:'Outfit',sans-serif;font-weight:800;font-size:21px;line-height:1.18}
+.ed .side h3{margin:6px 0 0;font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;line-height:1.18}
 
 /* sections */
 .ed .sec{padding-top:56px}
 .ed .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-top:3px solid var(--navy);padding-top:14px;margin-bottom:24px}
-.ed .sec-head h2{margin:0;font-family:'Outfit',sans-serif;font-weight:900;font-size:34px;letter-spacing:-.01em;line-height:1.05}
+.ed .sec-head h2{margin:0;font-family:'Outfit',sans-serif;font-weight:900;font-size:30px;letter-spacing:-.01em;line-height:1.05}
 .ed .sec-head p{margin:6px 0 0;font-size:15px;color:var(--mid)}
 .ed .sec-head .all{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:2px}
 .ed .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .ed .tile{display:block}
 .ed .tile .ph{aspect-ratio:4/3;margin-bottom:12px}
-.ed .tile h3{margin:6px 0 6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:19px;line-height:1.22}
+.ed .tile h3{margin:6px 0 6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:18px;line-height:1.22}
 .ed .tile p{margin:0 0 6px;font-size:14px;line-height:1.5;color:var(--mid)}
 .ed .tile.room{position:relative;color:#fff;background:var(--navy);display:flex;flex-direction:column}
 .ed .tile.room .ph{margin:0}
@@ -138,7 +138,7 @@ const CSS = `
 .ed .tile.room .go{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;border-bottom:1px solid var(--pink)}
 .ed .start{display:flex;flex-direction:column}
 .ed .start .kicker{padding-bottom:10px;border-bottom:1px solid var(--navy)}
-.ed .start a{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule);font-family:'Outfit',sans-serif;font-weight:800;font-size:17px;line-height:1.25}
+.ed .start a{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule);font-family:'Outfit',sans-serif;font-weight:800;font-size:16px;line-height:1.25}
 .ed .start a b{font:italic 700 26px 'Playfair Display',Georgia,serif;color:var(--pink);min-width:22px}
 .ed .results{padding-top:36px}
 .ed .results[hidden]{display:none}
@@ -147,8 +147,8 @@ const CSS = `
 /* pillar page */
 .ed .p-head{padding-top:28px;padding-bottom:8px}
 .ed .p-head .crumb{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
-.ed .p-head h1{margin:10px 0 8px;font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-.02em}
-.ed .p-head p{margin:0;font-size:18px;color:var(--mid);max-width:640px}
+.ed .p-head h1{margin:10px 0 8px;font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(39px,5.3vw,67px);line-height:.98;letter-spacing:-.02em}
+.ed .p-head p{margin:0;font-size:17px;color:var(--mid);max-width:640px}
 .ed .p-head .count{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
 .ed .jump{display:flex;gap:8px;flex-wrap:wrap;padding:18px 0 4px}
 .ed .jump a{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border:1px solid var(--navy);border-radius:100px;font-size:12px;font-weight:600}
@@ -159,12 +159,12 @@ const CSS = `
 .ed .nl{margin-top:80px;margin-bottom:-72px;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}
 .ed .nl .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px 72px;align-items:end;padding-top:64px;padding-bottom:64px}
 .ed .nl .kicker{color:var(--pink)}
-.ed .nl h2{margin:14px 0 12px;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(34px,4.4vw,52px);line-height:1.04;letter-spacing:-.02em;color:#fff}
+.ed .nl h2{margin:14px 0 12px;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(30px,3.9vw,46px);line-height:1.04;letter-spacing:-.02em;color:#fff}
 .ed .nl .accent{color:var(--pink)}
-.ed .nl p{margin:0;font-size:16px;line-height:1.55;color:rgba(255,255,255,.78);max-width:460px}
+.ed .nl p{margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.78);max-width:460px}
 .ed .nl form{display:flex;align-items:flex-end;gap:20px;border-bottom:1px solid rgba(255,255,255,.55);transition:border-color .2s}
 .ed .nl form:focus-within{border-bottom-color:var(--pink)}
-.ed .nl input[type=email]{flex:1;min-width:0;min-height:52px;padding:0;border:0;border-radius:0;background:transparent;color:#fff;font-size:19px;font-family:inherit;outline:0}
+.ed .nl input[type=email]{flex:1;min-width:0;min-height:52px;padding:0;border:0;border-radius:0;background:transparent;color:#fff;font-size:18px;font-family:inherit;outline:0}
 .ed .nl input[type=email]::placeholder{color:rgba(255,255,255,.55)}
 .ed .nl button{min-height:52px;padding:0;background:none;color:var(--pink);border:0;border-radius:0;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap}
 .ed .nl button:after{content:" →"}
@@ -176,17 +176,17 @@ const CSS = `
 .ed .crumbs a{color:var(--mid)}
 .ed .art{max-width:740px;margin:0 auto;padding-left:24px;padding-right:24px}
 .ed .art-head{padding-top:28px;padding-bottom:26px;text-align:center}
-.ed .art-head h1{margin:14px 0 0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(34px,4.6vw,54px);line-height:1.05;letter-spacing:-.025em}
-.ed .art-head .dek{margin:16px auto 0;font-size:19px;line-height:1.55;color:var(--mid);max-width:620px}
+.ed .art-head h1{margin:14px 0 0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-.025em}
+.ed .art-head .dek{margin:16px auto 0;font-size:18px;line-height:1.55;color:var(--mid);max-width:620px}
 .ed .byline{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin-top:20px;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-size:13px;color:var(--mid)}
 .ed .byline b{color:var(--navy)}
 .ed .hero-img{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
 .ed .hero-img img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 25%;display:block}
 .ed .hero-img figcaption{font-size:12px;color:var(--muted);margin-top:8px}
-.ed .prose{padding-top:12px;font-size:18px;line-height:1.72;color:#1f2433}
+.ed .prose{padding-top:12px;font-size:17px;line-height:1.72;color:#1f2433}
 .ed .prose p{margin:0 0 20px}
-.ed .prose h2{scroll-margin-top:80px;margin:52px 0 16px;font-family:'Outfit',sans-serif;font-weight:800;font-size:29px;line-height:1.15;letter-spacing:-.015em;color:var(--navy)}
-.ed .prose h3{margin:32px 0 10px;font-family:'Outfit',sans-serif;font-weight:800;font-size:21px;color:var(--navy)}
+.ed .prose h2{scroll-margin-top:80px;margin:52px 0 16px;font-family:'Outfit',sans-serif;font-weight:800;font-size:26px;line-height:1.15;letter-spacing:-.015em;color:var(--navy)}
+.ed .prose h3{margin:32px 0 10px;font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:var(--navy)}
 .ed .prose ul,.ed .prose ol{margin:0 0 22px;padding-left:22px}
 .ed .prose li{margin:0 0 10px;padding-left:4px}
 .ed .prose ul li::marker{color:var(--pink)}
@@ -195,13 +195,13 @@ const CSS = `
 .ed code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:var(--paper);color:var(--navy);padding:1px 6px;white-space:nowrap}
 .ed .takeaways{margin:28px 0 36px;padding:20px 0;border-top:1px solid var(--navy);border-bottom:1px solid var(--navy)}
 .ed .takeaways h2{margin:0 0 12px;font:700 12px 'Be Vietnam Pro',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--pink-text)}
-.ed .takeaways ul{margin:0;font-size:16px;line-height:1.6}
+.ed .takeaways ul{margin:0;font-size:15px;line-height:1.6}
 .ed .answer{border-left:3px solid var(--pink);padding:4px 0 4px 20px;margin:0 0 22px}
 .ed .tbl{overflow-x:auto;margin:0 0 26px}
 .ed table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
 .ed th{text-align:left;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:10px 12px;border-bottom:2px solid var(--navy)}
 .ed td{padding:12px;border-bottom:1px solid var(--rule);vertical-align:top}
-.ed .prompt{position:relative;background:var(--navy);color:#fff;padding:26px 28px 22px;margin:0 0 26px;font-size:16px;line-height:1.65}
+.ed .prompt{position:relative;background:var(--navy);color:#fff;padding:26px 28px 22px;margin:0 0 26px;font-size:15px;line-height:1.65}
 .ed .prompt .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
 .ed .prompt p{margin:0 0 12px} .ed .prompt strong{color:var(--pink)}
 .ed .prompt code{background:rgba(255,255,255,.12);color:#fff}
@@ -213,21 +213,23 @@ const CSS = `
 .ed .faq{margin-top:52px}
 .ed .faq details{border-top:1px solid var(--rule);padding:16px 0}
 .ed .faq details:last-child{border-bottom:1px solid var(--rule)}
-.ed .faq summary{font-weight:700;font-size:17px;cursor:pointer;color:var(--navy)}
-.ed .faq details p{margin:10px 0 0;font-size:16px}
+.ed .faq summary{font-weight:700;font-size:16px;cursor:pointer;color:var(--navy)}
+.ed .faq details p{margin:10px 0 0;font-size:15px}
 .ed .takeaways.intoc{margin-top:-20px;border-top:0}
-.ed .sources h2{font-size:20px;margin-top:32px}
+.ed .sources h2{font-size:19px;margin-top:32px}
 .ed .sources ul{font-size:15px}
 .ed .disclosure{margin:24px 0 0;font-size:14px;line-height:1.6;color:var(--mid)}
 .ed .closing{margin-top:52px;padding-top:8px;border-top:3px solid var(--navy)}
 .ed .author{margin-top:36px;padding:24px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;gap:22px;align-items:center}
 .ed .author img{flex:0 0 96px;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center 22%}
-.ed .author .name{margin:6px 0 6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:20px}
+.ed .author .name{margin:6px 0 6px;font-family:'Outfit',sans-serif;font-weight:800;font-size:19px}
 .ed .author p{margin:0;font-size:15px;line-height:1.6;color:var(--mid)}
 .ed .related{margin-top:64px}
 @media (max-width:1000px){.ed .grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:860px){.ed .news{padding-left:0;padding-top:24px}.ed .top{grid-template-columns:1fr}.ed .lead{padding-right:0;border-right:0;padding-bottom:24px;border-bottom:0}.ed .side{padding-left:0;padding-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:20px}.ed .side a,.ed .side a+a{padding:0;border:0}}
-@media (max-width:700px){.ed .mast-row{flex-direction:column;align-items:stretch}.ed .search{flex:none}.ed .grid{gap:22px 16px}.ed .tile h3{font-size:16px}.ed .tile p{display:none}.ed .side{grid-template-columns:1fr}.ed .side h3{font-size:18px}.ed .prose{font-size:17px}.ed .prose h2{font-size:25px}.ed .prompt{padding:54px 20px 20px}.ed .sec-head h2{font-size:28px}.ed .nl .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:48px}.ed .author{align-items:flex-start}.ed .author img{width:72px;height:72px;flex-basis:72px}}
+@media (max-width:700px){.ed .mast-row{flex-direction:column;align-items:stretch}.ed .search{flex:none}.ed .grid{gap:22px 16px}.ed .tile h3{font-size:15px}.ed .tile p{display:none}.ed .side{grid-template-columns:1fr}.ed .side h3{font-size:17px}.ed .prose{font-size:16px}.ed .prose h2{font-size:22px}.ed .prompt{padding:54px 20px 20px}.ed .sec-head h2{font-size:25px}.ed .nl .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:48px}.ed .author{align-items:flex-start}.ed .author img{width:72px;height:72px;flex-basis:72px}}
+/* lead carousel (from the Marketing HQ version of the home page) */
+.ed .lead-car{display:flex;flex-direction:column;min-width:0;position:relative}.ed .lc-track{display:grid}.ed .lc-slide{grid-area:1/1;display:block;color:inherit;text-decoration:none;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility 0s .5s}.ed .lc-slide.on{opacity:1;visibility:visible;transition:opacity .5s ease}.ed .lc-ctl{position:absolute;left:0;right:32px;top:0;aspect-ratio:3/2;display:flex;align-items:flex-end;gap:10px;padding:16px;pointer-events:none;z-index:2}.ed .lc-ctl>*{pointer-events:auto}.ed .lc-dots{display:flex;gap:8px;background:rgba(6,13,38,.55);padding:8px 10px;border-radius:999px}.ed .lc-dots button{width:10px;height:10px;border-radius:50%;border:1.5px solid #fff;background:none;padding:0;cursor:pointer}.ed .lc-dots button[aria-current="true"]{background:var(--pink);border-color:var(--pink)}.ed .lc-arrow{width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--navy);font-size:20px;line-height:1;cursor:pointer;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.18)}.ed .lc-arrow:hover{background:#fff}@media (max-width:860px){.ed .lc-ctl{right:0}}@media (prefers-reduced-motion:reduce){.ed .lc-slide,.ed .lc-slide.on{transition:none}}
 `;
 
 const NEWSLETTER = `<section class="nl" aria-label="Newsletter"><div class="wrap">
@@ -422,7 +424,9 @@ function indexPage(list, cfg) {
   const lead = by(cfg.lead) || list[0];
   const news = list.find((a) => a.pillar === 'AI News');
   const side = (cfg.side || []).map(by).filter(Boolean).filter((a) => a !== lead).slice(0, 2);
-  const shown = new Set([lead, ...side].filter(Boolean).map((a) => a.slug));
+  // Lead carousel: the lead plus the launch picks (then other photo stories), up to 3, never the AI news.
+  const slides = [lead, ...((cfg0.launchHome || {}).side || []).map(by), ...side, ...list.filter((a) => a.hero?.src)].filter((a, i, arr) => a && a !== news && a.pillar !== 'AI News' && arr.indexOf(a) === i).slice(0, 3);
+  const shown = new Set([lead, ...side, ...slides].filter(Boolean).map((a) => a.slug));
   const pick = (key, n, prefer = []) => {
     const pool = list.filter((a) => a.pillar === key && !shown.has(a.slug)).sort((x, y) => !!y.hero?.src - !!x.hero?.src);
     const out = [...prefer.map(by).filter((a) => a && pool.includes(a)), ...pool].filter((a, i, arr) => arr.indexOf(a) === i).slice(0, n);
@@ -452,7 +456,8 @@ function indexPage(list, cfg) {
     k: plain([a.title, a.dek, a.cluster, pillarOf(a).name, ...(a.brief?.primaryKeywords || []), ...(a.brief?.supportingTerms || [])].join(' ')).toLowerCase() }));
   const main = `${MAST(null)}
 <section class="wrap top" aria-label="Top stories">
-  ${lead ? `<a class="lead" href="/editorial/${lead.slug}">${ph(lead.hero?.src, lead.hero?.alt, '', lead.hero?.focus)}<span class="kicker">${esc(kicker(lead))}</span><h2>${esc(plain(lead.cardTitle || lead.title))}</h2><p>${esc(plain(lead.dek))}</p></a>` : ''}
+  ${slides.length > 1 ? `<div class="lead lead-car" role="region" aria-roledescription="carousel" aria-label="Featured articles"><div class="lc-track">${slides.map((a, k) => `<a class="lc-slide${k ? '' : ' on'}" href="/editorial/${a.slug}">${ph(a.hero?.src, a.hero?.alt, '', a.hero?.focus)}<span class="kicker">${esc(kicker(a))}</span><h2>${esc(plain(a.cardTitle || a.title))}</h2><p>${esc(plain(a.dek))}</p></a>`).join('')}</div><div class="lc-ctl"><button type="button" class="lc-arrow" data-d="-1" aria-label="Previous article">‹</button><div class="lc-dots">${slides.map((a, k) => `<button type="button" aria-label="Article ${k + 1} of ${slides.length}"${k ? '' : ' aria-current="true"'}></button>`).join('')}</div><button type="button" class="lc-arrow" data-d="1" aria-label="Next article">›</button></div></div>`
+    : lead ? `<a class="lead" href="/editorial/${lead.slug}">${ph(lead.hero?.src, lead.hero?.alt, '', lead.hero?.focus)}<span class="kicker">${esc(kicker(lead))}</span><h2>${esc(plain(lead.cardTitle || lead.title))}</h2><p>${esc(plain(lead.dek))}</p></a>` : ''}
   ${news ? `<aside class="news" aria-label="This week in AI"><div class="box"><span class="kicker">This week in AI</span><div class="date">${fmtDate(news.date)}</div><h2><a href="/editorial/${news.slug}">${esc(plain(news.title))}</a></h2><ol>${news.takeaways.map((t) => `<li>${esc(plain((t.match(/^\*\*(.+?)\*\*/) || [, t])[1]))}</li>`).join('')}</ol><a class="go" href="/editorial/${news.slug}">What it means for you</a><a class="go" href="/editorial/ai-news">All AI news</a></div></aside>` : `<div class="side">${side.map((a) => `<a href="/editorial/${a.slug}">${ph(a.hero?.src, a.hero?.alt, '', a.hero?.focus)}<span class="kicker">${esc(kicker(a))}</span><h3>${esc(plain(a.cardTitle || a.title))}</h3></a>`).join('')}</div>`}
 </section>
 <section class="wrap results" id="results" hidden aria-live="polite"><div class="sec-head"><h2>Results</h2></div><div class="grid" id="results-grid"></div><p class="empty" id="results-empty" hidden>Nothing yet. Try another word, like dinner, school or prompt.</p></section>
@@ -463,7 +468,8 @@ ${sections}
 var q=document.getElementById('search'),res=document.getElementById('results'),grid=document.getElementById('results-grid'),secs=document.getElementById('sections'),top=document.querySelector('.top');
 function e(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function run(){var t=(q.value||'').trim().toLowerCase();if(!t){res.hidden=true;secs.hidden=false;top.hidden=false;return}var m=IDX.filter(function(a){return t.split(/\\s+/).every(function(w){return a.k.indexOf(w)>-1})});grid.innerHTML=m.map(function(a){return '<a class="tile" href="/editorial/'+a.s+'">'+(a.i?'<div class="ph" role="img" style="background-image:url(\\''+e(a.i)+'\\')"></div>':'<div class="ph none"></div>')+'<span class="kicker">'+e(a.p+' · '+a.c)+'</span><h3>'+e(a.t)+'</h3><p>'+e(a.d)+'</p><span class="meta">'+e(a.r)+' read</span></a>'}).join('');document.getElementById('results-empty').hidden=m.length>0;res.hidden=false;secs.hidden=true;top.hidden=true}
-q.addEventListener('input',run);var u=new URLSearchParams(location.search).get('q');if(u){q.value=u;run()}`;
+q.addEventListener('input',run);var u=new URLSearchParams(location.search).get('q');if(u){q.value=u;run()}
+(function(){var c=document.querySelector(".lead-car");if(!c)return;var s=c.querySelectorAll(".lc-slide"),d=c.querySelectorAll(".lc-dots button"),i=0,t=null,paused=false;var still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;function go(n){i=(n+s.length)%s.length;s.forEach(function(x,k){x.classList.toggle("on",k===i);x.setAttribute("aria-hidden",k===i?"false":"true");x.tabIndex=k===i?0:-1});d.forEach(function(x,k){x.setAttribute("aria-current",k===i?"true":"false")})}function run(){clearInterval(t);if(!still)t=setInterval(function(){if(!paused)go(i+1)},6000)}d.forEach(function(x,k){x.onclick=function(){go(k);run()}});c.querySelectorAll(".lc-arrow").forEach(function(b){b.onclick=function(){go(i+Number(b.dataset.d));run()}});c.addEventListener("mouseenter",function(){paused=true});c.addEventListener("mouseleave",function(){paused=false});c.addEventListener("focusin",function(){paused=true});c.addEventListener("focusout",function(){paused=false});var x0=null;c.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});c.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));run()}x0=null});go(0);run()})();`;
   const ld = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'The AIM by ai.moms™', url: SITE + '/editorial', hasPart: list.map((a) => ({ '@type': 'Article', headline: plain(a.title), url: `${SITE}/editorial/${a.slug}` })) };
   return page({ title: 'The AIM by ai.moms™: AI News, Guides and Prompts for Moms', description: 'The AIM by ai.moms™: AI news, articles, guides and copy-ready prompts for the mom at home, the mom at work and the mompreneur.', canonical: SITE + '/editorial', ogType: 'website', image: absImg(lead?.hero?.src), extraHead: `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`, main, script: js });
 }
