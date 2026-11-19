@@ -1,5 +1,5 @@
 {
-  "lead": "ai-prompts-for-moms-holiday-gifts",
+  "lead": "thanksgiving-planning-with-ai-for-moms",
   "side": [
     "ai-family-command-center",
     "ai-for-moms-start-here"
@@ -74,9 +74,9 @@
     "ai-travel-prompts-for-moms"
   ],
   "launchHome": {
-    "lead": "ai-prompts-for-moms-holiday-gifts",
+    "lead": "thanksgiving-planning-with-ai-for-moms",
     "side": [
-      "thanksgiving-planning-with-ai-for-moms",
+      "ai-prompts-for-moms-holiday-gifts",
       "which-ai-should-moms-use"
     ]
   }
