@@ -308,6 +308,7 @@ ${extraHead}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap">
 ${FBQ_STUB}
 <style>${CHROME_CSS}${CSS}${DEMO_CSS()}${VIDEO_CSS}${AIME_CSS}${POPUP_CSS}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
 <script src="/aim-track.js" defer></script>

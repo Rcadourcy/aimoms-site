@@ -1,0 +1,431 @@
+{
+  "slug": "thanksgiving-planning-with-ai-for-moms",
+  "status": "published",
+  "pillar": "Seasonal",
+  "cluster": "Thanksgiving",
+  "title": "The AI Prompt for Moms to Use This Thanksgiving",
+  "cardTitle": "The AI Prompt for Moms to Use This Thanksgiving",
+  "dek": "The guest list, the menu, the turkey, the oven schedule and the day after: the ai.moms™ Thanksgiving Method plans all of it with you.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-19",
+  "readTime": "8 min",
+  "hero": {
+    "src": "/editorial/img/thanksgiving-planning-with-ai-for-moms.jpg",
+    "alt": "Hands slicing pumpkin pie on a wooden table with braided bread, cranberry drinks and fall leaves"
+  },
+  "takeaways": [
+    "**Start with the interview, not the menu.** The ai.moms™ Thanksgiving Method has Claude ask about your people, your kitchen and your budget before Claude plans anything.",
+    "**Plan backwards from mealtime.** The countdown, the shopping trips and the oven schedule all start from the minute dinner is served.",
+    "**Put a break for you on the plan.** Your Thanksgiving Day timeline includes 15 minutes that belong to you.",
+    "**Aime remembers your family for next year.** Aime, your AI Chief Everything Officer™, is the AI assistant you build in Claude or ChatGPT in about an hour. After she learns your family once in her onboarding interview, she plans Thanksgiving and the rest of the year."
+  ],
+  "jumpLinks": [
+    "How Do I Set Up the Thanksgiving Prompt?",
+    "What Is the Full ai.moms™ Thanksgiving Method Prompt?",
+    "Planning Thanksgiving With AI: Frequently Asked Questions"
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "The ai.moms™ Thanksgiving Method is one AI prompt that plans Thanksgiving with you, from the guest list to the day after. Paste the prompt into Claude, answer Claude’s interview questions, and Claude builds the menu, the shopping lists, the oven schedule and your Thanksgiving Day timeline around your family. The prompt is written in the RCTF method: Role, Context, Task, Format."
+    },
+    {
+      "type": "p",
+      "text": "Moms, if you’re already feeling the holiday stress, you’re not alone. In a [2025 survey of 1,000 moms by Calm](https://www.calm.com/blog/not-calm-holiday), 65% said the pressure to make the holidays perfect feels overwhelming, and 59% named the mental load of planning and scheduling as a stress trigger."
+    },
+    {
+      "type": "p",
+      "text": "The cooking is only part of the Thanksgiving load. The rest sits in the back of your head at 10pm: who hasn’t answered the group text, whether your sister-in-law is still dairy-free, if there are enough chairs, and how the stuffing and the sweet potatoes are going to share one oven."
+    },
+    {
+      "type": "h2",
+      "text": "How Can Moms Use AI to Plan Thanksgiving?"
+    },
+    {
+      "type": "answer",
+      "text": "**The short answer:** give Claude one detailed prompt that interviews you first, then plans in order: the guest list, the menu and quantities, the turkey, the shopping, the make-ahead plan, the oven schedule, the kids, the table, your Thanksgiving Day timeline and the day after. You answer the questions. Claude does the lists, the math and the timeline, and you make every call."
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/thanksgiving-dinner-table-square.jpg",
+      "alt": "An overhead view of a Thanksgiving dinner table with turkey, mashed potatoes, gravy, rolls, cranberry sauce and place settings",
+      "portrait": true
+    },
+    {
+      "type": "h2",
+      "text": "How Do I Set Up the Thanksgiving Prompt?"
+    },
+    {
+      "type": "p",
+      "text": "Set up the ai.moms™ Thanksgiving prompt from your phone or desktop in the Claude or ChatGPT app, and follow these steps:"
+    },
+    {
+      "type": "ol",
+      "items": [
+        "In Claude or ChatGPT, create a Project called “Thanksgiving.” Turn on web search. If you use Google Calendar, connect Google Calendar so your AI can add your reminders.",
+        "Start a new chat inside the Project and paste the prompt below.",
+        "Answer in as much detail as you can. Voice-to-text works well here, so talk instead of typing. Say “skip” to anything that doesn’t apply.",
+        "Next year, open the same Project. The Thanksgiving Project already knows your family, so you start in minutes."
+      ]
+    },
+    {
+      "type": "demo",
+      "label": "Watch it: set up Thanksgiving",
+      "steps": [
+        {
+          "scene": "tg-project",
+          "title": "Make a Project called",
+          "accent": "Thanksgiving.",
+          "caption": "One Project holds the whole plan, and next year it’s still there."
+        },
+        {
+          "scene": "tg-tools",
+          "title": "Turn on",
+          "accent": "web search.",
+          "caption": "Web search looks up store deadlines. Connect Google Calendar so Claude can add your reminders."
+        },
+        {
+          "scene": "tg-paste",
+          "title": "Paste",
+          "accent": "the prompt.",
+          "caption": "Start a new chat inside the Project and paste the Thanksgiving Method. Claude interviews you first."
+        },
+        {
+          "scene": "tg-talk",
+          "title": "Answer by",
+          "accent": "talking.",
+          "caption": "Voice-to-text works well here. Say “skip” to anything that doesn’t apply."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What’s Included in the ai.moms™ Thanksgiving Method?"
+    },
+    {
+      "type": "p",
+      "text": "The AI prompt works through 13 steps in order and checks in with you after each one, so nothing gets planned on a guess."
+    },
+    {
+      "type": "table",
+      "head": [
+        "Step",
+        "What you get back"
+      ],
+      "rows": [
+        [
+          "**1. Get to know our Thanksgiving**",
+          "A short summary of your day, your people, your kitchen and what a win looks like for you"
+        ],
+        [
+          "**2. The guest list, sorted**",
+          "Who’s confirmed, who’s bringing what and allergies next to each name, plus the invite text and a nudge for the maybes"
+        ],
+        [
+          "**3. The menu and the quantities**",
+          "Every dish, who makes it, swaps for allergies and exact amounts for your headcount"
+        ],
+        [
+          "**4. The turkey, handled**",
+          "What size, where and when to order, the day it goes in the fridge to thaw, and a backup plan"
+        ],
+        [
+          "**5. The shopping, split up**",
+          "One list by store section, split into three trips, with a running total"
+        ],
+        [
+          "**6. The make-ahead plan**",
+          "What to freeze now, what to make 2 to 3 days ahead, a fridge plan and a serving dish for every dish"
+        ],
+        [
+          "**7. The oven and stove schedule**",
+          "A timeline worked backwards from mealtime, so everything comes out hot at the same time"
+        ],
+        [
+          "**8. The kids’ table, covered**",
+          "Activities by age, small jobs, a supply list and kid-friendly food"
+        ],
+        [
+          "**9. The table and the seating**",
+          "How to set it, a seating chart idea, simple decorations and one gratitude moment"
+        ],
+        [
+          "**10. The playlist and the feel**",
+          "Music for cooking, dinner and after, plus a self-serve drinks station"
+        ],
+        [
+          "**11. Your Thanksgiving Day timeline**",
+          "Hour by hour for the day before and the day of, a job for every helper and a 15-minute break for you"
+        ],
+        [
+          "**12. If something goes wrong**",
+          "Calm fixes for a frozen turkey, a full oven, lumpy gravy or extra guests"
+        ],
+        [
+          "**13. Cleanup and the day after**",
+          "Jobs for everyone, leftovers to go, three leftover meals, thank-you texts and a note for next year"
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What Is the Full ai.moms™ Thanksgiving Method Prompt?"
+    },
+    {
+      "type": "p",
+      "text": "Here’s the ai.moms™ Thanksgiving Method in RCTF form: Role, Context, Task, Format. The prompt covers the same 13 steps as the table above, written so you can paste them straight into Claude."
+    },
+    {
+      "type": "prompt",
+      "label": "The ai.moms™ Thanksgiving Method",
+      "lines": [
+        "**Role:** You are my Thanksgiving planner. Take the whole thing off my plate, from today through the day after, and build the plan around my family, my kitchen, my budget and my time, so that on the day I actually get to enjoy it.",
+        "**Context:** We’re ==[insert hosting, going to someone else’s house or splitting the day]== on Thursday, November 26, and want to eat at ==[insert time]==. Before you plan anything, interview me in small groups of 2 or 3 questions, one topic at a time, and wait for my answers. Ask about: who’s coming (adults, kids and their ages, who’s staying over, who hasn’t answered); allergies and diets; our non-negotiable dishes and traditions; my ovens, burners, appliances, fridge and counter space; our table, chairs and space; what equipment I have and what I’m missing; my budget and how much I want to cook versus buy or have people bring; who’s helping and who always offers but never follows through; what stressed me out last time; how I want to feel this year; and anything else on my plate that week. If I say “skip” or “not sure,” suggest a sensible default and move on. Keep a running list of everything I tell you and use it in every step.",
+        "**Task:** Work through these steps in order. After each one, show me what you made and ask if I want changes before you move on. 1) A summary of our Thanksgiving for me to confirm. 2) The guest list with who’s bringing what and allergies, a warm invite text and a follow-up for anyone who hasn’t answered. 3) The menu with exact quantities for our headcount plus a little extra for leftovers, who makes each dish, allergy swaps, and a message telling each guest what to bring and how much. 4) The turkey: fresh or frozen, size, where and when to order, the day to start thawing and a backup plan. 5) One shopping list by store section, split into three trips (now, the weekend before, two days before), with a running total. 6) A make-ahead plan, a fridge plan for the night before, and a serving dish and spoon for every dish. 7) An oven and stove schedule worked backwards from mealtime, so everything comes out hot together. 8) Kids’ activities by age, small jobs and a supply list. 9) Table setup, a seating chart idea, simple decorations and one gratitude moment. 10) A playlist plan and a self-serve drinks station. 11) An hour-by-hour timeline for the day before and Thanksgiving Day (when each dish goes in the oven, when guests arrive, when we eat), with a job and a short message for each helper, and a 15-minute break for me. 12) Quick fixes for what usually goes wrong. 13) A cleanup plan, leftovers to go, three easy leftover meals, a thank-you text and a note for next year. Use today’s date to count how many days I have. Search the web for current turkey prices and order deadlines at my stores, delivery slots and recipes. Follow USDA food safety guidance: thaw a frozen turkey in the fridge (about 24 hours for every 4 to 5 pounds), cook it to 165°F in the thickest part of the thigh, breast and stuffing, and get leftovers in the fridge within 2 hours.",
+        "**Format:** Finish with one clean plan organized by date, from today through the day after. Then ask if I want the key dates added to my calendar (order the turkey, start thawing, each shopping trip, set the table, start cooking) and if I want any part turned into a checklist I can print or keep on my phone.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What Should Moms Double-Check Before Acting on the Plan?"
+    },
+    {
+      "type": "p",
+      "text": "AI does the planning. You still make the call, especially on food safety and money."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Use a meat thermometer.** A cook time from a chat is a starting point. The 165°F reading is the finish line.",
+        "**Check every price, deadline and delivery slot** on the store’s own site before you count on it.",
+        "**Confirm allergies with the guest.** Text them the swap Claude suggested and get a yes.",
+        "**Keep private details out.** First initials and ages are plenty. Leave out full names, addresses and anything you wouldn’t hand a babysitter."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What Is an AI Assistant Moms Can Use This Thanksgiving?"
+    },
+    {
+      "type": "p",
+      "text": "Aime is the ai.moms™ AI assistant, your Chief Everything Officer™, built to help moms with Thanksgiving and the rest of the year."
+    },
+    {
+      "type": "p",
+      "text": "A one-off prompt plans one Thanksgiving. Aime learns your family once, in her onboarding interview: who’s in your house, your schedules, and your family’s food allergies and dietary restrictions. After that, Aime plans holidays, birthdays, weekly dinners and grocery lists without starting from scratch."
+    },
+    {
+      "type": "aime",
+      "what": "Thanksgiving",
+      "skill": "/aimoms-celebration",
+      "questions": [
+        {
+          "q": "Are you hosting?",
+          "options": [
+            "Hosting",
+            "Bringing a dish",
+            "Not sure yet"
+          ]
+        },
+        {
+          "q": "About how many people?",
+          "options": [
+            "Under 8",
+            "8 to 12",
+            "13 to 20",
+            "More"
+          ],
+          "on": [
+            1
+          ]
+        },
+        {
+          "q": "Anything to plan around?",
+          "options": [
+            "Food allergies",
+            "Dairy-free",
+            "Vegetarian",
+            "A kids' table",
+            "Travel the day before"
+          ],
+          "multi": true,
+          "on": [
+            0,
+            3
+          ]
+        },
+        {
+          "q": "Where should your plan land?",
+          "options": [
+            "Google Calendar + email",
+            "Email only"
+          ]
+        }
+      ],
+      "lands": [
+        {
+          "when": "Thu, Nov 5",
+          "what": "15 minutes with Aime: headcount and the invite text"
+        },
+        {
+          "when": "Sun, Nov 8",
+          "what": "Nudge the maybes (text already drafted)"
+        },
+        {
+          "when": "Thu, Nov 12",
+          "what": "Order the turkey before your store's deadline"
+        },
+        {
+          "when": "Sat, Nov 14",
+          "what": "Shopping trip one: everything that keeps, by aisle"
+        },
+        {
+          "when": "Sat, Nov 21",
+          "what": "Shopping trip two"
+        },
+        {
+          "when": "Sat, Nov 21",
+          "what": "Turkey into the fridge to thaw: about 1 day for every 4 to 5 lb (USDA)",
+          "byAnswer": {
+            "q": 1,
+            "when": [
+              "Mon, Nov 23",
+              "Sun, Nov 22",
+              "Sat, Nov 21",
+              "Sat, Nov 21"
+            ],
+            "what": [
+              "Turkey (about 10 lb) into the fridge to thaw: about 1 day for every 4 to 5 lb (USDA)",
+              "Turkey (about 12 to 18 lb) into the fridge to thaw: about 1 day for every 4 to 5 lb (USDA)",
+              "Turkey (about 20 to 24 lb) into the fridge to thaw: about 1 day for every 4 to 5 lb (USDA)",
+              "Turkey into the fridge to thaw (for a big group, maybe two smaller birds): about 1 day for every 4 to 5 lb (USDA)"
+            ]
+          }
+        },
+        {
+          "when": "Sun, Nov 22",
+          "what": "Make-aheads that keep: cranberry sauce, pie dough, casseroles to freeze"
+        },
+        {
+          "when": "Tue, Nov 24",
+          "what": "The fresh shopping list, then set the table and pull out the serving dishes"
+        },
+        {
+          "when": "Wed, Nov 25",
+          "what": "Last make-aheads, and print the oven schedule"
+        },
+        {
+          "when": "Thu, Nov 26",
+          "what": "Your Thanksgiving Day timeline: when each dish goes in the oven, when guests arrive, when you eat, plus 15 minutes just for you"
+        }
+      ],
+      "skillPrompt": "/aimoms-celebration Plan our Thanksgiving with the ai.moms™ Thanksgiving Method and add each step to my Google Calendar.",
+      "date": "2026-11-26"
+    }
+  ],
+  "faqTitle": "Planning Thanksgiving With AI: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "How far ahead should I start planning Thanksgiving?",
+      "a": "Three to four weeks is comfortable, but the method works even a week out. The method starts with the headcount, then the menu and the turkey order about two weeks out, the shopping in three trips and the cooking timeline the week of. If you’re starting late, tell Claude how many days you have, and Claude will compress the plan."
+    },
+    {
+      "q": "Can I use this prompt in ChatGPT or other AI tools?",
+      "a": "Yes. The ai.moms™ Thanksgiving Method is written in the RCTF format, so the prompt works in ChatGPT, Gemini and other AI tools as well as Claude. Paste the prompt into a Project or a new chat, turn on web search so the AI can look up store deadlines and prices, and answer the AI’s questions as you go."
+    },
+    {
+      "q": "Can AI make a Thanksgiving cooking schedule?",
+      "a": "Yes. Tell Claude your serving time, your ovens and burners and every dish on the menu, and ask Claude to work backwards from mealtime. Claude will move what it can to the slow cooker, Instant Pot, air fryer or microwave to free up the oven."
+    },
+    {
+      "q": "Does this work if we’re not hosting?",
+      "a": "Yes. Step 1 asks whether you’re hosting, going to someone else’s house or splitting the day. If you’re a guest, Claude plans your dish, your travel and the kids’ bag instead of the whole meal."
+    }
+  ],
+  "closing": {
+    "title": "What Will You Do With Your Time Back This Thanksgiving?",
+    "paragraphs": [
+      "Maybe you’re the mom at home hosting the whole family, the mom at work cooking around a full week of meetings, or the mompreneur with Black Friday the next morning. The Thanksgiving Method works the same for each of you. Claude holds the lists, the quantities and the timeline, so you get to sit down at your own table.",
+      "For this kind of help all year, [Build Aime](/build-aime) gets you Aime, your AI Chief Everything Officer™, plus the ai.moms™ plugin."
+    ]
+  },
+  "brief": {
+    "workingTitle": "Thanksgiving, Planned A to Z With AI",
+    "draftDate": "2026-11-02",
+    "author": "ai.moms™ team",
+    "note": "Beginner level, the Thanksgiving hub. Built from the Carry Less: Thanksgiving Instagram post and the full ai.moms™ Thanksgiving Method prompt. Links to the menu, table and seating pieces.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "The AI Prompt for Moms to Use This Thanksgiving",
+    "altH1s": [
+      "How to Plan Thanksgiving With AI: The ai.moms™ Method",
+      "Plan Your Whole Thanksgiving With One AI Prompt"
+    ],
+    "primaryKeywords": [
+      "plan thanksgiving with ai",
+      "ai for moms",
+      "ai prompts for moms"
+    ],
+    "supportingTerms": [
+      "thanksgiving planning checklist",
+      "thanksgiving countdown",
+      "how long to thaw a turkey",
+      "thanksgiving hosting plan",
+      "thanksgiving oven schedule"
+    ],
+    "metaTitle": "Plan Thanksgiving With AI: The ai.moms™ Method",
+    "metaDescription": "Plan Thanksgiving A to Z with AI: guest list, menu, turkey, shopping, oven schedule and the Thanksgiving Day timeline. The full ai.moms™ Thanksgiving Method prompt inside.",
+    "slugPath": "/editorial/thanksgiving-planning-with-ai-for-moms",
+    "internalLinks": [
+      "aimoms.ai/build-aime (closing)"
+    ],
+    "externalLinks": [
+      "Calm, “Calm is helping all ‘not calm’ parents make it through the holidays” (survey of 1,000 moms, Oct 16–19, 2025): https://www.calm.com/blog/not-calm-holiday (opening)"
+    ],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 1,800 words, article body only",
+    "sourceArticle": "Carry Less: Thanksgiving Instagram post (POST 1, 11 slides + caption) and “The ai.moms™ Thanksgiving Method - full prompt.txt”; Holiday Planner prompt pack #2",
+    "reviewNotes": [
+      "The 14-step method is kept in order; the prompt is the full method condensed into RCTF so it fits the page. Consider also offering the full-length prompt by email (comment THANKSGIVING on Instagram) and adding that CTA if you want it on the site.",
+      "Countdown dates come from the post captions: order the turkey by the 15th, start thawing by the 21st. USDA thaw rule (24 hours per 4 to 5 lb) and 165°F are from the prompt file; no USDA URL was in the source, so none is linked.",
+      "The $19 Holiday Planner isn’t linked (checkout link still TK). Add it here once it’s live.",
+      "Hero is an Unsplash photo from the Holiday Planner carousel (free license, per credits.txt); it shows hands and food, no faces.",
+      "Body runs about 1,800 words, over the 1,300 target, because the full method prompt (about 500 words) and the 14-step table are on the page. Trim the table if you want it shorter.",
+      "QA: Dates checked (Thu Nov 26, Black Friday Nov 27, Sun Nov 8, Nov 9–15, Sat Nov 21, Tue Nov 24). The opening says 'That’s 24 days from today', which is only true on Nov 2; if it publishes later, change the number or say 'just over three weeks'.",
+      "Watch it: screens are a drawing; check the labels (Create project, the Web search on switch, Google Calendar Connect, the mic button in the chat box) against the Claude app before publishing.",
+      "Hand it to Aime mock (after the short answer): confirm Aime can add the countdown to Google Calendar with the Calendar connector on; the email countdown option is a mock (no list exists yet).",
+      "Nov 6: removed the Carry Less title and any NYC-only dates so this works for moms anywhere in the U.S.",
+      "Nov 12: headline changed at Raquel’s request from “Thanksgiving, Planned A to Z With AI” to “The AI Prompt for Moms to Use This Thanksgiving.” The keyword “plan thanksgiving with ai” stays in the meta title and the first H2.",
+      "Nov 12: at Raquel’s request, Build Aime is the closing’s one CTA (removed the Foundations Course line), and the card title now matches the new headline.",
+      "Nov 12: at Raquel’s request, the first paragraph now opens “Moms, if you’re already feeling the stress of the holidays, you’re not alone,” followed by the Calm 2025 stat (1,000 moms; 65% overwhelmed by pressure for perfect holidays; 59% name the mental load of planning and scheduling as a stress trigger). The old first paragraph (“Thanksgiving is Thursday, November 26...”) was replaced. Calm ran the survey itself (brand survey), so the source is named in the sentence. Alternative, more independent source: the 2021 University of Michigan Mott Poll, where mothers were nearly twice as likely as fathers to report high holiday stress (23% vs 12%).",
+      "Nov 12: at Raquel’s request, removed three Key Takeaways (Order the turkey by the 15th, Split the shopping into three trips, Save it in a Claude Project). Three remain; the formatter asks for 4–6.",
+      "Nov 12: at Raquel’s request, added the hosting stat from the same Calm 2025 survey to the end of the opening paragraph (58% name hosting as a stress trigger; 64% agree having guests over is more stressful than wrapping gifts).",
+      "Nov 12: Raquel removed the hosting stat again (58% / 64%) and added a fourth Key Takeaway about building Aime.",
+      "Nov 12: Raquel asked for one sentence explaining Aime in the takeaway; wording reuses the Hand it to Aime block (“Build Aime in about an hour. She learns your family once, then runs Thanksgiving, birthdays, dinners and the school emails.”).",
+      "Nov 12: Raquel reworded the Aime takeaway (now says Claude or ChatGPT, and ends at Thanksgiving) and added an intro line after the stat: “What’s the AI prompt for moms this year? The ai.moms™ Thanksgiving Method, built with the RCTF method.” Check: the third intro paragraph (“So we built one prompt... We call it the ai.moms™ Thanksgiving Method”) now repeats the name, and the rest of the site says Aime runs in Claude.",
+      "Nov 12: Raquel reworded the intro question to connect the first two paragraphs: “What’s one AI prompt moms can use to feel less burned out and prepare for this Thanksgiving?”",
+      "Nov 12: Raquel renamed the second H2 to “How Do I Set Up the Thanksgiving Prompt?” and added a lead-in before the steps (phone or desktop, Claude or ChatGPT app). Check: the steps themselves still say “In Claude, create a Project” and mention turning on web search and Google Calendar, which are Claude wording.",
+      "Nov 12: at Raquel’s request, step 1 of the setup steps now says Claude or ChatGPT (both have Projects, web search and a Google Calendar connector). Steps 2 to 4 already read for either app. The Watch it demo still shows Claude screens.",
+      "Nov 12: Raquel renamed the third H2 “The ai.moms™ Thanksgiving Method, Step by Step” to “What’s Included in the ai.moms™ Thanksgiving Method?”",
+      "Nov 12: Raquel removed the whole “The Countdown From Today” section (intro line and the dated list). The USDA thaw rule still appears in the FAQ.",
+      "Nov 12: Raquel changed “The method works through 14 steps” to “The AI prompt works through 14 steps” under What’s Included.",
+      "Nov 12: Raquel renamed the H2 “The Thanksgiving Method Prompt, Ready to Copy” to “The Thanksgiving Method AI Prompt for Moms.” Nov 13: renamed again to “What Is the Full ai.moms™ Thanksgiving Method Prompt?”",
+      "Nov 12: Raquel removed the “Go Deeper on the Three Hardest Parts” section, which linked the menu timeline, table setting and seating chart articles. This article no longer links to them.",
+      "Nov 12: at Raquel’s request, cut “plus three deeper guides for the parts that take the most thought” from the intro.",
+      "Nov 12: Raquel renamed “When You Want This All Year” to “Build Your Own AI Assistant to Help You All Year Long” and asked for a sentence explaining Aime before the skills paragraph. The next paragraph still ends “It runs with Aime, your AI Chief Everything Officer™, who learns your family once in her onboarding interview,” which now repeats a little.",
+      "Nov 12: trimmed the skills paragraph’s ending to “It runs with Aime.” so it doesn’t repeat the new Aime sentence.",
+      "Nov 12: Raquel replaced the opening sentence of “Build Your Own AI Assistant to Help You All Year Long” with a fuller paragraph about Aime and her onboarding interview.",
+      "Nov 12: Raquel renamed that H2 to “Aime: The AI Assistant for Moms.”",
+      "Nov 12: Raquel renamed the Aime H2 to “What Is an AI Assistant Moms Can Use This Thanksgiving?” and added an opening line before “If you need more help...”.",
+      "Nov 12: Raquel removed the two skills paragraphs (/aimoms-celebration and /aimoms-weekly-dinner-plan), changed “Aime is the ai.moms™ assistant who learns” to “Aime is the assistant who learns,” and moved the Hand it to Aime box from under the short answer to the end of the AI assistant section.",
+      "Nov 12: Raquel rewrote both Aime paragraphs in the AI assistant section.",
+      "Nov 12: Raquel removed “The Thanksgiving Method Works for All Three Moms” section. The closing still speaks to all three moms.",
+      "Nov 12: Raquel swapped the turkey-thaw FAQ for “Can I use this prompt in ChatGPT or other AI tools?” and removed the Skill Guide sentence from the closing.",
+      "Nov 12: added the 600 × 600 in-body photo the formatter now requires, after the short answer: an overhead Thanksgiving table from the Holiday Planner carousel (Unsplash EiL2KnuY0hc, free Unsplash License per Holiday Planner launch/photos/credits.txt), 95 KB."
+    ]
+  }
+}

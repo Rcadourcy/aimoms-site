@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap">
 <script>
 window._fbqQueue=[];
 window.fbq=function(){window._fbqQueue.push(arguments);};
@@ -80,6 +81,8 @@ body{background:#ffffff;color:#060d26;font-family:'Be Vietnam Pro',system-ui,san
 @media (max-width:1000px){.ffoot .grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.ffoot .grid{grid-template-columns:1fr}}
 
+
+.italic-accent,.serif-accent,.serif,h1 .accent,h2 .accent,h3 .accent,h1 .ia,h2 .ia,h1 em,h2 em,h1 i,h2 i{font-family:inherit!important;font-style:normal!important;font-weight:inherit!important;color:inherit!important;letter-spacing:inherit!important;text-decoration:underline!important;text-decoration-color:#FF63D8!important;text-decoration-thickness:.28em!important;text-underline-offset:-.12em!important;text-decoration-skip-ink:none!important}
 
 html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 .ed{--navy:#060d26;--pink:#ff63d8;--pink-text:#060d26;--ivory:#ffffff;--mid:#4b5163;--muted:#6b7280;--rule:rgba(6,13,38,.16);--paper:#f8f8f8;background:var(--ivory);color:var(--navy)}
@@ -370,6 +373,18 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 .ed .demo .gf-out{margin:0 0 6px;font-weight:700;color:#b3261e;font-size:15px}
 .ed .demo .gf-age{margin:0;color:#5f5a52}
 
+.ed .demo .tg-made{margin-top:18px;padding:14px;border:1px solid #e1ddd4;background:#fff;border-radius:10px;animation:dpop .3s ease-out}
+.ed .demo .tg-made h4{margin:0}
+.ed .demo .tg-web.on{background:#2f7d4f;color:#fff;border-color:#2f7d4f}
+.ed .demo .tg-main{padding:14px 20px}
+.ed .demo .tg-main .msgs{justify-content:flex-end;margin-bottom:10px;gap:8px}
+.ed .demo .tg-main .me{max-width:88%;font-size:11.5px}
+.ed .demo .tg-main .ai ol{margin:0 0 4px;padding-left:18px}
+.ed .demo .tg-old{opacity:.55;animation:none}
+.ed .demo .tg-box{padding-right:76px}
+.ed .demo .tg-mic{position:absolute;right:42px;bottom:10px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#5f5a52;transition:transform .15s}
+.ed .demo .tg-mic.on{background:#ff63d8;color:#fff;box-shadow:0 0 0 4px rgba(255,99,216,.25)}
+
 .ed .demo .wa-box{padding-bottom:44px;min-height:96px}
 .ed .demo .wa-files{display:flex;gap:6px;flex-wrap:wrap}
 .ed .demo .wa-files .file{display:inline-block;margin:0 0 6px}
@@ -497,7 +512,7 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 @media (max-width:600px){.nlp{left:0;right:0;bottom:0;width:auto;border-radius:16px 16px 0 0;padding:22px 18px calc(18px + env(safe-area-inset-bottom,0px))}}
 @media (prefers-reduced-motion:reduce){.nlp{transition:none}}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
 <script src="/aim-track.js" defer></script>
-<style>/* Pink underline accent replaces the serif (Nov 19, 2026) */.italic-accent,.serif-accent,.serif,h1 .accent,h2 .accent,h3 .accent,h1 .ia,h2 .ia,h1 em,h2 em,h1 i,h2 i{font-family:inherit!important;font-style:normal!important;font-weight:inherit!important;color:inherit!important;letter-spacing:inherit!important;text-decoration:underline!important;text-decoration-color:#FF63D8!important;text-decoration-thickness:.28em!important;text-underline-offset:-.12em!important;text-decoration-skip-ink:none!important}</style><style>/* Tighter logo (Nov 19, 2026) */.brand .bm,.bm{letter-spacing:-.04em}.brand .bm .tm,.bm .tm{letter-spacing:0}</style><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap"></head>
+<style>/* Pink underline accent replaces the serif (Nov 19, 2026) */.italic-accent,.serif-accent,.serif,h1 .accent,h2 .accent,h3 .accent,h1 .ia,h2 .ia,h1 em,h2 em,h1 i,h2 i{font-family:inherit!important;font-style:normal!important;font-weight:inherit!important;color:inherit!important;letter-spacing:inherit!important;text-decoration:underline!important;text-decoration-color:#FF63D8!important;text-decoration-thickness:.28em!important;text-underline-offset:-.12em!important;text-decoration-skip-ink:none!important}</style><style>/* Tighter logo (Nov 19, 2026) */.brand .bm,.bm{letter-spacing:-.04em}.brand .bm .tm,.bm .tm{letter-spacing:0}</style></head>
 <body>
 <div class="site" id="site">
 <nav class="s-nav pad"><div class="inner">
@@ -605,7 +620,7 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
     <p class="disclosure">Disclosure: ai.moms™ is a listed partner in Anthropic’s Claude Partner Network. We’re an independent company, and we cover tools across AI.</p>
   </div>
 </article>
-<section class="wrap related" aria-label="Keep reading"><div class="sec-head"><h2>Keep reading</h2><a class="all" href="/theaim/ai-education">More AI Education</a></div><div class="grid"><a class="tile" href="/theaim/ai-prompts-for-moms-holiday-gifts"><div class="ph " role="img" aria-label="A mom and her young son sitting together on a couch by a Christmas tree, the moment all the gift planning is for" style="background-image:url('/editorial/img/holiday-gifts-mom-and-son.jpg');background-position:50% 35%"></div><span class="kicker">Holidays</span><h3>Holiday Gift Planning With AI</h3><p>The list, the budget, the teachers, the in-laws and the wrapping paper: hand it to Claude before December gets here.</p><span class="meta">9 min read</span></a><a class="tile" href="/theaim/ai-news-teen-safety-alerts"><div class="ph " role="img" aria-label="A mom and her daughter smiling together on a couch while the mom checks her phone" style="background-image:url('/editorial/img/ai-news-teen-safety-hero.jpg');background-position:50% 45%"></div><span class="kicker">This Week in AI</span><h3>This Week in AI: Nov 12</h3><p>Instagram’s AI now spots teens using an adult birthday, Gemini shows what it remembers about you and a catch-up on ChatGPT’s teen rules.</p><span class="meta">4 min read</span></a></div></section>
+<section class="wrap related" aria-label="Keep reading"><div class="sec-head"><h2>Keep reading</h2><a class="all" href="/theaim/ai-education">More AI Education</a></div><div class="grid"><a class="tile" href="/theaim/thanksgiving-planning-with-ai-for-moms"><div class="ph " role="img" aria-label="Hands slicing pumpkin pie on a wooden table with braided bread, cranberry drinks and fall leaves" style="background-image:url('/editorial/img/thanksgiving-planning-with-ai-for-moms.jpg')"></div><span class="kicker">Thanksgiving</span><h3>The AI Prompt for Moms to Use This Thanksgiving</h3><p>The guest list, the menu, the turkey, the oven schedule and the day after: the ai.moms™ Thanksgiving Method plans all of it with you.</p><span class="meta">8 min read</span></a><a class="tile" href="/theaim/ai-prompts-for-moms-holiday-gifts"><div class="ph " role="img" aria-label="A mom and her young son sitting together on a couch by a Christmas tree, the moment all the gift planning is for" style="background-image:url('/editorial/img/holiday-gifts-mom-and-son.jpg');background-position:50% 35%"></div><span class="kicker">Holidays</span><h3>Holiday Gift Planning With AI</h3><p>The list, the budget, the teachers, the in-laws and the wrapping paper: hand it to Claude before December gets here.</p><span class="meta">9 min read</span></a><a class="tile" href="/theaim/ai-news-teen-safety-alerts"><div class="ph " role="img" aria-label="A mom and her daughter smiling together on a couch while the mom checks her phone" style="background-image:url('/editorial/img/ai-news-teen-safety-hero.jpg');background-position:50% 45%"></div><span class="kicker">This Week in AI</span><h3>This Week in AI: Nov 12</h3><p>Instagram’s AI now spots teens using an adult birthday, Gemini shows what it remembers about you and a catch-up on ChatGPT’s teen rules.</p><span class="meta">4 min read</span></a></div></section>
 <section class="nl" aria-label="Newsletter"><div class="wrap">
   <div>
     <span class="kicker">Coming soon</span>
