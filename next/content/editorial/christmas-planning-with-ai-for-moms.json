@@ -1,0 +1,318 @@
+{
+  "slug": "christmas-planning-with-ai-for-moms",
+  "status": "published",
+  "pillar": "Seasonal",
+  "cluster": "Holidays",
+  "title": "Christmas Countdown Week, Planned With AI",
+  "cardTitle": "Christmas Countdown Week",
+  "dek": "The last week before Christmas, planned day by day: what’s left to buy, the wrapping, the hosting and the travel, sized to the time you have.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-19",
+  "readTime": "4 min",
+  "hero": {
+    "src": "/editorial/img/christmas-planning-with-ai-for-moms-unsplash.jpg",
+    "alt": "A woman, seen from behind, hangs ornaments on a Christmas tree in a bright glass-roofed sunroom.",
+    "credit": {
+      "name": "Annie Spratt",
+      "url": "https://unsplash.com/photos/a-woman-decorating-a-christmas-tree-in-a-greenhouse-tHTKgqNv7Aw",
+      "site": "Unsplash"
+    }
+  },
+  "takeaways": [
+    "**Start with the Christmas countdown prompt.** Tell Claude what’s left to buy, wrap, cook and pack, and how much time you have each day, and Claude builds a day-by-day plan to Christmas morning.",
+    "**Put the ordering deadline at the top.** Ask Claude to check each store’s last day to order, then confirm it on the store’s site.",
+    "**Wrap in short sessions, not one marathon.** One wrapping station and a simple tracker keep it moving.",
+    "**Hosting? Reuse the Thanksgiving Method.** Change the date, and the Thanksgiving Method plans Christmas dinner the same way.",
+    "**Put one small thing for you on every day.** The Christmas countdown prompt builds that in."
+  ],
+  "jumpLinks": true,
+  "body": [
+    {
+      "type": "p",
+      "text": "The Christmas countdown prompt plans the last week before Christmas with you, day by day. Tell Claude what’s still left to buy, wrap, cook and pack, plus your events and how much time you have each day, and Claude builds a countdown with the ordering deadlines first, a wrapping plan and what you can hand off."
+    },
+    {
+      "type": "p",
+      "text": "Moms, if the holidays already feel heavy, you’re not alone. In a [2021 C.S. Mott Children’s Hospital National Poll of 2,020 parents](https://mottpoll.org/node/2801), moms were nearly twice as likely as dads to rate their holiday stress as high (23% vs. 12%), and 23% of moms said having the kids home over school break adds to it."
+    },
+    {
+      "type": "p",
+      "text": "Christmas is Friday, December 25, and many schools let out that week. The week before is where it all piles up: the class party, the teacher gifts, the package that hasn’t shipped, the cookies you promised, the in-laws’ arrival time, the wrapping paper that ran out at 11pm. Most of it lives on a list in your head that only you can see. AI can carry that list for you: Claude holds every date, gift, recipe and errand in one plan, so the holiday mental load sits on the page and off your mind."
+    },
+    {
+      "type": "h2",
+      "text": "How Can Moms Use AI to Plan Christmas Week?"
+    },
+    {
+      "type": "answer",
+      "text": "**The short answer:** tell Claude what’s still not done, your events and how much time you have each day. Ask for a day-by-day countdown, one list of everything left to buy with the last safe day to order, a wrapping and hiding plan, and what you can drop or hand off. Add hosting or travel plans in the same chat."
+    },
+    {
+      "type": "aime",
+      "what": "Christmas",
+      "skill": "/aimoms-celebration",
+      "questions": [
+        {
+          "q": "What's on your plate?",
+          "options": [
+            "Hosting dinner",
+            "Traveling",
+            "Gifts",
+            "Wrapping",
+            "Class parties"
+          ],
+          "multi": true,
+          "on": [
+            0,
+            2
+          ]
+        },
+        {
+          "q": "How much time do you have most days?",
+          "options": [
+            "15 minutes",
+            "An hour",
+            "Weekends only"
+          ]
+        },
+        {
+          "q": "Working through the 23rd?",
+          "options": [
+            "Yes",
+            "No",
+            "Running my business"
+          ]
+        },
+        {
+          "q": "Where should your plan land?",
+          "options": [
+            "Google Calendar + email",
+            "Email only"
+          ]
+        }
+      ],
+      "lands": [
+        {
+          "when": "Tue, Dec 1",
+          "what": "Your gift list with a budget for each person"
+        },
+        {
+          "when": "Thu, Dec 3",
+          "what": "Order the gifts in one sitting, links ready"
+        },
+        {
+          "when": "Fri, Dec 11",
+          "what": "Shipping cutoffs to confirm on each store's site"
+        },
+        {
+          "when": "Sun, Dec 13",
+          "what": "Wrapping night, plus where everything is hidden"
+        },
+        {
+          "when": "Fri, Dec 18",
+          "what": "Teacher and helper gifts packed for the last week"
+        },
+        {
+          "when": "Last school day",
+          "what": "The class party list"
+        },
+        {
+          "when": "Wed, Dec 23",
+          "what": "Christmas Day dinner timeline, worked back from when you eat"
+        },
+        {
+          "when": "Thu, Dec 24",
+          "what": "Christmas Eve, hour by hour, plus one small thing for you"
+        }
+      ],
+      "skillPrompt": "/aimoms-celebration Plan our Christmas week with a day-by-day countdown and add each step to my Google Calendar.",
+      "date": "2026-12-24"
+    },
+    {
+      "type": "h2",
+      "text": "What Goes on the Christmas Countdown, Day by Day?"
+    },
+    {
+      "type": "p",
+      "text": "Start about a week out, around Friday, December 18. If the gift list isn’t started yet, our [holiday gift planning prompt](/editorial/ai-prompts-for-moms-holiday-gifts) builds it first. Then ask Claude to put each task on the day it fits, with the hard deadlines first:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**The ordering deadline.** Ask Claude to check each store’s last day to order for delivery by the 24th, and put that day at the top of the list.",
+        "**School wrap-up.** Class parties, teacher and helper gifts and anything due before your kids’ last school day.",
+        "**The food.** What to shop for, what to bake or make ahead, and what waits for the 24th.",
+        "**The people.** Who arrives when, who needs a ride, where everyone sleeps.",
+        "**One small thing for you each day.** The Christmas countdown prompt adds one on purpose."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Celebrating Hanukkah or Kwanzaa too? Hanukkah runs from the evening of December 4 to December 12 this year, and Kwanzaa begins December 26. Tell Claude, and Claude will fit your traditions into the countdown and the week after Christmas. With the kids home for break, our [winter break plan](/editorial/winter-break-planning-with-ai-for-moms) picks up where the Christmas countdown ends."
+    },
+    {
+      "type": "h2",
+      "text": "How Do I Plan Wrapping and Hiding the Gifts?"
+    },
+    {
+      "type": "p",
+      "text": "Wrapping in one marathon on Christmas Eve is a rite of passage nobody needs. Ask Claude to split it into short sessions across the week, after bedtime or during a show, and to keep a simple tracker: who, what, bought, wrapped, hidden where."
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/christmas-family-tree-square.jpg",
+      "alt": "A mom, dad and son decorate a Christmas tree at home, with wrapped gifts and a box of ornaments at the base of the tree",
+      "portrait": true
+    },
+    {
+      "type": "p",
+      "text": "Set up one wrapping station with paper, tape, scissors, tags and a pen, so you’re not hunting for scissors every night. If more than one person is wrapping, a shared tag system (a color or a sticker per person) keeps the gifts straight on the morning of."
+    },
+    {
+      "type": "h2",
+      "text": "How Do I Plan Christmas Dinner With AI?"
+    },
+    {
+      "type": "p",
+      "text": "If you’re hosting, the ai.moms™ Thanksgiving Method works for Christmas dinner too. Change the date in [the Thanksgiving prompt](/editorial/thanksgiving-planning-with-ai-for-moms), and the Thanksgiving Method will plan the guest list, the menu and quantities, the shopping, the oven schedule and the day-of timeline. For the timeline alone, our [menu and cooking timeline guide](/editorial/ai-thanksgiving-menu-timeline-grocery-list) shows how to work back from serving time."
+    },
+    {
+      "type": "h2",
+      "text": "How Can AI Help With Christmas Travel?"
+    },
+    {
+      "type": "p",
+      "text": "If you’re the ones on the road, ask Claude for a travel-day plan, packing lists by person, what to ship ahead instead of packing, and a before-we-leave house checklist. Our [family trip planning guide](/editorial/ai-travel-prompts-for-moms) has the full set of travel prompts, and the `/aimoms-travel-plan` skill in the [ai.moms™ plugin](/skill-guide) builds the countdown checklist and packing lists so clear your partner or kid can pack from them."
+    },
+    {
+      "type": "h2",
+      "text": "What Is the Christmas Countdown Prompt?"
+    },
+    {
+      "type": "prompt",
+      "label": "The Christmas countdown prompt",
+      "lines": [
+        "**Role:** You are a calm, organized holiday planner who helps busy moms finish the season without a last-minute scramble.",
+        "**Context:** We celebrate Christmas on Friday, December 25. Today is ==[insert date]==. The kids’ last day of school is ==[insert date]==. Still not done: ==[insert gifts, wrapping, food, cards, travel, school things]==. Events this week: ==[insert parties, concerts, work events]==. We’re ==[insert hosting, traveling or staying home]==. Who can help: ==[insert people and what they can do]==. Time I really have each day: ==[insert]==.",
+        "**Task:** Build a day-by-day plan from today to Christmas morning, sized to the time I have. Give me one list of everything still to buy, grouped by store or website, with the last safe day to order online. Make a wrapping and hiding plan. Tell me what I can drop, delegate or simplify, with the message to send if I’m handing something off. Put one small thing just for me on each day.",
+        "**Format:** A table with one row per day (date, must-do, nice-to-do, who), then the buy list, the wrapping plan, the hand-off messages and my daily small thing.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What Should Moms Double-Check Before Acting on the Plan?"
+    },
+    {
+      "type": "p",
+      "text": "AI does the research. You still make the call."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Confirm shipping cutoffs** on each store’s own site. AI can be out of date on holiday deadlines.",
+        "**Click through every gift link** for price, size and stock.",
+        "**Travel details come from the airline, train or rental company.** Use Claude to organize, then confirm times and rules at the source.",
+        "**Keep addresses and account numbers out of the chat.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "How Does the Christmas Countdown Work for Each Mom?"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Mom at home:** with the kids home for break, ask Claude to front-load the wrapping and baking to the days they’re still at school.",
+        "**Mom at work:** if you’re working right up to Christmas Eve, ask for the evening-only version and a list of what to hand your partner.",
+        "**Mompreneur:** put your own business deadlines in the Context, like last ship dates for your customers, so Claude plans your week around both."
+      ]
+    }
+  ],
+  "faqTitle": "Planning Christmas With AI: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "How can I share my Christmas plan from AI with other family members?",
+      "a": "Ask Claude to turn the plan into a short message for each person, with only their jobs and dates, then paste it into the family group text or an email. If your family shares a Google Calendar, tap “Add all steps to my calendar” in the Aime box above, or connect Google Calendar in Claude, so everyone sees the same countdown. Hand each helper a whole job, like “you own the cookies,” so the follow-up doesn’t land back on you."
+    },
+    {
+      "q": "What is the fastest way to write long prompts?",
+      "a": "Talk instead of typing. [Wispr Flow](https://wisprflow.ai) is a voice dictation app that turns what you say into clean, written text in whatever app you’re using, including Claude. Say your details the way you’d explain them to a friend, then read it over, fix any names it misheard and hit send."
+    },
+    {
+      "q": "Which AI should I use?",
+      "a": "We teach Claude, Anthropic’s AI assistant. Claude Projects remember your family between chats, and Claude connects to Google Calendar and Gmail, so a plan like this one lands where you already look. To see how Claude, ChatGPT and Gemini compare for moms, read [Which AI Should Moms Use?](/editorial/which-ai-should-moms-use)"
+    }
+  ],
+  "closing": {
+    "title": "What Will You Do With Your Time Back on Christmas Morning?",
+    "paragraphs": [
+      "Maybe you’re the mom at home with the kids out of school for break, the mom at work wrapping after a full day, or the mompreneur shipping your own customers’ orders while finishing your family’s list. When Claude holds the countdown, you get to be in the room on Christmas morning instead of in your head.",
+      "When you want this help every week of the year, [Build Aime](/build-aime), your AI Chief Everything Officer™. Aime carries the mental load, so you get your time back."
+    ]
+  },
+  "brief": {
+    "workingTitle": "Christmas Countdown Week, Planned With AI",
+    "draftDate": "2026-11-02",
+    "author": "ai.moms™ team",
+    "note": "Beginner level, Holidays cluster. Built on the Holiday Planner’s Final Countdown prompt (#8) with hosting and travel pointing to existing pieces.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "Christmas Countdown Week, Planned With AI",
+    "altH1s": [
+      "How to Plan Christmas Week With AI",
+      "The Christmas Countdown, Planned With AI"
+    ],
+    "primaryKeywords": [
+      "christmas planning with ai",
+      "ai for moms",
+      "ai prompts for moms"
+    ],
+    "supportingTerms": [
+      "christmas countdown checklist",
+      "christmas wrapping plan",
+      "hosting christmas dinner",
+      "holiday travel with kids"
+    ],
+    "metaTitle": "Christmas Planning With AI for Moms: The Countdown Week",
+    "metaDescription": "Plan the week before Christmas with AI: a day-by-day countdown, the last day to order, a wrapping plan, hosting and travel. Copy-ready prompt.",
+    "slugPath": "/editorial/christmas-planning-with-ai-for-moms",
+    "internalLinks": [
+      "aimoms.ai/editorial/thanksgiving-planning-with-ai-for-moms (hosting)",
+      "aimoms.ai/editorial/ai-thanksgiving-menu-timeline-grocery-list (hosting)",
+      "aimoms.ai/editorial/ai-travel-prompts-for-moms (travel)",
+      "aimoms.ai/editorial/winter-break-planning-with-ai-for-moms (end)",
+      "aimoms.ai/editorial/ai-prompts-for-moms-holiday-gifts (closing)",
+      "aimoms.ai/build-aime (closing)",
+      "aimoms.ai/skill-guide (closing)"
+    ],
+    "externalLinks": [],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 950 words, article body only",
+    "sourceArticle": "Holiday Planner prompt pack #8 (The Final Countdown) and #7 (Travel and Packing Plan); ai.moms™ Seasonal map 2026-27 (Christmas Fri Dec 25; NYC winter break Thu Dec 24 to Fri Jan 1; Kwanzaa Dec 26 to Jan 1)",
+    "reviewNotes": [
+      "“Last day before break is Wednesday, Dec 23” is inferred from the map (break starts Thu Dec 24). Please confirm on the NYC school calendar.",
+      "No shipping cutoff dates are stated; the article tells moms to have Claude look them up and confirm on store sites.",
+      "Kwanzaa is mentioned as a hand-off to the winter break piece, not assumed for every family.",
+      "QA: Day-of-week math checked (Fri Dec 18, Wed Dec 23, Fri Dec 25, Kwanzaa Sat Dec 26); NYC break dates match the winter break and MLK pieces.",
+      "QA (photo): the gift tag in the hero reads 'mark'; a readable name on the image. Minor, but consider a crop.",
+      "Hand it to Aime mock (after the short answer): confirm /aimoms-celebration can add these steps to Google Calendar with the Calendar connector on; the email countdown option is a mock.",
+      "Nov 6: removed the Carry Less title and any NYC-only dates so this works for moms anywhere in the U.S.",
+      "Nov 12 photo licensing check: hero is now https://unsplash.com/photos/a-woman-decorating-a-christmas-tree-in-a-greenhouse-tHTKgqNv7Aw by Annie Spratt (Unsplash License (free, verified on photo page)), the same photo as the Marketing HQ board. The old hero (/editorial/img/christmas-planning-with-ai-for-moms.jpg) had no confirmed source.",
+      "Nov 13: edited with the aimoms-blog-formatter and aimoms-article-clarity skills (answer-first intro, Calm stat + Sources, question headings, In This Article jump links, one CTA, specific nouns for vague “it”, school-specific dates made general). Open questions are in the Clarity review doc in Editorial relaunch.",
+      "Nov 13: the opening stat is now the 2021 Mott Poll (moms 23% vs. dads 12% high holiday stress; 23% of moms stressed by kids home over break), so it no longer repeats the Calm stat from the Thanksgiving article. The data is from 2021, so the year is named in the sentence.",
+      "Nov 13: Raquel replaced the FAQ with three questions: sharing the plan with family, the fastest way to write long prompts (Wispr Flow) and which AI to use (Claude, linking Which AI Should Moms Use?).",
+      "Nov 13: in-body 600 × 600 photo added under the first wrapping paragraph: Unsplash iAfcF8ezPQU by Vitaly Gariev (free Unsplash License, verified on the photo page), a family decorating the tree with wrapped gifts. Stock photo with a child; faces mostly turned away.",
+      "Nov 13: Raquel approved the new meta title \"Christmas Planning With AI for Moms: The Countdown Week\" (was \"Christmas Week, Planned With AI\") and the date moved to Nov 13, 2026.",
+      "Nov 13: Raquel moved the Hand it to Aime plan to start Dec 1 and end on Christmas Eve, Dec 24 (event date in the box is now Dec 24). The family trip guide link stays, because that article is in the launch set.",
+      "Nov 13: Raquel added Hanukkah next to Kwanzaa (Hanukkah 2026: evening of Fri Dec 4 to Sat Dec 12, per the ai.moms™ seasonal map). No link, since the Hanukkah article isn’t in the launch set.",
+      "Nov 13: Raquel replaced the first Key Takeaway (Christmas is Friday, Dec 25...) with one about the Christmas countdown prompt."
+    ]
+  },
+  "sources": [
+    "C.S. Mott Children’s Hospital National Poll on Children’s Health, University of Michigan Health, “Holiday Stress,” December 20, 2021, survey of 2,020 U.S. parents. [mottpoll.org/node/2801](https://mottpoll.org/node/2801)"
+  ]
+}
