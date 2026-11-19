@@ -6,7 +6,11 @@
   window.dataLayer=window.dataLayer||[];
   window.gtag=function(){window.dataLayer.push(arguments);};
   gtag('js',new Date());
+  // Hero A/B test: tag every visitor with their homepage hero version (a = old copy, b = Your entry into AI)
+  var hv=(document.cookie.match(/(?:^|; )aim_hero=([ab])/)||[])[1];
+  if(hv) gtag('set','user_properties',{hero_variant:hv});
   gtag('config',ID);
+  if(hv&&document.documentElement.getAttribute('data-hero')) gtag('event','hero_view',{hero_variant:hv});
   var s=document.createElement('script');
   s.async=true;
   s.src='https://www.googletagmanager.com/gtag/js?id='+ID;
