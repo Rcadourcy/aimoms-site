@@ -1,9 +1,9 @@
 /* Shop page styles: one page for everything we sell. */
 
 .page-shop {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
-  .serif-accent { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--pink); }
+  .serif-accent { font-family: var(--serif);  font-weight: 500; color: var(--pink); }
   .cat { font-family: 'Be Vietnam Pro', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--pink); }
 
   /* HERO */

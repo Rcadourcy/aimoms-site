@@ -17,7 +17,7 @@
     letter-spacing: -0.04em;
     margin-bottom: 6px;
   }
-  .sub-brandmark .ai { color: var(--pink); font-family: var(--serif); font-style: italic; font-weight: 900; }
+  .sub-brandmark .ai { color: var(--pink); font-family: var(--serif);  font-weight: 900; }
   .sub-brandmark .moms { color: var(--navy); }
   .sub-brandmark .tm-mini { font-size: 10px; vertical-align: super; opacity: 0.4; color: var(--navy); }
 

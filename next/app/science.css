@@ -27,7 +27,7 @@
     margin-bottom: 20px;
     color: #060d26;
   }
-  .hero h1 .accent { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; color: #ff63d8; }
+  .hero h1 .accent { font-family: 'Outfit',sans-serif;  font-weight: 500; color: #ff63d8; }
   .hero .hero-lead { font-size: 1.25em; line-height: 1.5; color: #060d26; margin-bottom: 28px; max-width: 680px; font-weight: 400; }
   .hero .hero-note { font-size: 1.05em; line-height: 1.75; color: #444; max-width: 680px; margin-bottom: 14px; }
   .hero .hero-note:last-child { margin-bottom: 0; }

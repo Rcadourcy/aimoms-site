@@ -8,12 +8,12 @@
   --muted: #6E6E6B;
   --faint: #9a9a97;
   --line: #EFEFED;
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
   line-height: 1.6;
 
   h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
-  .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
+  .italic-accent { font-family: var(--serif);  font-weight: 500; letter-spacing: -0.01em; }
   .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
   /* HERO */

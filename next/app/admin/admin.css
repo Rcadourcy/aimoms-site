@@ -13,7 +13,7 @@
   color: var(--navy);
 }
 
-.admin-brand-ai { color: var(--pink); font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 900; }
+.admin-brand-ai { color: var(--pink); font-family: 'Outfit',sans-serif;  font-weight: 900; }
 .admin-brand-moms { color: var(--navy); font-weight: 800; }
 .admin-brand-tm { font-size: 0.5em; vertical-align: super; opacity: 0.4; }
 

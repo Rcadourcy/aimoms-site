@@ -7,7 +7,7 @@
 
 .page-membership-register {
   --gray-300: #d4d4d4;
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
   .container-sm { max-width: 580px; margin: 0 auto; padding: 0 24px; }
 
@@ -78,7 +78,7 @@
   .intent-option.wide .intent-desc { flex: 1 1 200px; margin-top: 0; }
   .intent-card .intent-tag { font-family: 'Outfit', sans-serif; font-size: 0.68em; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--pink); }
   .intent-card .intent-name { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.02em; letter-spacing: -0.015em; color: var(--navy); line-height: 1.2; margin-top: 2px; }
-  .intent-card .intent-name .it { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--pink); }
+  .intent-card .intent-name .it { font-family: var(--serif);  font-weight: 500; color: var(--pink); }
   .intent-card .intent-desc { font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.85em; line-height: 1.45; color: var(--gray-600); font-weight: 400; margin-top: 2px; }
 
   /* Submit */

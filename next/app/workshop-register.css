@@ -7,11 +7,11 @@
 
 .page-workshop-register {
   --gray-300: #d4d4d4;
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
   .container-sm { max-width: 580px; margin: 0 auto; padding: 0 24px; }
 
-  .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
+  .italic-accent { font-family: var(--serif);  font-weight: 500; letter-spacing: -0.01em; }
   .tm { font-size: 0.42em; vertical-align: 0.6em; font-weight: 600; letter-spacing: 0; margin-left: 1px; opacity: 0.85; }
 
   /* HERO */

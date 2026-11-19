@@ -10,11 +10,11 @@
 }
 
 .page-membership-thank-you {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
   .container-sm { max-width: 620px; margin: 0 auto; padding: 0 24px; }
 
-  .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; color: var(--pink); }
+  .italic-accent { font-family: var(--serif);  font-weight: 500; letter-spacing: -0.01em; color: var(--pink); }
   .tm { font-size: 0.42em; vertical-align: 0.6em; font-weight: 600; letter-spacing: 0; margin-left: 1px; opacity: 0.85; }
 
   /* CONFIRMATION HERO */

@@ -6,13 +6,13 @@
 }
 
 .page-out-of-office-waitlist {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
   --gray-300: #d4d4d4;
 
   line-height: 1.6;
 
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-  .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--pink); letter-spacing: -0.01em; }
+  .italic-accent { font-family: var(--serif);  font-weight: 500; color: var(--pink); letter-spacing: -0.01em; }
   .tm { font-size: 0.42em; vertical-align: 0.6em; opacity: 0.85; font-weight: 400; letter-spacing: 0; }
 
   h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; color: var(--navy); }

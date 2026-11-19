@@ -62,7 +62,7 @@
 
   /* CTA STRIP */
   .cta-strip { background: var(--ivory); border-radius: 12px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 8px 0; }
-  .cta-strip h4 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4em; font-weight: 600; color: var(--navy); line-height: 1.25; }
+  .cta-strip h4 { font-family: 'Outfit',sans-serif; font-size: 1.4em; font-weight: 600; color: var(--navy); line-height: 1.25; }
   .cta-strip p { font-size: 0.82em; color: var(--mid); margin-top: 4px; }
 
   /* BTN */

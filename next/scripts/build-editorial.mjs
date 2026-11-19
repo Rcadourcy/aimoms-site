@@ -66,7 +66,7 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 .ed a{color:var(--navy);text-decoration:none} .ed a:hover{color:var(--navy);text-decoration:underline;text-decoration-color:var(--pink);text-underline-offset:4px}
 .ed .wrap{max-width:1240px;margin:0 auto;padding-left:24px;padding-right:24px}
 .ed .sr-only{position:absolute;left:-9999px}
-.ed .accent{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;color:var(--pink);letter-spacing:0;text-transform:none}
+.ed .accent{font-family:inherit;font-style:normal;font-weight:inherit;color:inherit;text-decoration:underline;text-decoration-color:#FF63D8;text-decoration-thickness:.28em;text-underline-offset:-.12em;text-decoration-skip-ink:none}
 .ed .kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink-text)}
 .ed .meta{font-size:12px;color:var(--muted)}
 .ed .ph{background:var(--paper) 50% 25%/cover no-repeat}
@@ -115,7 +115,7 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 .ed .news h2{margin:6px 0 14px;font-family:'Outfit',sans-serif;font-weight:800;font-size:21px;line-height:1.15}
 .ed .news ol{list-style:none;margin:0;padding:0;counter-reset:n}
 .ed .news li{counter-increment:n;display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--rule);font-size:15px;line-height:1.4;font-weight:600}
-.ed .news li::before{content:counter(n);font:italic 700 20px 'Playfair Display',Georgia,serif;color:var(--pink);min-width:16px;line-height:1.1}
+.ed .news li::before{content:counter(n);font:800 20px 'Outfit',sans-serif;color:var(--pink);min-width:16px;line-height:1.1}
 .ed .news .go{display:inline-block;margin:14px 16px 0 0;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--pink);padding-bottom:2px}
 .ed .side h3{margin:6px 0 0;font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;line-height:1.18}
 
@@ -140,7 +140,7 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 .ed .start{display:flex;flex-direction:column}
 .ed .start .kicker{padding-bottom:10px;border-bottom:1px solid var(--navy)}
 .ed .start a{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule);font-family:'Outfit',sans-serif;font-weight:800;font-size:16px;line-height:1.25}
-.ed .start a b{font:italic 700 26px 'Playfair Display',Georgia,serif;color:var(--pink);min-width:22px}
+.ed .start a b{font:800 26px 'Outfit',sans-serif;color:var(--pink);min-width:22px}
 .ed .results{padding-top:36px}
 .ed .results[hidden]{display:none}
 .ed .empty{font-size:15px;color:var(--muted)}
@@ -307,7 +307,7 @@ function page({ title, description, canonical, ogType, image, extraHead = '', ma
 ${extraHead}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,700;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">
 ${FBQ_STUB}
 <style>${CHROME_CSS}${CSS}${DEMO_CSS()}${VIDEO_CSS}${AIME_CSS}${POPUP_CSS}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
 <script src="/aim-track.js" defer></script>

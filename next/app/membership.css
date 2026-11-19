@@ -34,7 +34,7 @@
     color: var(--navy); letter-spacing: -0.035em; margin-bottom: 24px; max-width: 860px; margin-left: auto; margin-right: auto;
   }
   .hero h1 .pink { color: var(--pink); }
-  .italic-accent { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; color: var(--pink); letter-spacing: -0.01em; }
+  .italic-accent { font-family: 'Outfit',sans-serif;  font-weight: 500; color: var(--pink); letter-spacing: -0.01em; }
   .hero-sub { font-size: 1.1em; line-height: 1.7; color: var(--gray-600); max-width: 620px; margin: 0 auto 36px; }
   .hero-price-line {
     display: inline-flex; align-items: baseline; gap: 10px; background: #060d26; color: #fff; padding: 14px 28px;

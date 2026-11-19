@@ -1,9 +1,9 @@
 /* Generic success page styles (ported from success.html; also a Stripe success_url target). */
 
 .page-success {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
-  .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; color: var(--pink); }
+  .italic-accent { font-family: var(--serif);  font-weight: 500; letter-spacing: -0.01em; color: var(--pink); }
 
   .confirm-section {
     padding: 100px 24px;

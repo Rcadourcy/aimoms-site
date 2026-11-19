@@ -1,14 +1,14 @@
 /* The AI Toolkit page styles (ported from toolkit.html's inline <style> into scoped classes). */
 
 .page-toolkit {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
   /* HERO */
   .tk-hero { min-height: 380px; padding: 90px 24px 56px; background: var(--navy); text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; }
   .tk-hero-inner { max-width: 700px; margin: 0 auto; }
   .tk-hero-eyebrow { text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: var(--pink); font-weight: 700; margin-bottom: 14px; }
   .tk-hero h1 { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.2em, 5.5vw, 3.6em); letter-spacing: -0.03em; margin-bottom: 14px; line-height: 1.05; }
-  .tk-hero h1 .accent { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--pink); font-size: 0.7em; letter-spacing: -0.01em; }
+  .tk-hero h1 .accent { font-family: var(--serif);  font-weight: 500; color: var(--pink); font-size: 0.7em; letter-spacing: -0.01em; }
   .tk-hero p { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 520px; margin: 0 auto 20px; }
   .tk-hero-chips { display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center; }
   .tk-chip-pink { border: 1.5px solid var(--pink); color: var(--pink); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 7px 18px; border-radius: 100px; }

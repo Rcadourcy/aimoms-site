@@ -14,7 +14,7 @@
     --gray-200:#e5e5e5;
     --gray-400:#999;
     --gray-600:#666;
-    --serif:'Playfair Display', Georgia, serif;
+    --serif:'Outfit', 'Be Vietnam Pro', sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{overflow-x:hidden;max-width:100%;}
@@ -29,7 +29,7 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif;letter-spacing:-0.02em;}
 /* Editorial serif italic accent */
 .italic-accent{
     font-family:var(--serif);
-    font-style:italic;
+    
     font-weight:500;
     letter-spacing:-0.01em;
 }
@@ -117,7 +117,7 @@ button,a,.btn,input,select,textarea{
     font-family:'Be Vietnam Pro',sans-serif;font-weight:800;
     font-size:22px;letter-spacing:-0.04em;line-height:1;
 }
-.brandmark .ai{color:var(--pink);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:900;}
+.brandmark .ai{color:var(--pink);font-family:'Outfit',sans-serif;font-weight:900;}
 .brandmark .moms{color:#fff;}
 .brandmark .tm-mini{font-size:8px;vertical-align:super;opacity:0.5;color:#fff;}
 .nav-tagline{
@@ -165,7 +165,7 @@ button,a,.btn,input,select,textarea{
     font-family:'Be Vietnam Pro',sans-serif;font-weight:800;font-size:20px;
     letter-spacing:-0.04em;margin-bottom:8px;
 }
-.footer-brandmark .ai{color:var(--pink);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:900;}
+.footer-brandmark .ai{color:var(--pink);font-family:'Outfit',sans-serif;font-weight:900;}
 .footer-brandmark .moms{color:#fff;}
 .footer-brandmark .tm-mini{font-size:7px;vertical-align:super;opacity:0.4;color:#fff;}
 .footer-tagline{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
@@ -202,7 +202,7 @@ button,a,.btn,input,select,textarea{
     font-family:'Be Vietnam Pro',sans-serif;box-shadow:0 8px 40px rgba(0,0,0,0.35);
 }
 .cookie-title{font-weight:800;font-size:14px;letter-spacing:-0.03em;margin-bottom:10px;}
-.cookie-title .ai{color:var(--pink);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:900;}
+.cookie-title .ai{color:var(--pink);font-family:'Outfit',sans-serif;font-weight:900;}
 .cookie-title .moms{color:#fff;}
 .cookie-title .uses{color:rgba(255,255,255,0.4);font-weight:400;font-size:11px;}
 .cookie-banner p{font-size:11.5px;color:rgba(255,255,255,0.5);margin:0 0 16px;line-height:1.65;}
@@ -219,3 +219,6 @@ button,a,.btn,input,select,textarea{
 
 .tnl2{position:relative}
 .tnl2 small{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:3px;font-family:'Be Vietnam Pro',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.01em;text-transform:none;opacity:.72;white-space:nowrap;line-height:1}
+
+/* Pink underline accent replaces the serif (Raquel, Nov 19, 2026) */
+.italic-accent,.serif-accent,.serif,h1 .accent,h2 .accent,h3 .accent,h1 .ia,h2 .ia,h1 em,h2 em,h1 i,h2 i{font-family:inherit!important;font-style:normal!important;font-weight:inherit!important;color:inherit!important;letter-spacing:inherit!important;text-decoration:underline!important;text-decoration-color:#FF63D8!important;text-decoration-thickness:.28em!important;text-underline-offset:-.12em!important;text-decoration-skip-ink:none!important}

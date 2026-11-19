@@ -1,9 +1,9 @@
 /* The buyer's Prompt Library page. */
 
 .page-library {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
-  .serif-accent { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--pink); }
+  .serif-accent { font-family: var(--serif);  font-weight: 500; color: var(--pink); }
   .ph { color: #d6209f; font-weight: 600; }
   .lib-inner { max-width: 760px; margin: 0 auto; min-width: 0; }
 

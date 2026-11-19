@@ -54,7 +54,7 @@ export default function FoundationsPage() {
           <h1 style={{ fontFamily: "'Outfit',sans-serif", fontWeight: 900, fontSize: 'clamp(2.8em,6vw,4em)', letterSpacing: '-0.03em', textAlign: 'center', lineHeight: 1.05 }}>
             <span style={{ whiteSpace: 'nowrap' }}>Master AI.</span> <span style={{ whiteSpace: 'nowrap' }}>For moms.</span>
             <br />
-            <span style={{ fontFamily: "'Playfair Display',Georgia,serif", fontStyle: 'italic', fontWeight: 500, color: '#ff63d8', whiteSpace: 'nowrap' }}>On your schedule.</span>
+            <span style={{ whiteSpace: 'nowrap', textDecoration: 'underline', textDecorationColor: '#FF63D8', textDecorationThickness: '.28em', textUnderlineOffset: '-.12em', textDecorationSkipInk: 'none' }}>On your schedule.</span>
           </h1>
           <p className="hero-sub" style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
             6 modules. 44 video lessons. 50+ ready-to-use prompts.<br />

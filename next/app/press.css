@@ -1,7 +1,7 @@
 /* Press page styles (ported from press.html's inline styles into scoped classes). */
 
 .page-press {
-  --serif: 'Playfair Display', Georgia, serif;
+  --serif: 'Outfit', 'Be Vietnam Pro', sans-serif;
 
   .press-hero {
     min-height: 480px;
@@ -19,7 +19,7 @@
     letter-spacing: -0.03em;
     line-height: 1.05;
   }
-  .press-hero h1 .serif-accent { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--pink); }
+  .press-hero h1 .serif-accent { font-family: var(--serif);  font-weight: 500; color: var(--pink); }
   .press-hero p { font-size: 15px; color: #6E6E6B; line-height: 1.7; }
 
   .press-form-section { padding: 0 24px 80px; }
