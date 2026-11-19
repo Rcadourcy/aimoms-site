@@ -82,7 +82,7 @@ export default function NewsletterPopup() {
           &times;
         </button>
         <div style={{ fontWeight: 800, fontSize: 18, letterSpacing: '-0.04em', marginBottom: 14 }}>
-          <span style={{ color: '#ff63d8', fontFamily: "'Outfit',sans-serif", fontWeight: 900 }}>ai.</span>
+          <span style={{ color: '#ff63d8', fontFamily: "'Playfair Display',Georgia,serif", fontStyle: 'italic', fontWeight: 900 }}>ai.</span>
           <span style={{ color: '#060d26' }}>moms</span>
           <span style={{ fontSize: 6, verticalAlign: 'super', opacity: 0.4 }}>&#8482;</span>
         </div>

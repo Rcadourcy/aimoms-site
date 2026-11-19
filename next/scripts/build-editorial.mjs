@@ -311,7 +311,7 @@ ${extraHead}
 ${FBQ_STUB}
 <style>${CHROME_CSS}${CSS}${DEMO_CSS()}${VIDEO_CSS}${AIME_CSS}${POPUP_CSS}.s-nav .tnl.on{box-shadow:inset 0 -2px 0 var(--pink,#ff63d8);padding:4px 0}</style>
 <script src="/aim-track.js" defer></script>
-</head>
+<style>/* Pink underline accent replaces the serif (Nov 19, 2026) */.italic-accent,.serif-accent,.serif,h1 .accent,h2 .accent,h3 .accent,h1 .ia,h2 .ia,h1 em,h2 em,h1 i,h2 i{font-family:inherit!important;font-style:normal!important;font-weight:inherit!important;color:inherit!important;letter-spacing:inherit!important;text-decoration:underline!important;text-decoration-color:#FF63D8!important;text-decoration-thickness:.28em!important;text-underline-offset:-.12em!important;text-decoration-skip-ink:none!important}</style><style>/* Tighter logo (Nov 19, 2026) */.brand .bm,.bm{letter-spacing:-.04em}.brand .bm .tm,.bm .tm{letter-spacing:0}</style></head>
 <body>
 <div class="site" id="site">
 ${NAV}
