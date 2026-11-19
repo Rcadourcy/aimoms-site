@@ -1,0 +1,260 @@
+{
+  "slug": "ai-travel-prompts-for-moms",
+  "pillar": "Seasonal",
+  "cluster": "Holidays",
+  "kicker": "SEASONAL · HOLIDAYS",
+  "title": "Best AI Travel Planning Prompts for Busy Moms",
+  "cardTitle": "Best AI Travel Planning Prompts for Busy Moms",
+  "dek": "Thanksgiving at the grandparents’, a winter break getaway or the summer beach week: destination, itinerary and packing lists, planned with Claude.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-19",
+  "readTime": "5 min",
+  "hero": {
+    "src": "/editorial/img/ai-family-trip-planning-for-moms-travel.jpg",
+    "alt": "A mom and her daughter, seen from behind, roll their suitcases down a sunny boardwalk at the start of a family trip.",
+    "credit": {
+      "name": "Zero Vo",
+      "url": "https://unsplash.com/photos/a-woman-and-a-child-walking-down-a-sidewalk-with-luggage-yKHD8XDNwb0",
+      "site": "Unsplash"
+    }
+  },
+  "takeaways": [
+    "**Use specific, detailed prompts to get a realistic travel plan.** Where to go, a day-by-day itinerary, then the travel day, packing and meals.",
+    "**Give context in the prompt.** Ages, budget, nap times and what wears everyone out.",
+    "**Confirm before you book.** Prices, holiday hours and ID rules change, so check before you pay."
+  ],
+  "jumpLinks": true,
+  "body": [
+    {
+      "type": "p",
+      "text": "To plan a family trip with AI, work through three phases with Claude: choose where to go, build a day-by-day itinerary, then handle the travel day, packing lists and meals. The five copy-ready prompts below cover each step for Thanksgiving at the grandparents’, a winter break getaway or the summer beach week, and you keep every decision."
+    },
+    {
+      "type": "p",
+      "text": "Holiday travel starts long before the car is packed: who’s hosting Thanksgiving this year, which flights still have seats, whether the toddler will nap in the car, what everyone needs for three nights at the grandparents’ and who’s watering the plants. Add activities that work for a five-year-old and a twelve-year-old, a budget that keeps growing and a backup plan for the delayed flight, and one person is holding all of it."
+    },
+    {
+      "type": "h2",
+      "text": "Phase 1: Where Should We Go?"
+    },
+    {
+      "type": "p",
+      "text": "Skip this phase if you already know, like when the trip is to a relative’s house. If you’re deciding, this prompt gives you options side by side. Every prompt here uses RCTF (Role, Context, Task, Format), the structure we teach at ai.moms™."
+    },
+    {
+      "type": "prompt",
+      "label": "The destination prompt",
+      "lines": [
+        "**Role:** You are a family travel planner who specializes in trips with kids.",
+        "**Context:** Our family is ==[insert adults and kids, with ages]==. We’re traveling ==[insert dates, like Thanksgiving week or winter break]==. Our budget for the trip is ==[insert total]==. We live in ==[insert city]==. Past trips we’ve taken: ==[insert]==. The kids love ==[insert interests]==. The adults want ==[insert what you need from this trip]==. Limits: ==[insert things like car trips only, no long flights, mobility needs or a pet to board]==.",
+        "**Task:** Suggest 4 destinations that fit our family and our dates.",
+        "**Format:** A table with each option, a rough cost range, travel time from home, what each person will enjoy and one downside. Note anything about holiday crowds, closures or weather we should know.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Phase 2: How Do I Build a Day-by-Day Itinerary?"
+    },
+    {
+      "type": "prompt",
+      "label": "The itinerary prompt",
+      "lines": [
+        "**Role:** You are a family travel planner who builds realistic days for trips with kids.",
+        "**Context:** We’re going to ==[insert destination]== for ==[insert number]== days over ==[insert holiday or dates]==. Our kids are ==[insert ages]==. We like ==[insert activity types]== and want to avoid ==[insert things like crowds or overscheduling]==. What tires our family out: ==[insert, like early wake-ups, long walks or the afternoon slump]==.",
+        "**Task:** Build a day-by-day itinerary that balances activities with downtime and includes at least one rest afternoon. Note which places may have holiday hours or closures.",
+        "**Format:** One short section per day with morning, afternoon and evening, plus a backup idea for bad weather.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For a holiday at family’s house, ask for a lighter version: one outing a day, the holiday meal blocked out and a quiet hour after lunch."
+    },
+    {
+      "type": "h2",
+      "text": "Phase 3: How Do I Handle the Travel Day, Packing and Meals?"
+    },
+    {
+      "type": "h3",
+      "text": "How do I plan the travel day?"
+    },
+    {
+      "type": "prompt",
+      "label": "The travel day prompt",
+      "lines": [
+        "**Role:** You are a family travel planner who has planned a lot of travel days with kids.",
+        "**Context:** We’re ==[insert driving or flying]== from ==[insert city]== to ==[insert destination]== on ==[insert date]==. Our kids are ==[insert ages]==. What makes travel days hard for us: ==[insert, like carsickness, a nap schedule or a long layover]==.",
+        "**Task:** Plan our travel day: when to leave, snacks and activities by age, where to stop or what to do during a layover, and what to keep in the carry-on or the front seat.",
+        "**Format:** A simple timeline for the day, then a short “keep within reach” checklist.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/family-trip-train-square.jpg",
+      "alt": "A mom and her young son stand at the door of a train, looking out the window on a family travel day.",
+      "portrait": true
+    },
+    {
+      "type": "h3",
+      "text": "How do I make a packing list for each person?"
+    },
+    {
+      "type": "prompt",
+      "label": "The packing list prompt",
+      "lines": [
+        "**Role:** You are an organized family travel planner who writes packing lists anyone in the family can pack from.",
+        "**Context:** We’re taking a ==[insert number]==-day trip to ==[insert destination]== in ==[insert month]==. Travelers: ==[insert family members and ages]==. Holiday plans while we’re there: ==[insert, like a dinner outfit or gifts to bring]==.",
+        "**Task:** Create our packing list. Flag anything easy to forget that’s hard to buy there.",
+        "**Format:** Organized by person, then by category: clothes, toiletries, entertainment, documents and gear, with a checkbox for each item.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "How do I find kid-friendly restaurants?"
+    },
+    {
+      "type": "prompt",
+      "label": "The restaurant prompt",
+      "lines": [
+        "**Role:** You are a local food guide who knows which restaurants truly work for families.",
+        "**Context:** We’re visiting ==[insert destination]== on ==[insert dates]== with kids aged ==[insert ages]==. Food notes: ==[insert allergies, picky eaters or budget]==.",
+        "**Task:** Help me find restaurants that are truly kid-friendly, beyond having a high chair. Tell me which neighborhoods to look at, what to ask before booking and what our backup plan is when a place doesn’t work out. Note anything likely to be closed on ==[insert holiday]==.",
+        "**Format:** A short list of neighborhoods, a checklist of questions to ask, and a short backup plan.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Why Should I Write My Real Family Into the Prompt?"
+    },
+    {
+      "type": "p",
+      "text": "Claude doesn’t know that one of your kids hits a wall at 3pm, that someone gets carsick on mountain roads, or that your partner’s idea of relaxing is different from yours. Put those details in the Context. The more specific you are about your actual family, the more the plan fits the trip you’ll really take."
+    },
+    {
+      "type": "h2",
+      "text": "What Should Moms Double-Check Before Booking?"
+    },
+    {
+      "type": "p",
+      "text": "AI does the research. You still make the call."
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Confirm prices and availability directly.** AI can be out of date on fares, rates and what’s open.",
+        "**Check holiday hours.** Many attractions and restaurants close or change hours around Thanksgiving and winter break.",
+        "**Check ID and passport rules at official sources.** Rules for kids differ by destination and airline.",
+        "**Confirm car seat and stroller rules with your airline or rental company.**",
+        "**Keep private details out of the chat.** Passport numbers and booking codes stay in your own records."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Can the ai.moms™ Plugin Plan the Whole Trip?"
+    },
+    {
+      "type": "p",
+      "text": "Yes. If you have Aime and the [ai.moms™ plugin](/skill-guide), the **/aimoms-travel-plan** skill builds the countdown checklist and packing lists from your family’s travel preferences, so you don’t start from scratch each trip."
+    },
+    {
+      "type": "h2",
+      "text": "How Does AI Trip Planning Work for Each Mom?"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Mom at home:** hand AI the research and spend your evenings on the parts you enjoy, like picking the one special outing.",
+        "**Mom at work:** ask AI to draft your out-of-office message and a handoff note alongside the packing list.",
+        "**Mompreneur:** ask for an itinerary with a short daily work window, plus a note to customers about holiday hours."
+      ]
+    }
+  ],
+  "faqTitle": "Family Travel Planning With AI: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "Can AI make a packing list for my family?",
+      "a": "Yes. Ask for a list organized by person, then by category, with the things that are easy to forget and hard to buy at your destination flagged."
+    },
+    {
+      "q": "Is AI travel information accurate?",
+      "a": "Not always. AI can be out of date on prices, hours and rules, so confirm anything you’ll pay for or rely on with the airline, hotel or official source."
+    },
+    {
+      "q": "How do I share the trip plan with my partner or family?",
+      "a": "Ask Claude to put the itinerary and packing lists into one clean checklist, then copy it into a shared note, a Google Doc or the family group chat. When plans change, paste the change into the same Claude chat and ask for an updated version to share."
+    }
+  ],
+  "closing": {
+    "title": "What Will You Do With Your Time Back on This Trip?",
+    "paragraphs": [
+      "Maybe you’re the mom at home who holds every detail of the holiday trip, the mom at work planning travel between meetings, or the mompreneur trying to step away from the business for a few days. When Claude does the research and keeps the lists, you get to enjoy the trip, the drive there included.",
+      "When you want Aime planning trips with your family’s preferences already in hand, [Build Aime](/build-aime), your AI Chief Everything Officer™. With the details and the thinking out of your head, your next trip is something to look forward to."
+    ]
+  },
+  "brief": {
+    "workingTitle": "How to Plan a Family Summer Trip in One Afternoon With AI (converted, now all-season)",
+    "draftDate": "2026-10-29",
+    "author": "ai.moms™ team (converted from the old article)",
+    "note": "Beginner level, written for all three moms, with the mom at home in the lead example. Made year-round with Thanksgiving and winter break as the lead examples.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "Best AI Travel Planning Prompts for Busy Moms",
+    "altH1s": [
+      "How to Plan Family Holiday Travel With AI",
+      "Plan the Family Trip in an Afternoon With AI"
+    ],
+    "primaryKeywords": [
+      "ai travel planning prompts",
+      "plan a family trip with ai",
+      "ai for moms",
+      "ai prompts for moms"
+    ],
+    "supportingTerms": [
+      "holiday travel with kids",
+      "family vacation itinerary",
+      "packing list for kids",
+      "thanksgiving travel",
+      "winter break trip"
+    ],
+    "metaTitle": "AI Travel Planning Prompts for Moms: Plan the Family Trip",
+    "metaDescription": "Copy-ready AI travel planning prompts for busy moms: pick a destination, build a day-by-day itinerary and get packing lists for every person in the family.",
+    "slugPath": "/editorial/ai-travel-prompts-for-moms",
+    "internalLinks": [
+      "aimoms.ai/skill-guide (plugin section)",
+      "aimoms.ai/build-aime (closing)",
+      "aimoms.ai/foundations (closing)"
+    ],
+    "externalLinks": [],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 950 words, article body only",
+    "sourceArticle": "How to Plan a Family Summer Trip in One Afternoon With AI (summer-family-trip)",
+    "reviewNotes": [
+      "Made it year-round: Thanksgiving and winter break lead, with summer still mentioned. Prompts now ask about holiday closures, crowds and what to bring for the holiday.",
+      "Kept all four original prompts (destination in RCTF, itinerary, packing, restaurants) and added a travel-day prompt plus a lighter itinerary tip for trips to family.",
+      "Points to /aimoms-travel-plan and /aimoms-school-breaks, described only from the Skill Guide. Old CTA “Take the Course” is now Build Aime, with Foundations as a secondary link.",
+      "Cut the pullquote (“planning used to take longer than the vacation itself”) and the “One session” promise. Changed “your 8-year-old” to a generic kid.",
+      "QA: Rewrote the itinerary, travel day, packing and restaurant prompts in full RCTF with the clarifying-questions line (they were one-paragraph asks).",
+      "QA: Hero (img-unsplash-17) shows two young boys in the foreground with faces partly visible, and reads as summer for a holiday-travel piece. Ideal replacement: a mom with a carry-on and coffee at a bright airport window or packing a suitcase on a bed, winter light, no kids’ faces.",
+      "Nov 12 photo licensing check: hero is now https://unsplash.com/photos/a-woman-with-curly-hair-looking-at-a-harbor-with-boats-in-valletta-malta-5sAOdnB_rIc by Dawid Tkocz (Unsplash License (free, verified on photo page)), matching Marketing HQ v133. The old hero (/img-unsplash-17.jpg) had no confirmed source.",
+      "Nov 13: edited with the aimoms-blog-formatter and aimoms-article-clarity skills (answer-first intro, Bright Horizons 2017 stat + Sources, question headings, In This Article jump links, one CTA, Claude instead of vague it/AI, staccato fragments joined, date Nov 13). Open items are in the Clarity review doc in Editorial relaunch.",
+      "Nov 13 (Raquel): removed the Bright Horizons stat and the Sources section; no data in this article for now. Idea flagged in HQ: run our own ai.moms™ survey on family trip planning to create a data set for this topic. Plugin is a brief mention only (Key Takeaway 6 cut; plugin section is one short paragraph; /aimoms-school-breaks paragraph cut). Removed the first two FAQs. No Aime planner box."
+    ]
+  },
+  "status": "published",
+  "legacyId": "summer-family-trip",
+  "oldTakeaways": [
+    "**Trip planning is mostly research and lists.** Claude handles the research and the lists, while you keep the decisions.",
+    "**Use specific, detailed prompts to get a realistic travel plan.** Choose where to go, build a day-by-day itinerary, then handle the logistics: travel day, packing and meals.",
+    "**Holiday travel needs its own details.** Tell AI about closures, crowds, the host’s house and what to bring for the holiday itself.",
+    "**Give context in the prompt.** The afternoon slump, the light sleeper and your partner’s idea of relaxing all belong in the Context.",
+    "**Confirm before you book.** Prices, holiday hours and ID rules change, so check official sources before you pay."
+  ],
+  "topTrial": "Nov 16: Raquel is trying a shorter top (3 takeaways, no short-answer box) before she talks to Belinda. oldTakeaways holds the original five."
+}
