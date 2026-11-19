@@ -230,7 +230,9 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 .ed .prompt .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
 .ed .prompt p{margin:0 0 12px} .ed .prompt strong{color:var(--pink)}
 .ed .prompt code{background:rgba(255,255,255,.12);color:#fff}
-.ed mark.fill{background:var(--pink);color:var(--navy);padding:1px 6px;border-radius:4px;font-weight:600;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ed mark.fill{background:#fff;color:var(--navy);padding:1px 6px;border-radius:4px;font-weight:600;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* Nov 19 (Raquel): fill-ins are white on every article; on a white background they get a thin navy outline so they still show. */
+.ed mark.fill{box-shadow:inset 0 0 0 1.5px var(--navy)}.ed .ptext mark.fill{box-shadow:none}
 .ed .prompt .copy{position:absolute;top:16px;right:16px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:7px 16px;font:700 12px 'Be Vietnam Pro',sans-serif;cursor:pointer}
 .ed .fig{margin:8px 0 26px}
 .ed .fig img{width:100%;display:block}
