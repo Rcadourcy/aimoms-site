@@ -238,16 +238,16 @@ html,body{overflow-x:hidden;max-width:100%}#site{overflow-x:clip}
 
 const NEWSLETTER = `<section class="nl" aria-label="Newsletter"><div class="wrap">
   <div>
-    <span class="kicker">Coming soon</span>
-    <h2>Be first when our <span class="accent">newsletter</span> launches</h2>
-    <p>What's new in AI and what it means for your week, in plain words. We're still building it, so add your email and we'll tell you the day it starts.</p>
+    <span class="kicker">The AIM · every Friday</span>
+    <h2>Get The AIM, our <span class="accent">Friday</span> newsletter</h2>
+    <p>Every Friday: one tip to help you use AI better, a prompt or a few you can try that same day, and the AI news that matters for mom life. Short enough to read in the pickup line.</p>
   </div>
   <form name="newsletter" class="nl-form" novalidate>
     <input type="hidden" name="form-name" value="newsletter">
     <label class="hp">Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
     <label class="sr-only" for="nl-email">Email address</label>
     <input id="nl-email" type="email" name="email" required placeholder="you@email.com">
-    <button type="submit">Get me on the list</button>
+    <button type="submit">Send me The AIM</button>
   </form>
 </div></section>`;
 // Newsletter pop-up (Nov 13). Best practice for a content site: never on arrival. It slides in (no full-screen overlay,
@@ -256,16 +256,16 @@ const NEWSLETTER = `<section class="nl" aria-label="Newsletter"><div class="wrap
 // stays away 14 days after a close and never comes back after a sign-up.
 const POPUP = `<aside class="nlp" id="nlp" role="dialog" aria-modal="false" aria-labelledby="nlp-h" hidden>
   <button type="button" class="nlp-x" aria-label="Close">×</button>
-  <span class="kicker">The AIM newsletter · coming soon</span>
-  <h2 id="nlp-h">Be first when it <span class="accent">launches</span></h2>
-  <p>What's new in AI and what it means for your week, in plain words. Add your email and we'll tell you the day it starts.</p>
+  <span class="kicker">The AIM · every Friday</span>
+  <h2 id="nlp-h">AI for mom life, every <span class="accent">Friday</span></h2>
+  <p>One tip to help you use AI better, a prompt or a few you can try that same day, and the AI news that matters for mom life. Short enough to read in the pickup line.</p>
   <form name="newsletter" class="nl-form" novalidate>
     <input type="hidden" name="form-name" value="newsletter">
     <input type="hidden" name="source" value="the-aim-popup">
     <label class="hp">Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
     <label class="sr-only" for="nlp-email">Email address</label>
     <input id="nlp-email" type="email" name="email" required placeholder="you@email.com">
-    <button type="submit">Get me on the list</button>
+    <button type="submit">Send me The AIM</button>
   </form>
 </aside>`;
 const POPUP_CSS = `.nlp{position:fixed;right:24px;bottom:24px;z-index:9997;width:min(380px,calc(100vw - 32px));background:#060d26;color:#fff;border-radius:16px;padding:24px 22px 20px;box-shadow:0 24px 60px -20px rgba(6,13,38,.6);transform:translateY(16px);opacity:0;transition:transform .35s ease,opacity .35s ease;font-family:'Be Vietnam Pro',sans-serif}
