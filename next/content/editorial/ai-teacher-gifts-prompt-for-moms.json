@@ -1,0 +1,233 @@
+{
+  "slug": "ai-teacher-gifts-prompt-for-moms",
+  "status": "published",
+  "pillar": "Seasonal",
+  "cluster": "Holidays",
+  "title": "How to Use AI for Teacher Gifts, Cards and More",
+  "cardTitle": "Teacher Gifts and Cards",
+  "dek": "Give the best gifts to the special team that helps make life a little easier with our ready-to-copy teacher gift AI prompt.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-23",
+  "readTime": "5 min",
+  "hero": {
+    "src": "/editorial/img/teacher-gifts-and-holiday-cards-unsplash.jpg",
+    "alt": "Hand holding a small kraft-paper gift tied with colorful string in window light"
+  },
+  "takeaways": [
+    "**Make one list of everyone you want to thank.** Teachers, aides, coaches, the sitter, the bus driver and the people who make the year work.",
+    "**Set the budget first, then the gift.** Claude splits one total across the whole list so nobody gets forgotten and the card doesn’t get maxed out.",
+    "**Put every December date in one place.** Party RSVPs, gift deadlines, card mailing and the last school day before break.",
+    "**Use the teacher gift prompt.** Give Claude everyone on your list, your total budget and one detail about each person, and [the copy-ready prompt](#the-ai-teacher-gift-and-holiday-card-prompt) builds the gift plan, a short note for each and your December calendar in one go."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "During the holidays, it can feel like moms are juggling 20 lists in the Notes app: gifts for the kids, friends and family, and the dream team, aka the teachers. If your child is involved in various activities or sports, add a handful of coaches and instructors to that list too."
+    },
+    {
+      "type": "p",
+      "text": "The good news is that one simple teacher gift AI prompt can take most of it off your plate, from the gift ideas to the notes and the party RSVPs. If you’re helping with the class party too, AI can go beyond the gifts and plan that as well."
+    },
+    {
+      "type": "h2",
+      "text": "How Can Moms Use AI for Teacher Gifts and Holiday Cards?"
+    },
+    {
+      "type": "answer",
+      "text": "Tell Claude everyone you want to thank, your total budget and one detail about each person, and ask for a gift plan with a two-line note for each. Then add your card list and party invitations, and ask for one December calendar with every deadline on it. Claude does the list, the math and the first drafts. You choose the gifts and sign the cards."
+    },
+    {
+      "type": "h2",
+      "text": "AI Prompt Step 1: Create a List for Your Special People"
+    },
+    {
+      "type": "p",
+      "text": "The first step in building the teacher gift prompt is to list who these people are and their role. A list could include:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "Classroom teachers and assistants",
+        "Coaches, tutors and activity instructors",
+        "Sitters or daycare staff",
+        "The bus driver, crossing guard or front office staff"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Next to each one, add one special detail about them: loves coffee, runs marathons, always remembers your kid loves Elsa from Frozen. Small details are what make the note feel personal, and they help Claude or ChatGPT suggest a gift that fits."
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/teacher-gifts-wrapping-square.jpg",
+      "alt": "A mom and her daughter tie the ribbon on a kraft-paper gift by the Christmas tree, getting a teacher gift ready together.",
+      "portrait": true,
+      "credit": {
+        "name": "Lia Den",
+        "url": "https://unsplash.com/photos/a-woman-and-a-little-girl-sitting-on-the-floor-near-a-christmas-tree-Ah4REYV11ko",
+        "site": "Unsplash"
+      }
+    },
+    {
+      "type": "h2",
+      "text": "AI Prompt Step 2: Create the Budget and the Gifts"
+    },
+    {
+      "type": "p",
+      "text": "Give Claude one total and let it split it by tier: the people your family sees every day, the people you see weekly and the small thank-yous. Ask for ideas in each tier, from gift cards and group class gifts to small consumables and a heartfelt note on its own."
+    },
+    {
+      "type": "p",
+      "text": "If your class is doing a group gift, Claude can draft the message to other parents with a suggested amount, a deadline and how to chip in, worded so nobody feels pressured."
+    },
+    {
+      "type": "h2",
+      "text": "AI Prompt Step 3: The Card List and the Party"
+    },
+    {
+      "type": "p",
+      "text": "For holiday cards, ask Claude to plan the order: when to choose the photo, order the cards, address them and mail them so they arrive before your holiday. For the parties, paste in the dates and ask for a single calendar with a yes, no or maybe for each and a short reply to send."
+    },
+    {
+      "type": "h2",
+      "text": "The AI Teacher Gift and Holiday Card Prompt"
+    },
+    {
+      "type": "prompt",
+      "label": "Teacher Gifts, Cards and Party RSVPs",
+      "lines": [
+        "**Role:** You are a thoughtful, organized holiday planner who helps busy moms thank the people in their kids’ lives without overspending.",
+        "**Context:** Here is everyone I want to thank this December, by role, with one detail about each: ==[insert list, like 2nd grade teacher, loves coffee; swim coach, has a new baby; bus driver]==. My total budget for all of them is ==[insert amount]==. Our school’s last day before winter break is ==[insert date]==. Our family celebrates ==[insert holiday or holidays]==. I’m sending about ==[insert number]== holiday cards and want them to arrive by ==[insert date]==. These parties and events are on our calendar: ==[insert event, date and RSVP status for each]==.",
+        "**Task:** 1) Split my budget across the list in tiers and suggest one or two gift ideas per person, including at least a few low-cost options. 2) Draft a warm, two-line note for each person using their detail, with a version that says “happy holidays” for anyone whose holiday I don’t know. 3) If I want a class group gift, draft the message to other parents. 4) Give me a holiday card timeline working back from my arrive-by date. 5) Put every gift, card and party deadline into one December calendar, with a short RSVP reply for each event.",
+        "**Format:** A table for the gift plan (name or role, tier, gift idea, cost, note), then the card timeline, then the December calendar by date. Show the total spent against my budget.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Check Before You Buy"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Check your school’s gift policy.** Some schools and districts limit what staff can accept. Ask the front office or check the family handbook.",
+        "**Click every link and confirm delivery dates.** AI can be wrong about prices and shipping times in December.",
+        "**Ask about allergies before giving food.** Or choose something that isn’t edible.",
+        "**Keep private details out.** Use roles or first names. Keep full addresses in your contacts or a spreadsheet, not in a chat, and leave out your kids’ school names."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Let the Plugin Keep It All Year"
+    },
+    {
+      "type": "p",
+      "text": "The `/aimoms-celebration` skill in the ai.moms™ plugin plans birthdays and holidays from start to finish, and it keeps a year-round gift ledger so you never repeat a gift. Next December, Aime already knows who got what."
+    },
+    {
+      "type": "p",
+      "text": "For the family gift list, start with our [holiday gift prompt](/editorial/ai-prompts-for-moms-holiday-gifts). For the bigger holiday plan, see [our Christmas plan](/editorial/christmas-planning-with-ai-for-moms)."
+    },
+    {
+      "type": "h2",
+      "text": "Thank-You Season Works for All Three Moms"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Mom at home:** you probably hold the whole list. Run the prompt once in early December and hand the gift pickup to whoever has a free afternoon.",
+        "**Mom at work:** add your team or your assistant to the same list, with a separate budget line, so work and school gifts come from one plan.",
+        "**Mompreneur:** add your best clients and vendors, and ask Claude for a short thank-you note that fits your brand."
+      ]
+    }
+  ],
+  "faqTitle": "Teacher Gifts and Holiday Cards: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "What are good teacher gift ideas for Christmas?",
+      "a": "A heartfelt note, a gift card to a coffee shop or bookstore, classroom supplies the teacher actually wants, or a group class gift all work well. Give Claude one detail about the teacher and your budget, and it will suggest ideas that fit."
+    },
+    {
+      "q": "How much should I spend on a teacher gift?",
+      "a": "A good rule of thumb is to spend around $20–$30, according to [USA Today](https://www.usatoday.com/story/money/shopping/2023/12/08/teacher-gifts-christmas-etiquette/71806855007/)."
+    },
+    {
+      "q": "When should I mail holiday cards?",
+      "a": "It depends on where they’re going and the shipping times that year. Tell Claude your arrive-by date and it will work backwards to when to order, address and mail them. Check current postal deadlines before you count on them."
+    },
+    {
+      "q": "Can AI write thank-you notes for teachers?",
+      "a": "Yes. Give Claude one specific detail about each person and ask for two warm lines. Read each one and add your own words before you sign it."
+    }
+  ],
+  "closing": {
+    "title": "Moms, Thank Everyone Without Carrying the List",
+    "paragraphs": [
+      "With our teacher gift prompt, you save time and take the mental load of gifts off your plate, so thanking your kids’ teachers, the dream team that makes every school day a little easier, feels good again.",
+      "When you want help with every gift, birthday and holiday all year, [Build Aime](/build-aime), your AI Chief Everything Officer™. Aime remembers who got what, so next December starts with the list already made.",
+      "At ai.moms™, we’re on a mission to help moms get their time back, with the tools, resources and community to make it happen."
+    ]
+  },
+  "brief": {
+    "workingTitle": "How to Use AI for Teacher Gifts, Cards and More",
+    "draftDate": "2026-11-02",
+    "author": "ai.moms™ team",
+    "note": "Beginner level, all three moms with the mom at home leading. Carry Less series; publish late November 2026. Maps to the celebration skill.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "How to Use AI for Teacher Gifts, Cards and More",
+    "altH1s": [
+      "Teacher Gift Ideas for Christmas, Planned With AI",
+      "How Moms Plan Teacher Gifts and Holiday Cards With AI"
+    ],
+    "primaryKeywords": [
+      "teacher gift ai prompt",
+      "ai prompts for moms",
+      "teacher gift ideas for christmas"
+    ],
+    "supportingTerms": [
+      "teacher gift budget",
+      "holiday card timeline",
+      "class group gift",
+      "thank you notes for teachers",
+      "holiday party RSVP"
+    ],
+    "metaTitle": "Teacher Gift AI Prompt for Moms: Gifts, Notes and Cards",
+    "metaDescription": "Use our teacher gift AI prompt to plan gifts for teachers, coaches and sitters, write a short note for each, and keep holiday cards and party RSVPs on track.",
+    "slugPath": "/editorial/ai-teacher-gifts-prompt-for-moms",
+    "internalLinks": [
+      "aimoms.ai/editorial/ai-prompts-for-moms-holiday-gifts (plugin section)",
+      "aimoms.ai/editorial/christmas-planning-with-ai-for-moms (plugin section)",
+      "aimoms.ai/editorial/hanukkah-planning-with-ai-for-moms (plugin section)",
+      "aimoms.ai/build-aime (closing)"
+    ],
+    "externalLinks": [
+      "https://www.usatoday.com/story/money/shopping/2023/12/08/teacher-gifts-christmas-etiquette/71806855007/ (FAQ, spend range)"
+    ],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 1,150 words, article body only",
+    "sourceArticle": "NEW-ARTICLES-PLAN.md batch B row 4; Seasonal map 2026-27 (holiday parties, teacher gifts, cards early to mid Dec; Hanukkah Dec 4 to 12; winter break Dec 24; Christmas Dec 25); skill-guide.html for celebration",
+    "reviewNotes": [
+      "No stats, per the plan. Dates checked against the seasonal map: Hanukkah ends Sat Dec 12, NYC winter break starts Thu Dec 24, Christmas Fri Dec 25.",
+      "If you want a line on what teachers value most, add a quote from a teacher in the community; we didn’t make that claim without a source.",
+      "School gift limits are mentioned generally (no dollar figure), since rules differ by school and district.",
+      "No hero: the gift photos in public/ are already used. Ideal photo: a woman’s hands writing small cards beside simply wrapped gifts and twine, modern, neutral palette, no candles, no kids.",
+      "Nov 6: removed the Carry Less title and any NYC-only dates so this works for moms anywhere in the U.S.",
+      "Nov 12 photo licensing check: hero is now https://unsplash.com/photos/hand-holding-small-brown-paper-package-zYPixh1jN9w by Liana S (Unsplash License (verified)), the same photo as the Marketing HQ board. The old hero (none) had no confirmed source.",
+      "Nov 14: removed the \"The short answer:\" label from the answer block (house rule since Nov 14). No other wording changed.",
+      "Nov 17 (Raquel): headline is now “How to Use AI for Teacher Gifts, Cards and More”; date moved to Nov 17; the intro is replaced with Raquel’s new version (the old December-list opening and the “ai.moms™ seasonal calendar” line are gone with it); the closing keeps one CTA, Build Aime (Skill Guide and Foundations links cut); added a 600×600 classroom photo under Step 1 (Ronald Felton, Unsplash License, verified on the photo page Nov 17). The FAQ spend range ($20–30, USA Today, Dec 8, 2023) is on hold: the USA Today page is paywalled and couldn’t be read to confirm the figure.",
+      "Nov 17 (Raquel): the FAQ spend range now uses Lauren Grace’s By the Graces blog (Oct 9, 2022), quote checked on the page: “A good rule of thumb is to spend around $20-$30.” A teacher writing on her own shop’s blog, so a brand source (named in the sentence). Replaces the USA Today idea, which was paywalled. The shop’s product page isn’t linked (one source link is enough, and a shop link reads as an ad).",
+      "Nov 17 (Raquel): the “Check the school’s gift policy” takeaway is replaced with a teacher gift prompt callout that jumps to the prompt. The gift policy check still appears in “Check Before You Buy” and the FAQ.",
+      "Nov 17 (Raquel): browser title changed from “Teacher Gift Ideas for Christmas, Planned With AI” to “The Essential Teacher Gift AI Prompt for Moms” (45 characters); the article focuses on the prompt, not a list of ideas. Primary keyword now leads with “teacher gift ai prompt”. Headings: Step 1–3 renamed to “AI Prompt Step 1: Create a List for Your Special People”, “AI Prompt Step 2: Create the Budget and the Gifts”, “AI Prompt Step 3: The Card List and the Party”; the prompt heading is now “The AI Teacher Gift and Holiday Card Prompt”. Step 1 text rewritten in Raquel’s words (the neighbors bullet is gone; “activity instructors” appeared in two bullets, so it stays only in the coaches bullet).",
+      "Nov 17 (Raquel): meta description changed to match the prompt-focused title: “Use our teacher gift AI prompt to plan gifts, a short note for each, holiday cards and party RSVPs in one go.” (109 characters). Was: “Teacher gift ideas for Christmas, plus coaches, sitters and helpers: plan the list, budget, notes, holiday cards and party RSVPs with one AI prompt.”",
+      "Nov 17 (Raquel): summary line is now “Give the best gifts to the special team that helps make life a little easier with our ready-to-copy teacher gift AI prompt.” (123 characters). URL changed to aimoms.ai/editorial/ai-teacher-gifts-prompt-for-moms (was teacher-gifts-and-holiday-cards). The old URL was never live (404 on aimoms.ai/theaim/teacher-gifts-and-holiday-cards), so no redirect is needed. Photo filenames kept as they are.",
+      "Nov 17 (Raquel): FAQ spend answer tightened to “A good rule of thumb is to spend around $20–$30, according to USA Today.” Source and link switched to USA Today (Dec 8, 2023). The USA Today page is paywalled, so we couldn’t open it; the $20–$30 line itself is checked on Lauren Grace’s By the Graces blog (Oct 9, 2022), which USA Today quotes."
+    ]
+  },
+  "sources": [
+    "USA Today, article on teacher gift etiquette, Dec 8, 2023: https://www.usatoday.com/story/money/shopping/2023/12/08/teacher-gifts-christmas-etiquette/71806855007/"
+  ]
+}

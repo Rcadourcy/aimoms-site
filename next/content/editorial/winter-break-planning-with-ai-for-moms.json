@@ -1,0 +1,269 @@
+{
+  "slug": "winter-break-planning-with-ai-for-moms",
+  "status": "published",
+  "pillar": "Seasonal",
+  "cluster": "Winter Break",
+  "title": "The Winter Break AI Prompt for Moms",
+  "cardTitle": "Winter Break Planning for Moms",
+  "dek": "Use the winter break prompt to get coverage, find break camps and set a loose daily rhythm.",
+  "byline": "The ai.moms™ team",
+  "date": "2026-11-25",
+  "readTime": "5 min",
+  "hero": {
+    "src": "/editorial/img/winter-break-planning-with-ai-for-moms-hero.jpg",
+    "alt": "A mom holds her toddler on her hip and smiles at her laptop at the kitchen table, the real juggle of covering work and kids over winter break.",
+    "credit": {
+      "name": "Helena Lopes",
+      "url": "https://unsplash.com/photos/girl-in-white-and-gray-stripe-shirt-sitting-on-white-wooden-table-C2WC2ZerF3s",
+      "site": "Unsplash"
+    }
+  },
+  "takeaways": [
+    "**Kids are home for a week or two.** Winter break dates vary by district, so start with your school calendar.",
+    "**Coverage comes before activities.** Put a name on every day, starting with the workdays Dec 28 to 31.",
+    "**Use the winter break prompt.** Give Claude your dates, work schedules and kids’ ages, and [the copy-ready prompt](#the-winter-break-prompt) builds the coverage map, break camp list and daily rhythm in one go.",
+    "**A loose rhythm beats a packed schedule.** Out in the morning, quiet at midday, one planned thing in the afternoon."
+  ],
+  "body": [
+    {
+      "type": "p",
+      "text": "The winter break AI prompt takes your dates, both work schedules and your kids’ ages, and Claude builds a day-by-day coverage map, finds local break camps and sets a loose daily rhythm for the days at home. Most U.S. schools close for a week or two around Christmas and New Year’s, and the exact dates vary by district."
+    },
+    {
+      "type": "p",
+      "text": "If the juggle already feels heavy, you’re not alone. In a [December 2025 survey of 500 employed U.S. parents of young children](https://www.brighthorizons.com/newsroom/archive/2025-modern-family-index-holiday-stress-working-parents), commissioned by the child care company Bright Horizons and conducted by Opinium, 68% said juggling work and child care is a top source of holiday stress, and 34% said they need extra child care, like backup care or holiday camps, during school breaks."
+    },
+    {
+      "type": "p",
+      "text": "For some families, the break is a trip. For a lot of us, it’s a stretch of days at home where work hasn’t stopped, the sitter is away, the grandparents are traveling, and somebody asks “what are we doing today?” before breakfast is over. Claude can build the coverage plan and the daily rhythm with you in one sitting."
+    },
+    {
+      "type": "h2",
+      "text": "How Can Moms Use AI to Plan Winter Break?"
+    },
+    {
+      "type": "answer",
+      "text": "Let Claude build your winter break plan so the kids stay busy and every day is covered. Give Claude the break dates, both parents’ work schedules, any travel, the holidays your family celebrates and your kids’ ages. Ask for a day-by-day coverage map, a short list of local activities and break camps, and a loose daily rhythm, then confirm the details and make the bookings."
+    },
+    {
+      "type": "h2",
+      "text": "Start With the Coverage Map"
+    },
+    {
+      "type": "p",
+      "text": "Before activities, figure out who’s home each day. Lay the days off next to your work calendar. In 2026, the days around the holidays fall like this:"
+    },
+    {
+      "type": "table",
+      "head": [
+        "Date",
+        "Day",
+        "Plan for"
+      ],
+      "rows": [
+        [
+          "**Dec 24**",
+          "Thursday",
+          "Christmas Eve for families who celebrate; many kids are already off school"
+        ],
+        [
+          "**Dec 25**",
+          "Friday",
+          "Christmas"
+        ],
+        [
+          "**Dec 26 and 27**",
+          "Weekend",
+          "Kwanzaa begins on the 26th for families who celebrate"
+        ],
+        [
+          "**Dec 28 to 31**",
+          "Mon to Thu",
+          "Workdays for many parents: the coverage gap"
+        ],
+        [
+          "**Jan 1**",
+          "Friday",
+          "New Year’s Day"
+        ],
+        [
+          "**Jan 2 and 3**",
+          "Weekend",
+          "Reset before school"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For most working parents, the hard part is December 28 to 31. Ask Claude to fill each of those days with a name: a parent working from home, a parent taking a day off, a grandparent, a sitter, a swap with another family, or a break camp."
+    },
+    {
+      "type": "p",
+      "text": "If you have the [ai.moms™ plugin](/skill-guide), the `/aimoms-school-breaks` skill builds this coverage map for you."
+    },
+    {
+      "type": "h2",
+      "text": "Ask for Backup Early"
+    },
+    {
+      "type": "p",
+      "text": "Other parents are solving the same puzzle. A swap where you take their kids on Tuesday and they take yours on Wednesday covers two days for the price of one."
+    },
+    {
+      "type": "h2",
+      "text": "A Loose Daily Rhythm, Not a Schedule"
+    },
+    {
+      "type": "p",
+      "text": "A rough shape to the day makes a long stretch at home easier for everyone, moms included. Ask Claude for a simple daily rhythm you can repeat, then fill in one planned thing per day:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Morning:** get out of the house, even for a walk, the library or a playground",
+        "**Midday:** lunch and a quiet block, like reading, a puzzle or a show",
+        "**Afternoon:** one planned thing, like a friend over, a museum, baking or a craft",
+        "**Evening:** a simple dinner and an early night"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/editorial/img/winter-break-city-hug-square.jpg",
+      "alt": "A mom in a houndstooth coat hugs her son on a city sidewalk, the kind of easy outing that fills a day at home over winter break.",
+      "portrait": true,
+      "credit": {
+        "name": "Kyle Nieber",
+        "url": "https://unsplash.com/photos/a-woman-hugging-a-young-boy-on-the-street-lyX93rbcS-8",
+        "site": "Unsplash"
+      }
+    },
+    {
+      "type": "h2",
+      "text": "The Winter Break Prompt"
+    },
+    {
+      "type": "prompt",
+      "label": "The winter break prompt",
+      "lines": [
+        "**Role:** You are a practical family planner who helps working parents cover school breaks without losing their minds.",
+        "**Context:** Winter break for our kids runs from ==[insert first day off]== to ==[insert last day off]==, and school starts again on ==[insert date]==. Our kids: ==[insert ages]==. My work schedule over the break: ==[insert]==. My partner’s or co-parent’s schedule: ==[insert]==. Possible help: ==[insert grandparents, sitter, other parents for swaps]==. We’re traveling ==[insert dates, or not at all]==. Holidays we celebrate during the break: ==[insert]==. We live in ==[insert neighborhood or city]==. Our budget for camps and activities: ==[insert]==. What my kids love: ==[insert]==.",
+        "**Task:** Build a day-by-day coverage map for the whole break and flag every day without coverage. For those days, find two or three local break camps or drop-in programs with prices, hours and how to sign up. Draft a short swap text I can send to other parents. Then give me a loose daily rhythm and one planned activity for each day at home, with free options first.",
+        "**Format:** A table with one row per day (date, who’s covering, the plan, cost), then the camp options in a comparison table, then the swap text.",
+        "**Before you start, ask me any clarifying questions.**"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Check Before You Book"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Confirm camp prices, hours and holiday closures** on each program’s own site or by phone.",
+        "**Check what’s open on the holidays.** Many places close or change hours on December 24, 25 and January 1.",
+        "**Vet any new sitter or program** the way you normally would. AI can find options; you decide who watches your kids.",
+        "**Keep the kids’ details general.** Ages and interests are plenty."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Winter Break Works for All Three Moms"
+    },
+    {
+      "type": "ul",
+      "items": [
+        "**Mom at home:** use the rhythm to keep the days from blurring together, and book one or two break camp days for yourself.",
+        "**Mom at work:** run the coverage map now, while break camps and sitters still have room.",
+        "**Mompreneur:** block your work hours inside the rhythm, like during the midday quiet block, and tell clients your break hours ahead of time."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Traveling over break? Our [family trip planning guide](/editorial/ai-travel-prompts-for-moms) covers the itinerary and packing lists. For Christmas week inside the break, see [our Christmas countdown plan](/editorial/christmas-planning-with-ai-for-moms)."
+    }
+  ],
+  "faqTitle": "Winter Break Planning: Frequently Asked Questions",
+  "faq": [
+    {
+      "q": "When is winter break 2026?",
+      "a": "Winter break dates depend on your school district. Most U.S. schools close for a week or two around Christmas and New Year’s. In New York City, for example, public schools are closed from Thursday, Dec 24, 2026, through Friday, Jan 1, 2027, according to the [NYC Public Schools calendar](https://www.schools.nyc.gov/calendar/2026-2027-school-year-calendar). Check your school’s calendar, then give Claude your dates."
+    },
+    {
+      "q": "How do working parents cover winter break?",
+      "a": "Map each day against both work schedules, then fill the gaps with a mix of days off, family help, swaps with other parents and break camps. Claude can build the map and find local camps with prices and hours."
+    },
+    {
+      "q": "What can kids do over winter break at home?",
+      "a": "Keep a loose rhythm: out in the morning, quiet at midday and one planned thing in the afternoon, like baking, a friend over or a museum. Tell Claude your kids’ ages and Claude will suggest a different plan for each day."
+    },
+    {
+      "q": "Are there winter break camps near me?",
+      "a": "Many programs run break camps or drop-in days. Ask Claude to search for options near you with prices, hours and sign-up details, then confirm with each program directly."
+    }
+  ],
+  "closing": {
+    "title": "Moms, Plan the Break Before It Starts",
+    "paragraphs": [
+      "Whether you’re a mom at home or working in an office, winter break doesn’t have to be stressful. The right plan helps. When Claude holds the coverage map and the daily rhythm, the break turns into days you can actually enjoy. Take the kids to a museum and get time for yourself at the gym. Spend time with the grandparents, and finally get the haircut you’ve been putting off.",
+      "When you want every day off planned like this all year, from teacher workdays to spring break, [Build Aime](/build-aime), your AI Chief Everything Officer™. At ai.moms™, we’re here to help you get your time back, with prompts, tools and community."
+    ]
+  },
+  "brief": {
+    "workingTitle": "Winter Break Planning for Moms With AI",
+    "draftDate": "2026-11-02",
+    "author": "ai.moms™ team",
+    "note": "Beginner level, Winter Break cluster. Coverage first, then a loose daily plan, with holidays inside the break named for the families who celebrate them.",
+    "level": "Beginner",
+    "audience": "All three moms (mom at home leads)",
+    "h1": "Winter Break Planning for Moms With AI",
+    "altH1s": [
+      "How to Plan Winter Break With AI",
+      "Winter Break With Kids Home: Coverage and a Loose Plan With AI"
+    ],
+    "primaryKeywords": [
+      "winter break ai prompt",
+      "winter break planning",
+      "winter break childcare",
+      "ai for moms"
+    ],
+    "supportingTerms": [
+      "winter break 2026",
+      "winter break camps near me",
+      "what to do with kids over winter break",
+      "childcare over winter break for working parents",
+      "winter break schedule for kids"
+    ],
+    "metaTitle": "The Winter Break Planning AI Prompt for Moms",
+    "metaDescription": "Plan winter break with AI: a day-by-day childcare map, break camps near you, parent swaps and a loose daily rhythm for the days at home. Copy-ready prompt.",
+    "slugPath": "/editorial/winter-break-planning-with-ai-for-moms",
+    "internalLinks": [
+      "aimoms.ai/theaim/ai-travel-prompts-for-moms (end of the each-mom section)",
+      "aimoms.ai/theaim/christmas-planning-with-ai-for-moms (end of the each-mom section)",
+      "aimoms.ai/build-aime (closing)"
+    ],
+    "externalLinks": [
+      "brighthorizons.com/newsroom/archive/2025-modern-family-index-holiday-stress-working-parents (opening stat)",
+      "schools.nyc.gov/calendar/2026-2027-school-year-calendar (FAQ: When is winter break 2026?)"
+    ],
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "length": "About 1,200 words, article body only",
+    "sourceArticle": "ai.moms™ Seasonal map 2026-27 (NYC winter break Thu Dec 24 to Fri Jan 1, back Jan 4; Christmas; Kwanzaa; New Year’s) and the Skill Guide (/aimoms-school-breaks, /aimoms-village-ask, /aimoms-activities)",
+    "reviewNotes": [
+      "“Workdays for many parents: Dec 28 to 31” is a general statement, no statistic.",
+      "Please confirm the break dates against the NYC calendar link in the map’s sources.",
+      "Hand it to Aime mock (after the short answer): confirm /aimoms-school-breaks can add these steps to Google Calendar with the Calendar connector on; the email countdown option is a mock.",
+      "Nov 6: removed the Carry Less title and any NYC-only dates so this works for moms anywhere in the U.S.",
+      "Nov 12 photo licensing check: hero is now https://unsplash.com/photos/woman-in-white-knit-sweater-and-blue-denim-jeans-sitting-on-gray-sofa-chair-reading-book-zzp90geJ9oQ by Alexandra Fuller (Unsplash License (free, verified on photo page)), the same photo as the Marketing HQ board. The old hero (/editorial/img/winter-break-planning-with-ai-for-moms.jpg) had no confirmed source.",
+      "Nov 14 formatter + clarity + SEO pass: opening now answers first, Bright Horizons/Opinium stat added (brand survey, named in the sentence), short answer cut to two sentences, every H2 a question, 600×600 baking photo added (Vitaly Gariev, Unsplash License), two extra plugin skill mentions and the Skill Guide link cut so Build Aime is the one CTA, meta title and description rewritten for 'winter break planning' and 'winter break childcare'. Hero (Alexandra Fuller) has no candle, so the Nov 2 candle note is resolved.",
+      "Nov 14 later changes from Raquel: H2s restored to the originals (not all questions), \"The short answer:\" label removed, answer paragraph rewritten, H1 \"Winter Break Planning for Moms With AI\", meta title \"Winter Break AI Prompts for Moms\", both plugin skills (/aimoms-village-ask, /aimoms-activities) restored, Bright Horizons stat and Aime box kept, date set to Nov 14, 2026."
+    ]
+  },
+  "sources": [
+    "Bright Horizons, “Research Reveals Stress Peaks for Working Parents During the Holiday Season,” December 9, 2025, survey of 500 employed U.S. parents of young children, commissioned by Bright Horizons and conducted by Opinium. [brighthorizons.com](https://www.brighthorizons.com/newsroom/archive/2025-modern-family-index-holiday-stress-working-parents)",
+    "NYC Public Schools, “2026-2027 School Year Calendar” (Winter Recess, schools closed Thu, Dec 24, 2026 to Fri, Jan 1, 2027). [schools.nyc.gov](https://www.schools.nyc.gov/calendar/2026-2027-school-year-calendar)"
+  ],
+  "jumpLinks": false
+}
