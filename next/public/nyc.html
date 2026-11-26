@@ -426,6 +426,18 @@ section,.nh .s-nav{position:relative}
             <label for="t5"><input type="checkbox" id="t5" name="tools" value="none">None yet</label>
           </div>
         </fieldset>
+<label for="heard">How did you hear about <span style="text-transform:none">ai.moms™</span>?
+          <select id="heard" name="heard_about" required>
+            <option value="">Choose one</option>
+            <option>Instagram</option>
+            <option>LinkedIn</option>
+            <option>A friend told me</option>
+            <option>Google search</option>
+            <option>An ai.moms™ experience or workshop</option>
+            <option>The AIM newsletter</option>
+            <option>Other</option>
+          </select>
+        </label>
         <div class="sum"><span id="sumtxt">NYC Experience · Wed, Feb 10 · Evening</span><b>$265</b></div>
         <p class="err" id="err" role="alert"></p>
         <button class="btn" type="submit">Continue to payment</button>
@@ -468,6 +480,7 @@ f.addEventListener('submit',e=>{
   if(!fn||!f.ln.value.trim()){err.textContent='Add your first and last name so we can put you on the list.';return}
   const ses=f.querySelector('input[name=session]:checked');
   if(!ses){err.textContent='Pick the evening session so we can save your seat.';return}
+  if(!f.heard.value){err.textContent='Tell us how you heard about ai.moms™ so we can find more moms like you.';return}
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Enter an email like name@example.com so we can send your details.';return}
   err.textContent='';
   const btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='One moment…';

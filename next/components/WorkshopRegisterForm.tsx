@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { STRIPE_LINKS, PRICES, WORKSHOP } from '@/lib/commerce';
+import HeardAboutField from './HeardAboutField';
 import { trackFbq } from './TrackedLink';
 
 function formatPhone(value: string): string {
@@ -113,6 +114,8 @@ export default function WorkshopRegisterForm() {
           onBlur={(e) => { if (e.target.value === '(') setPhone(''); }}
         />
       </div>
+
+      <HeardAboutField />
 
       <div className="submit-wrap">
         <button type="submit" disabled={submitting}>

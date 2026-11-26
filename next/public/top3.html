@@ -428,6 +428,18 @@ section,.nh .s-nav{position:relative}
         <button class="linkbtn" type="button" id="other">None of these work? Request another time</button>
         <label for="tr" id="trbox" hidden>What days and times work for you?<textarea id="tr" name="time_request" rows="2" placeholder="e.g. Tuesdays after 3pm, or any Friday morning"></textarea></label>
       </fieldset>
+<label for="heard">How did you hear about <span style="text-transform:none">ai.moms™</span>?
+          <select id="heard" name="heard_about" required>
+            <option value="">Choose one</option>
+            <option>Instagram</option>
+            <option>LinkedIn</option>
+            <option>A friend told me</option>
+            <option>Google search</option>
+            <option>An ai.moms™ experience or workshop</option>
+            <option>The AIM newsletter</option>
+            <option>Other</option>
+          </select>
+        </label>
       <p class="err" id="err" role="alert"></p>
       <button class="btn" type="submit">Continue to payment · $500</button>
       <small class="opt">You'll pay securely with Stripe, and your time is booked.</small>
@@ -496,6 +508,7 @@ f.addEventListener('submit',async e=>{
   const where=f.querySelector('input[name=where]:checked');
   if(!where){err.textContent='Pick Zoom or in person so we can plan your session.';return}
   if(!f.p1.value.trim()){err.textContent='Add at least your first one so we can prep.';return}
+  if(!f.heard.value){err.textContent='Tell us how you heard about ai.moms™ so we can find more moms like you.';return}
   const asked=!trbox.hidden&&f.tr.value.trim();
   if(!asked&&!pick){err.textContent=trbox.hidden?'Pick a time, or request another one.':'Tell us what days and times work for you.';return}
   err.textContent='';
